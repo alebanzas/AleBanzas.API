@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF3CD334-528A-4C92-91B8-6ECC2EF4952A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AB.Wiring</RootNamespace>
+    <AssemblyName>AB.Wiring</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel">
+      <HintPath>..\Lib\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\Lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache">
+      <HintPath>..\Lib\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractGuyWire.cs" />
+    <Compile Include="ApplicationServicesGuyWire.cs" />
+    <Compile Include="DomainEvents\CastleDomainEventHandlersStore.cs" />
+    <Compile Include="DomainEvents\DomainEventsGuyWire.cs" />
+    <Compile Include="InstantiateAndForgetIt.cs" />
+    <Compile Include="PlugIns\ServiciosPlugInsGuyWire.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AbstractDaosGuyWire.cs" />
+    <Compile Include="Repositories\DaosGuyWire.cs" />
+    <Compile Include="Repositories\NhSessionManagementGuyWire.cs" />
+    <Compile Include="Repositories\RoadtripDaosGuyWire.cs" />
+    <Compile Include="ServiceLocatorGuyWire.cs" />
+    <Compile Include="WebGuyWire.cs" />
+    <Compile Include="WebServiceGuyWire.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AB.Common\AB.Common.csproj">
+      <Project>{E3E70B35-9ADF-40B2-A211-55859542854B}</Project>
+      <Name>AB.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AB.Data\AB.Data.csproj">
+      <Project>{67C0C6F5-BFF0-4892-95B6-41D9FECDFFD5}</Project>
+      <Name>AB.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABServicios.BLL\ABServicios.BLL.csproj">
+      <Project>{DE11105B-F395-4987-95AD-75255E2F539D}</Project>
+      <Name>ABServicios.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

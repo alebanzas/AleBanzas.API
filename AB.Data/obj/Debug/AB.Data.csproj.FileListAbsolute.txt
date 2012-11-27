@@ -1,0 +1,14 @@
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\AB.Data.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\AB.Data.pdb
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\obj\Debug\AB.Data.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\obj\Debug\AB.Data.pdb
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\obj\Debug\AB.Data.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\Mappings\Hotel.hbm.xml
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\ABServicios.BLL.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\Iesi.Collections.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\NHibernate.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\ABServicios.BLL.pdb
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\Iesi.Collections.xml
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Data\bin\Debug\NHibernate.xml
