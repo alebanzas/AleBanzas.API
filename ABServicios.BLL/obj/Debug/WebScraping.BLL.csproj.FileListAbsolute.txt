@@ -1,0 +1,8 @@
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\bin\Debug\ABServicios.BLL.dll
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\bin\Debug\ABServicios.BLL.pdb
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\obj\Debug\ABServicios.BLL.dll
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\obj\Debug\ABServicios.BLL.pdb
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\bin\Debug\NetTopologySuite.dll
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\bin\Debug\NetTopologySuite.pdb
+C:\Users\Administrador\documents\visual studio 2010\Projects\ABServicios\ABServicios.BLL\bin\Debug\Mappings\Hotel.hbm.xml
