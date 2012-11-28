@@ -24,7 +24,7 @@ namespace ABServicios.Controllers
         {
             IEnumerable<Hotel> hotels = _hotelRepo;
 
-            return Json(hotels.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
+            return Json(hotels.Select(ConvertTo).ToList());
         }
 
         public ActionResult Near(double lat, double lon)
@@ -35,7 +35,7 @@ namespace ABServicios.Controllers
 
             var masCercano = new Hotel();
 
-            foreach (var h in hotels.Where(h => point.Distance(h.Ubicacion) < point.Distance(masCercano.Ubicacion)))
+            foreach (var h in hotels.ToList().Where(h => point.Distance(h.Ubicacion) < point.Distance(masCercano.Ubicacion)))
             {
                 masCercano = h;
             }
@@ -47,7 +47,7 @@ namespace ABServicios.Controllers
         {
             IEnumerable<Hotel> hotels = _hotelRepo.Where(x => x.Barrio.Equals(barrio));
 
-            return Json(hotels.Select(ConvertTo));
+            return Json(hotels.Select(ConvertTo).ToList());
         }
 
         private HotelViewModel ConvertTo(Hotel hotel)
