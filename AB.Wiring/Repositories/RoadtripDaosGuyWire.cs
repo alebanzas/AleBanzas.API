@@ -1,3 +1,4 @@
+using System;
 using ABServicios.BLL.Entities;
 using Castle.Windsor;
 
@@ -9,7 +10,7 @@ namespace AB.Wiring.Repositories
 
 		public override void Wire()
 		{
-			RegisterEntityDao<Hotel>();
+			RegisterEntityDao<Hotel, Guid>();
 
 			RegisterQueries();
 		}

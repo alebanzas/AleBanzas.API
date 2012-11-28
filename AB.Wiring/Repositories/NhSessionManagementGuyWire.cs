@@ -26,7 +26,6 @@ namespace AB.Wiring.Repositories
 		public void Wire()
 		{
             var conf = new Configuration();
-            conf.Configure();
             conf.DataBaseIntegration(x =>
             {
                 x.Dialect<ABSqlDialect>();
@@ -40,12 +39,10 @@ namespace AB.Wiring.Repositories
                 x.UseQueryCache = true;
                 x.DefaultExpiration = 120;
             });
-						conf.QueryCache().ResolveRegion("SearchStatistics").Using<TolerantQueryCache>().AlwaysTolerant();
-						conf.AddResource("RoadTrip.BLL.Mapping.CustomTypes.xml",
-                             typeof(Hotel).Assembly);
-                        conf.AddAssembly(typeof(Hotel).Assembly);
+            conf.AddAssembly(typeof(Hotel).Assembly);
+            conf.Configure();
 
-						container.Register(Component.For<ISessionFactory>().UsingFactoryMethod(() => conf.BuildSessionFactory()));
+			container.Register(Component.For<ISessionFactory>().UsingFactoryMethod(() => conf.BuildSessionFactory()));
 		}
 
 		public void Dewire()

@@ -38,7 +38,7 @@
       <HintPath>..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
-      <HintPath>..\ABServicios\bin\NHibernate.dll</HintPath>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

@@ -2,7 +2,7 @@
 
 namespace ABServicios.BLL.Entities
 {
-    public class Hotel : AbstractEntity<int>
+    public class Hotel : AbstractEntity<Guid>
     {
         public Hotel()
         {

@@ -1,6 +1,8 @@
-using System.ComponentModel;
 using AB.Common.Wiring;
+using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using CommonServiceLocator.WindsorAdapter;
+using Microsoft.Practices.ServiceLocation;
 
 namespace AB.Wiring
 {
@@ -15,9 +17,9 @@ namespace AB.Wiring
 
 		public void Wire()
 		{
-			//var wServiceLocator = new WindsorServiceLocator(container);
-			//container.Register(Component.For<IServiceLocator>().Instance(wServiceLocator));
-			//ServiceLocator.SetLocatorProvider(() => container.Resolve<IServiceLocator>());
+			var wServiceLocator = new WindsorServiceLocator(container);
+			container.Register(Component.For<IServiceLocator>().Instance(wServiceLocator));
+			ServiceLocator.SetLocatorProvider(() => container.Resolve<IServiceLocator>());
 		}
 
 		public void Dewire()

@@ -21,4 +21,3 @@ C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios.BLL\bin\Debug\ABSer
 C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios.BLL\bin\Debug\ABServicios.BLL.pdb
 C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios.BLL\obj\Debug\ABServicios.BLL.dll
 C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios.BLL\obj\Debug\ABServicios.BLL.pdb
-C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios.BLL\obj\Debug\ABServicios.BLL.csprojResolveAssemblyReference.cache

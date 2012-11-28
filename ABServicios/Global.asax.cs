@@ -41,5 +41,10 @@ namespace ABServicios
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
+
+        protected void Application_End()
+        {
+            guywire.Dewire();
+        }
     }
 }
