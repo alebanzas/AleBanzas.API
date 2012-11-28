@@ -67,3 +67,5 @@ C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios\bin\Castle.Core.xml
 C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios\bin\Castle.MicroKernel.xml
 C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios\bin\Castle.Windsor.xml
 C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios\bin\Iesi.Collections.xml
+C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios\bin\Castle.DynamicProxy2.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\ABServicios\bin\Castle.DynamicProxy2.xml
