@@ -15,9 +15,7 @@ namespace AB.Wiring
 				yield return new ServiceLocatorGuyWire(Container);
 				yield return new NhSessionManagementGuyWire(Container);
 				yield return new DaosGuyWire(Container);
-				yield return new ApplicationServicesGuyWire(Container);
 				yield return new DomainEventsGuyWire(Container);
-				yield return new ServiciosPlugInsGuyWire(Container);
 			}
 		}
 	}

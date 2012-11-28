@@ -43,6 +43,10 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\Lib\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="CommonServiceLocator.WindsorAdapter">
+      <HintPath>..\Lib\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="NHibernate">
       <HintPath>..\Lib\NHibernate.dll</HintPath>
     </Reference>
@@ -71,7 +75,6 @@
     <Compile Include="Repositories\RoadtripDaosGuyWire.cs" />
     <Compile Include="ServiceLocatorGuyWire.cs" />
     <Compile Include="WebGuyWire.cs" />
-    <Compile Include="WebServiceGuyWire.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AB.Common\AB.Common.csproj">

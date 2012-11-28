@@ -9,7 +9,6 @@ namespace AB.Wiring.Repositories
 {
 	public abstract class AbstractDaosGuyWire : IGuyWire
 	{
-		protected const string Roadtrip = "Roadtrip";
 		private readonly WindsorContainer container;
 
 		protected AbstractDaosGuyWire(WindsorContainer container)
@@ -38,10 +37,10 @@ namespace AB.Wiring.Repositories
 			container.Register(Component.For<IRepository<T>>().ImplementedBy<Repository<T>>());
 		}
 
-		protected void RegisterEntityDao<T>() where T : AbstractEntity<int>
-		{
-			container.Register(Component.For<IRoadtripDao<T>, IEntityDao<T, int>, ICrudDao<T, int>, IDao<T, int>>().ImplementedBy<RoadTripDao<T>>());
-			container.Register(Component.For<IRepository<T>>().ImplementedBy<Repository<T>>());
-		}
+        protected void RegisterEntityDao<T, U>() where T : AbstractEntity<U>
+        {
+            container.Register(Component.For<IRoadtripDao<T>, IEntityDao<T, U>, ICrudDao<T, U>, IDao<T, U>>().ImplementedBy<RoadTripDao<T>>());
+            container.Register(Component.For<IRepository<T>>().ImplementedBy<Repository<T>>());
+        }
 	}
 }

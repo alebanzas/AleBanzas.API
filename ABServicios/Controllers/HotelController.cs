@@ -19,12 +19,12 @@ namespace ABServicios.Controllers
             _hotelRepo = ServiceLocator.Current.GetInstance<IRepository<Hotel>>();
 		}
 
-
+        [HttpGet]
         public ActionResult All()
         {
             IEnumerable<Hotel> hotels = _hotelRepo;
 
-            return Json(hotels.Select(ConvertTo));
+            return Json(hotels.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Near(double lat, double lon)
