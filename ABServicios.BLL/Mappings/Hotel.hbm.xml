@@ -7,7 +7,7 @@
     <param name="subtype">GEOMETRY</param>
   </typedef -->
   <class name="Hotel" table="hotel">
-    <id name="Id">
+    <id name="ID">
       <generator class="guid"/>
     </id>
 

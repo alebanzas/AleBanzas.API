@@ -23,3 +23,5 @@ C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Wiring\bin\Debug\Iesi.Collec
 C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Wiring\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Wiring\obj\Debug\AB.Wiring.dll
 C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Wiring\obj\Debug\AB.Wiring.pdb
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Wiring\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Wiring\bin\Debug\Castle.DynamicProxy2.xml
