@@ -19,7 +19,6 @@ namespace ABServicios.Controllers
             _hotelRepo = ServiceLocator.Current.GetInstance<IRepository<Hotel>>();
 		}
 
-        [HttpGet]
         public ActionResult All()
         {
             IEnumerable<Hotel> hotels = _hotelRepo;

@@ -12,17 +12,41 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHZv2e2lpyEi2cC8wDQvQrQAAAAACAAAAAAAQZgAAAAEAACAAAAAeGXfDAXXJ9FfTZhr+RKu7BBGW/eJFUpGtdJlAZz9sDQAAAAAOgAAAAAIAACAAAAC5odbNBy98phmJD9Bh70xn/X7RjFrFrrJthWFB/sNxECAAAABfETVGEM6D5akfHnxhW0XEYRHH0Ztdy6c2CzA5ZdNGsEAAAADhvIbsQHCZm4IOik5CYS8Kh6kbfT0DZ0HZIKLsE/OeODXf7oqjKZ/Jrvidf8erqMItPYUS4RFC+/eaJfnGwxu+</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="bin/AB.Common.dll">
+      <publishTime>11/28/2012 00:11:11</publishTime>
+    </File>
+    <File Include="bin/AB.Data.dll">
+      <publishTime>11/28/2012 00:41:31</publishTime>
+    </File>
+    <File Include="bin/AB.Wiring.dll">
+      <publishTime>11/28/2012 00:41:31</publishTime>
+    </File>
     <File Include="bin/ABServicios.BLL.dll">
-      <publishTime>04/09/2012 21:52:39</publishTime>
+      <publishTime>11/28/2012 00:41:30</publishTime>
     </File>
     <File Include="bin/ABServicios.BLL.pdb">
       <publishTime>04/09/2012 21:52:38</publishTime>
     </File>
     <File Include="bin/ABServicios.dll">
-      <publishTime>07/19/2012 21:39:54</publishTime>
+      <publishTime>11/28/2012 00:41:31</publishTime>
     </File>
     <File Include="bin/ABServicios.pdb">
       <publishTime>07/19/2012 21:39:54</publishTime>
+    </File>
+    <File Include="bin/Castle.Core.dll">
+      <publishTime>05/25/2012 21:13:05</publishTime>
+    </File>
+    <File Include="bin/Castle.DynamicProxy2.dll">
+      <publishTime>05/25/2012 21:13:05</publishTime>
+    </File>
+    <File Include="bin/Castle.MicroKernel.dll">
+      <publishTime>05/25/2012 21:13:05</publishTime>
+    </File>
+    <File Include="bin/Castle.Windsor.dll">
+      <publishTime>05/25/2012 21:13:05</publishTime>
+    </File>
+    <File Include="bin/CommonServiceLocator.WindsorAdapter.dll">
+      <publishTime>05/25/2012 21:13:05</publishTime>
     </File>
     <File Include="bin/GeoAPI.dll">
       <publishTime>10/05/2010 22:43:14</publishTime>
@@ -30,14 +54,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/GeoAPI.xml">
       <publishTime>10/05/2010 22:43:14</publishTime>
     </File>
+    <File Include="bin/Iesi.Collections.dll">
+      <publishTime>05/25/2012 21:13:06</publishTime>
+    </File>
     <File Include="bin/Mappings/Hotel.hbm.xml">
-      <publishTime>01/26/2012 21:28:29</publishTime>
+      <publishTime>11/27/2012 23:13:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
+      <publishTime>03/04/2012 19:52:33</publishTime>
     </File>
     <File Include="bin/NetTopologySuite.dll">
       <publishTime>10/05/2010 22:43:14</publishTime>
     </File>
     <File Include="bin/NetTopologySuite.pdb">
       <publishTime>10/05/2010 22:43:14</publishTime>
+    </File>
+    <File Include="bin/NHibernate.ByteCode.Castle.dll">
+      <publishTime>03/04/2012 19:52:33</publishTime>
+    </File>
+    <File Include="bin/NHibernate.Caches.SysCache.dll">
+      <publishTime>05/25/2012 21:13:06</publishTime>
+    </File>
+    <File Include="bin/NHibernate.dll">
+      <publishTime>05/25/2012 21:13:06</publishTime>
     </File>
     <File Include="bin/nunit.framework.dll">
       <publishTime>01/10/2012 00:25:28</publishTime>
@@ -220,7 +259,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/26/2012 21:31:36</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/16/2012 23:01:46</publishTime>
+      <publishTime>11/28/2012 00:41:45</publishTime>
     </File>
   </ItemGroup>
 </Project>
