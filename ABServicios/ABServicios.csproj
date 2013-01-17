@@ -92,6 +92,7 @@
     <Compile Include="Controllers\LocalController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\VPS.pubxml" />
+    <Content Include="Views\Status\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AB.Common\AB.Common.csproj">
