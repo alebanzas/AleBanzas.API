@@ -59,9 +59,11 @@
     <Compile Include="Entities\AbstractEntity.cs" />
     <Compile Include="Entities\Hotel.cs" />
     <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\ITipoMoneda.cs" />
     <Compile Include="Entities\Local.cs" />
     <Compile Include="Entities\Point.cs" />
     <Compile Include="Entities\Rol.cs" />
+    <Compile Include="Entities\TiposMoneda.cs" />
     <Compile Include="Exceptions\ConstraintViolationException.cs" />
     <Compile Include="Exceptions\UniquenessViolationException.cs" />
     <Compile Include="Interfaces\IReadOnlyEntity.cs" />

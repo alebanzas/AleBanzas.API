@@ -14,9 +14,17 @@
 <script type="text/javascript">
 
 function JsonFromServerAction(urlAction, serverAction, params, onsuccess) {
+    $("#result").val("WAIT...");
+    var url = '/' + urlAction;
+    if (serverAction) {
+        url += '/' + serverAction;
+    }
+    if (params) {
+        url += '/?' + params;
+    }
     $.ajax({
         type: "POST",
-        url: '/' + urlAction + '/' + serverAction + '/?' + params,
+        url: url,
         contentType: "application/json",
         dataType: "json",
         success: onsuccess
