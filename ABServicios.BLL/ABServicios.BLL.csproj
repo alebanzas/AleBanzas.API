@@ -62,8 +62,10 @@
     <Compile Include="Entities\ITipoMoneda.cs" />
     <Compile Include="Entities\Local.cs" />
     <Compile Include="Entities\Point.cs" />
+    <Compile Include="Entities\RecargaSUBE.cs" />
     <Compile Include="Entities\Rol.cs" />
     <Compile Include="Entities\TiposMoneda.cs" />
+    <Compile Include="Entities\VentaSUBE.cs" />
     <Compile Include="Exceptions\ConstraintViolationException.cs" />
     <Compile Include="Exceptions\UniquenessViolationException.cs" />
     <Compile Include="Interfaces\IReadOnlyEntity.cs" />
@@ -71,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\Hotel.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\VentaSUBE.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\RecargaSUBE.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Mappings\Queries.hbm.xml">

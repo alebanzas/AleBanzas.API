@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AB.Data", "AB.Data\AB.Data.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AB.Wiring", "AB.Wiring\AB.Wiring.csproj", "{AF3CD334-528A-4C92-91B8-6ECC2EF4952A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABServicios.Data.Tests", "ABServicios.Data.Tests\ABServicios.Data.Tests.csproj", "{26442030-48E0-413A-B9E2-A6EEC31FE17F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,8 +75,21 @@ Global
 		{AF3CD334-528A-4C92-91B8-6ECC2EF4952A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{AF3CD334-528A-4C92-91B8-6ECC2EF4952A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AF3CD334-528A-4C92-91B8-6ECC2EF4952A}.Release|x86.ActiveCfg = Release|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26442030-48E0-413A-B9E2-A6EEC31FE17F} = {59F60900-3092-4209-9577-0A0BC7B799A5}
 	EndGlobalSection
 EndGlobal

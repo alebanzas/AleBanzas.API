@@ -1,6 +1,3 @@
-# Ignore file for Visual Studio 2008/2010
-
-# use glob syntax
 syntax: glob
 
 *.obj
@@ -9,11 +6,11 @@ syntax: glob
 *.user
 *.aps
 *.pch
-*.vspscc
+*.vspcc
 *_i.c
 *_p.c
-*.ncb
 *.suo
+*.ncb
 *.tlb
 *.tlh
 *.bak
@@ -24,37 +21,11 @@ syntax: glob
 *.sbr
 *.scc
 [Bb]in
-[Db]ebug*/
-obj/
+[Dd]ebug*/
 [Rr]elease*/
-*[Rr]e[Ss]harper*
+obj/
+*resharper*
 _ReSharper*/
-[Tt]est[Rr]esult*
-[Bb]uild[Ll]og.*
-*.[Pp]ublish.xml
-glob:Roadtrip\packages
-glob:Lib/Microsoft.IdentityModel.dll
-glob:hibernate.cfg.xml
-glob:log4net.configuration.xml
-glob:Roadtrip/Roadtrip.Web/usados/fotos_clasificados
-glob:Roadtrip/Roadtrip.Web/Default2.aspx
-glob:Roadtrip/Roadtrip.Web/Default2.aspx.cs
-Roadtrip/Roadtrip.DataAcessObjects.ReadOnlyTests/NHAutocosmos.cfg.xml
-Roadtrip/Roadtrip.Web/web.config
-Roadtrip/Roadtrip.Web/Noticias/fotosprinc/
-Roadtrip/Roadtrip.Web/Noticias/fotos/preview/27699_1911444898.jpg
-Roadtrip/Roadtrip.Web/Noticias/fotos/preview/27699_1911452636.jpg
-Roadtrip/Roadtrip.Web/Noticias/fotosbig/preview/27699_1911444898.jpg
-Roadtrip/Roadtrip.Web/Noticias/fotosbig/preview/27699_1911452636.jpg
-Roadtrip/Roadtrip.Web/Siteadmin/Default2.aspx.cs
-Roadtrip/Roadtrip.Web/Siteadmin/Default2.aspx
-Roadtrip/Roadtrip.Web/App_Data/Roadtrip.cfg.xml
-Roadtrip/Roadtrip.Web/App_Data/NHAutocosmos.cfg.xml
-Roadtrip/Roadtrip.Web/App_Data/Roadtrip.cfg.xml
+[Bb]ld
 *.orig
-Roadtrip/Roadtrip.Web/lanzamientos/*
-Roadtrip/Roadtrip.Storage/*
-Roadtrip/Autocosmos.Web/plugins/*
-Roadtrip/scaffolding.config
-Roadtrip/Autocosmos.Web/configuration.serialized
-sitemap.xml
+Thumbs.db
