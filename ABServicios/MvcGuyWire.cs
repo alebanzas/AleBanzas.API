@@ -63,9 +63,9 @@ namespace ABServicios
                 x.UseQueryCache = true;
                 x.DefaultExpiration = 120;
             });
-            conf.QueryCache().ResolveRegion("SearchStatistic").Using<TolerantQueryCache>().AlwaysTolerant();
+            //conf.QueryCache().ResolveRegion("SearchStatistic").Using<TolerantQueryCache>().AlwaysTolerant();
             //conf.AddResource("Mapping.CustomTypes.xml", typeof(Hotel).Assembly);
-            conf.AddAssembly(typeof(Hotel).Assembly);
+            conf.AddAssembly(typeof(RecargaSUBE).Assembly);
             conf.SetProperty(Environment.SqlExceptionConverter, typeof(MsSqlExceptionConverter).AssemblyQualifiedName);
             conf.Configure();
             //#endif

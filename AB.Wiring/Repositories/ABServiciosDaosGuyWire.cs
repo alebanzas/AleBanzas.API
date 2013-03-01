@@ -4,13 +4,15 @@ using Castle.Windsor;
 
 namespace AB.Wiring.Repositories
 {
-	public class RoadtripDaosGuyWire : AbstractDaosGuyWire
+	public class ABServiciosDaosGuyWire : AbstractDaosGuyWire
 	{
-		public RoadtripDaosGuyWire(WindsorContainer container) : base(container) {}
+		public ABServiciosDaosGuyWire(WindsorContainer container) : base(container) {}
 
 		public override void Wire()
-		{
-			RegisterEntityDao<Hotel, Guid>();
+        {
+            RegisterEntityDao<Hotel, Guid>();
+            RegisterEntityDao<RecargaSUBE, Guid>();
+            RegisterEntityDao<VentaSUBE, Guid>();
 
 			RegisterQueries();
 		}
