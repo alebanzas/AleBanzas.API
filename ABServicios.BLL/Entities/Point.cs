@@ -15,7 +15,13 @@ namespace ABServicios.BLL.Entities
 
         public double Distance(Point ubicacion)
         {
-            return Math.Abs(ubicacion.X - X) + Math.Abs(ubicacion.Y - Y);
+            return Distance(ubicacion, this);
+        }
+
+        public static double Distance(Point origen, Point destino)
+        {
+            return Math.Pow(origen.X - destino.X, 2) + Math.Pow(origen.Y - destino.Y, 2);
+            //return Math.Abs(origen.X - destino.X) + Math.Abs(origen.Y - destino.Y);
         }
     }
 }

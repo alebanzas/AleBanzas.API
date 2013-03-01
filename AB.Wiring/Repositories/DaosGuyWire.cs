@@ -32,7 +32,7 @@ namespace AB.Wiring.Repositories
 		{
 			get
 			{
-				yield return new RoadtripDaosGuyWire(container);
+				yield return new ABServiciosDaosGuyWire(container);
 				yield return new DocumentDaosGuyWire(container);
 			}
 		}

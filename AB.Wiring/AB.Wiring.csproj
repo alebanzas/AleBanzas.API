@@ -72,7 +72,7 @@
     <Compile Include="Repositories\AbstractDaosGuyWire.cs" />
     <Compile Include="Repositories\DaosGuyWire.cs" />
     <Compile Include="Repositories\NhSessionManagementGuyWire.cs" />
-    <Compile Include="Repositories\RoadtripDaosGuyWire.cs" />
+    <Compile Include="Repositories\ABServiciosDaosGuyWire.cs" />
     <Compile Include="ServiceLocatorGuyWire.cs" />
     <Compile Include="WebGuyWire.cs" />
   </ItemGroup>
