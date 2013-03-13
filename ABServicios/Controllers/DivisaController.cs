@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -30,7 +31,7 @@ namespace ABServicios.Controllers
                 cache.Put(CacheKey, result, new TimeSpan(1,0,0));
             }        
 
-            return Json(result);
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         private static DivisaModel GetModel()
@@ -46,13 +47,31 @@ namespace ABServicios.Controllers
 
             divisas.Add(new DivisaViewModel
                 {
-                    Nombre = "Dolar",
+                    Nombre = "Dólar",
                     Simbolo = "U$S",
                     ValorCompra = compra,
                     ValorVenta = venta,
                     Variacion = variacion,
                     Actualizacion = fecha,
                 });
+
+
+            try
+            {
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "Dólar Turístico",
+                    Simbolo = "U$S",
+                    ValorCompra = (float.Parse(compra.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    ValorVenta = (float.Parse(venta.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    Variacion = variacion,
+                    Actualizacion = fecha,
+                });
+            }
+            catch
+            {
+                
+            }
 
             compra = html.CssSelect("div.columna2 div.ultimo big").FirstOrDefault().InnerText;
             venta = html.CssSelect("div.columna2 div.cierreAnterior big").FirstOrDefault().InnerText;
@@ -61,7 +80,7 @@ namespace ABServicios.Controllers
 
             divisas.Add(new DivisaViewModel
                 {
-                    Nombre = "Dolar Blue",
+                    Nombre = "Dólar Blue",
                     Simbolo = "U$S",
                     ValorCompra = compra,
                     ValorVenta = venta,
