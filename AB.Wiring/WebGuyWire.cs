@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using AB.Common.Wiring;
 using AB.Wiring.DomainEvents;
-using AB.Wiring.PlugIns;
 using AB.Wiring.Repositories;
 
 namespace AB.Wiring
