@@ -18,7 +18,7 @@ namespace ABServicios.Controllers
         //
         // GET: /Divisa/
 
-        public ActionResult Index()
+        public ActionResult Index(string version = "1", string type = "ALL")
         {
             var cache = new WebCache();
             
@@ -33,6 +33,17 @@ namespace ABServicios.Controllers
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+
+        //
+        // GET: /Divisa/Message
+
+        public ActionResult Message(string version = "1", string type = "ALL")
+        {
+            dynamic result = new { Message = "hay una nueva version disponible." };
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
 
         private static DivisaModel GetModel()
         {
