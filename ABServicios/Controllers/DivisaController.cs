@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using ABServicios.Models;
 using ABServicios.Services;
@@ -51,13 +50,15 @@ namespace ABServicios.Controllers
 
             HtmlNode html = new Scraper().GetNodes(new Uri("http://www.ambito.com/economia/mercados/monedas/dolar/"));
 
-            string compra = html.CssSelect("div.columna1 div.ultimo big").FirstOrDefault().InnerText;
-            string venta = html.CssSelect("div.columna1 div.cierreAnterior big").FirstOrDefault().InnerText;
-            string variacion = html.CssSelect("div.columna1 div.variacion big").FirstOrDefault().InnerText;
-            string fecha = html.CssSelect("div.columna1 div.dolarFecha big").FirstOrDefault().InnerText;
+            var compra = html.CssSelect("div.columna1 div.ultimo big").FirstOrDefault().InnerText;
+            var venta = html.CssSelect("div.columna1 div.cierreAnterior big").FirstOrDefault().InnerText;
+            var variacion = html.CssSelect("div.columna1 div.variacion big").FirstOrDefault().InnerText;
+            var fecha = html.CssSelect("div.columna1 div.dolarFecha big").FirstOrDefault().InnerText;
 
-            string variacionBlue = variacion;
-            string fechaBlue = fecha;
+            var variacionOficial = variacion;
+            var fechaOficial = fecha;
+            var compraOficial = compra;
+            var ventaOficial = venta;
 
             divisas.Add(new DivisaViewModel
                 {
@@ -95,10 +96,10 @@ namespace ABServicios.Controllers
                 {
                     Nombre = "Dólar Turístico",
                     Simbolo = "U$S",
-                    ValorCompra = (float.Parse(compra.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
-                    ValorVenta = (float.Parse(venta.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
-                    Variacion = variacionBlue,
-                    Actualizacion = fechaBlue,
+                    ValorCompra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    ValorVenta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    Variacion = variacionOficial,
+                    Actualizacion = fechaOficial,
                 });
             }
             catch
