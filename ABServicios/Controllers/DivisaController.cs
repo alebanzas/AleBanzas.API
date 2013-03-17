@@ -39,7 +39,7 @@ namespace ABServicios.Controllers
 
         public ActionResult Message(string version = "1", string type = "ALL")
         {
-            dynamic result = new { Message = "hay una nueva version disponible." };
+            dynamic result = new { Message = "" };
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
@@ -56,6 +56,9 @@ namespace ABServicios.Controllers
             string variacion = html.CssSelect("div.columna1 div.variacion big").FirstOrDefault().InnerText;
             string fecha = html.CssSelect("div.columna1 div.dolarFecha big").FirstOrDefault().InnerText;
 
+            string variacionBlue = variacion;
+            string fechaBlue = fecha;
+
             divisas.Add(new DivisaViewModel
                 {
                     Nombre = "Dólar",
@@ -65,24 +68,6 @@ namespace ABServicios.Controllers
                     Variacion = variacion,
                     Actualizacion = fecha,
                 });
-
-
-            try
-            {
-                divisas.Add(new DivisaViewModel
-                {
-                    Nombre = "Dólar Turístico",
-                    Simbolo = "U$S",
-                    ValorCompra = (float.Parse(compra.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
-                    ValorVenta = (float.Parse(venta.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
-                    Variacion = variacion,
-                    Actualizacion = fecha,
-                });
-            }
-            catch
-            {
-                
-            }
 
             compra = html.CssSelect("div.columna2 div.ultimo big").FirstOrDefault().InnerText;
             venta = html.CssSelect("div.columna2 div.cierreAnterior big").FirstOrDefault().InnerText;
@@ -103,6 +88,24 @@ namespace ABServicios.Controllers
                     Actualizacion = DateTime.Now,
                     Divisas = divisas,
                 };
+
+            try
+            {
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "Dólar Turístico",
+                    Simbolo = "U$S",
+                    ValorCompra = (float.Parse(compra.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    ValorVenta = (float.Parse(venta.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    Variacion = variacionBlue,
+                    Actualizacion = fechaBlue,
+                });
+            }
+            catch
+            {
+
+            }
+
             return result;
         }
     }
