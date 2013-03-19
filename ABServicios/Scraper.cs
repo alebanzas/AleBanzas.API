@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 using System.IO;
+using System.Text;
 using HtmlAgilityPack;
 
 namespace ABServicios
@@ -16,7 +17,7 @@ namespace ABServicios
             var req = WebRequest.Create(url);
 				
 			// Get the stream from the returned web response
-			var stream = new StreamReader(req.GetResponse().GetResponseStream());
+			var stream = new StreamReader(req.GetResponse().GetResponseStream(), Encoding.UTF7);
             
             var htmlDocument = new HtmlDocument();
             htmlDocument.Load(stream);
