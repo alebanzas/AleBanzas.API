@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
+    <Compile Include="Controllers\SubteController.cs" />
     <Compile Include="Controllers\DivisaController.cs" />
     <Compile Include="Controllers\LicenseController.cs" />
     <Compile Include="Controllers\LocalController.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\SubteStatusModel.cs" />
     <Compile Include="Models\DivisaModel.cs" />
     <Compile Include="Models\DivisaViewModel.cs" />
     <Compile Include="Models\LocalViewModel.cs" />
