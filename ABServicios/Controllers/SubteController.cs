@@ -51,7 +51,7 @@ namespace ABServicios.Controllers
 
             var infos = script.Split(new[] { "if" }, StringSplitOptions.RemoveEmptyEntries)[0];
 
-            var lineas = (from info in infos.Split(new[] { "pausecontent" }, StringSplitOptions.RemoveEmptyEntries).Skip(2) select info.Split(new[] { "] = '" }, StringSplitOptions.RemoveEmptyEntries) into linea select linea[1].Replace("';", "").Split(':') into il select new SubteStatusItem { Nombre = il[0].Replace("&nbsp;", "").Replace("<b>", ""), Detalles = il[1].Replace("&nbsp;", "").Replace("</b>", "") }).ToList();
+            var lineas = (from info in infos.Split(new[] { "pausecontent" }, StringSplitOptions.RemoveEmptyEntries).Skip(2) select info.Split(new[] { "] = '" }, StringSplitOptions.RemoveEmptyEntries) into linea select linea[1].Replace("';", "").Split(':') into il select new SubteStatusItem { Nombre = il[0].Replace("&nbsp;", "").Replace("<b>", "").Trim(), Detalles = il[1].Replace("&nbsp;", "").Replace("</b>", "").Trim() }).ToList();
 
             return new SubteStatusModel
                 {
