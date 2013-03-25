@@ -13,6 +13,7 @@ namespace AB.Wiring.Repositories
             RegisterEntityDao<Hotel, Guid>();
             RegisterEntityDao<RecargaSUBE, Guid>();
             RegisterEntityDao<VentaSUBE, Guid>();
+            RegisterEntityDao<DolarHistorico, Guid>();
 
 			RegisterQueries();
 		}

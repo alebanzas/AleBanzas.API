@@ -57,6 +57,7 @@
     <Compile Include="DataInterfaces\Queries\ISampleQuery.cs" />
     <Compile Include="EmbeddedRepositories\Roles.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />
+    <Compile Include="Entities\DolarHistorico.cs" />
     <Compile Include="Entities\Hotel.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Entities\ITipoMoneda.cs" />
@@ -79,6 +80,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\RecargaSUBE.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\DolarHistorico.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Mappings\Queries.hbm.xml">
