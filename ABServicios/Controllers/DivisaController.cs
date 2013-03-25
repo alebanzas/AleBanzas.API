@@ -3,16 +3,27 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
+using ABServicios.Attributes;
+using ABServicios.BLL.DataInterfaces;
+using ABServicios.BLL.Entities;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
+using Microsoft.Practices.ServiceLocation;
 using ScrapySharp.Extensions;
 
 namespace ABServicios.Controllers
 {
     public class DivisaController : Controller
     {
+        private readonly IRepository<DolarHistorico> _dolarRepo;
+
         private const string CacheKey = "Divisa";
+
+        public DivisaController()
+        {
+            _dolarRepo = ServiceLocator.Current.GetInstance<IRepository<DolarHistorico>>();
+        }
 
         //
         // GET: /Divisa/
@@ -42,6 +53,53 @@ namespace ABServicios.Controllers
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+
+        //
+        // GET: /Divisa/Historico
+
+        [NeedRelationalPersistence]
+        public ActionResult Historico(DateTime? from, DateTime? to)
+        {
+            var dFrom = from.HasValue ? from.Value : DateTime.MinValue;
+            var dTo = to.HasValue ? to.Value : DateTime.MinValue;
+            
+            var result = _dolarRepo.Select(x => new
+                {
+                    Fecha = x.Date,
+                    Compra = x.Compra,
+                    Venta = x.Venta,
+                    Moneda = x.Moneda,
+                }).ToList();
+            
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        //
+        // POST: /Divisa/Add
+        [HttpPost]
+        [NeedRelationalPersistence]
+        public ActionResult Add(DateTime date, double compra, double venta, int tipoMoneda = 1)
+        {
+            try
+            {
+                var historico = new DolarHistorico
+                    {
+                        Date = date,
+                        Compra = compra,
+                        Venta = venta,
+                        Moneda = tipoMoneda,
+                    };
+
+                _dolarRepo.Add(historico);
+            }
+            catch (Exception)
+            {
+                return new HttpStatusCodeResult(500);
+            }
+            return new HttpStatusCodeResult(200);
+        }
+
+
 
 
         private static DivisaModel GetModel()
