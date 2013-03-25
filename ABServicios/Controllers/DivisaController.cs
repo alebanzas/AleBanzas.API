@@ -62,16 +62,26 @@ namespace ABServicios.Controllers
         {
             var dFrom = from.HasValue ? from.Value : DateTime.MinValue;
             var dTo = to.HasValue ? to.Value : DateTime.MinValue;
-            
-            var result = _dolarRepo.Select(x => new
-                {
-                    Fecha = x.Date,
-                    Compra = x.Compra,
-                    Venta = x.Venta,
-                    Moneda = x.Moneda,
-                }).ToList();
-            
-            return Json(result, JsonRequestBehavior.AllowGet);
+
+            var dolarHistoricos = _dolarRepo;
+            IQueryable<DolarHistorico> result;
+            if (!from.HasValue && !to.HasValue)
+            {
+                result = dolarHistoricos;
+            }
+            else
+            {
+                result = dolarHistoricos.Where(x => dFrom <= x.Date && x.Date <= dTo);
+            }
+
+            return Json(result.Select(x => new
+                    {
+                        Fecha = x.Date,
+                        Compra = x.Compra,
+                        Venta = x.Venta,
+                        Moneda = x.Moneda,
+                    }).ToList()
+                    , JsonRequestBehavior.AllowGet);
         }
 
         //
