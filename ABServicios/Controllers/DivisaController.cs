@@ -96,8 +96,8 @@ namespace ABServicios.Controllers
                 {
                     Nombre = "Dólar Turístico",
                     Simbolo = "U$S",
-                    ValorCompra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
-                    ValorVenta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.15).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    ValorCompra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    ValorVenta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
                     Variacion = variacionOficial,
                     Actualizacion = fechaOficial,
                 });
