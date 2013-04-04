@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web.Mvc;
 using ABServicios.Models;
 using ABServicios.Services;
@@ -45,7 +46,7 @@ namespace ABServicios.Controllers
 
         private static SubteStatusModel GetModel()
         {
-            var html = new Scraper().GetNodes(new Uri("http://www.metrovias.com.ar/V2/InfoSubteSplash.asp"));
+            var html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.metrovias.com.ar/V2/InfoSubteSplash.asp"));
 
             var script = html.CssSelect("script").First().InnerText;
 

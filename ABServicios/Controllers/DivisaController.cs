@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Web.Mvc;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
@@ -116,7 +117,7 @@ namespace ABServicios.Controllers
         {
             var divisas = new List<DivisaViewModel>();
 
-            HtmlNode html = new Scraper().GetNodes(new Uri("http://www.ambito.com/economia/mercados/monedas/dolar/"));
+            HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.ambito.com/economia/mercados/monedas/dolar/"));
 
             var compra = html.CssSelect("div.columna1 div.ultimo big").FirstOrDefault().InnerText;
             var venta = html.CssSelect("div.columna1 div.cierreAnterior big").FirstOrDefault().InnerText;
