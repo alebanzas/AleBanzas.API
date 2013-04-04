@@ -27,7 +27,7 @@ namespace ABServicios.Controllers
             {
                 result = GetModel();
 
-                cache.Put(CacheKey, result, new TimeSpan(1,0,0));
+                cache.Put(CacheKey, result, new TimeSpan(0,5,0));
             }        
 
             return Json(result, JsonRequestBehavior.AllowGet);
