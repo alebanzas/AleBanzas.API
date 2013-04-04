@@ -63,23 +63,40 @@ namespace ABServicios.Controllers
                 var lat = double.Parse(arg0.Split(',')[0].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
                 var lon = double.Parse(arg0.Split(',')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
 
-                //<div style="height:100px;"><span class="style1">RETIRO
-                //<br>Cerrado. Horario de atención: Lun a Vie de 8 a 20. Sáb 9 a 15.</span>
-                //<br><span class="style2">Cant. Bicicletas disponibles: 8</span><br></div>
-
-                //<div style="height:100px;"><span class="style1">RETIRO</span>
-                //<br><span class="style2">Cant. Bicicletas disponibles: 2</span><br></div>
                 string arg1 = a[1].Split(new[] { "'," }, StringSplitOptions.RemoveEmptyEntries)[0];
 
                 var arg2 = arg1.Split(new[] { "<br>" }, StringSplitOptions.RemoveEmptyEntries);
 
-                var nombre = arg2[0].Split('>')[2].Trim();
+                string nombre;
+                string estado;
+                string horario;
+                int cantidad;
 
-                var estado = arg2[1].Split('.')[0].Trim();
+                if (arg2.Length == 4)
+                {
+                    //<div style="height:100px;"><span class="style1">RETIRO
+                    //<br>Cerrado. Horario de atención: Lun a Vie de 8 a 20. Sáb 9 a 15.</span>
+                    //<br><span class="style2">Cant. Bicicletas disponibles: 8</span><br></div>
+                    nombre = arg2[0].Split('>')[2].Trim();
 
-                var horario = arg2[1].Split(':')[1].Split('<')[0].Trim();
+                    estado = arg2[1].Split('.')[0].Trim();
 
-                var cantidad = int.Parse(arg2[2].Split(':')[1].Split('<')[0].Trim());
+                    horario = arg2[1].Split(':')[1].Split('<')[0].Trim();
+
+                    cantidad = int.Parse(arg2[2].Split(':')[1].Split('<')[0].Trim());
+                }
+                else
+                {
+                    //<div style="height:100px;"><span class="style1">RETIRO</span>
+                    //<br><span class="style2">Cant. Bicicletas disponibles: 2</span><br></div>
+                    nombre = arg2[0].Split('>')[2].Split('<')[0].Trim();
+
+                    cantidad = int.Parse(arg2[1].Split(':')[1].Split('<')[0].Trim());
+
+                    estado = GetEstadoByCantidad(cantidad);
+
+                    horario = string.Empty;
+                }
 
                 var estacion = new BicicletaEstacion
                     {
@@ -99,6 +116,21 @@ namespace ABServicios.Controllers
                     Actualizacion = DateTime.UtcNow,
                     Estaciones = estaciones,
                 };
+        }
+
+        private static string GetEstadoByCantidad(int cantidad)
+        {
+            if (cantidad == 0)
+                return "Sin disponibilidad";
+
+            if (cantidad <= 3)
+                return "Disponibilidad baja";
+
+            if (cantidad <= 10)
+                return "Disponibilidad media";
+
+            return "Disponibilidad alta";
+
         }
     }
 }
