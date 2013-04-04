@@ -11,13 +11,22 @@ namespace ABServicios
 	/// </summary>
 	public class Scraper
 	{
-		public HtmlNode GetNodes(Uri url)
+	    private readonly Encoding _encoding;
+        
+        public Scraper(){}
+
+	    public Scraper(Encoding encoding)
+        {
+            _encoding = encoding;
+        }
+
+	    public HtmlNode GetNodes(Uri url)
         {
             // Create the WebRequest for the URL we are using
             var req = WebRequest.Create(url);
-				
-			// Get the stream from the returned web response
-			var stream = new StreamReader(req.GetResponse().GetResponseStream(), Encoding.UTF7);
+
+            // Get the stream from the returned web response
+            var stream = _encoding != null ? new StreamReader(req.GetResponse().GetResponseStream(), _encoding) : new StreamReader(req.GetResponse().GetResponseStream());
             
             var htmlDocument = new HtmlDocument();
             htmlDocument.Load(stream);

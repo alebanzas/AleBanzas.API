@@ -21,6 +21,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -116,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
+    <Compile Include="Controllers\BicicletasController.cs" />
     <Compile Include="Controllers\SubteController.cs" />
     <Compile Include="Controllers\DivisaController.cs" />
     <Compile Include="Controllers\LicenseController.cs" />
@@ -127,6 +132,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BicicletasStatusModel.cs" />
     <Compile Include="Models\SubteStatusModel.cs" />
     <Compile Include="Models\DivisaModel.cs" />
     <Compile Include="Models\DivisaViewModel.cs" />
