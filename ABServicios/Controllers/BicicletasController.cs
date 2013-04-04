@@ -66,6 +66,9 @@ namespace ABServicios.Controllers
                 //<div style="height:100px;"><span class="style1">RETIRO
                 //<br>Cerrado. Horario de atención: Lun a Vie de 8 a 20. Sáb 9 a 15.</span>
                 //<br><span class="style2">Cant. Bicicletas disponibles: 8</span><br></div>
+
+                //<div style="height:100px;"><span class="style1">RETIRO</span>
+                //<br><span class="style2">Cant. Bicicletas disponibles: 2</span><br></div>
                 string arg1 = a[1].Split(new[] { "'," }, StringSplitOptions.RemoveEmptyEntries)[0];
 
                 var arg2 = arg1.Split(new[] { "<br>" }, StringSplitOptions.RemoveEmptyEntries);
