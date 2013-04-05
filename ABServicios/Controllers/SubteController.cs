@@ -12,7 +12,7 @@ namespace ABServicios.Controllers
 {
     public class SubteController : Controller
     {
-        private const string CacheKey = "Subte";
+        public static string CacheKey = "Subte";
 
         //
         // GET: /Subte/

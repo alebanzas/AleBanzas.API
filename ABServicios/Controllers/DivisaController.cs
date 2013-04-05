@@ -19,7 +19,7 @@ namespace ABServicios.Controllers
     {
         private readonly IRepository<DolarHistorico> _dolarRepo;
 
-        private const string CacheKey = "Divisa";
+        public static string CacheKey = "Divisa";
 
         public DivisaController()
         {
