@@ -12,7 +12,7 @@ namespace ABServicios.Controllers
 {
     public class BicicletasController : Controller
     {
-        private const string CacheKey = "Bicicletas";
+        public static string CacheKey = "Bicicletas";
 
         //
         // GET: /Bicicletas/
