@@ -74,10 +74,22 @@ namespace ABServicios.Controllers
                      * <div class="separador"></div></span></li>
                      */
 
+                    /*
+                     <li class="transitoDescripcion">
+                     * Retiro-Villa Rosa<br>
+                     * <a href="#" class="demora" alt="Demora" title="Demora">Demora<b class="detalleAmpliar">+</b></a>
+                     * <span><b class="color">Retiro-Villa Rosa</b>
+                     * <br><b class="demora">Demora</b>
+                     * <div class="separador"></div>
+                     * 18:30 hs. El seervicio se halla demorado por accidente de una persona altura Scalabrini Ortiz.</span></li>
+                     
+                     */
+
                     var ra = new RamalTrenModel();
                     ra.Nombre = ramal.InnerHtml.Split(new[] { "<br>" }, StringSplitOptions.RemoveEmptyEntries)[0];
-                    ra.Estado = ramal.CssSelect("a").FirstOrDefault().InnerText;
-                    ra.MasInfo = "";
+                    ra.Estado = ramal.CssSelect("a").FirstOrDefault().InnerText.Replace("+", "").Trim();
+                    string[] strings = ramal.InnerHtml.Split(new[] { "<div class=\"separador\"></div>" }, StringSplitOptions.RemoveEmptyEntries);
+                    ra.MasInfo = strings.Length > 1 ? strings[1].Replace("</span>", "") : "";
 
                     r.Add(ra);
                 }
