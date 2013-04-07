@@ -34,7 +34,12 @@ namespace ABServicios.Controllers
         {
             try
             {
-                var hoteles = _hotelRepo.ToList();
+                (new SubteController()).Index();
+                (new TrenesController()).Index();
+                (new DivisaController()).Index();
+                (new BicicletasController()).Index();
+                (new SUBEController()).RecargaAll();
+                (new SUBEController()).VentaAll();
             }
             catch(Exception ex)
             {
