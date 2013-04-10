@@ -43,8 +43,26 @@ namespace ABServicios.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-
         private static SubteStatusModel GetModel()
+        {
+            try
+            {
+                return GetModelFromMetrovias();
+            }
+            catch (Exception)
+            {
+                try
+                {
+                    return GetModelFromLaNacion();
+                }
+                catch (Exception)
+                {
+                    return new SubteStatusModel();
+                }
+            }
+        }
+
+        private static SubteStatusModel GetModelFromMetrovias()
         {
             var html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.metrovias.com.ar/V2/InfoSubteSplash.asp"));
 
@@ -60,5 +78,40 @@ namespace ABServicios.Controllers
                     Lineas = lineas,
                 };
         }
+
+
+        private static SubteStatusModel GetModelFromLaNacion()
+        {
+            HtmlNode html = new Scraper().GetNodes(new Uri("http://servicios.lanacion.com.ar/transito/"));
+
+            var cssSelect = html.CssSelect("section.subtes");
+            var script = cssSelect.CssSelect("ul li");
+            
+            var ssi = new List<SubteStatusItem>();
+            foreach (var linea in script)
+            {
+                /*
+                    <li class="lineaA">
+                 * <a alt="Línea A" title="Línea A" class="normal">Normal</a>
+                 * <span><b class="color">Línea A</b>
+                 * <b class="pipe">|</b><b class="normal">Normal</b>
+                 * <br><b>Ambos sentidos</b>
+                 * <div class="separador"></div></span></li>
+                    */
+
+                var ra = new SubteStatusItem();
+                ra.Nombre = linea.CssSelect("a").FirstOrDefault().GetAttributeValue("title");
+                ra.Detalles = linea.CssSelect("a").FirstOrDefault().InnerText.Replace("+", "").Trim();
+                
+                ssi.Add(ra);
+            }
+
+            return new SubteStatusModel
+            {
+                Actualizacion = DateTime.UtcNow,
+                Lineas = ssi,
+            };
+        }
+
     }
 }
