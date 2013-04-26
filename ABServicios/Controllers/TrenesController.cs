@@ -46,7 +46,7 @@ namespace ABServicios.Controllers
 
         private static TrenesStatusModel GetModel()
         {
-            HtmlNode html = new Scraper().GetNodes(new Uri("http://servicios.lanacion.com.ar/transito/"));
+            HtmlNode html = new Scraper().GetNodes(new Uri("http://servicios.lanacion.com.ar/transito/?sitio=desktop"));
 
             var cssSelect = html.CssSelect("section.trenes");
             var script = cssSelect.CssSelect("nav ul li");
