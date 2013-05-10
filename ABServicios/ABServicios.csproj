@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
     <Compile Include="Controllers\BicicletasController.cs" />
+    <Compile Include="Controllers\BocaController.cs" />
     <Compile Include="Controllers\TrenesController.cs" />
     <Compile Include="Controllers\SubteController.cs" />
     <Compile Include="Controllers\DivisaController.cs" />
