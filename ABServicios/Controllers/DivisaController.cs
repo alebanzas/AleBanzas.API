@@ -133,8 +133,8 @@ namespace ABServicios.Controllers
                 {
                     Nombre = "Dólar",
                     Simbolo = "U$S",
-                    ValorCompra = compra,
-                    ValorVenta = venta,
+                    ValorCompra = compra.Substring(0, compra.Length - 1),
+                    ValorVenta = venta.Substring(0, venta.Length - 2),
                     Variacion = variacion,
                     Actualizacion = fecha,
                 });
@@ -148,8 +148,8 @@ namespace ABServicios.Controllers
                 {
                     Nombre = "Dólar Blue",
                     Simbolo = "U$S",
-                    ValorCompra = compra,
-                    ValorVenta = venta,
+                    ValorCompra = compra.Substring(0, compra.Length - 1),
+                    ValorVenta = venta.Substring(0, venta.Length - 1),
                     Variacion = variacion,
                     Actualizacion = fecha,
                 });
@@ -161,12 +161,15 @@ namespace ABServicios.Controllers
 
             try
             {
+                compra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
+                venta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture)*1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
+
                 divisas.Add(new DivisaViewModel
                 {
                     Nombre = "Dólar Turístico",
                     Simbolo = "U$S",
-                    ValorCompra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
-                    ValorVenta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ','),
+                    ValorCompra = compra.Substring(0, compra.Length - 1),
+                    ValorVenta = venta.Substring(0, venta.Length - 1),
                     Variacion = variacionOficial,
                     Actualizacion = fechaOficial,
                 });
