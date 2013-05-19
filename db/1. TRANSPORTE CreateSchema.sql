@@ -17,8 +17,8 @@ CREATE TABLE dbo.GUIATBA_Transporte
 	Codigo nvarchar(50) NOT NULL,
 	Ramal nvarchar(100) NOT NULL,
 	Ubicacion geography NOT NULL,
-	DescripcionIda text NULL,
-	DescripcionVuelta text NULL
+	DescripcionRecorrido text NULL,
+	Regreso bit NOT NULL CONSTRAINT DF_GUIATBA_TipoTransporte_Regreso DEFAULT ((0))
 	)  ON [PRIMARY]
 	 TEXTIMAGE_ON [PRIMARY]
 GO

@@ -1,4 +1,4 @@
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 1 A - Est. Morón','1','A - Est. Morón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 1 A - Est. Morón','1','A - Est. Morón','LINESTRING ( 
 -58.441482 -34.620519, 
 -58.449196 -34.623714, 
 -58.455773 -34.626309, 
@@ -73,9 +73,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.618498 -34.6456, 
 -58.619731 -34.645538, 
 -58.619764 -34.6474
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 2 A - Lomas del Mirador','2','A - Lomas del Mirador','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 2 A - Lomas del Mirador','2','A - Lomas del Mirador','LINESTRING ( 
 -58.353001 -34.623725, 
 -58.354064 -34.622323, 
 -58.356048 -34.618279, 
@@ -139,9 +139,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.541829 -34.658203, 
 -58.540756 -34.657445, 
 -58.540273 -34.65788
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 2 B - Lomas del Mirador','2','B - Lomas del Mirador','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 2 B - Lomas del Mirador','2','B - Lomas del Mirador','LINESTRING ( 
 -58.367963 -34.612243, 
 -58.367164 -34.612178, 
 -58.367013 -34.61336, 
@@ -185,9 +185,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.541829 -34.658203, 
 -58.540756 -34.657445, 
 -58.540273 -34.65788
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 4 A - Correo Central','4','A - Correo Central','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 4 A - Correo Central','4','A - Correo Central','LINESTRING ( 
 -58.53316 -34.660758, 
 -58.524878 -34.656351, 
 -58.525993 -34.655557, 
@@ -262,9 +262,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.352744 -34.62399, 
 -58.351564 -34.624273, 
 -58.347487 -34.62381
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 4 B - Darsena Sur','4','B - Darsena Sur','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 4 B - Darsena Sur','4','B - Darsena Sur','LINESTRING ( 
 -58.53316 -34.660758, 
 -58.524878 -34.656351, 
 -58.525993 -34.655557, 
@@ -341,9 +341,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.354653 -34.62238, 
 -58.358688 -34.622646, 
 -58.355941 -34.62531
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 4 C - Central Costanera','4','C - Central Costanera','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 4 C - Central Costanera','4','C - Central Costanera','LINESTRING ( 
 -58.53316 -34.660758, 
 -58.524878 -34.656351, 
 -58.525993 -34.655557, 
@@ -412,9 +412,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.368613 -34.600423, 
 -58.369309 -34.600538, 
 -58.36918 -34.60177
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 5 A - Retiro','5','A - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 5 A - Retiro','5','A - Retiro','LINESTRING ( 
 -58.486972 -34.675778, 
 -58.48619 -34.67644, 
 -58.487799 -34.677861, 
@@ -498,9 +498,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.371648 -34.58503, 
 -58.376541 -34.582424, 
 -58.377195 -34.58327
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 5 B - Retiro','5','B - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 5 B - Retiro','5','B - Retiro','LINESTRING ( 
 -58.487005 -34.635733, 
 -58.487594 -34.635229, 
 -58.474451 -34.632004, 
@@ -555,9 +555,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.371648 -34.58503, 
 -58.376541 -34.582424, 
 -58.377195 -34.58327
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 A - Villa Soldati por Caseros','6','A - Villa Soldati por Caseros','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 A - Villa Soldati por Caseros','6','A - Villa Soldati por Caseros','LINESTRING ( 
 -58.375006 -34.58055, 
 -58.369008 -34.583987, 
 -58.371884 -34.587466, 
@@ -630,9 +630,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.442481 -34.661025, 
 -58.443542 -34.660161, 
 -58.44455 -34.66096
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 B - Villa Soldati por Brasil','6','B - Villa Soldati por Brasil','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 B - Villa Soldati por Brasil','6','B - Villa Soldati por Brasil','LINESTRING ( 
 -58.375006 -34.58055, 
 -58.369008 -34.583987, 
 -58.371884 -34.587466, 
@@ -703,9 +703,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.442481 -34.661025, 
 -58.443542 -34.660161, 
 -58.44455 -34.66096
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 C - Pompeya por Caseros','6','C - Pompeya por Caseros','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 C - Pompeya por Caseros','6','C - Pompeya por Caseros','LINESTRING ( 
 -58.375006 -34.58055, 
 -58.369008 -34.583987, 
 -58.371884 -34.587466, 
@@ -758,9 +758,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.416302 -34.64844, 
 -58.416344 -34.649684, 
 -58.416387 -34.65206
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 D - Pompeya por Brasil','6','D - Pompeya por Brasil','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 6 D - Pompeya por Brasil','6','D - Pompeya por Brasil','LINESTRING ( 
 -58.375006 -34.58055, 
 -58.369008 -34.583987, 
 -58.371884 -34.587466, 
@@ -811,9 +811,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.416302 -34.64844, 
 -58.416344 -34.649684, 
 -58.416387 -34.65206
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 7 A - Parque Avellaneda','7','A - Parque Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 7 A - Parque Avellaneda','7','A - Parque Avellaneda','LINESTRING ( 
 -58.374974 -34.580559, 
 -58.369073 -34.583933, 
 -58.371777 -34.587237, 
@@ -882,9 +882,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.468766 -34.648367, 
 -58.473765 -34.644378, 
 -58.478614 -34.64055
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 7 B - Barrio Samore','7','B - Barrio Samore','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 7 B - Barrio Samore','7','B - Barrio Samore','LINESTRING ( 
 -58.374974 -34.580559, 
 -58.369073 -34.583933, 
 -58.371777 -34.587237, 
@@ -975,9 +975,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.472349 -34.670509, 
 -58.473809 -34.671903, 
 -58.474935 -34.67100
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 A - Aeropuerto Ezeiza por Liniers','8','A - Aeropuerto Ezeiza por Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 A - Aeropuerto Ezeiza por Liniers','8','A - Aeropuerto Ezeiza por Liniers','LINESTRING ( 
 -58.368032 -34.63718, 
 -58.36815 -34.636279, 
 -58.368333 -34.635367, 
@@ -1242,9 +1242,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.541583 -34.813271, 
 -58.541561 -34.812772, 
 -58.541626 -34.81231
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 B - Mercado Central por Liniers','8','B - Mercado Central por Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 B - Mercado Central por Liniers','8','B - Mercado Central por Liniers','LINESTRING ( 
 -58.368032 -34.63718, 
 -58.36815 -34.636279, 
 -58.368333 -34.635367, 
@@ -1365,9 +1365,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.490352 -34.709544, 
 -58.491982 -34.711061, 
 -58.491188 -34.71166
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 C - Liniers','8','C - Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 C - Liniers','8','C - Liniers','LINESTRING ( 
 -58.368032 -34.63718, 
 -58.36815 -34.636279, 
 -58.368333 -34.635367, 
@@ -1450,9 +1450,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.52507 -34.639063, 
 -58.530028 -34.639434, 
 -58.529963 -34.64060
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 D - Semirapido - Liniers por autopista','8','D - Semirapido - Liniers por autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 8 D - Semirapido - Liniers por autopista','8','D - Semirapido - Liniers por autopista','LINESTRING ( 
 -58.368183 -34.622813, 
 -58.36844 -34.620572, 
 -58.368569 -34.618319, 
@@ -1562,9 +1562,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.522517 -34.638851, 
 -58.526336 -34.639135, 
 -58.527732 -34.63925
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 9 A - 1 - Caraza por Moreno','9','A - 1 - Caraza por Moreno','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 9 A - 1 - Caraza por Moreno','9','A - 1 - Caraza por Moreno','LINESTRING ( 
 -58.37431 -34.585551, 
 -58.372957 -34.586275, 
 -58.372259 -34.586381, 
@@ -1662,9 +1662,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.427857 -34.700543, 
 -58.426687 -34.699907, 
 -58.4257 -34.70118
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 9 B - 2 - Caraza por Castro','9','B - 2 - Caraza por Castro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 9 B - 2 - Caraza por Castro','9','B - 2 - Caraza por Castro','LINESTRING ( 
 -58.37431 -34.585551, 
 -58.372957 -34.586275, 
 -58.372259 -34.586381, 
@@ -1759,9 +1759,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.427857 -34.700543, 
 -58.426687 -34.699907, 
 -58.4257 -34.70118
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 10 A - Wilde','10','A - Wilde','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 10 A - Wilde','10','A - Wilde','LINESTRING ( 
 -58.423265 -34.57116, 
 -58.421734 -34.571818, 
 -58.420374 -34.572445, 
@@ -1874,9 +1874,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.348087 -34.713458, 
 -58.347605 -34.713616, 
 -58.346896 -34.71418
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 12 A - Palermo','12','A - Palermo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 12 A - Palermo','12','A - Palermo','LINESTRING ( 
 -58.375703 -34.65583, 
 -58.37462 -34.655574, 
 -58.375812 -34.652326, 
@@ -1928,9 +1928,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.42584 -34.578358, 
 -58.428029 -34.577759, 
 -58.429617 -34.57718
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 12 B - Palermo','12','B - Palermo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 12 B - Palermo','12','B - Palermo','LINESTRING ( 
 -58.379609 -34.627778, 
 -58.382227 -34.627716, 
 -58.382269 -34.624809, 
@@ -1969,9 +1969,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.42584 -34.578358, 
 -58.428029 -34.577759, 
 -58.429617 -34.57718
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 A - Est. Benavídez','15','A - Est. Benavídez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 A - Est. Benavídez','15','A - Est. Benavídez','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2092,9 +2092,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.698963 -34.417177, 
 -58.695551 -34.41523, 
 -58.684738 -34.40938
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 B - Est. Benavídez por Hospital Naval','15','B - Est. Benavídez por Hospital Naval','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 B - Est. Benavídez por Hospital Naval','15','B - Est. Benavídez por Hospital Naval','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2215,9 +2215,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.698963 -34.417177, 
 -58.695551 -34.41523, 
 -58.684738 -34.40938
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 C - Est. Pacheco','15','C - Est. Pacheco','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 C - Est. Pacheco','15','C - Est. Pacheco','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2317,9 +2317,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.662678 -34.475253, 
 -58.658216 -34.472847, 
 -58.651006 -34.46909
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 D - Don Torcuato','15','D - Don Torcuato','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 D - Don Torcuato','15','D - Don Torcuato','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2416,9 +2416,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.614559 -34.485353, 
 -58.616148 -34.486096, 
 -58.617928 -34.48712
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 E - Barrio 1º de Mayo','15','E - Barrio 1º de Mayo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 E - Barrio 1º de Mayo','15','E - Barrio 1º de Mayo','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2524,9 +2524,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.732523 -34.453634, 
 -58.73409 -34.454695, 
 -58.73349 -34.45589
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 F - Pte Saavedra','15','F - Pte Saavedra','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 F - Pte Saavedra','15','F - Pte Saavedra','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2606,9 +2606,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.48281 -34.54262, 
 -58.481909 -34.542391, 
 -58.481693 -34.54260
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 G - Barrancas de Belgrano','15','G - Barrancas de Belgrano','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 G - Barrancas de Belgrano','15','G - Barrancas de Belgrano','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2664,9 +2664,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.447125 -34.560099, 
 -58.448262 -34.559727, 
 -58.450645 -34.55838
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 H - Est. Benavídez','15','H - Est. Benavídez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 H - Est. Benavídez','15','H - Est. Benavídez','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2786,9 +2786,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.698963 -34.417177, 
 -58.695551 -34.41523, 
 -58.684738 -34.40938
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 I - Est. Benavídez','15','I - Est. Benavídez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 I - Est. Benavídez','15','I - Est. Benavídez','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -2908,9 +2908,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.698963 -34.417177, 
 -58.695551 -34.41523, 
 -58.684738 -34.40938
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 J - Est. Pacheco','15','J - Est. Pacheco','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 J - Est. Pacheco','15','J - Est. Pacheco','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -3010,9 +3010,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.662678 -34.475253, 
 -58.658216 -34.472847, 
 -58.651006 -34.46909
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 K','15','K','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 K','15','K','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -3106,9 +3106,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.60307 -34.486395, 
 -58.608648 -34.485847, 
 -58.614142 -34.48515
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 L','15','L','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 15 L','15','L','LINESTRING ( 
 -58.416226 -34.662104, 
 -58.416946 -34.661549, 
 -58.416646 -34.659562, 
@@ -3206,9 +3206,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.65858 -34.476491, 
 -58.669825 -34.473377, 
 -58.681068 -34.46983
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 17 A - Wilde','17','A - Wilde','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 17 A - Wilde','17','A - Wilde','LINESTRING ( 
 -58.390777 -34.58238, 
 -58.388342 -34.583457, 
 -58.389232 -34.584774, 
@@ -3429,9 +3429,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.33724 -34.72097, 
 -58.338056 -34.721676, 
 -58.338754 -34.72230
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 19 A - Est. Carapachay','19','A - Est. Carapachay','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 19 A - Est. Carapachay','19','A - Est. Carapachay','LINESTRING ( 
 -58.406142 -34.608884, 
 -58.406094 -34.608879, 
 -58.406072 -34.608884, 
@@ -3704,9 +3704,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.543089 -34.531193, 
 -58.543809 -34.531728, 
 -58.544823 -34.53250
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 20 A - Esteban Echeverría por Virgen de Itati','20','A - Esteban Echeverría por Virgen de Itati','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 20 A - Esteban Echeverría por Virgen de Itati','20','A - Esteban Echeverría por Virgen de Itati','LINESTRING ( 
 -58.377012 -34.583334, 
 -58.372357 -34.586125, 
 -58.371884 -34.587873, 
@@ -3819,9 +3819,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.447405 -34.773063, 
 -58.452469 -34.775601, 
 -58.460515 -34.77998
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 20 B - Esteban Echeverría por Hornos','20','B - Esteban Echeverría por Hornos','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 20 B - Esteban Echeverría por Hornos','20','B - Esteban Echeverría por Hornos','LINESTRING ( 
 -58.377012 -34.583334, 
 -58.372357 -34.586125, 
 -58.371884 -34.587873, 
@@ -3934,9 +3934,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.447405 -34.773063, 
 -58.452469 -34.775601, 
 -58.460515 -34.77998
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 A - Dardo Rocha, Tigre','21','A - Dardo Rocha, Tigre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 A - Dardo Rocha, Tigre','21','A - Dardo Rocha, Tigre','LINESTRING ( 
 -58.439525 -34.719591, 
 -58.439525 -34.719591, 
 -58.439717 -34.719715, 
@@ -4488,9 +4488,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.583624 -34.427756, 
 -58.583677 -34.427576, 
 -58.583694 -34.42746
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 B - Fábrica Ford','21','B - Fábrica Ford','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 B - Fábrica Ford','21','B - Fábrica Ford','LINESTRING ( 
 -58.439525 -34.719591, 
 -58.439525 -34.719591, 
 -58.439717 -34.719715, 
@@ -5051,9 +5051,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.698948 -34.447892, 
 -58.698948 -34.447799, 
 -58.698985 -34.44769
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 C - Puente Saavedra','21','C - Puente Saavedra','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 C - Puente Saavedra','21','C - Puente Saavedra','LINESTRING ( 
 -58.439525 -34.719591, 
 -58.439525 -34.719591, 
 -58.439717 -34.719715, 
@@ -5428,9 +5428,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.476281 -34.538175, 
 -58.476334 -34.537972, 
 -58.476523 -34.53750
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 D - El Talar, Tigre','21','D - El Talar, Tigre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 D - El Talar, Tigre','21','D - El Talar, Tigre','LINESTRING ( 
 -58.526508 -34.638283, 
 -58.525188 -34.638168, 
 -58.525629 -34.634566, 
@@ -5797,9 +5797,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.659461 -34.475997, 
 -58.661039 -34.475565, 
 -58.661934 -34.47529
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 E - Tigre','21','E - Tigre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 E - Tigre','21','E - Tigre','LINESTRING ( 
 -58.526508 -34.638283, 
 -58.525188 -34.638168, 
 -58.525629 -34.634566, 
@@ -6204,9 +6204,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.583908 -34.423274, 
 -58.58305 -34.422787, 
 -58.582008 -34.42219
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 F - Est. Florida ','21','F - Est. Florida ','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 F - Est. Florida ','21','F - Est. Florida ','LINESTRING ( 
 -58.526476 -34.638275, 
 -58.525199 -34.638178, 
 -58.525629 -34.634576, 
@@ -6455,9 +6455,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.509278 -34.534613, 
 -58.513634 -34.53669, 
 -58.5127 -34.5371
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 G - Cementerio de Olivos','21','G - Cementerio de Olivos','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 G - Cementerio de Olivos','21','G - Cementerio de Olivos','LINESTRING ( 
 -58.526519 -34.638319, 
 -58.525188 -34.638195, 
 -58.525618 -34.634576, 
@@ -6730,9 +6730,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.509107 -34.516047, 
 -58.510066 -34.516466, 
 -58.511971 -34.5173
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 H - Puente Saavedra','21','H - Puente Saavedra','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 H - Puente Saavedra','21','H - Puente Saavedra','LINESTRING ( 
 -58.52653 -34.6383, 
 -58.525177 -34.638195, 
 -58.525629 -34.634576, 
@@ -6937,9 +6937,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.476281 -34.538175, 
 -58.476334 -34.537972, 
 -58.476523 -34.53750
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 I - Puente Saavedra - Expreso','21','I - Puente Saavedra - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 I - Puente Saavedra - Expreso','21','I - Puente Saavedra - Expreso','LINESTRING ( 
 -58.439525 -34.719591, 
 -58.439525 -34.719591, 
 -58.439717 -34.719715, 
@@ -7314,9 +7314,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.476281 -34.538175, 
 -58.476334 -34.537972, 
 -58.476523 -34.53750
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 J - Fábrica Ford - Expreso','21','J - Fábrica Ford - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 J - Fábrica Ford - Expreso','21','J - Fábrica Ford - Expreso','LINESTRING ( 
 -58.439525 -34.719591, 
 -58.439525 -34.719591, 
 -58.439717 -34.719715, 
@@ -7877,9 +7877,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.698948 -34.447892, 
 -58.698948 -34.447799, 
 -58.698985 -34.44769
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 K - San Isidro - Expreso','21','K - San Isidro - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 21 K - San Isidro - Expreso','21','K - San Isidro - Expreso','LINESTRING ( 
 -58.439525 -34.719591, 
 -58.439525 -34.719591, 
 -58.439717 -34.719715, 
@@ -8331,9 +8331,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.550567 -34.497852, 
 -58.5512 -34.497405, 
 -58.55281 -34.49587
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 22 A - Quilmes','22','A - Quilmes','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 22 A - Quilmes','22','A - Quilmes','LINESTRING ( 
 -58.373579 -34.581389, 
 -58.36961 -34.583615, 
 -58.366562 -34.585312, 
@@ -8439,9 +8439,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.249715 -34.737133, 
 -58.250306 -34.736322, 
 -58.250991 -34.73660
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 22 B - Quilmes','22','B - Quilmes','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 22 B - Quilmes','22','B - Quilmes','LINESTRING ( 
 -58.373815 -34.59077, 
 -58.375329 -34.592466, 
 -58.373634 -34.593685, 
@@ -8532,9 +8532,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.264156 -34.725194, 
 -58.262376 -34.724243, 
 -58.261516 -34.72369
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 23 A - Retiro','23','A - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 23 A - Retiro','23','A - Retiro','LINESTRING ( 
 -58.444197 -34.660693, 
 -58.439411 -34.65681, 
 -58.438028 -34.655856, 
@@ -8605,9 +8605,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.374893 -34.583387, 
 -58.376471 -34.582459, 
 -58.377189 -34.58326
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 24 A - Wilde por Cementerio de Avellaneda','24','A - Wilde por Cementerio de Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 24 A - Wilde por Cementerio de Avellaneda','24','A - Wilde por Cementerio de Avellaneda','LINESTRING ( 
 -58.494501 -34.602139, 
 -58.494501 -34.602139, 
 -58.494622 -34.602226, 
@@ -8895,9 +8895,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.336485 -34.721561, 
 -58.337232 -34.720989, 
 -58.338059 -34.7216
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 24 B - Wilde por Lynch','24','B - Wilde por Lynch','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 24 B - Wilde por Lynch','24','B - Wilde por Lynch','LINESTRING ( 
 -58.494501 -34.602139, 
 -58.494501 -34.602139, 
 -58.494622 -34.602226, 
@@ -9193,9 +9193,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.336485 -34.721561, 
 -58.337232 -34.720989, 
 -58.338059 -34.7216
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 25 A - Saenz Peña','25','A - Saenz Peña','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 25 A - Saenz Peña','25','A - Saenz Peña','LINESTRING ( 
 -58.366585 -34.628247, 
 -58.365296 -34.629041, 
 -58.360995 -34.6319, 
@@ -9311,9 +9311,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.52624 -34.604635, 
 -58.528944 -34.603788, 
 -58.529845 -34.6034
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 26 A - Flores Sur','26','A - Flores Sur','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 26 A - Flores Sur','26','A - Flores Sur','LINESTRING ( 
 -58.366777 -34.585591, 
 -58.367921 -34.587035, 
 -58.369058 -34.588442, 
@@ -9463,9 +9463,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.444245 -34.642811, 
 -58.445152 -34.643624, 
 -58.445587 -34.6439
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 A - Pte. La Noria','28','A - Pte. La Noria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 A - Pte. La Noria','28','A - Pte. La Noria','LINESTRING ( 
 -58.375124 -34.585056, 
 -58.373097 -34.586204, 
 -58.372656 -34.586266, 
@@ -9603,9 +9603,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.452866 -34.712426, 
 -58.454281 -34.710697, 
 -58.455741 -34.70879
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 B - Liniers','28','B - Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 B - Liniers','28','B - Liniers','LINESTRING ( 
 -58.375124 -34.585056, 
 -58.373097 -34.586204, 
 -58.372656 -34.586266, 
@@ -9788,9 +9788,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.528911 -34.642952, 
 -58.52904 -34.639792, 
 -58.529057 -34.63951
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 C - La Salada','28','C - La Salada','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 C - La Salada','28','C - La Salada','LINESTRING ( 
 -58.375124 -34.585056, 
 -58.373097 -34.586204, 
 -58.372656 -34.586266, 
@@ -9952,9 +9952,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.486555 -34.722751, 
 -58.48474 -34.724155, 
 -58.483508 -34.72306
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 D - Ciudad Universitaria','28','D - Ciudad Universitaria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 D - Ciudad Universitaria','28','D - Ciudad Universitaria','LINESTRING ( 
 -58.418061 -34.655416, 
 -58.416431 -34.654885, 
 -58.416603 -34.655785, 
@@ -10165,9 +10165,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.438263 -34.543954, 
 -58.43777 -34.543256, 
 -58.437556 -34.54301
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 E - Estación Rivadavia','28','E - Estación Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 E - Estación Rivadavia','28','E - Estación Rivadavia','LINESTRING ( 
 -58.418061 -34.655416, 
 -58.416431 -34.654885, 
 -58.416603 -34.655785, 
@@ -10332,9 +10332,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.466737 -34.536002, 
 -58.466309 -34.53669, 
 -58.467585 -34.53734
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 F - Ciudad Universitaria','28','F - Ciudad Universitaria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 F - Ciudad Universitaria','28','F - Ciudad Universitaria','LINESTRING ( 
 -58.529362 -34.638883, 
 -58.529288 -34.637912, 
 -58.529245 -34.636377, 
@@ -10461,9 +10461,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.438263 -34.543954, 
 -58.43777 -34.543256, 
 -58.437556 -34.54301
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 G - La Salada','28','G - La Salada','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 G - La Salada','28','G - La Salada','LINESTRING ( 
 -58.418019 -34.655397, 
 -58.416431 -34.654904, 
 -58.416603 -34.655785, 
@@ -10537,9 +10537,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.486555 -34.722751, 
 -58.48474 -34.724155, 
 -58.483508 -34.72306
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 H - Ciudad Universitaria','28','H - Ciudad Universitaria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 H - Ciudad Universitaria','28','H - Ciudad Universitaria','LINESTRING ( 
 -58.456943 -34.707318, 
 -58.458252 -34.706401, 
 -58.458424 -34.706155, 
@@ -10698,9 +10698,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.438263 -34.543954, 
 -58.43777 -34.543256, 
 -58.437556 -34.54301
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 I - Estación Rivadavia','28','I - Estación Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 I - Estación Rivadavia','28','I - Estación Rivadavia','LINESTRING ( 
 -58.456963 -34.707327, 
 -58.458252 -34.706401, 
 -58.458424 -34.706155, 
@@ -10813,9 +10813,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.466737 -34.536002, 
 -58.466309 -34.53669, 
 -58.467585 -34.53734
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 J - Ciudad Universitaria - Expreso','28','J - Ciudad Universitaria - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 J - Ciudad Universitaria - Expreso','28','J - Ciudad Universitaria - Expreso','LINESTRING ( 
 -58.456943 -34.707318, 
 -58.458252 -34.706401, 
 -58.458424 -34.706155, 
@@ -10953,9 +10953,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.438263 -34.543954, 
 -58.43777 -34.543256, 
 -58.437556 -34.54301
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 K - Ciudad Universitaria - Expreso','28','K - Ciudad Universitaria - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 K - Ciudad Universitaria - Expreso','28','K - Ciudad Universitaria - Expreso','LINESTRING ( 
 -58.529352 -34.638919, 
 -58.529352 -34.63835, 
 -58.529277 -34.637869, 
@@ -11059,9 +11059,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.438263 -34.543954, 
 -58.43777 -34.543256, 
 -58.437556 -34.54301
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 L - Liniers por Roca - Expreso','28','L - Liniers por Roca - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 28 L - Liniers por Roca - Expreso','28','L - Liniers por Roca - Expreso','LINESTRING ( 
 -58.375124 -34.585056, 
 -58.373097 -34.586204, 
 -58.372656 -34.586266, 
@@ -11211,9 +11211,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.528911 -34.642952, 
 -58.52904 -34.639792, 
 -58.529057 -34.63951
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 A - Olivos','29','A - Olivos','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 A - Olivos','29','A - Olivos','LINESTRING ( 
 -58.365296 -34.640357, 
 -58.364761 -34.64027, 
 -58.363666 -34.642122, 
@@ -11353,9 +11353,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.477547 -34.506168, 
 -58.478212 -34.506529, 
 -58.478673 -34.50673
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 B - Parque Sarmiento','29','B - Parque Sarmiento','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 B - Parque Sarmiento','29','B - Parque Sarmiento','LINESTRING ( 
 -58.365296 -34.640357, 
 -58.364761 -34.64027, 
 -58.363666 -34.642122, 
@@ -11470,9 +11470,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.496263 -34.55167, 
 -58.49723 -34.549973, 
 -58.499118 -34.55106
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 C - Estación Rivadavia','29','C - Estación Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 C - Estación Rivadavia','29','C - Estación Rivadavia','LINESTRING ( 
 -58.365296 -34.640357, 
 -58.364761 -34.64027, 
 -58.363666 -34.642122, 
@@ -11581,9 +11581,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.46764 -34.537176, 
 -58.467982 -34.536417, 
 -58.466824 -34.53595
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 D - Estación Belgrano C','29','D - Estación Belgrano C','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 29 D - Estación Belgrano C','29','D - Estación Belgrano C','LINESTRING ( 
 -58.375039 -34.607179, 
 -58.379395 -34.604847, 
 -58.380735 -34.604778, 
@@ -11633,9 +11633,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.447448 -34.560099, 
 -58.449508 -34.559038, 
 -58.450623 -34.55840
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 A - Estación Lanús','32','A - Estación Lanús','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 A - Estación Lanús','32','A - Estación Lanús','LINESTRING ( 
 -58.4073 -34.609237, 
 -58.406582 -34.609189, 
 -58.406356 -34.609183, 
@@ -11776,9 +11776,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.392141 -34.708227, 
 -58.391787 -34.708235, 
 -58.391438 -34.70822
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 B - Barrio 9 de Abril','32','B - Barrio 9 de Abril','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 B - Barrio 9 de Abril','32','B - Barrio 9 de Abril','LINESTRING ( 
 -58.4073 -34.609237, 
 -58.406582 -34.609189, 
 -58.406356 -34.609183, 
@@ -11937,9 +11937,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.488894 -34.739364, 
 -58.491017 -34.740386, 
 -58.494734 -34.74225
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 C - Barrio 9 de Abril','32','C - Barrio 9 de Abril','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 C - Barrio 9 de Abril','32','C - Barrio 9 de Abril','LINESTRING ( 
 -58.4073 -34.609237, 
 -58.406582 -34.609189, 
 -58.406356 -34.609183, 
@@ -12105,9 +12105,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.488894 -34.739364, 
 -58.491017 -34.740386, 
 -58.494734 -34.74225
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 D - Lomas de Zamora','32','D - Lomas de Zamora','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 D - Lomas de Zamora','32','D - Lomas de Zamora','LINESTRING ( 
 -58.416431 -34.652971, 
 -58.416474 -34.654242, 
 -58.416468 -34.655313, 
@@ -12193,9 +12193,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.46838 -34.713554, 
 -58.479151 -34.723714, 
 -58.472735 -34.73228
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 E - Ingeniero Budge','32','E - Ingeniero Budge','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 32 E - Ingeniero Budge','32','E - Ingeniero Budge','LINESTRING ( 
 -58.416431 -34.652971, 
 -58.416474 -34.654242, 
 -58.416468 -34.655313, 
@@ -12281,9 +12281,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.465397 -34.717222, 
 -58.463413 -34.719692, 
 -58.462372 -34.72092
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 A - por Barracas y Madariaga','33','A - por Barracas y Madariaga','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 A - por Barracas y Madariaga','33','A - por Barracas y Madariaga','LINESTRING ( 
 -58.440635 -34.54262, 
 -58.438274 -34.542611, 
 -58.436472 -34.542611, 
@@ -12497,9 +12497,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.331856 -34.760987, 
 -58.329129 -34.764549, 
 -58.329667 -34.7647
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 B - por Barracas y Cementerio de Avellaneda','33','B - por Barracas y Cementerio de Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 B - por Barracas y Cementerio de Avellaneda','33','B - por Barracas y Cementerio de Avellaneda','LINESTRING ( 
 -58.440635 -34.54262, 
 -58.438274 -34.542611, 
 -58.436472 -34.542611, 
@@ -12707,9 +12707,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.332242 -34.760635, 
 -58.329301 -34.764496, 
 -58.329838 -34.76479
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 C - por Dock Sud y Madariaga','33','C - por Dock Sud y Madariaga','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 C - por Dock Sud y Madariaga','33','C - por Dock Sud y Madariaga','LINESTRING ( 
 -58.440635 -34.54262, 
 -58.438274 -34.542611, 
 -58.436472 -34.542611, 
@@ -12906,9 +12906,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.334902 -34.756968, 
 -58.329194 -34.764496, 
 -58.32956 -34.76481
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 D - por Dock Sud y Cementerio de Avellaneda','33','D - por Dock Sud y Cementerio de Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 D - por Dock Sud y Cementerio de Avellaneda','33','D - por Dock Sud y Cementerio de Avellaneda','LINESTRING ( 
 -58.440635 -34.54262, 
 -58.438274 -34.542611, 
 -58.436472 -34.542611, 
@@ -13099,9 +13099,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.334902 -34.756968, 
 -58.329194 -34.764496, 
 -58.32956 -34.76481
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 E - por Barracas y Madariaga','33','E - por Barracas y Madariaga','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 E - por Barracas y Madariaga','33','E - por Barracas y Madariaga','LINESTRING ( 
 -58.37344 -34.581513, 
 -58.371991 -34.582309, 
 -58.368988 -34.584014, 
@@ -13264,9 +13264,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.331727 -34.761128, 
 -58.329237 -34.764496, 
 -58.32958 -34.76465
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 F - por Barracas y Cementerio de Avellaneda','33','F - por Barracas y Cementerio de Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 F - por Barracas y Cementerio de Avellaneda','33','F - por Barracas y Cementerio de Avellaneda','LINESTRING ( 
 -58.373021 -34.58169, 
 -58.369787 -34.583528, 
 -58.36896 -34.584004, 
@@ -13420,9 +13420,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.331856 -34.760987, 
 -58.329129 -34.764549, 
 -58.329667 -34.7647
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 G - por Dock Sud y Madariaga','33','G - por Dock Sud y Madariaga','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 G - por Dock Sud y Madariaga','33','G - por Dock Sud y Madariaga','LINESTRING ( 
 -58.373021 -34.58169, 
 -58.369787 -34.583528, 
 -58.36896 -34.584004, 
@@ -13550,9 +13550,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.331856 -34.760987, 
 -58.329129 -34.764549, 
 -58.329667 -34.7647
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 H - por Dock Sud y Cementerio de Avellaneda','33','H - por Dock Sud y Cementerio de Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 H - por Dock Sud y Cementerio de Avellaneda','33','H - por Dock Sud y Cementerio de Avellaneda','LINESTRING ( 
 -58.372571 -34.581972, 
 -58.370361 -34.583227, 
 -58.369073 -34.584004, 
@@ -13737,9 +13737,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.330739 -34.762503, 
 -58.329216 -34.76469, 
 -58.329602 -34.76483
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 I - Est. Remedios de Escalada','33','I - Est. Remedios de Escalada','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 33 I - Est. Remedios de Escalada','33','I - Est. Remedios de Escalada','LINESTRING ( 
 -58.372357 -34.582115, 
 -58.370682 -34.58305, 
 -58.369008 -34.583987, 
@@ -13852,9 +13852,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.37426 -34.661513, 
 -58.374625 -34.660621, 
 -58.373928 -34.65978
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 A - Estación Liniers','34','A - Estación Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 A - Estación Liniers','34','A - Estación Liniers','LINESTRING ( 
 -58.420208 -34.569968, 
 -58.420754 -34.570233, 
 -58.421183 -34.570647, 
@@ -13937,9 +13937,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.527946 -34.637366, 
 -58.527796 -34.638398, 
 -58.526497 -34.638
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 B - Estación Liniers','34','B - Estación Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 B - Estación Liniers','34','B - Estación Liniers','LINESTRING ( 
 -58.434626 -34.553401, 
 -58.43408 -34.553047, 
 -58.433532 -34.552607, 
@@ -14038,9 +14038,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.527946 -34.637366, 
 -58.527796 -34.638398, 
 -58.526497 -34.638
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 C - Estación Liniers','34','C - Estación Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 C - Estación Liniers','34','C - Estación Liniers','LINESTRING ( 
 -58.42436 -34.57934, 
 -58.423575 -34.579889, 
 -58.427889 -34.584552, 
@@ -14111,9 +14111,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.527946 -34.637366, 
 -58.527796 -34.638398, 
 -58.526497 -34.638
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 D - Estación Liniers - Expreso','34','D - Estación Liniers - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 D - Estación Liniers - Expreso','34','D - Estación Liniers - Expreso','LINESTRING ( 
 -58.420208 -34.569968, 
 -58.420754 -34.570233, 
 -58.421183 -34.570647, 
@@ -14196,9 +14196,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.527946 -34.637366, 
 -58.527796 -34.638398, 
 -58.526497 -34.638
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 E - Estación Liniers - Expreso','34','E - Estación Liniers - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 34 E - Estación Liniers - Expreso','34','E - Estación Liniers - Expreso','LINESTRING ( 
 -58.434626 -34.553401, 
 -58.43408 -34.553047, 
 -58.433532 -34.552607, 
@@ -14297,9 +14297,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.527946 -34.637366, 
 -58.527796 -34.638398, 
 -58.526497 -34.638
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 36 A - Villa Celina','36','A - Villa Celina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 36 A - Villa Celina','36','A - Villa Celina','LINESTRING ( 
 -58.418748 -34.578837, 
 -58.420507 -34.580781, 
 -58.421162 -34.580647, 
@@ -14487,9 +14487,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.493994 -34.700597, 
 -58.492787 -34.701379, 
 -58.491967 -34.70186
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 36 B - Puente de La Noria','36','B - Puente de La Noria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 36 B - Puente de La Noria','36','B - Puente de La Noria','LINESTRING ( 
 -58.418866 -34.578978, 
 -58.420571 -34.58079, 
 -58.420959 -34.580666, 
@@ -14675,9 +14675,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.456653 -34.708801, 
 -58.456277 -34.709029, 
 -58.455913 -34.70951
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 37 A - Lanús por Gimnasia y Esgrima','37','A - Lanús por Gimnasia y Esgrima','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 37 A - Lanús por Gimnasia y Esgrima','37','A - Lanús por Gimnasia y Esgrima','LINESTRING ( 
 -58.445259 -34.54209, 
 -58.441397 -34.543362, 
 -58.441192 -34.543478, 
@@ -14918,9 +14918,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.395074 -34.718201, 
 -58.393808 -34.718352, 
 -58.393433 -34.7166
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 37 B - Lanús por Aeroparque Newberry','37','B - Lanús por Aeroparque Newberry','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 37 B - Lanús por Aeroparque Newberry','37','B - Lanús por Aeroparque Newberry','LINESTRING ( 
 -58.445259 -34.54209, 
 -58.441397 -34.543362, 
 -58.441192 -34.543478, 
@@ -15079,9 +15079,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.395074 -34.718201, 
 -58.393808 -34.718352, 
 -58.393433 -34.7166
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 37 C - Lanús','37','C - Lanús','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 37 C - Lanús','37','C - Lanús','LINESTRING ( 
 -58.418325 -34.575949, 
 -58.418098 -34.576434, 
 -58.41781 -34.576824, 
@@ -15163,9 +15163,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.395074 -34.718201, 
 -58.393808 -34.718352, 
 -58.393433 -34.7166
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 A - Chacarita','39','A - Chacarita','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 A - Chacarita','39','A - Chacarita','LINESTRING ( 
 -58.367871 -34.648848, 
 -58.368408 -34.645741, 
 -58.368569 -34.644789, 
@@ -15258,9 +15258,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.450961 -34.588748, 
 -58.450651 -34.588289, 
 -58.4502 -34.58694
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 B - Chacarita por Colegiales','39','B - Chacarita por Colegiales','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 B - Chacarita por Colegiales','39','B - Chacarita por Colegiales','LINESTRING ( 
 -58.367915 -34.648726, 
 -58.368408 -34.645671, 
 -58.368698 -34.643906, 
@@ -15336,9 +15336,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.452727 -34.588279, 
 -58.450817 -34.588791, 
 -58.450172 -34.58691
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 C - Chacarita por Palermo Viejo','39','C - Chacarita por Palermo Viejo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 C - Chacarita por Palermo Viejo','39','C - Chacarita por Palermo Viejo','LINESTRING ( 
 -58.367915 -34.648884, 
 -58.368473 -34.645425, 
 -58.368547 -34.644523, 
@@ -15428,9 +15428,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.450876 -34.588712, 
 -58.450564 -34.587952, 
 -58.450211 -34.58694
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 D - Chacarita','39','D - Chacarita','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 D - Chacarita','39','D - Chacarita','LINESTRING ( 
 -58.380231 -34.627786, 
 -58.382184 -34.627814, 
 -58.382275 -34.627124, 
@@ -15513,9 +15513,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.450425 -34.587679, 
 -58.450178 -34.586955, 
 -58.450414 -34.58686
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 E - Chacarita por Colegiales','39','E - Chacarita por Colegiales','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 E - Chacarita por Colegiales','39','E - Chacarita por Colegiales','LINESTRING ( 
 -58.380617 -34.627805, 
 -58.382162 -34.627876, 
 -58.382173 -34.62708, 
@@ -15582,9 +15582,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.450837 -34.588757, 
 -58.450065 -34.586955, 
 -58.450409 -34.58681
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 F - Chacarita por Palermo Viejo','39','F - Chacarita por Palermo Viejo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 39 F - Chacarita por Palermo Viejo','39','F - Chacarita por Palermo Viejo','LINESTRING ( 
 -58.380724 -34.627822, 
 -58.382077 -34.627876, 
 -58.382291 -34.626446, 
@@ -15668,9 +15668,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.450392 -34.587653, 
 -58.450145 -34.586938, 
 -58.450468 -34.58685
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 41 A - 1 - Munro por Viaducto Carapachay','41','A - 1 - Munro por Viaducto Carapachay','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 41 A - 1 - Munro por Viaducto Carapachay','41','A - 1 - Munro por Viaducto Carapachay','LINESTRING ( 
 -58.411983 -34.626621, 
 -58.411924 -34.627602, 
 -58.411067 -34.627558, 
@@ -15814,9 +15814,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.542248 -34.52908, 
 -58.5428 -34.528638, 
 -58.543363 -34.52821
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 41 B - 2 - Munro por Dorrego','41','B - 2 - Munro por Dorrego','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 41 B - 2 - Munro por Dorrego','41','B - 2 - Munro por Dorrego','LINESTRING ( 
 -58.411983 -34.626621, 
 -58.411924 -34.627602, 
 -58.411067 -34.627558, 
@@ -15969,9 +15969,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.542248 -34.52908, 
 -58.5428 -34.528638, 
 -58.543363 -34.52821
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 A - Ciudad Universitaria por Lugones','42','A - Ciudad Universitaria por Lugones','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 A - Ciudad Universitaria por Lugones','42','A - Ciudad Universitaria por Lugones','LINESTRING ( 
 -58.407564 -34.651797, 
 -58.410218 -34.653792, 
 -58.411302 -34.654144, 
@@ -16134,9 +16134,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.44263 -34.542842, 
 -58.443629 -34.542571, 
 -58.444895 -34.54219
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 B - Ciudad Universitaria por La Pampa','42','B - Ciudad Universitaria por La Pampa','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 B - Ciudad Universitaria por La Pampa','42','B - Ciudad Universitaria por La Pampa','LINESTRING ( 
 -58.407564 -34.651797, 
 -58.410218 -34.653792, 
 -58.411302 -34.654144, 
@@ -16272,9 +16272,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.44263 -34.542842, 
 -58.443629 -34.542571, 
 -58.444895 -34.54219
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 C - Ciudad Universitaria por Lugones - Expreso','42','C - Ciudad Universitaria por Lugones - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 C - Ciudad Universitaria por Lugones - Expreso','42','C - Ciudad Universitaria por Lugones - Expreso','LINESTRING ( 
 -58.436472 -34.618322, 
 -58.437582 -34.615929, 
 -58.437807 -34.614032, 
@@ -16366,9 +16366,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.44263 -34.542842, 
 -58.443629 -34.542571, 
 -58.444895 -34.54219
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 D - Ciudad Universitaria por La Pampa - Expreso','42','D - Ciudad Universitaria por La Pampa - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 42 D - Ciudad Universitaria por La Pampa - Expreso','42','D - Ciudad Universitaria por La Pampa - Expreso','LINESTRING ( 
 -58.436461 -34.618234, 
 -58.437336 -34.616557, 
 -58.437582 -34.615929, 
@@ -16488,9 +16488,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.44263 -34.542842, 
 -58.443629 -34.542571, 
 -58.444895 -34.54219
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 44 A - Barrancas de Belgrano','44','A - Barrancas de Belgrano','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 44 A - Barrancas de Belgrano','44','A - Barrancas de Belgrano','LINESTRING ( 
 -58.417504 -34.657268, 
 -58.417836 -34.65755, 
 -58.416865 -34.658363, 
@@ -16609,9 +16609,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.448042 -34.559887, 
 -58.449469 -34.559091, 
 -58.450543 -34.55850
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 A - Remedios de Escalada','45','A - Remedios de Escalada','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 A - Remedios de Escalada','45','A - Remedios de Escalada','LINESTRING ( 
 -58.441578 -34.54209, 
 -58.440721 -34.542602, 
 -58.438983 -34.542602, 
@@ -16723,9 +16723,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.40655 -34.717435, 
 -58.405197 -34.719039, 
 -58.405175 -34.71861
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 B - Remedios de Escalada - Expreso','45','B - Remedios de Escalada - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 B - Remedios de Escalada - Expreso','45','B - Remedios de Escalada - Expreso','LINESTRING ( 
 -58.372549 -34.581964, 
 -58.371295 -34.58267, 
 -58.369953 -34.583421, 
@@ -16822,9 +16822,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.407322 -34.714454, 
 -58.40775 -34.715918, 
 -58.40524 -34.71891
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 C - Constitución - Expreso','45','C - Constitución - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 C - Constitución - Expreso','45','C - Constitución - Expreso','LINESTRING ( 
 -58.438167 -34.542549, 
 -58.437052 -34.542762, 
 -58.436365 -34.542568, 
@@ -16888,9 +16888,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.380285 -34.626356, 
 -58.379705 -34.627752, 
 -58.3814 -34.62785
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 D - Retiro - Expreso','45','D - Retiro - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 45 D - Retiro - Expreso','45','D - Retiro - Expreso','LINESTRING ( 
 -58.440528 -34.542586, 
 -58.437395 -34.542656, 
 -58.436278 -34.542586, 
@@ -16923,9 +16923,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.371681 -34.588033, 
 -58.372216 -34.588898, 
 -58.373998 -34.59087
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 46 A - Universidad La Matanza por Barrio Espora','46','A - Universidad La Matanza por Barrio Espora','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 46 A - Universidad La Matanza por Barrio Espora','46','A - Universidad La Matanza por Barrio Espora','LINESTRING ( 
 -58.356135 -34.637197, 
 -58.356847 -34.637647, 
 -58.357095 -34.637802, 
@@ -17160,9 +17160,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.559902 -34.668303, 
 -58.561875 -34.670051, 
 -58.563346 -34.67136
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 46 B - Universidad La Matanza por Iriarte','46','B - Universidad La Matanza por Iriarte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 46 B - Universidad La Matanza por Iriarte','46','B - Universidad La Matanza por Iriarte','LINESTRING ( 
 -58.356135 -34.637197, 
 -58.356847 -34.637647, 
 -58.357095 -34.637802, 
@@ -17403,9 +17403,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.559902 -34.668303, 
 -58.561875 -34.670051, 
 -58.563346 -34.67136
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 47 A - Autódromo por Nogoyá','47','A - Autódromo por Nogoyá','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 47 A - Autódromo por Nogoyá','47','A - Autódromo por Nogoyá','LINESTRING ( 
 -58.454196 -34.587325, 
 -58.455005 -34.587043, 
 -58.455173 -34.587029, 
@@ -17605,9 +17605,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.462006 -34.690524, 
 -58.463422 -34.691786, 
 -58.464013 -34.69234
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 47 B - Autódromo por Camarones','47','B - Autódromo por Camarones','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 47 B - Autódromo por Camarones','47','B - Autódromo por Camarones','LINESTRING ( 
 -58.454196 -34.587325, 
 -58.455005 -34.587043, 
 -58.455119 -34.587082, 
@@ -17787,9 +17787,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.462006 -34.690524, 
 -58.463422 -34.691786, 
 -58.464013 -34.69234
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 47 C - Est. Liniers - Expreso','47','C - Est. Liniers - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 47 C - Est. Liniers - Expreso','47','C - Est. Liniers - Expreso','LINESTRING ( 
 -58.454196 -34.587325, 
 -58.455005 -34.587043, 
 -58.455173 -34.587029, 
@@ -17909,9 +17909,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.528965 -34.639453, 
 -58.528739 -34.639373, 
 -58.526401 -34.63912
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 49 A - La Tablada por Crovara','49','A - La Tablada por Crovara','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 49 A - La Tablada por Crovara','49','A - La Tablada por Crovara','LINESTRING ( 
 -58.439154 -34.621696, 
 -58.438205 -34.621549, 
 -58.43872 -34.620159, 
@@ -17995,9 +17995,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.541873 -34.699534, 
 -58.542994 -34.698718, 
 -58.544034 -34.69792
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 49 B - Isidro Casanova por Peribebuy','49','B - Isidro Casanova por Peribebuy','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 49 B - Isidro Casanova por Peribebuy','49','B - Isidro Casanova por Peribebuy','LINESTRING ( 
 -58.439154 -34.621696, 
 -58.438205 -34.621549, 
 -58.43872 -34.620159, 
@@ -18119,9 +18119,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.573244 -34.718651, 
 -58.57202 -34.719586, 
 -58.571258 -34.72017
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 50 A - Eva Perón y Gral. Paz','50','A - Eva Perón y Gral. Paz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 50 A - Eva Perón y Gral. Paz','50','A - Eva Perón y Gral. Paz','LINESTRING ( 
 -58.375211 -34.584394, 
 -58.372506 -34.585878, 
 -58.371626 -34.587538, 
@@ -18218,9 +18218,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.499997 -34.673912, 
 -58.500576 -34.673453, 
 -58.501542 -34.67398
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 50 B - Hospital Piñero','50','B - Hospital Piñero','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 50 B - Hospital Piñero','50','B - Hospital Piñero','LINESTRING ( 
 -58.375576 -34.584305, 
 -58.372464 -34.585984, 
 -58.371862 -34.587096, 
@@ -18273,9 +18273,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.448993 -34.640588, 
 -58.453285 -34.644311, 
 -58.453971 -34.64378
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 A - Cañuelas por RN 205','51','A - Cañuelas por RN 205','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 A - Cañuelas por RN 205','51','A - Cañuelas por RN 205','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -18569,9 +18569,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.762918 -35.060299, 
 -58.758251 -35.056286, 
 -58.754978 -35.05892
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 B - Canning por RN 205','51','B - Canning por RN 205','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 B - Canning por RN 205','51','B - Canning por RN 205','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -18758,9 +18758,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.503988 -34.879744, 
 -58.504322 -34.879823, 
 -58.504665 -34.87967
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 C - Aeropuerto Ezeiza por RN 205','51','C - Aeropuerto Ezeiza por RN 205','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 C - Aeropuerto Ezeiza por RN 205','51','C - Aeropuerto Ezeiza por RN 205','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -19100,9 +19100,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.542146 -34.813617, 
 -58.541786 -34.813516, 
 -58.54155 -34.81334
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 D - Aeropuerto Ezeiza por Av. Fair','51','D - Aeropuerto Ezeiza por Av. Fair','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 D - Aeropuerto Ezeiza por Av. Fair','51','D - Aeropuerto Ezeiza por Av. Fair','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -19424,9 +19424,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.542146 -34.813617, 
 -58.541786 -34.813516, 
 -58.54155 -34.81334
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 E - Brandsen','51','E - Brandsen','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 E - Brandsen','51','E - Brandsen','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -19757,9 +19757,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.231229 -35.169747, 
 -58.231315 -35.169572, 
 -58.231487 -35.16927
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 F- Alejandro Korn','51','F- Alejandro Korn','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 F- Alejandro Korn','51','F- Alejandro Korn','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -20006,9 +20006,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.377066 -34.99649, 
 -58.376412 -34.9973, 
 -58.372421 -35.00198
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 G - Máximo Paz por RN 205','51','G - Máximo Paz por RN 205','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 G - Máximo Paz por RN 205','51','G - Máximo Paz por RN 205','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -20209,9 +20209,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.618476 -34.938243, 
 -58.615344 -34.942377, 
 -58.613241 -34.94125
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 H - Estación Rafael Calzada','51','H - Estación Rafael Calzada','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 51 H - Estación Rafael Calzada','51','H - Estación Rafael Calzada','LINESTRING ( 
 -58.385789 -34.624715, 
 -58.385736 -34.626057, 
 -58.385693 -34.627071, 
@@ -20313,9 +20313,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.362079 -34.794527, 
 -58.360877 -34.796095, 
 -58.358451 -34.79662
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 A - San Miguel','53','A - San Miguel','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 A - San Miguel','53','A - San Miguel','LINESTRING ( 
 -58.368012 -34.64282, 
 -58.367292 -34.642705, 
 -58.365737 -34.642459, 
@@ -20481,9 +20481,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.713459 -34.53882, 
 -58.712085 -34.539811, 
 -58.712685 -34.54055
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 B - El Palomar','53','B - El Palomar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 B - El Palomar','53','B - El Palomar','LINESTRING ( 
 -58.368012 -34.64282, 
 -58.367292 -34.642705, 
 -58.365737 -34.642459, 
@@ -20619,9 +20619,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.598156 -34.605536, 
 -58.598219 -34.607602, 
 -58.595683 -34.6076
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 C - José C.Paz','53','C - José C.Paz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 C - José C.Paz','53','C - José C.Paz','LINESTRING ( 
 -58.368012 -34.64282, 
 -58.367292 -34.642705, 
 -58.365737 -34.642459, 
@@ -20813,9 +20813,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.756224 -34.522663, 
 -58.757274 -34.521267, 
 -58.762511 -34.52345
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 D - Nazca y Rivadavia','53','D - Nazca y Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 D - Nazca y Rivadavia','53','D - Nazca y Rivadavia','LINESTRING ( 
 -58.368012 -34.64282, 
 -58.367292 -34.642705, 
 -58.365737 -34.642459, 
@@ -20902,9 +20902,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.468164 -34.630454, 
 -58.468938 -34.629147, 
 -58.470224 -34.629
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 E - José C.Paz - Expreso','53','E - José C.Paz - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 53 E - José C.Paz - Expreso','53','E - José C.Paz - Expreso','LINESTRING ( 
 -58.380146 -34.626356, 
 -58.380876 -34.624698, 
 -58.382151 -34.624626, 
@@ -21040,9 +21040,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.757317 -34.52132, 
 -58.762425 -34.523459, 
 -58.762661 -34.52331
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 55 A - Don Bosco por San Justo','55','A - Don Bosco por San Justo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 55 A - Don Bosco por San Justo','55','A - Don Bosco por San Justo','LINESTRING ( 
 -58.449174 -34.560453, 
 -58.448939 -34.560329, 
 -58.448788 -34.560223, 
@@ -21135,9 +21135,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.599303 -34.66731, 
 -58.600549 -34.6662, 
 -58.602232 -34.66808
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 55 B - Don Bosco por Rotonda San Justo','55','B - Don Bosco por Rotonda San Justo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 55 B - Don Bosco por Rotonda San Justo','55','B - Don Bosco por Rotonda San Justo','LINESTRING ( 
 -58.449174 -34.560453, 
 -58.448939 -34.560329, 
 -58.448788 -34.560223, 
@@ -21229,9 +21229,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.599303 -34.66731, 
 -58.600549 -34.6662, 
 -58.602232 -34.66808
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 55 C - Rotonda San Justo - Expreso','55','C - Rotonda San Justo - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 55 C - Rotonda San Justo - Expreso','55','C - Rotonda San Justo - Expreso','LINESTRING ( 
 -58.441794 -34.619911, 
 -58.441578 -34.620423, 
 -58.442953 -34.621077, 
@@ -21259,9 +21259,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.559939 -34.685592, 
 -58.560541 -34.68591, 
 -58.561528 -34.6859
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 A - Tapiales','56','A - Tapiales','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 A - Tapiales','56','A - Tapiales','LINESTRING ( 
 -58.375424 -34.584358, 
 -58.372506 -34.585984, 
 -58.37181 -34.587184, 
@@ -21386,9 +21386,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.505367 -34.706763, 
 -58.505529 -34.706665, 
 -58.505228 -34.7064
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 B - Est. Varela','56','B - Est. Varela','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 B - Est. Varela','56','B - Est. Varela','LINESTRING ( 
 -58.375424 -34.584358, 
 -58.372506 -34.585984, 
 -58.37181 -34.587184, 
@@ -21449,9 +21449,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.454963 -34.640014, 
 -58.456814 -34.641047, 
 -58.456471 -34.64139
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 C - Ciudad Evita','56','C - Ciudad Evita','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 C - Ciudad Evita','56','C - Ciudad Evita','LINESTRING ( 
 -58.375424 -34.584358, 
 -58.372506 -34.585984, 
 -58.37181 -34.587184, 
@@ -21598,9 +21598,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.534737 -34.723289, 
 -58.535102 -34.722655, 
 -58.535296 -34.72226
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 D - Ciudad Evita - Expreso','56','D - Ciudad Evita - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 56 D - Ciudad Evita - Expreso','56','D - Ciudad Evita - Expreso','LINESTRING ( 
 -58.375424 -34.584358, 
 -58.372506 -34.585984, 
 -58.37181 -34.587184, 
@@ -21725,9 +21725,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.534737 -34.723289, 
 -58.535102 -34.722655, 
 -58.535296 -34.72226
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 A - Mercedes','57','A - Mercedes','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 A - Mercedes','57','A - Mercedes','LINESTRING ( 
 -58.434241 -34.575603, 
 -58.432932 -34.576112, 
 -58.42998 -34.577052, 
@@ -22264,9 +22264,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.434147 -34.658562, 
 -59.434269 -34.658765, 
 -59.434651 -34.66018
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 B - Mercedes por Buen Ayre y Moreno','57','B - Mercedes por Buen Ayre y Moreno','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 B - Mercedes por Buen Ayre y Moreno','57','B - Mercedes por Buen Ayre y Moreno','LINESTRING ( 
 -58.439132 -34.579782, 
 -58.436655 -34.577644, 
 -58.435034 -34.576248, 
@@ -22774,9 +22774,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.434147 -34.658562, 
 -59.434269 -34.658765, 
 -59.434651 -34.66018
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 C - Luján por Acceso Oeste','57','C - Luján por Acceso Oeste','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 C - Luján por Acceso Oeste','57','C - Luján por Acceso Oeste','LINESTRING ( 
 -58.439132 -34.579782, 
 -58.436655 -34.577644, 
 -58.435034 -34.576248, 
@@ -23120,9 +23120,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.119791 -34.560572, 
 -59.120446 -34.5604, 
 -59.120189 -34.55979
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 D - Luján','57','D - Luján','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 D - Luján','57','D - Luján','LINESTRING ( 
 -58.439069 -34.579694, 
 -58.437823 -34.578704, 
 -58.436655 -34.577688, 
@@ -23528,9 +23528,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.11983 -34.560546, 
 -59.120446 -34.5604, 
 -59.120167 -34.55971
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 E - Pilar','57','E - Pilar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 E - Pilar','57','E - Pilar','LINESTRING ( 
 -58.439058 -34.579756, 
 -58.434229 -34.575471, 
 -58.432932 -34.576112, 
@@ -23803,9 +23803,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.914822 -34.454504, 
 -58.91626 -34.454528, 
 -58.91684 -34.45453
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 F - Pilar por Acceso Norte','57','F - Pilar por Acceso Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 F - Pilar por Acceso Norte','57','F - Pilar por Acceso Norte','LINESTRING ( 
 -58.439069 -34.579765, 
 -58.43667 -34.577623, 
 -58.435431 -34.576557, 
@@ -23979,9 +23979,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.9147 -34.456946, 
 -58.914822 -34.454509, 
 -58.917017 -34.45455
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 G - Pilar por Est. Garín','57','G - Pilar por Est. Garín','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 G - Pilar por Est. Garín','57','G - Pilar por Est. Garín','LINESTRING ( 
 -58.439069 -34.579765, 
 -58.43667 -34.577623, 
 -58.435431 -34.576557, 
@@ -24234,9 +24234,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.9147 -34.456946, 
 -58.914822 -34.454509, 
 -58.917017 -34.45455
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 H - Capilla del Señor','57','H - Capilla del Señor','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 H - Capilla del Señor','57','H - Capilla del Señor','LINESTRING ( 
 -58.439058 -34.579756, 
 -58.434229 -34.575471, 
 -58.432932 -34.576112, 
@@ -24657,9 +24657,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.104171 -34.289169, 
 -59.103113 -34.288308, 
 -59.102079 -34.28752
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 I - Cruce Castelar','57','I - Cruce Castelar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 I - Cruce Castelar','57','I - Cruce Castelar','LINESTRING ( 
 -58.439069 -34.579694, 
 -58.437823 -34.578704, 
 -58.436655 -34.577688, 
@@ -24857,9 +24857,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.745398 -34.581553, 
 -58.746895 -34.582962, 
 -58.748745 -34.58471
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 J - Est. Moreno','57','J - Est. Moreno','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 J - Est. Moreno','57','J - Est. Moreno','LINESTRING ( 
 -58.439069 -34.579694, 
 -58.437823 -34.578704, 
 -58.436655 -34.577688, 
@@ -25122,9 +25122,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.792535 -34.648297, 
 -58.795245 -34.647565, 
 -58.795658 -34.64868
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 K - Est. Moreno por Av. Roca','57','K - Est. Moreno por Av. Roca','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 K - Est. Moreno por Av. Roca','57','K - Est. Moreno por Av. Roca','LINESTRING ( 
 -58.439132 -34.579782, 
 -58.436655 -34.577644, 
 -58.435034 -34.576248, 
@@ -25452,9 +25452,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.795222 -34.647582, 
 -58.797969 -34.646845, 
 -58.798377 -34.64791
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 L - Mercedes por Buen Ayre - Expreso','57','L - Mercedes por Buen Ayre - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 L - Mercedes por Buen Ayre - Expreso','57','L - Mercedes por Buen Ayre - Expreso','LINESTRING ( 
 -58.439132 -34.579782, 
 -58.436655 -34.577644, 
 -58.435034 -34.576248, 
@@ -25917,9 +25917,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.434147 -34.658562, 
 -59.434269 -34.658765, 
 -59.434651 -34.66018
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 M - Pilar por Acceso Norte - Expreso','57','M - Pilar por Acceso Norte - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 M - Pilar por Acceso Norte - Expreso','57','M - Pilar por Acceso Norte - Expreso','LINESTRING ( 
 -58.439069 -34.579765, 
 -58.43667 -34.577623, 
 -58.435431 -34.576557, 
@@ -26093,9 +26093,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.9147 -34.456946, 
 -58.914822 -34.454509, 
 -58.917017 -34.45455
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 N - Capilla del Señor por Acc. Norte - Diferencial','57','N - Capilla del Señor por Acc. Norte - Diferencial','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 N - Capilla del Señor por Acc. Norte - Diferencial','57','N - Capilla del Señor por Acc. Norte - Diferencial','LINESTRING ( 
 -58.439058 -34.579756, 
 -58.434229 -34.575471, 
 -58.432932 -34.576112, 
@@ -26529,9 +26529,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.104171 -34.289169, 
 -59.103113 -34.288308, 
 -59.102079 -34.28752
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 O - Luján por Autopista - Expreso','57','O - Luján por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 O - Luján por Autopista - Expreso','57','O - Luján por Autopista - Expreso','LINESTRING ( 
 -58.439058 -34.579756, 
 -58.434229 -34.575471, 
 -58.432932 -34.576112, 
@@ -26809,9 +26809,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.91684 -34.454532, 
 -58.918357 -34.454602, 
 -58.918663 -34.45467
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 P - Mercedes por Autopista - Expreso','57','P - Mercedes por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 P - Mercedes por Autopista - Expreso','57','P - Mercedes por Autopista - Expreso','LINESTRING ( 
 -58.421677 -34.581125, 
 -58.418951 -34.582979, 
 -58.416066 -34.58509, 
@@ -27184,9 +27184,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.11983 -34.560546, 
 -59.120446 -34.5604, 
 -59.120167 -34.55971
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 Ñ - Pilar por Acc. Norte - Diferencial','57','Ñ - Pilar por Acc. Norte - Diferencial','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 57 Ñ - Pilar por Acc. Norte - Diferencial','57','Ñ - Pilar por Acc. Norte - Diferencial','LINESTRING ( 
 -58.421677 -34.581125, 
 -58.418951 -34.582979, 
 -58.416066 -34.58509, 
@@ -27660,9 +27660,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.433315 -34.655875, 
 -59.433813 -34.65764, 
 -59.434629 -34.66018
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 59 A - 1 - San Lorenzo y Panamericana por La Lucila','59','A - 1 - San Lorenzo y Panamericana por La Lucila','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 59 A - 1 - San Lorenzo y Panamericana por La Lucila','59','A - 1 - San Lorenzo y Panamericana por La Lucila','LINESTRING ( 
 -58.387011 -34.644224, 
 -58.389544 -34.6441, 
 -58.389898 -34.640199, 
@@ -27742,9 +27742,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.513773 -34.513559, 
 -58.522078 -34.517217, 
 -58.52152 -34.51808
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 59 B - 2 - San Lorenzo y Panamericana por Barrio Golf','59','B - 2 - San Lorenzo y Panamericana por Barrio Golf','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 59 B - 2 - San Lorenzo y Panamericana por Barrio Golf','59','B - 2 - San Lorenzo y Panamericana por Barrio Golf','LINESTRING ( 
 -58.387011 -34.644224, 
 -58.389544 -34.6441, 
 -58.389898 -34.640199, 
@@ -27823,9 +27823,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.51373 -34.513398, 
 -58.522142 -34.517271, 
 -58.52154 -34.51817
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 59 C - Est. Del Valle','59','C - Est. Del Valle','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 59 C - Est. Del Valle','59','C - Est. Del Valle','LINESTRING ( 
 -58.387011 -34.644224, 
 -58.389544 -34.6441, 
 -58.389898 -34.640199, 
@@ -27888,9 +27888,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.480128 -34.5367, 
 -58.479463 -34.537548, 
 -58.47605 -34.53599
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 A - 38 - Núñez','60','A - 38 - Núñez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 A - 38 - Núñez','60','A - 38 - Núñez','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -27952,9 +27952,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.463476 -34.549796, 
 -58.46264 -34.549425, 
 -58.463455 -34.5484
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 B - 38 - Bajo Tigre por Bajo San Isidro','60','B - 38 - Bajo Tigre por Bajo San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 B - 38 - Bajo Tigre por Bajo San Isidro','60','B - 38 - Bajo Tigre por Bajo San Isidro','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -28072,9 +28072,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.59689 -34.417636, 
 -58.605086 -34.413885, 
 -58.611009 -34.41101
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 C - 38 - Alto Tigre por Alto San Isidro','60','C - 38 - Alto Tigre por Alto San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 C - 38 - Alto Tigre por Alto San Isidro','60','C - 38 - Alto Tigre por Alto San Isidro','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -28200,9 +28200,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.600676 -34.415919, 
 -58.60587 -34.4136, 
 -58.611148 -34.41108
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 D - 38 - Tigre por Autopista y Acceso Norte','60','D - 38 - Tigre por Autopista y Acceso Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 D - 38 - Tigre por Autopista y Acceso Norte','60','D - 38 - Tigre por Autopista y Acceso Norte','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -28325,9 +28325,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.600827 -34.415742, 
 -58.611041 -34.411141, 
 -58.611127 -34.41073
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 E - 38 - Escobar por Ruta 27 y Larghi','60','E - 38 - Escobar por Ruta 27 y Larghi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 E - 38 - Escobar por Ruta 27 y Larghi','60','E - 38 - Escobar por Ruta 27 y Larghi','LINESTRING ( 
 -58.46338 -34.54863, 
 -58.466942 -34.550485, 
 -58.467618 -34.549602, 
@@ -28434,9 +28434,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.790706 -34.35309, 
 -58.791221 -34.353428, 
 -58.792422 -34.35257
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 F - 38 - Escobar por Ruta 24 y Larghi','60','F - 38 - Escobar por Ruta 24 y Larghi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 F - 38 - Escobar por Ruta 24 y Larghi','60','F - 38 - Escobar por Ruta 24 y Larghi','LINESTRING ( 
 -58.46338 -34.54863, 
 -58.466942 -34.550485, 
 -58.467618 -34.549602, 
@@ -28548,9 +28548,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.79061 -34.353144, 
 -58.791125 -34.353462, 
 -58.795588 -34.35034
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 G - 60 - Alto Tigre por Alto San Isidro','60','G - 60 - Alto Tigre por Alto San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 G - 60 - Alto Tigre por Alto San Isidro','60','G - 60 - Alto Tigre por Alto San Isidro','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -28735,9 +28735,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.608252 -34.412379, 
 -58.611041 -34.411123, 
 -58.61102 -34.41087
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 H - 60 - Bajo Tigre por Alto San Isidro','60','H - 60 - Bajo Tigre por Alto San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 H - 60 - Bajo Tigre por Alto San Isidro','60','H - 60 - Bajo Tigre por Alto San Isidro','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -28917,9 +28917,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.604388 -34.414167, 
 -58.610439 -34.411476, 
 -58.61117 -34.41094
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 I - 60 - Alto Tigre por Bajo San Isidro','60','I - 60 - Alto Tigre por Bajo San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 I - 60 - Alto Tigre por Bajo San Isidro','60','I - 60 - Alto Tigre por Bajo San Isidro','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -29106,9 +29106,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.606169 -34.413353, 
 -58.611255 -34.411104, 
 -58.611041 -34.41060
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 J - 60 - Bajo Tigre por Bajo San Isidro','60','J - 60 - Bajo Tigre por Bajo San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 J - 60 - Bajo Tigre por Bajo San Isidro','60','J - 60 - Bajo Tigre por Bajo San Isidro','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -29297,9 +29297,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.606298 -34.413299, 
 -58.611148 -34.411087, 
 -58.61102 -34.41066
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 K - 60 - Tigre por Autopista y Acceso Norte','60','K - 60 - Tigre por Autopista y Acceso Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 K - 60 - Tigre por Autopista y Acceso Norte','60','K - 60 - Tigre por Autopista y Acceso Norte','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -29466,9 +29466,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.603735 -34.414521, 
 -58.611009 -34.411211, 
 -58.610965 -34.41101
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 L - 60 - Alto Tigre por Acceso Norte','60','L - 60 - Alto Tigre por Acceso Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 L - 60 - Alto Tigre por Acceso Norte','60','L - 60 - Alto Tigre por Acceso Norte','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -29648,9 +29648,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.609872 -34.411689, 
 -58.611223 -34.411034, 
 -58.611094 -34.4107
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 M - 60 - Bajo Tigre por Fleming','60','M - 60 - Bajo Tigre por Fleming','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 M - 60 - Bajo Tigre por Fleming','60','M - 60 - Bajo Tigre por Fleming','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -29846,9 +29846,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.61028 -34.411512, 
 -58.611094 -34.411158, 
 -58.611137 -34.41087
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 N - 60 - Tigre por Larralde, Ruta 24 y Larghi','60','N - 60 - Tigre por Larralde, Ruta 24 y Larghi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 N - 60 - Tigre por Larralde, Ruta 24 y Larghi','60','N - 60 - Tigre por Larralde, Ruta 24 y Larghi','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -30067,9 +30067,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.791317 -34.353586, 
 -58.792326 -34.352648, 
 -58.795651 -34.35025
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 O - 60 - Escobar por Autopista y Boulogne Sur Mer','60','O - 60 - Escobar por Autopista y Boulogne Sur Mer','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 O - 60 - Escobar por Autopista y Boulogne Sur Mer','60','O - 60 - Escobar por Autopista y Boulogne Sur Mer','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -30240,9 +30240,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.795363 -34.351674, 
 -58.794632 -34.351053, 
 -58.795769 -34.35029
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 P - 60 - Escobar por Ruta 27 y Larghi','60','P - 60 - Escobar por Ruta 27 y Larghi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 P - 60 - Escobar por Ruta 27 y Larghi','60','P - 60 - Escobar por Ruta 27 y Larghi','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -30478,9 +30478,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.794632 -34.351125, 
 -58.795695 -34.35038, 
 -58.798194 -34.34860
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 Q - 60 - Escobar por Ruta 24 y Larghi','60','Q - 60 - Escobar por Ruta 24 y Larghi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 Q - 60 - Escobar por Ruta 24 y Larghi','60','Q - 60 - Escobar por Ruta 24 y Larghi','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -30681,9 +30681,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.791254 -34.353462, 
 -58.793098 -34.352116, 
 -58.798034 -34.34853
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 R - 60 - San Isidro por Av.Maipú - Diferencial','60','R - 60 - San Isidro por Av.Maipú - Diferencial','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 R - 60 - San Isidro por Av.Maipú - Diferencial','60','R - 60 - San Isidro por Av.Maipú - Diferencial','LINESTRING ( 
 -58.375812 -34.63951, 
 -58.374673 -34.63868, 
 -58.375006 -34.636845, 
@@ -30955,9 +30955,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.792552 -34.352559, 
 -58.795619 -34.350275, 
 -58.796157 -34.34981
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 S - 60 - Escobar por Autopista - Expreso Diferencial','60','S - 60 - Escobar por Autopista - Expreso Diferencial','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 S - 60 - Escobar por Autopista - Expreso Diferencial','60','S - 60 - Escobar por Autopista - Expreso Diferencial','LINESTRING ( 
 -58.389114 -34.610075, 
 -58.389051 -34.611277, 
 -58.387517 -34.611189, 
@@ -31073,9 +31073,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.512529 -34.474386, 
 -58.514352 -34.472634, 
 -58.515023 -34.47191
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 Ñ - 60 - Escobar por Autopista','60','Ñ - 60 - Escobar por Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 60 Ñ - 60 - Escobar por Autopista','60','Ñ - 60 - Escobar por Autopista','LINESTRING ( 
 -58.420915 -34.581707, 
 -58.422632 -34.580472, 
 -58.424156 -34.579588, 
@@ -31213,9 +31213,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.794589 -34.351036, 
 -58.796864 -34.349389, 
 -58.797873 -34.34859
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 61 A - Retiro - Constitución - Circular','61','A - Retiro - Constitución - Circular','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 61 A - Retiro - Constitución - Circular','61','A - Retiro - Constitución - Circular','LINESTRING ( 
 -58.380746 -34.62791, 
 -58.37948 -34.627876, 
 -58.378557 -34.627417, 
@@ -31305,9 +31305,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.379556 -34.627698, 
 -58.381143 -34.627822, 
 -58.382151 -34.62778
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 61 B - Retiro - Constitución - Circular por Univ. Catolica Arg.','61','B - Retiro - Constitución - Circular por Univ. Catolica Arg.','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 61 B - Retiro - Constitución - Circular por Univ. Catolica Arg.','61','B - Retiro - Constitución - Circular por Univ. Catolica Arg.','LINESTRING ( 
 -58.38094 -34.627786, 
 -58.382142 -34.627786, 
 -58.382131 -34.626975, 
@@ -31402,9 +31402,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.380237 -34.626331, 
 -58.379646 -34.627735, 
 -58.380676 -34.62779
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 62 A - Retiro - Constitución - Circular','62','A - Retiro - Constitución - Circular','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 62 A - Retiro - Constitución - Circular','62','A - Retiro - Constitución - Circular','LINESTRING ( 
 -58.38094 -34.627769, 
 -58.379201 -34.627628, 
 -58.378289 -34.627398, 
@@ -31479,9 +31479,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.382254 -34.627442, 
 -58.382232 -34.627831, 
 -58.381042 -34.62777
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 62 B - Retiro - Constitución - Circular por Univ. Catolica Arg.','62','B - Retiro - Constitución - Circular por Univ. Catolica Arg.','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 62 B - Retiro - Constitución - Circular por Univ. Catolica Arg.','62','B - Retiro - Constitución - Circular por Univ. Catolica Arg.','LINESTRING ( 
 -58.38094 -34.627735, 
 -58.379781 -34.627698, 
 -58.378891 -34.627611, 
@@ -31570,9 +31570,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.38221 -34.627018, 
 -58.382286 -34.627778, 
 -58.381019 -34.62777
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 63 A - Ciudad Madero por Torre','63','A - Ciudad Madero por Torre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 63 A - Ciudad Madero por Torre','63','A - Ciudad Madero por Torre','LINESTRING ( 
 -58.450592 -34.558368, 
 -58.452973 -34.559869, 
 -58.456781 -34.562026, 
@@ -31659,9 +31659,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.509717 -34.691327, 
 -58.509182 -34.691485, 
 -58.50341 -34.69476
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 63 B - Ciudad Madero por Pagola','63','B - Ciudad Madero por Pagola','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 63 B - Ciudad Madero por Pagola','63','B - Ciudad Madero por Pagola','LINESTRING ( 
 -58.450505 -34.558438, 
 -58.453231 -34.560063, 
 -58.456696 -34.562078, 
@@ -31760,9 +31760,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.509824 -34.69131, 
 -58.505963 -34.693356, 
 -58.503366 -34.69485
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 A - Barrancas de Belgrano por Hospital Militar','64','A - Barrancas de Belgrano por Hospital Militar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 A - Barrancas de Belgrano por Hospital Militar','64','A - Barrancas de Belgrano por Hospital Militar','LINESTRING ( 
 -58.364266 -34.641153, 
 -58.363751 -34.642052, 
 -58.362496 -34.6417, 
@@ -31870,9 +31870,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.448607 -34.559674, 
 -58.449615 -34.559109, 
 -58.449443 -34.55905
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 B - Barrancas de Belgrano por Hipódromo','64','B - Barrancas de Belgrano por Hipódromo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 B - Barrancas de Belgrano por Hipódromo','64','B - Barrancas de Belgrano por Hipódromo','LINESTRING ( 
 -58.364266 -34.641153, 
 -58.363751 -34.642052, 
 -58.362496 -34.6417, 
@@ -31981,9 +31981,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.448607 -34.559674, 
 -58.449615 -34.559109, 
 -58.449443 -34.55905
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 C - Barrancas de Belgrano por Hospital Militar y Univ.Cat.Arg.','64','C - Barrancas de Belgrano por Hospital Militar y Univ.Cat.Arg.','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 C - Barrancas de Belgrano por Hospital Militar y Univ.Cat.Arg.','64','C - Barrancas de Belgrano por Hospital Militar y Univ.Cat.Arg.','LINESTRING ( 
 -58.368 -34.624132, 
 -58.368366 -34.620741, 
 -58.368613 -34.618251, 
@@ -32068,9 +32068,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.449229 -34.559269, 
 -58.449486 -34.559091, 
 -58.449401 -34.55900
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 D - Barrancas de Belgrano por Hipódromo y Univ.Cat.Arg.','64','D - Barrancas de Belgrano por Hipódromo y Univ.Cat.Arg.','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 D - Barrancas de Belgrano por Hipódromo y Univ.Cat.Arg.','64','D - Barrancas de Belgrano por Hipódromo y Univ.Cat.Arg.','LINESTRING ( 
 -58.368 -34.624132, 
 -58.368366 -34.620741, 
 -58.368613 -34.618251, 
@@ -32158,9 +32158,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.449229 -34.559269, 
 -58.449486 -34.559091, 
 -58.449401 -34.55900
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 E - Barrancas de Belgrano por Hospital Militar','64','E - Barrancas de Belgrano por Hospital Militar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 E - Barrancas de Belgrano por Hospital Militar','64','E - Barrancas de Belgrano por Hospital Militar','LINESTRING ( 
 -58.368172 -34.623921, 
 -58.368344 -34.621977, 
 -58.368665 -34.619717, 
@@ -32236,9 +32236,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.449486 -34.559109, 
 -58.449421 -34.558968, 
 -58.449807 -34.55873
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 F - Barrancas de Belgrano por Hipódromo','64','F - Barrancas de Belgrano por Hipódromo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 64 F - Barrancas de Belgrano por Hipódromo','64','F - Barrancas de Belgrano por Hipódromo','LINESTRING ( 
 -58.368043 -34.623955, 
 -58.368301 -34.620882, 
 -58.368569 -34.618782, 
@@ -32307,9 +32307,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.446717 -34.560381, 
 -58.448757 -34.559533, 
 -58.449508 -34.55912
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 65 A - Barrancas de Belgrano','65','A - Barrancas de Belgrano','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 65 A - Barrancas de Belgrano','65','A - Barrancas de Belgrano','LINESTRING ( 
 -58.37903 -34.62934, 
 -58.379652 -34.627735, 
 -58.378546 -34.627417, 
@@ -32425,9 +32425,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.450431 -34.559674, 
 -58.449443 -34.559109, 
 -58.450558 -34.55840
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 65 B - Barrancas de Belgrano','65','B - Barrancas de Belgrano','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 65 B - Barrancas de Belgrano','65','B - Barrancas de Belgrano','LINESTRING ( 
 -58.375168 -34.661257, 
 -58.373902 -34.659705, 
 -58.373027 -34.659342, 
@@ -32566,9 +32566,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.44955 -34.559251, 
 -58.449314 -34.559128, 
 -58.450538 -34.5584
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 67 A - Villa Martelli','67','A - Villa Martelli','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 67 A - Villa Martelli','67','A - Villa Martelli','LINESTRING ( 
 -58.37888 -34.631107, 
 -58.379738 -34.632359, 
 -58.380048 -34.632643, 
@@ -32725,9 +32725,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.51586 -34.547234, 
 -58.516213 -34.547392, 
 -58.516846 -34.54767
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 67 B - Villa Martelli por Dorrego','67','B - Villa Martelli por Dorrego','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 67 B - Villa Martelli por Dorrego','67','B - Villa Martelli por Dorrego','LINESTRING ( 
 -58.379223 -34.631619, 
 -58.379631 -34.63243, 
 -58.380038 -34.63259, 
@@ -32921,9 +32921,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.51585 -34.547224, 
 -58.516171 -34.547367, 
 -58.516846 -34.54767
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 68 A - 1 - Puente Saavedra por Carranza','68','A - 1 - Puente Saavedra por Carranza','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 68 A - 1 - Puente Saavedra por Carranza','68','A - 1 - Puente Saavedra por Carranza','LINESTRING ( 
 -58.408963 -34.609158, 
 -58.406044 -34.608874, 
 -58.406024 -34.606932, 
@@ -32984,9 +32984,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.475921 -34.53859, 
 -58.476351 -34.537796, 
 -58.476759 -34.53703
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 68 B - 2 - Puente Saavedra por Dorrego','68','B - 2 - Puente Saavedra por Dorrego','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 68 B - 2 - Puente Saavedra por Dorrego','68','B - 2 - Puente Saavedra por Dorrego','LINESTRING ( 
 -58.408963 -34.609158, 
 -58.406024 -34.608857, 
 -58.406131 -34.607427, 
@@ -33047,9 +33047,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.475921 -34.53859, 
 -58.476351 -34.537796, 
 -58.476759 -34.53703
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 70 A - Retiro','70','A - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 70 A - Retiro','70','A - Retiro','LINESTRING ( 
 -58.394801 -34.658504, 
 -58.391711 -34.658346, 
 -58.391872 -34.656244, 
@@ -33132,9 +33132,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.374943 -34.583404, 
 -58.375565 -34.584305, 
 -58.37713 -34.58615
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 70 B - Retiro','70','B - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 70 B - Retiro','70','B - Retiro','LINESTRING ( 
 -58.405852 -34.673769, 
 -58.410401 -34.670453, 
 -58.412621 -34.668635, 
@@ -33247,9 +33247,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.374985 -34.583351, 
 -58.3755 -34.584164, 
 -58.377088 -34.58591
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 71 A - Villa Adelina por Larralde','71','A - Villa Adelina por Larralde','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 71 A - Villa Adelina por Larralde','71','A - Villa Adelina por Larralde','LINESTRING ( 
 -58.408898 -34.609068, 
 -58.406131 -34.60891, 
 -58.404736 -34.608803, 
@@ -33380,9 +33380,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.543621 -34.523954, 
 -58.544522 -34.524661, 
 -58.543599 -34.52540
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 71 B - Villa Adelina por Panamericana','71','B - Villa Adelina por Panamericana','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 71 B - Villa Adelina por Panamericana','71','B - Villa Adelina por Panamericana','LINESTRING ( 
 -58.408963 -34.609175, 
 -58.406067 -34.60891, 
 -58.404736 -34.608803, 
@@ -33514,9 +33514,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.543706 -34.523936, 
 -58.544415 -34.524715, 
 -58.543062 -34.52579
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 71 C - Villa Adelina por Av.Congreso','71','C - Villa Adelina por Av.Congreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 71 C - Villa Adelina por Av.Congreso','71','C - Villa Adelina por Av.Congreso','LINESTRING ( 
 -58.408771 -34.609121, 
 -58.406067 -34.609015, 
 -58.404778 -34.608803, 
@@ -33661,9 +33661,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.544378 -34.52467, 
 -58.544485 -34.524661, 
 -58.543852 -34.52526
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 74 A - Longchamps','74','A - Longchamps','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 74 A - Longchamps','74','A - Longchamps','LINESTRING ( 
 -58.368257 -34.602834, 
 -58.368408 -34.604036, 
 -58.36872 -34.604106, 
@@ -33807,9 +33807,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.385649 -34.833232, 
 -58.385477 -34.833866, 
 -58.385907 -34.83421
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 75 A - Lanús por Colombres','75','A - Lanús por Colombres','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 75 A - Lanús por Colombres','75','A - Lanús por Colombres','LINESTRING ( 
 -58.377099 -34.586106, 
 -58.375576 -34.584322, 
 -58.372388 -34.586001, 
@@ -33960,9 +33960,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.393627 -34.708139, 
 -58.391556 -34.708244, 
 -58.390891 -34.70899
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 75 B - Lanús por Hospital Penna','75','B - Lanús por Hospital Penna','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 75 B - Lanús por Hospital Penna','75','B - Lanús por Hospital Penna','LINESTRING ( 
 -58.37534 -34.584394, 
 -58.372377 -34.585984, 
 -58.371842 -34.587113, 
@@ -34101,9 +34101,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.392023 -34.708297, 
 -58.391657 -34.708191, 
 -58.39065 -34.70919
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 76 A - Saavedra por F.F. de la Cruz','76','A - Saavedra por F.F. de la Cruz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 76 A - Saavedra por F.F. de la Cruz','76','A - Saavedra por F.F. de la Cruz','LINESTRING ( 
 -58.408813 -34.652697, 
 -58.409134 -34.65289, 
 -58.410282 -34.653173, 
@@ -34251,9 +34251,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.489998 -34.549548, 
 -58.49165 -34.547198, 
 -58.491028 -34.54686
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 76 B - Saavedra por Janer','76','B - Saavedra por Janer','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 76 B - Saavedra por Janer','76','B - Saavedra por Janer','LINESTRING ( 
 -58.408706 -34.652644, 
 -58.408985 -34.652847, 
 -58.409323 -34.652917, 
@@ -34459,9 +34459,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.49165 -34.547215, 
 -58.490963 -34.546773, 
 -58.490814 -34.54714
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 78 A - Villa Adelina por Charlone','78','A - Villa Adelina por Charlone','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 78 A - Villa Adelina por Charlone','78','A - Villa Adelina por Charlone','LINESTRING ( 
 -58.447608 -34.591706, 
 -58.448681 -34.592695, 
 -58.449272 -34.591971, 
@@ -34558,9 +34558,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.553857 -34.530301, 
 -58.550724 -34.527648, 
 -58.546883 -34.5242
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 78 B - Villa Adelina por Chilavert','78','B - Villa Adelina por Chilavert','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 78 B - Villa Adelina por Chilavert','78','B - Villa Adelina por Chilavert','LINESTRING ( 
 -58.447608 -34.591777, 
 -58.448616 -34.592626, 
 -58.449432 -34.591847, 
@@ -34645,9 +34645,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.553877 -34.53023, 
 -58.546903 -34.524326, 
 -58.547226 -34.52393
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 78 C - Loma Hermosa','78','C - Loma Hermosa','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 78 C - Loma Hermosa','78','C - Loma Hermosa','LINESTRING ( 
 -58.44778 -34.591742, 
 -58.448703 -34.592714, 
 -58.450344 -34.590983, 
@@ -34736,9 +34736,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.602158 -34.56116, 
 -58.603423 -34.56116, 
 -58.603423 -34.56165
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 A - San Vicente','79','A - San Vicente','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 A - San Vicente','79','A - San Vicente','LINESTRING ( 
 -58.382313 -34.625985, 
 -58.382205 -34.627752, 
 -58.381444 -34.627839, 
@@ -34941,9 +34941,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.417085 -35.032158, 
 -58.412771 -35.037182, 
 -58.409404 -35.04088
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 B - Villa Numancia','79','B - Villa Numancia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 B - Villa Numancia','79','B - Villa Numancia','LINESTRING ( 
 -58.382291 -34.625934, 
 -58.382162 -34.627822, 
 -58.381422 -34.627822, 
@@ -35111,9 +35111,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.401808 -34.920791, 
 -58.401293 -34.921531, 
 -58.401164 -34.92205
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 C - Guernica','79','C - Guernica','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 C - Guernica','79','C - Guernica','LINESTRING ( 
 -58.382269 -34.625934, 
 -58.382227 -34.626905, 
 -58.382151 -34.627822, 
@@ -35326,9 +35326,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.369047 -34.906522, 
 -58.366031 -34.905043, 
 -58.363124 -34.9036
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 D - Longchamps','79','D - Longchamps','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 D - Longchamps','79','D - Longchamps','LINESTRING ( 
 -58.382249 -34.626004, 
 -58.38212 -34.627752, 
 -58.381486 -34.627805, 
@@ -35472,9 +35472,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.38683 -34.85882, 
 -58.386723 -34.859841, 
 -58.386507 -34.85989
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 E - Est. Varela por Lacaze','79','E - Est. Varela por Lacaze','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 E - Est. Varela por Lacaze','79','E - Est. Varela por Lacaze','LINESTRING ( 
 -58.382334 -34.625934, 
 -58.382184 -34.627786, 
 -58.381422 -34.627839, 
@@ -35683,9 +35683,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.272953 -34.807743, 
 -58.272697 -34.810702, 
 -58.27438 -34.81087
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 F - Est. Varela por Av. Eva Perón','79','F - Est. Varela por Av. Eva Perón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 F - Est. Varela por Av. Eva Perón','79','F - Est. Varela por Av. Eva Perón','LINESTRING ( 
 -58.382334 -34.625915, 
 -58.382249 -34.626922, 
 -58.382173 -34.627822, 
@@ -35867,9 +35867,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.273062 -34.807831, 
 -58.272782 -34.810755, 
 -58.273854 -34.81084
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 G - Claypole','79','G - Claypole','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 G - Claypole','79','G - Claypole','LINESTRING ( 
 -58.382303 -34.625915, 
 -58.382238 -34.626992, 
 -58.382275 -34.627178, 
@@ -36101,9 +36101,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.336528 -34.802149, 
 -58.338265 -34.801875, 
 -58.338878 -34.80173
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 H - Barrio Rayo de Sol','79','H - Barrio Rayo de Sol','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 H - Barrio Rayo de Sol','79','H - Barrio Rayo de Sol','LINESTRING ( 
 -58.382356 -34.625934, 
 -58.38212 -34.627805, 
 -58.381444 -34.627805, 
@@ -36258,9 +36258,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.395927 -34.866461, 
 -58.397559 -34.867305, 
 -58.39891 -34.86804
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 I - Barrio San José','79','I - Barrio San José','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 I - Barrio San José','79','I - Barrio San José','LINESTRING ( 
 -58.382356 -34.625897, 
 -58.382291 -34.627028, 
 -58.382173 -34.627786, 
@@ -36384,9 +36384,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.355581 -34.769379, 
 -58.355249 -34.769731, 
 -58.353296 -34.77229
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 J - Calzada - Constitución - Circular','79','J - Calzada - Constitución - Circular','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 J - Calzada - Constitución - Circular','79','J - Calzada - Constitución - Circular','LINESTRING ( 
 -58.382303 -34.625959, 
 -58.382249 -34.626992, 
 -58.382232 -34.627178, 
@@ -36654,9 +36654,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.382945 -34.624662, 
 -58.38434 -34.624662, 
 -58.384383 -34.62519
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 J - San José - Constitución - Circular','79','J - San José - Constitución - Circular','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 79 J - San José - Constitución - Circular','79','J - San José - Constitución - Circular','LINESTRING ( 
 -58.382303 -34.625959, 
 -58.382249 -34.626992, 
 -58.382232 -34.627178, 
@@ -36884,9 +36884,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.382945 -34.624662, 
 -58.38434 -34.624662, 
 -58.384383 -34.62519
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 A - Barrio Sarmiento ','80','A - Barrio Sarmiento ','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 A - Barrio Sarmiento ','80','A - Barrio Sarmiento ','LINESTRING ( 
 -58.449523 -34.558695, 
 -58.450431 -34.558323, 
 -58.450676 -34.558452, 
@@ -37029,9 +37029,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.477756 -34.70454, 
 -58.47921 -34.704858, 
 -58.478335 -34.70764
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 B - Barrio Sarmiento por Piedrabuena','80','B - Barrio Sarmiento por Piedrabuena','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 B - Barrio Sarmiento por Piedrabuena','80','B - Barrio Sarmiento por Piedrabuena','LINESTRING ( 
 -58.449523 -34.558695, 
 -58.450431 -34.558323, 
 -58.450676 -34.558452, 
@@ -37176,9 +37176,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.477756 -34.70454, 
 -58.47921 -34.704858, 
 -58.478335 -34.70764
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 C - Barrio Sarmiento','80','C - Barrio Sarmiento','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 C - Barrio Sarmiento','80','C - Barrio Sarmiento','LINESTRING ( 
 -58.525081 -34.63906, 
 -58.522539 -34.638871, 
 -58.52123 -34.638962, 
@@ -37239,9 +37239,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.477756 -34.70454, 
 -58.47921 -34.704858, 
 -58.478335 -34.70764
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 D - Barrio Sarmiento por Piedrabuena','80','D - Barrio Sarmiento por Piedrabuena','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 D - Barrio Sarmiento por Piedrabuena','80','D - Barrio Sarmiento por Piedrabuena','LINESTRING ( 
 -58.525081 -34.638972, 
 -58.522539 -34.638871, 
 -58.52123 -34.638962, 
@@ -37304,9 +37304,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.477756 -34.70454, 
 -58.47921 -34.704858, 
 -58.478335 -34.70764
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 E - Liniers - Expreso','80','E - Liniers - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 80 E - Liniers - Expreso','80','E - Liniers - Expreso','LINESTRING ( 
 -58.449523 -34.558695, 
 -58.450431 -34.558323, 
 -58.450676 -34.558452, 
@@ -37390,9 +37390,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.528992 -34.639462, 
 -58.528798 -34.639352, 
 -58.52507 -34.63899
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 84 A - Villa del Parque','84','A - Villa del Parque','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 84 A - Villa del Parque','84','A - Villa del Parque','LINESTRING ( 
 -58.378943 -34.629888, 
 -58.379652 -34.627786, 
 -58.378568 -34.62747, 
@@ -37507,9 +37507,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.502101 -34.602781, 
 -58.503152 -34.603382, 
 -58.504268 -34.60230
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 A - Ciudadela Norte por Pte Aguero','85','A - Ciudadela Norte por Pte Aguero','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 A - Ciudadela Norte por Pte Aguero','85','A - Ciudadela Norte por Pte Aguero','LINESTRING ( 
 -58.22814 -34.707856, 
 -58.225737 -34.70888, 
 -58.229362 -34.707399, 
@@ -37840,9 +37840,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.536437 -34.627336, 
 -58.534883 -34.628537, 
 -58.534495 -34.62882
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 B - Ciudadela Norte por Pte Gerli','85','B - Ciudadela Norte por Pte Gerli','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 B - Ciudadela Norte por Pte Gerli','85','B - Ciudadela Norte por Pte Gerli','LINESTRING ( 
 -58.230929 -34.707115, 
 -58.233139 -34.708457, 
 -58.238086 -34.71135, 
@@ -38088,9 +38088,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.53647 -34.627372, 
 -58.535172 -34.628343, 
 -58.534432 -34.62886
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 C - Ciudadela Norte','85','C - Ciudadela Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 C - Ciudadela Norte','85','C - Ciudadela Norte','LINESTRING ( 
 -58.229942 -34.707292, 
 -58.230693 -34.707045, 
 -58.231046 -34.707186, 
@@ -38292,9 +38292,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.535831 -34.626745, 
 -58.536453 -34.627274, 
 -58.534436 -34.62884
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 D - Ciudadela Norte','85','D - Ciudadela Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 85 D - Ciudadela Norte','85','D - Ciudadela Norte','LINESTRING ( 
 -58.416409 -34.654763, 
 -58.416688 -34.656562, 
 -58.416784 -34.658856, 
@@ -38394,9 +38394,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.536476 -34.627257, 
 -58.535446 -34.628034, 
 -58.534502 -34.62875
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 A - G.Catán por Liniers y RP21','86','A - G.Catán por Liniers y RP21','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 A - G.Catán por Liniers y RP21','86','A - G.Catán por Liniers y RP21','LINESTRING ( 
 -58.368017 -34.637123, 
 -58.368327 -34.635326, 
 -58.367009 -34.635193, 
@@ -38816,9 +38816,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.627836 -34.78602, 
 -58.627617 -34.78613, 
 -58.62738 -34.78616
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 B - A - G.Catán por Liniers y RN3','86','B - A - G.Catán por Liniers y RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 B - A - G.Catán por Liniers y RN3','86','B - A - G.Catán por Liniers y RN3','LINESTRING ( 
 -58.368017 -34.637123, 
 -58.368327 -34.635326, 
 -58.367009 -34.635193, 
@@ -39240,9 +39240,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.625562 -34.783509, 
 -58.627026 -34.785716, 
 -58.627333 -34.78619
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 C - G.Catán por Pergamino y RN3','86','C - G.Catán por Pergamino y RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 C - G.Catán por Pergamino y RN3','86','C - G.Catán por Pergamino y RN3','LINESTRING ( 
 -58.368017 -34.637123, 
 -58.368327 -34.635326, 
 -58.367009 -34.635193, 
@@ -39644,9 +39644,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.627836 -34.78602, 
 -58.627617 -34.78613, 
 -58.62738 -34.78616
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 D - Villegas por Pergamino','86','D - Villegas por Pergamino','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 D - Villegas por Pergamino','86','D - Villegas por Pergamino','LINESTRING ( 
 -58.368017 -34.637123, 
 -58.368327 -34.635326, 
 -58.367009 -34.635193, 
@@ -39971,9 +39971,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.574488 -34.732708, 
 -58.57576 -34.733876, 
 -58.576666 -34.73469
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 E - G.Catán por Pergamino y RN3 - Expreso','86','E - G.Catán por Pergamino y RN3 - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 E - G.Catán por Pergamino y RN3 - Expreso','86','E - G.Catán por Pergamino y RN3 - Expreso','LINESTRING ( 
 -58.440291 -34.619965, 
 -58.441257 -34.62042, 
 -58.443232 -34.621281, 
@@ -40214,9 +40214,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.64342 -34.769705, 
 -58.645029 -34.770851, 
 -58.646644 -34.77197
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 F - G.Catán por Pergamino y RP21 - Expreso','86','F - G.Catán por Pergamino y RP21 - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 F - G.Catán por Pergamino y RP21 - Expreso','86','F - G.Catán por Pergamino y RP21 - Expreso','LINESTRING ( 
 -58.440291 -34.619965, 
 -58.441257 -34.62042, 
 -58.443232 -34.621281, 
@@ -40433,9 +40433,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.649858 -34.774194, 
 -58.647663 -34.772719, 
 -58.646661 -34.77200
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 G - G.Catán por Autopista y RN3 - Expreso','86','G - G.Catán por Autopista y RN3 - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 G - G.Catán por Autopista y RN3 - Expreso','86','G - G.Catán por Autopista y RN3 - Expreso','LINESTRING ( 
 -58.368017 -34.637123, 
 -58.368327 -34.635326, 
 -58.367009 -34.635193, 
@@ -40730,9 +40730,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.625562 -34.783509, 
 -58.627026 -34.785716, 
 -58.627333 -34.78619
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 H - G.Catán por Autopista y RP21 - Expreso','86','H - G.Catán por Autopista y RP21 - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 86 H - G.Catán por Autopista y RP21 - Expreso','86','H - G.Catán por Autopista y RP21 - Expreso','LINESTRING ( 
 -58.368017 -34.637123, 
 -58.368327 -34.635326, 
 -58.367009 -34.635193, 
@@ -41033,9 +41033,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.628459 -34.785522, 
 -58.62767 -34.786135, 
 -58.627333 -34.78619
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 87 A - Fábrica Ford','87','A - Fábrica Ford','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 87 A - Fábrica Ford','87','A - Fábrica Ford','LINESTRING ( 
 -58.455998 -34.593525, 
 -58.455119 -34.592695, 
 -58.452447 -34.590134, 
@@ -41224,9 +41224,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.702151 -34.443778, 
 -58.703974 -34.441477, 
 -58.705047 -34.44004
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 87 B - Est. J.L. Suárez','87','B - Est. J.L. Suárez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 87 B - Est. J.L. Suárez','87','B - Est. J.L. Suárez','LINESTRING ( 
 -58.455033 -34.594161, 
 -58.455956 -34.593508, 
 -58.453927 -34.591653, 
@@ -41365,9 +41365,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.572133 -34.525182, 
 -58.571586 -34.524369, 
 -58.57018 -34.52551
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 87 C - Barrio San Isidro','87','C - Barrio San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 87 C - Barrio San Isidro','87','C - Barrio San Isidro','LINESTRING ( 
 -58.45514 -34.594161, 
 -58.455956 -34.593525, 
 -58.454143 -34.591866, 
@@ -41558,9 +41558,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.589449 -34.48828, 
 -58.58887 -34.488323, 
 -58.58874 -34.48847
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 A - Lobos por Rivadavia','88','A - Lobos por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 A - Lobos por Rivadavia','88','A - Lobos por Rivadavia','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.413212 -34.610593, 
 -58.419676 -34.611055, 
@@ -42017,9 +42017,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.092947 -35.182077, 
 -59.092872 -35.184787, 
 -59.092776 -35.18743
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 B - Lobos por Alberdi','88','B - Lobos por Alberdi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 B - Lobos por Alberdi','88','B - Lobos por Alberdi','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.408813 -34.610013, 
 -58.408796 -34.609617, 
@@ -42479,9 +42479,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.092947 -35.182077, 
 -59.092872 -35.184787, 
 -59.092776 -35.18743
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 C - Cañuelas por Rivadavia y RN205','88','C - Cañuelas por Rivadavia y RN205','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 C - Cañuelas por Rivadavia y RN205','88','C - Cañuelas por Rivadavia y RN205','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.413212 -34.610593, 
 -58.419676 -34.611055, 
@@ -42826,9 +42826,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.754888 -35.056361, 
 -58.753374 -35.057546, 
 -58.755017 -35.05892
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 D - Cañuelas por Alberdi y RN205','88','D - Cañuelas por Alberdi y RN205','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 D - Cañuelas por Alberdi y RN205','88','D - Cañuelas por Alberdi y RN205','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.408813 -34.610013, 
 -58.408796 -34.609617, 
@@ -43182,9 +43182,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.754866 -35.05637, 
 -58.753365 -35.057543, 
 -58.755017 -35.05892
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 E - KM 56 RN3 por Rivadavia','88','E - KM 56 RN3 por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 E - KM 56 RN3 por Rivadavia','88','E - KM 56 RN3 por Rivadavia','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.413212 -34.610593, 
 -58.419676 -34.611055, 
@@ -43472,9 +43472,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.73491 -34.964171, 
 -58.73586 -34.966053, 
 -58.736986 -34.9684
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 F - KM 56 RN3 por Alberdi','88','F - KM 56 RN3 por Alberdi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 F - KM 56 RN3 por Alberdi','88','F - KM 56 RN3 por Alberdi','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.408813 -34.610013, 
 -58.408796 -34.609617, 
@@ -43765,9 +43765,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.73491 -34.964171, 
 -58.73586 -34.966053, 
 -58.736761 -34.96791
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 G - KM 48 RN3 por Rivadavia','88','G - KM 48 RN3 por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 G - KM 48 RN3 por Rivadavia','88','G - KM 48 RN3 por Rivadavia','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.413212 -34.610593, 
 -58.419676 -34.611055, 
@@ -43976,9 +43976,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.652723 -34.841757, 
 -58.653033 -34.842773, 
 -58.653441 -34.84409
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 H - KM 48 RN3 por Alberdi','88','H - KM 48 RN3 por Alberdi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 H - KM 48 RN3 por Alberdi','88','H - KM 48 RN3 por Alberdi','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.408813 -34.610013, 
 -58.408796 -34.609617, 
@@ -44189,9 +44189,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.652518 -34.841236, 
 -58.652723 -34.841757, 
 -58.653441 -34.84409
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 I - KM 35 RN3 por Rivadavia','88','I - KM 35 RN3 por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 I - KM 35 RN3 por Rivadavia','88','I - KM 35 RN3 por Rivadavia','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.413212 -34.610593, 
 -58.419676 -34.611055, 
@@ -44387,9 +44387,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.632392 -34.814124, 
 -58.630391 -34.815736, 
 -58.629784 -34.81522
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 J - KM 35 RN3 por Alberdi','88','J - KM 35 RN3 por Alberdi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 J - KM 35 RN3 por Alberdi','88','J - KM 35 RN3 por Alberdi','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.408813 -34.610013, 
 -58.408796 -34.609617, 
@@ -44588,9 +44588,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.632595 -34.81297, 
 -58.631802 -34.813614, 
 -58.630502 -34.81468
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 K - KM 26 RN3 por Rivadavia','88','K - KM 26 RN3 por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 K - KM 26 RN3 por Rivadavia','88','K - KM 26 RN3 por Rivadavia','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.413212 -34.610593, 
 -58.419676 -34.611055, 
@@ -44724,9 +44724,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.608021 -34.732809, 
 -58.611057 -34.730415, 
 -58.613852 -34.72821
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 L - KM 26 RN3 por Alberdi','88','L - KM 26 RN3 por Alberdi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 L - KM 26 RN3 por Alberdi','88','L - KM 26 RN3 por Alberdi','LINESTRING ( 
 -58.408872 -34.610306, 
 -58.408813 -34.610013, 
 -58.408796 -34.609617, 
@@ -44863,9 +44863,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.608037 -34.732796, 
 -58.611057 -34.730406, 
 -58.613852 -34.72821
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 M - KM 29 RN3 por Autopista y Bufano - Expreso','88','M - KM 29 RN3 por Autopista y Bufano - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 M - KM 29 RN3 por Autopista y Bufano - Expreso','88','M - KM 29 RN3 por Autopista y Bufano - Expreso','LINESTRING ( 
 -58.408492 -34.610216, 
 -58.408588 -34.610146, 
 -58.408684 -34.609991, 
@@ -45077,9 +45077,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.61406 -34.753076, 
 -58.61435 -34.754038, 
 -58.614845 -34.75598
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 N - KM 48 RN3 por Autopista y Gral.Rojo - Expreso','88','N - KM 48 RN3 por Autopista y Gral.Rojo - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 88 N - KM 48 RN3 por Autopista y Gral.Rojo - Expreso','88','N - KM 48 RN3 por Autopista y Gral.Rojo - Expreso','LINESTRING ( 
 -58.408492 -34.610216, 
 -58.408678 -34.609895, 
 -58.408695 -34.60929, 
@@ -45396,9 +45396,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.734616 -34.963526, 
 -58.735892 -34.966057, 
 -58.737147 -34.96856
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 A - Villegas por Barrio Sarmiento','91','A - Villegas por Barrio Sarmiento','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 A - Villegas por Barrio Sarmiento','91','A - Villegas por Barrio Sarmiento','LINESTRING ( 
 -58.370254 -34.583351, 
 -58.367936 -34.584606, 
 -58.366573 -34.585348, 
@@ -45785,9 +45785,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.56805 -34.722461, 
 -58.570883 -34.720486, 
 -58.576146 -34.71652
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 B - Villegas por Juan Rava','91','B - Villegas por Juan Rava','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 B - Villegas por Juan Rava','91','B - Villegas por Juan Rava','LINESTRING ( 
 -58.370232 -34.583297, 
 -58.36903 -34.583951, 
 -58.366616 -34.585329, 
@@ -46047,9 +46047,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.569172 -34.721649, 
 -58.572851 -34.718995, 
 -58.576135 -34.71650
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 C - Villegas por Juan Rava','91','C - Villegas por Juan Rava','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 C - Villegas por Juan Rava','91','C - Villegas por Juan Rava','LINESTRING ( 
 -58.418104 -34.650756, 
 -58.417568 -34.650632, 
 -58.416356 -34.650843, 
@@ -46245,9 +46245,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.572567 -34.71918, 
 -58.574649 -34.717629, 
 -58.576172 -34.716
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 D - Villegas por Barrio Sarmiento','91','D - Villegas por Barrio Sarmiento','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 D - Villegas por Barrio Sarmiento','91','D - Villegas por Barrio Sarmiento','LINESTRING ( 
 -58.382227 -34.627786, 
 -58.382205 -34.627602, 
 -58.382244 -34.627248, 
@@ -46624,9 +46624,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.573464 -34.71851, 
 -58.574708 -34.717593, 
 -58.576166 -34.71653
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 E - Villegas por Juan Rava','91','E - Villegas por Juan Rava','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 E - Villegas por Juan Rava','91','E - Villegas por Juan Rava','LINESTRING ( 
 -58.382216 -34.627822, 
 -58.382195 -34.62762, 
 -58.382254 -34.62724, 
@@ -46986,9 +46986,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.573914 -34.718158, 
 -58.57576 -34.716808, 
 -58.576124 -34.71652
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 F - Villegas por Autopista - Expreso','91','F - Villegas por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 91 F - Villegas por Autopista - Expreso','91','F - Villegas por Autopista - Expreso','LINESTRING ( 
 -58.380253 -34.617677, 
 -58.380822 -34.617617, 
 -58.381529 -34.617677, 
@@ -47250,9 +47250,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.570743 -34.720539, 
 -58.573768 -34.718282, 
 -58.576216 -34.71646
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 92 A - Olimpo y Cintura','92','A - Olimpo y Cintura','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 92 A - Olimpo y Cintura','92','A - Olimpo y Cintura','LINESTRING ( 
 -58.370254 -34.583316, 
 -58.369095 -34.584004, 
 -58.369706 -34.58487, 
@@ -47578,9 +47578,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.497235 -34.739206, 
 -58.495851 -34.741022, 
 -58.494939 -34.74233
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 92 B - Puente 12','92','B - Puente 12','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 92 B - Puente 12','92','B - Puente 12','LINESTRING ( 
 -58.37019 -34.583368, 
 -58.369095 -34.583987, 
 -58.369514 -34.58464, 
@@ -47745,9 +47745,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.514825 -34.721774, 
 -58.514847 -34.722302, 
 -58.514611 -34.72265
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 92 C - Gral.Paz y Perón','92','C - Gral.Paz y Perón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 92 C - Gral.Paz y Perón','92','C - Gral.Paz y Perón','LINESTRING ( 
 -58.37021 -34.583351, 
 -58.36918 -34.583987, 
 -58.370199 -34.585489, 
@@ -47903,9 +47903,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.498945 -34.672516, 
 -58.501306 -34.673681, 
 -58.501736 -34.6740
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 93 A - Avellaneda','93','A - Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 93 A - Avellaneda','93','A - Avellaneda','LINESTRING ( 
 -58.526316 -34.523865, 
 -58.527625 -34.52452, 
 -58.526364 -34.525987, 
@@ -48176,9 +48176,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.377952 -34.663516, 
 -58.380172 -34.665351, 
 -58.381202 -34.66445
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 93 B - Avellaneda por Sívori','93','B - Avellaneda por Sívori','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 93 B - Avellaneda por Sívori','93','B - Avellaneda por Sívori','LINESTRING ( 
 -58.526615 -34.523936, 
 -58.524813 -34.523193, 
 -58.522485 -34.522168, 
@@ -48385,9 +48385,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.379213 -34.664593, 
 -58.380113 -34.665422, 
 -58.381058 -34.66452
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 93 C - Avellaneda','93','C - Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 93 C - Avellaneda','93','C - Avellaneda','LINESTRING ( 
 -58.479109 -34.570064, 
 -58.48001 -34.570683, 
 -58.478583 -34.572114, 
@@ -48527,9 +48527,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.379061 -34.664399, 
 -58.380135 -34.665388, 
 -58.38123 -34.6644
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 95 A - 1 - Avellaneda','95','A - 1 - Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 95 A - 1 - Avellaneda','95','A - 1 - Avellaneda','LINESTRING ( 
 -58.434111 -34.575524, 
 -58.432437 -34.576267, 
 -58.431418 -34.57669, 
@@ -48665,9 +48665,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.361628 -34.672994, 
 -58.359138 -34.674193, 
 -58.357464 -34.67465
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 95 B - 2 - Avellaneda','95','B - 2 - Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 95 B - 2 - Avellaneda','95','B - 2 - Avellaneda','LINESTRING ( 
 -58.434218 -34.575366, 
 -58.432437 -34.576248, 
 -58.431719 -34.57669, 
@@ -48755,9 +48755,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.366188 -34.664841, 
 -58.362991 -34.66987, 
 -58.360587 -34.67308
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 A - Pontevedra por Rivadavia','96','A - Pontevedra por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 A - Pontevedra por Rivadavia','96','A - Pontevedra por Rivadavia','LINESTRING ( 
 -58.382784 -34.629041, 
 -58.383 -34.622278, 
 -58.382925 -34.619736, 
@@ -48922,9 +48922,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.70069 -34.748859, 
 -58.70391 -34.751485, 
 -58.705905 -34.7530
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AA - Pontevedra por Autopista - Expreso','96','AA - Pontevedra por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AA - Pontevedra por Autopista - Expreso','96','AA - Pontevedra por Autopista - Expreso','LINESTRING ( 
 -58.382699 -34.629058, 
 -58.382893 -34.627628, 
 -58.382818 -34.626939, 
@@ -49078,9 +49078,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.643281 -34.772709, 
 -58.645685 -34.77123, 
 -58.646585 -34.7719
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AB - Pontevedra por Alberdi - Expreso','96','AB - Pontevedra por Alberdi - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AB - Pontevedra por Alberdi - Expreso','96','AB - Pontevedra por Alberdi - Expreso','LINESTRING ( 
 -58.382775 -34.629075, 
 -58.382806 -34.62776, 
 -58.382902 -34.625757, 
@@ -49197,9 +49197,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.627585 -34.696354, 
 -58.625031 -34.698295, 
 -58.625225 -34.69947
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AC - Rafael Castillo por Autopista - Expreso','96','AC - Rafael Castillo por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AC - Rafael Castillo por Autopista - Expreso','96','AC - Rafael Castillo por Autopista - Expreso','LINESTRING ( 
 -58.382753 -34.629032, 
 -58.38286 -34.627778, 
 -58.382865 -34.626533, 
@@ -49360,9 +49360,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.569606 -34.708897, 
 -58.565165 -34.712266, 
 -58.563813 -34.71330
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AD - Barrio San Alberto por Autopista - Expreso','96','AD - Barrio San Alberto por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AD - Barrio San Alberto por Autopista - Expreso','96','AD - Barrio San Alberto por Autopista - Expreso','LINESTRING ( 
 -58.382699 -34.629058, 
 -58.382784 -34.627858, 
 -58.382838 -34.626922, 
@@ -49505,9 +49505,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.640963 -34.819617, 
 -58.642508 -34.82247, 
 -58.642606 -34.82259
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AE - Villa Scasso por Autopista - Expreso','96','AE - Villa Scasso por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AE - Villa Scasso por Autopista - Expreso','96','AE - Villa Scasso por Autopista - Expreso','LINESTRING ( 
 -58.38272 -34.629005, 
 -58.382849 -34.627982, 
 -58.382818 -34.627575, 
@@ -49621,9 +49621,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.627037 -34.744256, 
 -58.637766 -34.735863, 
 -58.634849 -34.73357
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AF - Villa Scasso por Alberdi - Expreso','96','AF - Villa Scasso por Alberdi - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AF - Villa Scasso por Alberdi - Expreso','96','AF - Villa Scasso por Alberdi - Expreso','LINESTRING ( 
 -58.38272 -34.629075, 
 -58.382806 -34.627769, 
 -58.382882 -34.626887, 
@@ -49766,9 +49766,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.646286 -34.841757, 
 -58.647143 -34.841264, 
 -58.650126 -34.84043
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AG - Barrio Esperanza por Autopista - Expreso','96','AG - Barrio Esperanza por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AG - Barrio Esperanza por Autopista - Expreso','96','AG - Barrio Esperanza por Autopista - Expreso','LINESTRING ( 
 -58.382764 -34.629058, 
 -58.382764 -34.628123, 
 -58.382882 -34.627522, 
@@ -49923,9 +49923,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.580657 -34.747166, 
 -58.582202 -34.748559, 
 -58.583762 -34.74997
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AH - Est. Laferrere por Autopista - Expreso','96','AH - Est. Laferrere por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 AH - Est. Laferrere por Autopista - Expreso','96','AH - Est. Laferrere por Autopista - Expreso','LINESTRING ( 
 -58.382784 -34.629058, 
 -58.382893 -34.627858, 
 -58.382795 -34.627451, 
@@ -50051,9 +50051,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.588402 -34.747678, 
 -58.58572 -34.74967, 
 -58.585163 -34.74901
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 B - González Catán por KM32 RN3','96','B - González Catán por KM32 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 B - González Catán por KM32 RN3','96','B - González Catán por KM32 RN3','LINESTRING ( 
 -58.440334 -34.619929, 
 -58.44306 -34.621183, 
 -58.444659 -34.62196, 
@@ -50175,9 +50175,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.699769 -34.748013, 
 -58.704746 -34.752121, 
 -58.705927 -34.7530
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 C - Rafael Castillo por Rivadavia','96','C - Rafael Castillo por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 C - Rafael Castillo por Rivadavia','96','C - Rafael Castillo por Rivadavia','LINESTRING ( 
 -58.440249 -34.619982, 
 -58.441535 -34.620565, 
 -58.443477 -34.621377, 
@@ -50280,9 +50280,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.644343 -34.772199, 
 -58.645524 -34.771194, 
 -58.646574 -34.77195
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 D - Barrio San Alberto por Rivadavia','96','D - Barrio San Alberto por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 D - Barrio San Alberto por Rivadavia','96','D - Barrio San Alberto por Rivadavia','LINESTRING ( 
 -58.440249 -34.619929, 
 -58.441043 -34.6203, 
 -58.443328 -34.621237, 
@@ -50380,9 +50380,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.627606 -34.696337, 
 -58.624988 -34.698278, 
 -58.625118 -34.69951
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 E - Barrio La Foresta','96','E - Barrio La Foresta','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 E - Barrio La Foresta','96','E - Barrio La Foresta','LINESTRING ( 
 -58.440206 -34.619948, 
 -58.44115 -34.620389, 
 -58.443457 -34.621343, 
@@ -50485,9 +50485,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.572074 -34.71112, 
 -58.569692 -34.70888, 
 -58.563684 -34.71330
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 F - Villa Scasso por Rivadavia','96','F - Villa Scasso por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 F - Villa Scasso por Rivadavia','96','F - Villa Scasso por Rivadavia','LINESTRING ( 
 -58.440269 -34.619948, 
 -58.442545 -34.620972, 
 -58.4444 -34.621712, 
@@ -50602,9 +50602,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.637542 -34.812764, 
 -58.640287 -34.818066, 
 -58.642777 -34.82283
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 G - Barrio Esperanza por Rivadavia','96','G - Barrio Esperanza por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 G - Barrio Esperanza por Rivadavia','96','G - Barrio Esperanza por Rivadavia','LINESTRING ( 
 -58.440269 -34.620018, 
 -58.441493 -34.620565, 
 -58.443756 -34.621484, 
@@ -50698,9 +50698,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.632863 -34.734664, 
 -58.633142 -34.734876, 
 -58.634858 -34.73355
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 H - Est. Laferrere por Rivadavia y KM24.7 RN3','96','H - Est. Laferrere por Rivadavia y KM24.7 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 H - Est. Laferrere por Rivadavia y KM24.7 RN3','96','H - Est. Laferrere por Rivadavia y KM24.7 RN3','LINESTRING ( 
 -58.440313 -34.619948, 
 -58.443703 -34.621465, 
 -58.444659 -34.621943, 
@@ -50791,9 +50791,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.646628 -34.841509, 
 -58.64725 -34.841211, 
 -58.649954 -34.84045
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 I - Est. Laferrere por Rivadavia y KM26 RN3','96','I - Est. Laferrere por Rivadavia y KM26 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 I - Est. Laferrere por Rivadavia y KM26 RN3','96','I - Est. Laferrere por Rivadavia y KM26 RN3','LINESTRING ( 
 -58.440206 -34.619982, 
 -58.442824 -34.621094, 
 -58.444003 -34.621572, 
@@ -50901,9 +50901,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.580668 -34.747219, 
 -58.58307 -34.749335, 
 -58.583651 -34.74991
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 J - Pontevedra por Rivadavia','96','J - Pontevedra por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 J - Pontevedra por Rivadavia','96','J - Pontevedra por Rivadavia','LINESTRING ( 
 -58.440313 -34.619948, 
 -58.441471 -34.620477, 
 -58.442565 -34.621006, 
@@ -51003,9 +51003,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.588607 -34.747554, 
 -58.585732 -34.749634, 
 -58.58511 -34.74908
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 K - González Catán por KM32 RN3','96','K - González Catán por KM32 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 K - González Catán por KM32 RN3','96','K - González Catán por KM32 RN3','LINESTRING ( 
 -58.522325 -34.640199, 
 -58.522561 -34.63884, 
 -58.523418 -34.63891, 
@@ -51096,9 +51096,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.701689 -34.74967, 
 -58.705143 -34.752437, 
 -58.705938 -34.75314
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 L - Rafael Castillo por Rivadavia','96','L - Rafael Castillo por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 L - Rafael Castillo por Rivadavia','96','L - Rafael Castillo por Rivadavia','LINESTRING ( 
 -58.522688 -34.638821, 
 -58.526508 -34.639087, 
 -58.529083 -34.639457, 
@@ -51172,9 +51172,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.643925 -34.772499, 
 -58.645535 -34.77123, 
 -58.64665 -34.77202
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 M - Barrio San Alberto por Rivadavia','96','M - Barrio San Alberto por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 M - Barrio San Alberto por Rivadavia','96','M - Barrio San Alberto por Rivadavia','LINESTRING ( 
 -58.522517 -34.638804, 
 -58.524405 -34.638998, 
 -58.525714 -34.639068, 
@@ -51250,9 +51250,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.627682 -34.696285, 
 -58.62502 -34.698278, 
 -58.625149 -34.69947
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 N - Barrio La Foresta','96','N - Barrio La Foresta','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 N - Barrio La Foresta','96','N - Barrio La Foresta','LINESTRING ( 
 -58.522604 -34.638821, 
 -58.524448 -34.639015, 
 -58.526358 -34.639105, 
@@ -51314,9 +51314,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.572105 -34.711103, 
 -58.569639 -34.708986, 
 -58.563758 -34.71334
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 O - Barrio Esperanza por Rivadavia','96','O - Barrio Esperanza por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 O - Barrio Esperanza por Rivadavia','96','O - Barrio Esperanza por Rivadavia','LINESTRING ( 
 -58.522624 -34.638821, 
 -58.524191 -34.638981, 
 -58.526294 -34.639175, 
@@ -51426,9 +51426,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.641478 -34.820216, 
 -58.641993 -34.821078, 
 -58.642681 -34.82259
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 P - Est. Laferrere por Rivadavia y KM24.7 RN3','96','P - Est. Laferrere por Rivadavia y KM24.7 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 P - Est. Laferrere por Rivadavia y KM24.7 RN3','96','P - Est. Laferrere por Rivadavia y KM24.7 RN3','LINESTRING ( 
 -58.522561 -34.638821, 
 -58.533107 -34.639704, 
 -58.54141 -34.640287, 
@@ -51472,9 +51472,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.614463 -34.754447, 
 -58.637681 -34.736004, 
 -58.634892 -34.73357
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Q - Est. Laferrere por Rivadavia y KM26 RN3','96','Q - Est. Laferrere por Rivadavia y KM26 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Q - Est. Laferrere por Rivadavia y KM26 RN3','96','Q - Est. Laferrere por Rivadavia y KM26 RN3','LINESTRING ( 
 -58.522561 -34.638804, 
 -58.528922 -34.639352, 
 -58.530039 -34.639457, 
@@ -51545,9 +51545,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.588591 -34.747545, 
 -58.585785 -34.749656, 
 -58.585002 -34.7490
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 R - Pontevedra','96','R - Pontevedra','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 R - Pontevedra','96','R - Pontevedra','LINESTRING ( 
 -58.522604 -34.638787, 
 -58.524748 -34.639015, 
 -58.527034 -34.639158, 
@@ -51614,9 +51614,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.646628 -34.841509, 
 -58.64725 -34.841211, 
 -58.649954 -34.84045
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 S - González Catán por KM32 RN3','96','S - González Catán por KM32 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 S - González Catán por KM32 RN3','96','S - González Catán por KM32 RN3','LINESTRING ( 
 -58.522561 -34.638804, 
 -58.528922 -34.639352, 
 -58.530039 -34.639457, 
@@ -51695,9 +51695,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.580657 -34.747166, 
 -58.582202 -34.748559, 
 -58.583762 -34.74997
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 T - Rafael Castillo','96','T - Rafael Castillo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 T - Rafael Castillo','96','T - Rafael Castillo','LINESTRING ( 
 -58.38302 -34.629041, 
 -58.384222 -34.629111, 
 -58.384202 -34.629852, 
@@ -51804,9 +51804,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.698267 -34.746716, 
 -58.70391 -34.751485, 
 -58.705905 -34.7530
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 U - Barrio San Alberto','96','U - Barrio San Alberto','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 U - Barrio San Alberto','96','U - Barrio San Alberto','LINESTRING ( 
 -58.382784 -34.629041, 
 -58.383 -34.622278, 
 -58.382925 -34.619736, 
@@ -51934,9 +51934,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.70069 -34.748859, 
 -58.70391 -34.751485, 
 -58.705905 -34.7530
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 V - Barrio La Foresta','96','V - Barrio La Foresta','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 V - Barrio La Foresta','96','V - Barrio La Foresta','LINESTRING ( 
 -58.38302 -34.629041, 
 -58.384222 -34.629111, 
 -58.384202 -34.629852, 
@@ -52009,9 +52009,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.624977 -34.698365, 
 -58.625171 -34.699584, 
 -58.626223 -34.69947
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 W - Villa Scasso','96','W - Villa Scasso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 W - Villa Scasso','96','W - Villa Scasso','LINESTRING ( 
 -58.383172 -34.629041, 
 -58.384309 -34.629075, 
 -58.384265 -34.629852, 
@@ -52130,9 +52130,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.569606 -34.708897, 
 -58.565165 -34.712266, 
 -58.563813 -34.71330
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 X - Barrio Esperanza','96','X - Barrio Esperanza','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 X - Barrio Esperanza','96','X - Barrio Esperanza','LINESTRING ( 
 -58.38302 -34.629041, 
 -58.384222 -34.629111, 
 -58.384202 -34.629852, 
@@ -52212,9 +52212,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.632724 -34.739866, 
 -58.637701 -34.735899, 
 -58.634849 -34.73355
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Y - Est. Laferrere por Rivadavia y KM24.7 RN3','96','Y - Est. Laferrere por Rivadavia y KM24.7 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Y - Est. Laferrere por Rivadavia y KM24.7 RN3','96','Y - Est. Laferrere por Rivadavia y KM24.7 RN3','LINESTRING ( 
 -58.38272 -34.629005, 
 -58.382849 -34.627982, 
 -58.382818 -34.627575, 
@@ -52289,9 +52289,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.627037 -34.744256, 
 -58.637766 -34.735863, 
 -58.634849 -34.73357
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Z - Est. Laferrere por Rivadavia y KM26 RN3','96','Z - Est. Laferrere por Rivadavia y KM26 RN3','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Z - Est. Laferrere por Rivadavia y KM26 RN3','96','Z - Est. Laferrere por Rivadavia y KM26 RN3','LINESTRING ( 
 -58.38302 -34.629041, 
 -58.384222 -34.629111, 
 -58.384202 -34.629852, 
@@ -52386,9 +52386,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.644075 -34.843446, 
 -58.647187 -34.841158, 
 -58.650061 -34.84038
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Ñ - Villa Scasso por Rivadavia','96','Ñ - Villa Scasso por Rivadavia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 96 Ñ - Villa Scasso por Rivadavia','96','Ñ - Villa Scasso por Rivadavia','LINESTRING ( 
 -58.38302 -34.629041, 
 -58.384222 -34.629111, 
 -58.384202 -34.629852, 
@@ -52449,9 +52449,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.557364 -34.73581, 
 -58.570174 -34.742952, 
 -58.583585 -34.7501
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 97 A - Estación Morón','97','A - Estación Morón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 97 A - Estación Morón','97','A - Estación Morón','LINESTRING ( 
 -58.377963 -34.628537, 
 -58.378472 -34.627358, 
 -58.378895 -34.626418, 
@@ -52707,9 +52707,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.619698 -34.6488, 
 -58.619484 -34.648764, 
 -58.618734 -34.64877
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 97 B - Mercado Central','97','B - Mercado Central','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 97 B - Mercado Central','97','B - Mercado Central','LINESTRING ( 
 -58.377963 -34.628537, 
 -58.378472 -34.627358, 
 -58.378895 -34.626418, 
@@ -52887,9 +52887,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.500619 -34.710687, 
 -58.499858 -34.711261, 
 -58.499166 -34.7117
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 97 C - Barrio San Alberto','97','C - Barrio San Alberto','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 97 C - Barrio San Alberto','97','C - Barrio San Alberto','LINESTRING ( 
 -58.377963 -34.628537, 
 -58.378472 -34.627358, 
 -58.378895 -34.626418, 
@@ -53116,9 +53116,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.575363 -34.717086, 
 -58.577787 -34.715291, 
 -58.575679 -34.71339
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 A - Balneario de Quilmes por Las Flores','98','A - Balneario de Quilmes por Las Flores','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 A - Balneario de Quilmes por Las Flores','98','A - Balneario de Quilmes por Las Flores','LINESTRING ( 
 -58.408728 -34.609192, 
 -58.406388 -34.609068, 
 -58.40619 -34.609152, 
@@ -53285,9 +53285,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.226739 -34.708342, 
 -58.225372 -34.709229, 
 -58.2235 -34.71045
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 B - Balneario de Quilmes por Montevideo','98','B - Balneario de Quilmes por Montevideo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 B - Balneario de Quilmes por Montevideo','98','B - Balneario de Quilmes por Montevideo','LINESTRING ( 
 -58.408728 -34.609192, 
 -58.406388 -34.609068, 
 -58.40619 -34.609152, 
@@ -53459,9 +53459,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.226739 -34.708342, 
 -58.225372 -34.709229, 
 -58.2235 -34.71045
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 C - Villa España por Calchaquí','98','C - Villa España por Calchaquí','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 C - Villa España por Calchaquí','98','C - Villa España por Calchaquí','LINESTRING ( 
 -58.408728 -34.609192, 
 -58.406388 -34.609068, 
 -58.40619 -34.609152, 
@@ -53710,9 +53710,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.19554 -34.768639, 
 -58.195438 -34.76869, 
 -58.194194 -34.76970
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 D - Villa España por Gral. Acha','98','D - Villa España por Gral. Acha','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 D - Villa España por Gral. Acha','98','D - Villa España por Gral. Acha','LINESTRING ( 
 -58.408728 -34.609192, 
 -58.406388 -34.609068, 
 -58.40619 -34.609152, 
@@ -53960,9 +53960,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.19554 -34.768639, 
 -58.195438 -34.76869, 
 -58.194194 -34.76970
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 E - Villa España por Ramón Franco','98','E - Villa España por Ramón Franco','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 E - Villa España por Ramón Franco','98','E - Villa España por Ramón Franco','LINESTRING ( 
 -58.408728 -34.609192, 
 -58.406388 -34.609068, 
 -58.40619 -34.609152, 
@@ -54157,9 +54157,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.19554 -34.768639, 
 -58.195438 -34.76869, 
 -58.194194 -34.76970
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 F - Barrio Gráfico','98','F - Barrio Gráfico','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 98 F - Barrio Gráfico','98','F - Barrio Gráfico','LINESTRING ( 
 -58.408728 -34.609192, 
 -58.406388 -34.609068, 
 -58.40619 -34.609152, 
@@ -54310,9 +54310,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.301127 -34.693576, 
 -58.303252 -34.691865, 
 -58.301122 -34.68996
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 99 A - Correo Central','99','A - Correo Central','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 99 A - Correo Central','99','A - Correo Central','LINESTRING ( 
 -58.524223 -34.634602, 
 -58.524062 -34.635741, 
 -58.523135 -34.635874, 
@@ -54438,9 +54438,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.368848 -34.604163, 
 -58.368977 -34.605192, 
 -58.369658 -34.60523
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 A - 1 - Est. Lanús por Pavón','100','A - 1 - Est. Lanús por Pavón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 A - 1 - Est. Lanús por Pavón','100','A - 1 - Est. Lanús por Pavón','LINESTRING ( 
 -58.373387 -34.581566, 
 -58.374234 -34.580992, 
 -58.374051 -34.581465, 
@@ -54626,9 +54626,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.390402 -34.709476, 
 -58.390639 -34.709665, 
 -58.391111 -34.71002
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 B - Est. Lanús por Guemes','100','B - Est. Lanús por Guemes','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 B - Est. Lanús por Guemes','100','B - Est. Lanús por Guemes','LINESTRING ( 
 -58.373387 -34.581566, 
 -58.374234 -34.580992, 
 -58.374051 -34.581465, 
@@ -54717,9 +54717,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.388857 -34.706287, 
 -58.387849 -34.707019, 
 -58.391024 -34.71002
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 C - 3 - Roma y Lynch','100','C - 3 - Roma y Lynch','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 C - 3 - Roma y Lynch','100','C - 3 - Roma y Lynch','LINESTRING ( 
 -58.373387 -34.581566, 
 -58.374234 -34.580992, 
 -58.374051 -34.581465, 
@@ -54867,9 +54867,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.365457 -34.744883, 
 -58.364803 -34.744548, 
 -58.364203 -34.74421
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 D - Roma y Lynch - Expreso','100','D - Roma y Lynch - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 100 D - Roma y Lynch - Expreso','100','D - Roma y Lynch - Expreso','LINESTRING ( 
 -58.373387 -34.581566, 
 -58.374234 -34.580992, 
 -58.374051 -34.581465, 
@@ -55039,9 +55039,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.365457 -34.744883, 
 -58.364803 -34.744548, 
 -58.364203 -34.74421
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 101 A - Retiro por Flores','101','A - Retiro por Flores','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 101 A - Retiro por Flores','101','A - Retiro por Flores','LINESTRING ( 
 -58.46884 -34.664099, 
 -58.469656 -34.663614, 
 -58.469656 -34.663437, 
@@ -55216,9 +55216,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.375205 -34.584473, 
 -58.375044 -34.584578, 
 -58.375002 -34.58474
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 101 B - Retiro por Villa Soldati','101','B - Retiro por Villa Soldati','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 101 B - Retiro por Villa Soldati','101','B - Retiro por Villa Soldati','LINESTRING ( 
 -58.463808 -34.719957, 
 -58.46338 -34.719807, 
 -58.46235 -34.720998, 
@@ -55433,9 +55433,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.375205 -34.584473, 
 -58.375044 -34.584578, 
 -58.375002 -34.58474
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 101 C - Retiro','101','C - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 101 C - Retiro','101','C - Retiro','LINESTRING ( 
 -58.406292 -34.60891, 
 -58.405068 -34.608778, 
 -58.404136 -34.608697, 
@@ -55498,9 +55498,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.375205 -34.584473, 
 -58.375044 -34.584578, 
 -58.375002 -34.58474
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 102 A - Barracas','102','A - Barracas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 102 A - Barracas','102','A - Barracas','LINESTRING ( 
 -58.4101 -34.573686, 
 -58.409672 -34.573855, 
 -58.409317 -34.574049, 
@@ -55586,9 +55586,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.369106 -34.641143, 
 -58.368955 -34.641956, 
 -58.369191 -34.64201
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 A - Tapiales','103','A - Tapiales','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 A - Tapiales','103','A - Tapiales','LINESTRING ( 
 -58.366306 -34.619293, 
 -58.366585 -34.616875, 
 -58.365909 -34.616875, 
@@ -55795,9 +55795,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.508999 -34.699953, 
 -58.509824 -34.700713, 
 -58.511477 -34.70222
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 B - Mataderos','103','B - Mataderos','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 B - Mataderos','103','B - Mataderos','LINESTRING ( 
 -58.366306 -34.619293, 
 -58.366585 -34.616875, 
 -58.365909 -34.616875, 
@@ -55963,9 +55963,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.498871 -34.672482, 
 -58.500469 -34.673346, 
 -58.501972 -34.67413
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 C - Tapiales','103','C - Tapiales','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 C - Tapiales','103','C - Tapiales','LINESTRING ( 
 -58.439433 -34.629032, 
 -58.439863 -34.628388, 
 -58.44026 -34.62769, 
@@ -56099,9 +56099,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.508999 -34.699953, 
 -58.509824 -34.700713, 
 -58.511477 -34.70222
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 D - Primera Junta','103','D - Primera Junta','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 103 D - Primera Junta','103','D - Primera Junta','LINESTRING ( 
 -58.366306 -34.619293, 
 -58.366585 -34.616875, 
 -58.365909 -34.616875, 
@@ -56190,9 +56190,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.438242 -34.630806, 
 -58.436697 -34.633119, 
 -58.436365 -34.63294
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 104 A - Liniers','104','A - Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 104 A - Liniers','104','A - Liniers','LINESTRING ( 
 -58.406657 -34.608946, 
 -58.406067 -34.608893, 
 -58.405991 -34.610093, 
@@ -56316,9 +56316,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.526305 -34.641505, 
 -58.52639 -34.640251, 
 -58.526412 -34.63916
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 104 B - San Justo','104','B - San Justo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 104 B - San Justo','104','B - San Justo','LINESTRING ( 
 -58.406657 -34.608946, 
 -58.406067 -34.608893, 
 -58.405991 -34.610093, 
@@ -56445,9 +56445,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.548428 -34.675913, 
 -58.547547 -34.676603, 
 -58.546914 -34.67705
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 104 C - Liniers - Expreso','104','C - Liniers - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 104 C - Liniers - Expreso','104','C - Liniers - Expreso','LINESTRING ( 
 -58.406657 -34.608946, 
 -58.406067 -34.608893, 
 -58.405991 -34.610093, 
@@ -56552,9 +56552,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.529952 -34.640605, 
 -58.529094 -34.640517, 
 -58.529083 -34.64040
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 105 A - Sáenz Peña por Santos Lugares','105','A - Sáenz Peña por Santos Lugares','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 105 A - Sáenz Peña por Santos Lugares','105','A - Sáenz Peña por Santos Lugares','LINESTRING ( 
 -58.368366 -34.604053, 
 -58.368504 -34.60408, 
 -58.36872 -34.60468, 
@@ -56774,9 +56774,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.545231 -34.614235, 
 -58.543331 -34.61269, 
 -58.543922 -34.61211
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 105 B - Sáenz Peña por Golf','105','B - Sáenz Peña por Golf','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 105 B - Sáenz Peña por Golf','105','B - Sáenz Peña por Golf','LINESTRING ( 
 -58.368366 -34.604053, 
 -58.368504 -34.60408, 
 -58.36872 -34.60468, 
@@ -56962,9 +56962,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.539577 -34.609343, 
 -58.541131 -34.610323, 
 -58.543931 -34.61208
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 106 A - Retiro','106','A - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 106 A - Retiro','106','A - Retiro','LINESTRING ( 
 -58.527818 -34.638371, 
 -58.52653 -34.6383, 
 -58.525188 -34.638178, 
@@ -57185,9 +57185,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.37373 -34.585878, 
 -58.373054 -34.586239, 
 -58.372582 -34.58627
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 107 A - Ciudad Universitaria por Libertador','107','A - Ciudad Universitaria por Libertador','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 107 A - Ciudad Universitaria por Libertador','107','A - Ciudad Universitaria por Libertador','LINESTRING ( 
 -58.473754 -34.652459, 
 -58.471362 -34.654347, 
 -58.469861 -34.655538, 
@@ -57411,9 +57411,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.440806 -34.542515, 
 -58.441031 -34.542391, 
 -58.441569 -34.54209
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 107 B - Ciudad Universitaria por Alcorta','107','B - Ciudad Universitaria por Alcorta','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 107 B - Ciudad Universitaria por Alcorta','107','B - Ciudad Universitaria por Alcorta','LINESTRING ( 
 -58.473754 -34.652459, 
 -58.471362 -34.654347, 
 -58.469861 -34.655538, 
@@ -57637,9 +57637,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.440806 -34.542515, 
 -58.441031 -34.542391, 
 -58.441569 -34.54209
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 108 A - Retiro','108','A - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 108 A - Retiro','108','A - Retiro','LINESTRING ( 
 -58.534416 -34.628793, 
 -58.534908 -34.629243, 
 -58.534168 -34.6298, 
@@ -57922,9 +57922,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.366252 -34.585489, 
 -58.369278 -34.583827, 
 -58.372324 -34.58212
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 109 A - Correo Central por Hospital','109','A - Correo Central por Hospital','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 109 A - Correo Central por Hospital','109','A - Correo Central por Hospital','LINESTRING ( 
 -58.525875 -34.63824, 
 -58.525177 -34.638178, 
 -58.525457 -34.636139, 
@@ -58106,9 +58106,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.368366 -34.60354, 
 -58.368451 -34.603833, 
 -58.368495 -34.6040
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 109 B - Correo Central','109','B - Correo Central','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 109 B - Correo Central','109','B - Correo Central','LINESTRING ( 
 -58.474001 -34.605289, 
 -58.473604 -34.60588, 
 -58.472414 -34.605271, 
@@ -58216,9 +58216,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.368366 -34.60354, 
 -58.368451 -34.603833, 
 -58.368495 -34.6040
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 109 C - Correo Central por Córdoba - Expreso','109','C - Correo Central por Córdoba - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 109 C - Correo Central por Córdoba - Expreso','109','C - Correo Central por Córdoba - Expreso','LINESTRING ( 
 -58.525875 -34.63824, 
 -58.525177 -34.638178, 
 -58.525457 -34.636139, 
@@ -58400,9 +58400,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.368366 -34.60354, 
 -58.368451 -34.603833, 
 -58.368495 -34.6040
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 110 A - Villa Martelli por Saavedra','110','A - Villa Martelli por Saavedra','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 110 A - Villa Martelli por Saavedra','110','A - Villa Martelli por Saavedra','LINESTRING ( 
 -58.389769 -34.584014, 
 -58.390037 -34.583899, 
 -58.390284 -34.584322, 
@@ -58642,9 +58642,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.50871 -34.552349, 
 -58.513066 -34.554374, 
 -58.514856 -34.55520
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 110 B - Villa Martelli por Constituyentes','110','B - Villa Martelli por Constituyentes','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 110 B - Villa Martelli por Constituyentes','110','B - Villa Martelli por Constituyentes','LINESTRING ( 
 -58.389769 -34.584014, 
 -58.390037 -34.583899, 
 -58.390284 -34.584322, 
@@ -58828,9 +58828,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.515844 -34.556626, 
 -58.514707 -34.55614, 
 -58.51417 -34.55590
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 A - J.L.Suárez por V.Concepción','111','A - J.L.Suárez por V.Concepción','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 A - J.L.Suárez por V.Concepción','111','A - J.L.Suárez por V.Concepción','LINESTRING ( 
 -58.367904 -34.612796, 
 -58.367958 -34.612265, 
 -58.367131 -34.612163, 
@@ -59176,9 +59176,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.569113 -34.526412, 
 -58.56996 -34.525705, 
 -58.569682 -34.52551
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 B - J.L.Suárez por Constituyentes','111','B - J.L.Suárez por Constituyentes','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 B - J.L.Suárez por Constituyentes','111','B - J.L.Suárez por Constituyentes','LINESTRING ( 
 -58.367904 -34.612796, 
 -58.367958 -34.612265, 
 -58.367131 -34.612163, 
@@ -59507,9 +59507,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.569113 -34.526412, 
 -58.56996 -34.525705, 
 -58.569682 -34.52551
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 C - J.L.Suárez por V.Constitución y Paraguay','111','C - J.L.Suárez por V.Constitución y Paraguay','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 C - J.L.Suárez por V.Constitución y Paraguay','111','C - J.L.Suárez por V.Constitución y Paraguay','LINESTRING ( 
 -58.367904 -34.612796, 
 -58.367958 -34.612265, 
 -58.367131 -34.612163, 
@@ -59875,9 +59875,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.569113 -34.526412, 
 -58.56996 -34.525705, 
 -58.569682 -34.52551
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 D - Chacarita','111','D - Chacarita','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 D - Chacarita','111','D - Chacarita','LINESTRING ( 
 -58.367904 -34.612796, 
 -58.367958 -34.612265, 
 -58.367131 -34.612163, 
@@ -60080,9 +60080,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.464399 -34.592471, 
 -58.464421 -34.592621, 
 -58.46448 -34.59280
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 E - Constituyentes y Gral.Paz','111','E - Constituyentes y Gral.Paz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 E - Constituyentes y Gral.Paz','111','E - Constituyentes y Gral.Paz','LINESTRING ( 
 -58.367904 -34.612796, 
 -58.367958 -34.612265, 
 -58.367131 -34.612163, 
@@ -60342,9 +60342,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.508951 -34.57007, 
 -58.509175 -34.569875, 
 -58.509385 -34.56966
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 F - Constituyentes y Gral.Paz por Paraguay','111','F - Constituyentes y Gral.Paz por Paraguay','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 111 F - Constituyentes y Gral.Paz por Paraguay','111','F - Constituyentes y Gral.Paz por Paraguay','LINESTRING ( 
 -58.367904 -34.612796, 
 -58.367958 -34.612265, 
 -58.367131 -34.612163, 
@@ -60604,9 +60604,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.508794 -34.570154, 
 -58.508988 -34.570042, 
 -58.509402 -34.56965
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 112 A - Lanús','112','A - Lanús','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 112 A - Lanús','112','A - Lanús','LINESTRING ( 
 -58.505147 -34.573298, 
 -58.50593 -34.572459, 
 -58.504826 -34.571849, 
@@ -60827,9 +60827,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.391798 -34.708235, 
 -58.390757 -34.708272, 
 -58.390949 -34.70897
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 113 A - San Justo por Boyaca','113','A - San Justo por Boyaca','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 113 A - San Justo por Boyaca','113','A - San Justo por Boyaca','LINESTRING ( 
 -58.449759 -34.558571, 
 -58.450136 -34.558315, 
 -58.450226 -34.558199, 
@@ -61093,9 +61093,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.561619 -34.682778, 
 -58.560529 -34.68358, 
 -58.55944 -34.68440
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 113 B - San Justo por Artigas','113','B - San Justo por Artigas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 113 B - San Justo por Artigas','113','B - San Justo por Artigas','LINESTRING ( 
 -58.449759 -34.558571, 
 -58.450136 -34.558315, 
 -58.450226 -34.558199, 
@@ -61364,9 +61364,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.561619 -34.682778, 
 -58.560529 -34.68358, 
 -58.55944 -34.68440
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 114 A - Pte. La Noria','114','A - Pte. La Noria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 114 A - Pte. La Noria','114','A - Pte. La Noria','LINESTRING ( 
 -58.450038 -34.558571, 
 -58.45042 -34.558332, 
 -58.450752 -34.558566, 
@@ -61683,9 +61683,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.458374 -34.706847, 
 -58.458311 -34.706755, 
 -58.457715 -34.70722
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 114 B - Pte. La Noria por Parque de la Ciudad','114','B - Pte. La Noria por Parque de la Ciudad','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 114 B - Pte. La Noria por Parque de la Ciudad','114','B - Pte. La Noria por Parque de la Ciudad','LINESTRING ( 
 -58.450038 -34.558571, 
 -58.45042 -34.558332, 
 -58.450752 -34.558566, 
@@ -62002,9 +62002,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.458374 -34.706847, 
 -58.458311 -34.706755, 
 -58.457715 -34.70722
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 114 C - Cnel.Roca y Saladillo','114','C - Cnel.Roca y Saladillo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 114 C - Cnel.Roca y Saladillo','114','C - Cnel.Roca y Saladillo','LINESTRING ( 
 -58.450038 -34.558571, 
 -58.45042 -34.558332, 
 -58.450752 -34.558566, 
@@ -62289,9 +62289,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.467801 -34.695844, 
 -58.468546 -34.696514, 
 -58.469302 -34.69721
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 115 A - Soldati','115','A - Soldati','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 115 A - Soldati','115','A - Soldati','LINESTRING ( 
 -58.372014 -34.58229, 
 -58.370334 -34.583232, 
 -58.369368 -34.583784, 
@@ -62506,9 +62506,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.459887 -34.688578, 
 -58.460236 -34.688733, 
 -58.460419 -34.68865
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 115 B - Once','115','B - Once','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 115 B - Once','115','B - Once','LINESTRING ( 
 -58.372014 -34.58229, 
 -58.370334 -34.583232, 
 -58.369368 -34.583784, 
@@ -62600,9 +62600,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.40892 -34.609219, 
 -58.40885 -34.609108, 
 -58.406255 -34.60890
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 117 A - Ing. Budge por Recondo','117','A - Ing. Budge por Recondo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 117 A - Ing. Budge por Recondo','117','A - Ing. Budge por Recondo','LINESTRING ( 
 -58.467607 -34.537345, 
 -58.46692 -34.538139, 
 -58.465859 -34.539599, 
@@ -62886,9 +62886,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.46235 -34.720979, 
 -58.463402 -34.719771, 
 -58.464561 -34.72037
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 117 B - Juan XXIII','117','B - Juan XXIII','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 117 B - Juan XXIII','117','B - Juan XXIII','LINESTRING ( 
 -58.525092 -34.639034, 
 -58.525027 -34.640129, 
 -58.524963 -34.64094, 
@@ -63072,9 +63072,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.441043 -34.769044, 
 -58.440613 -34.769626, 
 -58.441729 -34.77021
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 118 A - Barrancas de Belgrano','118','A - Barrancas de Belgrano','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 118 A - Barrancas de Belgrano','118','A - Barrancas de Belgrano','LINESTRING ( 
 -58.399757 -34.641416, 
 -58.400047 -34.639845, 
 -58.401282 -34.640093, 
@@ -63203,9 +63203,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.448112 -34.559879, 
 -58.449432 -34.559119, 
 -58.449207 -34.55898
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 118 B - Barrancas de Belgrano','118','B - Barrancas de Belgrano','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 118 B - Barrancas de Belgrano','118','B - Barrancas de Belgrano','LINESTRING ( 
 -58.408963 -34.609307, 
 -58.408856 -34.609104, 
 -58.406044 -34.608884, 
@@ -63290,9 +63290,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.448112 -34.559879, 
 -58.449432 -34.559119, 
 -58.449207 -34.55898
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 123 A - Palomar','123','A - Palomar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 123 A - Palomar','123','A - Palomar','LINESTRING ( 
 -58.453187 -34.586089, 
 -58.454132 -34.585135, 
 -58.454689 -34.586196, 
@@ -63375,9 +63375,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.593842 -34.607162, 
 -58.595731 -34.605483, 
 -58.595773 -34.60546
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 124 A - Ciudadela','124','A - Ciudadela','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 124 A - Ciudadela','124','A - Ciudadela','LINESTRING ( 
 -58.390799 -34.582343, 
 -58.389404 -34.582962, 
 -58.390317 -34.584313, 
@@ -63453,9 +63453,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.543761 -34.632024, 
 -58.544254 -34.631813, 
 -58.545284 -34.63149
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 124 B - Baigorria y Nazca','124','B - Baigorria y Nazca','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 124 B - Baigorria y Nazca','124','B - Baigorria y Nazca','LINESTRING ( 
 -58.390832 -34.582371, 
 -58.389426 -34.582935, 
 -58.390273 -34.584313, 
@@ -63513,9 +63513,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.487005 -34.602764, 
 -58.487864 -34.601899, 
 -58.489043 -34.60255
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 A - Alberti y República de Chile','126','A - Alberti y República de Chile','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 A - Alberti y República de Chile','126','A - Alberti y República de Chile','LINESTRING ( 
 -58.373407 -34.581496, 
 -58.369095 -34.583933, 
 -58.371842 -34.587378, 
@@ -63645,9 +63645,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.542665 -34.699036, 
 -58.54406 -34.697907, 
 -58.543396 -34.69736
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 B - Cementerio Villegas','126','B - Cementerio Villegas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 B - Cementerio Villegas','126','B - Cementerio Villegas','LINESTRING ( 
 -58.373407 -34.581496, 
 -58.369019 -34.583961, 
 -58.371842 -34.587378, 
@@ -63792,9 +63792,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.557923 -34.704928, 
 -58.562578 -34.701366, 
 -58.566656 -34.70503
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 C - Alberti y República de Chile','126','C - Alberti y República de Chile','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 C - Alberti y República de Chile','126','C - Alberti y República de Chile','LINESTRING ( 
 -58.433832 -34.627999, 
 -58.432341 -34.627769, 
 -58.432609 -34.626542, 
@@ -63855,9 +63855,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.542665 -34.699036, 
 -58.54406 -34.697907, 
 -58.543396 -34.69736
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 D - Cementerio Villegas','126','D - Cementerio Villegas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 126 D - Cementerio Villegas','126','D - Cementerio Villegas','LINESTRING ( 
 -58.433832 -34.627999, 
 -58.432341 -34.627769, 
 -58.432609 -34.626542, 
@@ -63931,9 +63931,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.559361 -34.703746, 
 -58.562547 -34.701338, 
 -58.566678 -34.70506
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 127 A - Panamericana y Calle 202','127','A - Panamericana y Calle 202','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 127 A - Panamericana y Calle 202','127','A - Panamericana y Calle 202','LINESTRING ( 
 -58.411988 -34.626427, 
 -58.411968 -34.627558, 
 -58.409393 -34.62738, 
@@ -64096,9 +64096,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.632992 -34.482098, 
 -58.634666 -34.481637, 
 -58.634526 -34.48148
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 128 A - Valentín Alsina','128','A - Valentín Alsina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 128 A - Valentín Alsina','128','A - Valentín Alsina','LINESTRING ( 
 -58.424993 -34.574517, 
 -58.42128 -34.575842, 
 -58.424284 -34.579076, 
@@ -64146,9 +64146,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.408287 -34.671953, 
 -58.40346 -34.675632, 
 -58.401099 -34.67731
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 A - La Plata por Ranelagh','129','A - La Plata por Ranelagh','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 A - La Plata por Ranelagh','129','A - La Plata por Ranelagh','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -64356,9 +64356,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955519 -34.907173, 
 -57.953491 -34.905254, 
 -57.951507 -34.90341
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 B - La Plata por Bosques','129','B - La Plata por Bosques','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 B - La Plata por Bosques','129','B - La Plata por Bosques','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -64581,9 +64581,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955519 -34.907173, 
 -57.953491 -34.905254, 
 -57.951507 -34.90341
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 C - Rotonda Gutiérrez','129','C - Rotonda Gutiérrez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 C - Rotonda Gutiérrez','129','C - Rotonda Gutiérrez','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -64709,9 +64709,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.189129 -34.841527, 
 -58.188743 -34.841369, 
 -58.188442 -34.84112
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 D - La Plata por Ranelagh y Centenario','129','D - La Plata por Ranelagh y Centenario','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 D - La Plata por Ranelagh y Centenario','129','D - La Plata por Ranelagh y Centenario','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -64933,9 +64933,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955519 -34.907173, 
 -57.953491 -34.905254, 
 -57.951507 -34.90341
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 E - La Plata por El Pato y Etcheverry','129','E - La Plata por El Pato y Etcheverry','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 E - La Plata por El Pato y Etcheverry','129','E - La Plata por El Pato y Etcheverry','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -65143,9 +65143,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955519 -34.907173, 
 -57.953491 -34.905254, 
 -57.951507 -34.90341
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 F - La Plata por El Pato y Abasto','129','F - La Plata por El Pato y Abasto','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 F - La Plata por El Pato y Abasto','129','F - La Plata por El Pato y Abasto','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -65266,9 +65266,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.221381 -34.830503, 
 -58.223418 -34.828828, 
 -58.225307 -34.83060
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 G - Barrio El Rocío','129','G - Barrio El Rocío','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 G - Barrio El Rocío','129','G - Barrio El Rocío','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -65409,9 +65409,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.193013 -34.86551, 
 -58.199793 -34.871319, 
 -58.205737 -34.86670
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 H - Ingeniero Allan','129','H - Ingeniero Allan','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 H - Ingeniero Allan','129','H - Ingeniero Allan','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -65549,9 +65549,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955413 -34.908774, 
 -57.955562 -34.907156, 
 -57.954576 -34.90618
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 I - La Plata por Autopista','129','I - La Plata por Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 I - La Plata por Autopista','129','I - La Plata por Autopista','LINESTRING ( 
 -58.380704 -34.625112, 
 -58.380386 -34.625973, 
 -58.380172 -34.626375, 
@@ -65872,9 +65872,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955283 -34.910006, 
 -57.955542 -34.907156, 
 -57.955669 -34.9053
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 J - La Plata por Gerli y Ranelagh','129','J - La Plata por Gerli y Ranelagh','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 J - La Plata por Gerli y Ranelagh','129','J - La Plata por Gerli y Ranelagh','LINESTRING ( 
 -58.380768 -34.624926, 
 -58.379652 -34.627735, 
 -58.378708 -34.630524, 
@@ -65958,9 +65958,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.185288 -34.807513, 
 -58.184623 -34.807389, 
 -58.1837 -34.80746
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 K - Barrio Marítimo por Sarandí','129','K - Barrio Marítimo por Sarandí','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 K - Barrio Marítimo por Sarandí','129','K - Barrio Marítimo por Sarandí','LINESTRING ( 
 -58.372807 -34.581814, 
 -58.366585 -34.585295, 
 -58.37035 -34.589948, 
@@ -66189,9 +66189,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955348 -34.9099, 
 -57.955584 -34.907226, 
 -57.953631 -34.9053
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 L - La Plata por Centenario','129','L - La Plata por Centenario','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 L - La Plata por Centenario','129','L - La Plata por Centenario','LINESTRING ( 
 -58.372635 -34.581938, 
 -58.366627 -34.585242, 
 -58.370489 -34.59001, 
@@ -66366,9 +66366,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955348 -34.909866, 
 -57.955649 -34.905343, 
 -57.954061 -34.90384
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 M - La Plata por Gral.Belgrano','129','M - La Plata por Gral.Belgrano','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 M - La Plata por Gral.Belgrano','129','M - La Plata por Gral.Belgrano','LINESTRING ( 
 -58.372635 -34.581938, 
 -58.366627 -34.585242, 
 -58.370489 -34.59001, 
@@ -66513,9 +66513,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955348 -34.909866, 
 -57.955649 -34.905343, 
 -57.954061 -34.90384
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 N - La Plata por Autopista','129','N - La Plata por Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 N - La Plata por Autopista','129','N - La Plata por Autopista','LINESTRING ( 
 -58.372377 -34.582115, 
 -58.369632 -34.583634, 
 -58.366605 -34.585312, 
@@ -66671,9 +66671,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.272815 -34.809963, 
 -58.27275 -34.810791, 
 -58.274445 -34.81084
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 O - La Plata','129','O - La Plata','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 O - La Plata','129','O - La Plata','LINESTRING ( 
 -58.38272 -34.595522, 
 -58.382699 -34.596918, 
 -58.38257 -34.599072, 
@@ -66825,9 +66825,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955283 -34.909847, 
 -57.955584 -34.907226, 
 -57.954532 -34.9061
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 P - La Plata por Autopista - Expreso','129','P - La Plata por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 P - La Plata por Autopista - Expreso','129','P - La Plata por Autopista - Expreso','LINESTRING ( 
 -58.407698 -34.609192, 
 -58.406067 -34.609158, 
 -58.405895 -34.611206, 
@@ -67012,9 +67012,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.95537 -34.909759, 
 -57.955626 -34.907226, 
 -57.954512 -34.90620
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 Q - La Plata por Autopista - Expreso','129','Q - La Plata por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 Q - La Plata por Autopista - Expreso','129','Q - La Plata por Autopista - Expreso','LINESTRING ( 
 -58.372377 -34.58207, 
 -58.366562 -34.585303, 
 -58.37035 -34.589941, 
@@ -67219,9 +67219,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955359 -34.909945, 
 -57.955519 -34.907138, 
 -57.954478 -34.90618
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 R - La Plata por Autopista - Expreso','129','R - La Plata por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 R - La Plata por Autopista - Expreso','129','R - La Plata por Autopista - Expreso','LINESTRING ( 
 -58.38272 -34.595443, 
 -58.382001 -34.608212, 
 -58.381788 -34.613174, 
@@ -67382,9 +67382,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955381 -34.909874, 
 -57.955508 -34.907164, 
 -57.953888 -34.90565
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 Ñ - Est. Varela','129','Ñ - Est. Varela','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 129 Ñ - Est. Varela','129','Ñ - Est. Varela','LINESTRING ( 
 -58.408662 -34.609316, 
 -58.406452 -34.609158, 
 -58.406087 -34.609281, 
@@ -67592,9 +67592,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955519 -34.907173, 
 -57.953491 -34.905254, 
 -57.951507 -34.90341
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 A - Est. Boulogne por Munro','130','A - Est. Boulogne por Munro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 A - Est. Boulogne por Munro','130','A - Est. Boulogne por Munro','LINESTRING ( 
 -58.358441 -34.626975, 
 -58.361455 -34.630099, 
 -58.364192 -34.628388, 
@@ -67738,9 +67738,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.564736 -34.511225, 
 -58.566023 -34.510075, 
 -58.565035 -34.50931
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 A - Est. Boulogne por Munro - de 6hs a 18hs','130','A - Est. Boulogne por Munro - de 6hs a 18hs','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 A - Est. Boulogne por Munro - de 6hs a 18hs','130','A - Est. Boulogne por Munro - de 6hs a 18hs','LINESTRING ( 
 -58.358516 -34.626922, 
 -58.361521 -34.630012, 
 -58.364288 -34.628334, 
@@ -67870,9 +67870,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.565604 -34.50813, 
 -58.56627 -34.50737, 
 -58.566591 -34.50781
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 B - Est. Boulogne por Panamericana','130','B - Est. Boulogne por Panamericana','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 B - Est. Boulogne por Panamericana','130','B - Est. Boulogne por Panamericana','LINESTRING ( 
 -58.358409 -34.626975, 
 -58.360104 -34.628616, 
 -58.361412 -34.630065, 
@@ -67941,9 +67941,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.463487 -34.541401, 
 -58.464131 -34.541808, 
 -58.465848 -34.53956
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 B - Est. Boulogne por Panamericana - de 6hs a 18hs','130','B - Est. Boulogne por Panamericana - de 6hs a 18hs','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 B - Est. Boulogne por Panamericana - de 6hs a 18hs','130','B - Est. Boulogne por Panamericana - de 6hs a 18hs','LINESTRING ( 
 -58.358753 -34.627293, 
 -58.361455 -34.630082, 
 -58.36461 -34.627999, 
@@ -68007,9 +68007,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.485078 -34.554859, 
 -58.485846 -34.554938, 
 -58.486634 -34.55490
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 C - Ramallo y 11 de Septiembre - Expreso','130','C - Ramallo y 11 de Septiembre - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 C - Ramallo y 11 de Septiembre - Expreso','130','C - Ramallo y 11 de Septiembre - Expreso','LINESTRING ( 
 -58.358441 -34.626975, 
 -58.361455 -34.630099, 
 -58.364192 -34.628388, 
@@ -68163,9 +68163,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.564736 -34.511225, 
 -58.566023 -34.510075, 
 -58.565035 -34.50931
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 C - Ramallo y 11 de Septiembre - Expreso - de 6hs a 18hs','130','C - Ramallo y 11 de Septiembre - Expreso - de 6hs a 18hs','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 C - Ramallo y 11 de Septiembre - Expreso - de 6hs a 18hs','130','C - Ramallo y 11 de Septiembre - Expreso - de 6hs a 18hs','LINESTRING ( 
 -58.358516 -34.626922, 
 -58.361521 -34.630012, 
 -58.364288 -34.628334, 
@@ -68303,9 +68303,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.565604 -34.50813, 
 -58.56627 -34.50737, 
 -58.566591 -34.50781
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 D - Est. Saavedra - Expreso','130','D - Est. Saavedra - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 130 D - Est. Saavedra - Expreso','130','D - Est. Saavedra - Expreso','LINESTRING ( 
 -58.358409 -34.626975, 
 -58.360104 -34.628616, 
 -58.361412 -34.630065, 
@@ -68383,9 +68383,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.463487 -34.541401, 
 -58.464131 -34.541808, 
 -58.465848 -34.53956
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 132 A - Retiro','132','A - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 132 A - Retiro','132','A - Retiro','LINESTRING ( 
 -58.451749 -34.645778, 
 -58.456814 -34.6411, 
 -58.454839 -34.639811, 
@@ -68445,9 +68445,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.374845 -34.583387, 
 -58.375576 -34.584269, 
 -58.374031 -34.58509
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 132 B - Retiro ','132','B - Retiro ','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 132 B - Retiro ','132','B - Retiro ','LINESTRING ( 
 -58.451793 -34.64576, 
 -58.454389 -34.643447, 
 -58.458531 -34.639493, 
@@ -68517,9 +68517,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.374782 -34.583404, 
 -58.375554 -34.584234, 
 -58.374031 -34.58511
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 132 C - Retiro','132','C - Retiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 132 C - Retiro','132','C - Retiro','LINESTRING ( 
 -58.408599 -34.609333, 
 -58.406367 -34.609175, 
 -58.406002 -34.609034, 
@@ -68550,9 +68550,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.374802 -34.58344, 
 -58.375489 -34.584322, 
 -58.374374 -34.58492
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 A - Florida','133','A - Florida','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 A - Florida','133','A - Florida','LINESTRING ( 
 -58.3727 -34.648831, 
 -58.374394 -34.639881, 
 -58.375424 -34.634372, 
@@ -68694,9 +68694,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.513869 -34.540835, 
 -58.517539 -34.542515, 
 -58.516852 -34.54339
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 B - Gaona y Nazca','133','B - Gaona y Nazca','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 B - Gaona y Nazca','133','B - Gaona y Nazca','LINESTRING ( 
 -58.372678 -34.648743, 
 -58.375424 -34.634372, 
 -58.377141 -34.630029, 
@@ -68753,9 +68753,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.471598 -34.626409, 
 -58.473036 -34.623179, 
 -58.474195 -34.62054
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 C - Florida','133','C - Florida','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 C - Florida','133','C - Florida','LINESTRING ( 
 -58.486919 -34.577008, 
 -58.484386 -34.57549, 
 -58.480825 -34.573546, 
@@ -68784,9 +68784,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.511552 -34.544246, 
 -58.513311 -34.541702, 
 -58.516874 -34.54336
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 D - Est. Vicente López','133','D - Est. Vicente López','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 133 D - Est. Vicente López','133','D - Est. Vicente López','LINESTRING ( 
 -58.372549 -34.649237, 
 -58.373686 -34.643588, 
 -58.374738 -34.637939, 
@@ -68861,9 +68861,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.474344 -34.540765, 
 -58.476191 -34.538184, 
 -58.477026 -34.53655
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 134 A - Barrio Avellaneda','134','A - Barrio Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 134 A - Barrio Avellaneda','134','A - Barrio Avellaneda','LINESTRING ( 
 -58.513075 -34.604388, 
 -58.513655 -34.603524, 
 -58.512905 -34.603046, 
@@ -68934,9 +68934,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.346542 -34.655363, 
 -58.349418 -34.655292, 
 -58.349333 -34.65299
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 134 B - Plaza Pueyrredón','134','B - Plaza Pueyrredón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 134 B - Plaza Pueyrredón','134','B - Plaza Pueyrredón','LINESTRING ( 
 -58.51314 -34.604211, 
 -58.513806 -34.603558, 
 -58.512948 -34.603116, 
@@ -68965,9 +68965,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.464602 -34.624237, 
 -58.463402 -34.627133, 
 -58.462736 -34.62881
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 135 A - Valentin Alsina','135','A - Valentin Alsina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 135 A - Valentin Alsina','135','A - Valentin Alsina','LINESTRING ( 
 -58.576441 -34.630771, 
 -58.57468 -34.630842, 
 -58.573028 -34.630842, 
@@ -69060,9 +69060,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.416623 -34.659739, 
 -58.416839 -34.660657, 
 -58.416966 -34.66272
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 A - Navarro','136','A - Navarro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 A - Navarro','136','A - Navarro','LINESTRING ( 
 -58.441986 -34.619188, 
 -58.441515 -34.62046, 
 -58.447114 -34.622878, 
@@ -69299,9 +69299,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.268965 -35.007046, 
 -59.277763 -35.009892, 
 -59.281368 -35.01122
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 B - Marcos Paz','136','B - Marcos Paz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 B - Marcos Paz','136','B - Marcos Paz','LINESTRING ( 
 -58.441986 -34.619276, 
 -58.441451 -34.620513, 
 -58.448639 -34.623514, 
@@ -69425,9 +69425,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.837774 -34.783231, 
 -58.838718 -34.782685, 
 -58.837859 -34.78148
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 C - Parque San Martín','136','C - Parque San Martín','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 C - Parque San Martín','136','C - Parque San Martín','LINESTRING ( 
 -58.441943 -34.619188, 
 -58.441515 -34.62046, 
 -58.447738 -34.623108, 
@@ -69521,9 +69521,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.755012 -34.697167, 
 -58.759196 -34.69422, 
 -58.766513 -34.68913
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 D - Marcos Paz','136','D - Marcos Paz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 136 D - Marcos Paz','136','D - Marcos Paz','LINESTRING ( 
 -58.51623 -34.639139, 
 -58.522668 -34.638787, 
 -58.529062 -34.63928, 
@@ -69631,9 +69631,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.837774 -34.783161, 
 -58.838782 -34.782721, 
 -58.837902 -34.78152
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 A - Est. Boulogne','140','A - Est. Boulogne','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 A - Est. Boulogne','140','A - Est. Boulogne','LINESTRING ( 
 -58.368816 -34.605201, 
 -58.369867 -34.605289, 
 -58.370038 -34.603011, 
@@ -69708,9 +69708,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.565883 -34.508678, 
 -58.56702 -34.508166, 
 -58.568738 -34.50779
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 B - Chacarita ','140','B - Chacarita ','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 B - Chacarita ','140','B - Chacarita ','LINESTRING ( 
 -58.368901 -34.605131, 
 -58.369846 -34.605307, 
 -58.37006 -34.602975, 
@@ -69741,9 +69741,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.451171 -34.582873, 
 -58.449947 -34.580948, 
 -58.450912 -34.58057
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 C - Est. Urquiza','140','C - Est. Urquiza','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 C - Est. Urquiza','140','C - Est. Urquiza','LINESTRING ( 
 -58.368901 -34.605131, 
 -58.369931 -34.605271, 
 -58.37006 -34.603011, 
@@ -69773,9 +69773,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.48413 -34.570824, 
 -58.486662 -34.572133, 
 -58.488078 -34.57294
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 D - Congreso y Bucarelli','140','D - Congreso y Bucarelli','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 140 D - Congreso y Bucarelli','140','D - Congreso y Bucarelli','LINESTRING ( 
 -58.368881 -34.605201, 
 -58.369867 -34.605325, 
 -58.370038 -34.602922, 
@@ -69818,9 +69818,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.486725 -34.572256, 
 -58.489257 -34.569217, 
 -58.492584 -34.57100
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 141 A - Villa Albertina por Piedrabuena','141','A - Villa Albertina por Piedrabuena','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 141 A - Villa Albertina por Piedrabuena','141','A - Villa Albertina por Piedrabuena','LINESTRING ( 
 -58.418705 -34.578811, 
 -58.420444 -34.58079, 
 -58.420959 -34.58063, 
@@ -69920,9 +69920,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.461534 -34.73604, 
 -58.458745 -34.739866, 
 -58.456471 -34.74289
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 141 B - Villa Albertina por Barrio Savio','141','B - Villa Albertina por Barrio Savio','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 141 B - Villa Albertina por Barrio Savio','141','B - Villa Albertina por Barrio Savio','LINESTRING ( 
 -58.418705 -34.578775, 
 -58.420444 -34.580666, 
 -58.421086 -34.580612, 
@@ -70038,9 +70038,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.463937 -34.732655, 
 -58.462843 -34.734295, 
 -58.456428 -34.74291
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 141 C - Villa Albertina - Expreso','141','C - Villa Albertina - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 141 C - Villa Albertina - Expreso','141','C - Villa Albertina - Expreso','LINESTRING ( 
 -58.418748 -34.578811, 
 -58.420378 -34.580612, 
 -58.420485 -34.580772, 
@@ -70138,9 +70138,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.464153 -34.732601, 
 -58.461728 -34.735829, 
 -58.456491 -34.74293
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 A - Tapiales por Chilavert','143','A - Tapiales por Chilavert','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 A - Tapiales por Chilavert','143','A - Tapiales por Chilavert','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -70269,9 +70269,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.505116 -34.709656, 
 -58.504815 -34.707945, 
 -58.505501 -34.70665
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 B - Tapiales por Juan Rava','143','B - Tapiales por Juan Rava','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 B - Tapiales por Juan Rava','143','B - Tapiales por Juan Rava','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -70408,9 +70408,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.505116 -34.709656, 
 -58.504815 -34.707945, 
 -58.505501 -34.70665
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 C - Tapiales por Chilavert y UCA','143','C - Tapiales por Chilavert y UCA','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 C - Tapiales por Chilavert y UCA','143','C - Tapiales por Chilavert y UCA','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -70548,9 +70548,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.505116 -34.709656, 
 -58.504815 -34.707945, 
 -58.505501 -34.70665
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 D - Tapiales por Juan Rava y UCA','143','D - Tapiales por Juan Rava y UCA','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 D - Tapiales por Juan Rava y UCA','143','D - Tapiales por Juan Rava y UCA','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -70659,9 +70659,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.505116 -34.709656, 
 -58.504815 -34.707945, 
 -58.505501 -34.70665
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 E - Tapiales por Chilavert y de la Cruz','143','E - Tapiales por Chilavert y de la Cruz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 E - Tapiales por Chilavert y de la Cruz','143','E - Tapiales por Chilavert y de la Cruz','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -70786,9 +70786,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.458123 -34.707469, 
 -58.4566 -34.708792, 
 -58.455849 -34.70960
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 F - Puenta La Noria','143','F - Puenta La Noria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 F - Puenta La Noria','143','F - Puenta La Noria','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -70913,9 +70913,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.494557 -34.704276, 
 -58.492969 -34.702635, 
 -58.492026 -34.70192
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 G - Villa Celina por Chilavert','143','G - Villa Celina por Chilavert','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 G - Villa Celina por Chilavert','143','G - Villa Celina por Chilavert','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -71053,9 +71053,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.505116 -34.709656, 
 -58.504815 -34.707945, 
 -58.505501 -34.70665
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 H - Tapiales por Juan Rava y de la Cruz','143','H - Tapiales por Juan Rava y de la Cruz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 H - Tapiales por Juan Rava y de la Cruz','143','H - Tapiales por Juan Rava y de la Cruz','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -71184,9 +71184,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.494557 -34.704276, 
 -58.492969 -34.702635, 
 -58.492026 -34.70192
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 I - Villa Celina por Juan Rava','143','I - Villa Celina por Juan Rava','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 143 I - Villa Celina por Juan Rava','143','I - Villa Celina por Juan Rava','LINESTRING ( 
 -58.38521 -34.578139, 
 -58.383622 -34.578175, 
 -58.379866 -34.5801, 
@@ -71320,9 +71320,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.504793 -34.707998, 
 -58.505073 -34.707275, 
 -58.505501 -34.70665
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 146 A - Ciudadela Norte','146','A - Ciudadela Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 146 A - Ciudadela Norte','146','A - Ciudadela Norte','LINESTRING ( 
 -58.368558 -34.604123, 
 -58.368065 -34.604, 
 -58.36798 -34.605165, 
@@ -71405,9 +71405,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.563243 -34.625995, 
 -58.565421 -34.626913, 
 -58.566001 -34.62645
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 146 B - Hasta Gral.Paz y Beiro','146','B - Hasta Gral.Paz y Beiro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 146 B - Hasta Gral.Paz y Beiro','146','B - Hasta Gral.Paz y Beiro','LINESTRING ( 
 -58.368473 -34.604036, 
 -58.368076 -34.604027, 
 -58.36798 -34.605201, 
@@ -71485,9 +71485,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.526262 -34.614915, 
 -58.528311 -34.616416, 
 -58.530092 -34.61782
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 A - Cementerio de Florencio Varela','148','A - Cementerio de Florencio Varela','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 A - Cementerio de Florencio Varela','148','A - Cementerio de Florencio Varela','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -71585,9 +71585,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.278651 -34.841949, 
 -58.287449 -34.846564, 
 -58.28938 -34.84758
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 B - Paraje El Tropezón','148','B - Paraje El Tropezón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 B - Paraje El Tropezón','148','B - Paraje El Tropezón','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -71684,9 +71684,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.278651 -34.841949, 
 -58.278651 -34.845436, 
 -58.278351 -34.85103
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 C - Paraje El Alpino','148','C - Paraje El Alpino','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 C - Paraje El Alpino','148','C - Paraje El Alpino','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -71775,9 +71775,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.278651 -34.841949, 
 -58.278694 -34.845173, 
 -58.278436 -34.85077
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 D - Villa del Plata','148','D - Villa del Plata','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 D - Villa del Plata','148','D - Villa del Plata','LINESTRING ( 
 -58.380704 -34.625262, 
 -58.380318 -34.626356, 
 -58.379308 -34.628793, 
@@ -71866,9 +71866,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.256464 -34.800483, 
 -58.257686 -34.799039, 
 -58.247838 -34.79380
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 E - Barrio El Jalón','148','E - Barrio El Jalón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 E - Barrio El Jalón','148','E - Barrio El Jalón','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -71930,9 +71930,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.266077 -34.764671, 
 -58.26494 -34.764091, 
 -58.260433 -34.77004
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 F - Berazategui','148','F - Berazategui','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 F - Berazategui','148','F - Berazategui','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -71990,9 +71990,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.257322 -34.757179, 
 -58.250455 -34.76476, 
 -58.244168 -34.77082
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 G - Est. Solano por López','148','G - Est. Solano por López','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 G - Est. Solano por López','148','G - Est. Solano por López','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -72052,9 +72052,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.30809 -34.777926, 
 -58.315258 -34.782333, 
 -58.316459 -34.78127
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 H - Est. Solano por Monteverde','148','H - Est. Solano por Monteverde','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 H - Est. Solano por Monteverde','148','H - Est. Solano por Monteverde','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -72117,9 +72117,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.313991 -34.783355, 
 -58.315258 -34.782333, 
 -58.316459 -34.78127
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 I - Monteverde','148','I - Monteverde','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 I - Monteverde','148','I - Monteverde','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -72183,9 +72183,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.313412 -34.783655, 
 -58.311503 -34.784466, 
 -58.304378 -34.7868
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 J - Est. Solano por Flores','148','J - Est. Solano por Flores','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 148 J - Est. Solano por Flores','148','J - Est. Solano por Flores','LINESTRING ( 
 -58.380661 -34.625157, 
 -58.380296 -34.626339, 
 -58.379137 -34.629094, 
@@ -72248,9 +72248,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.315558 -34.774648, 
 -58.311117 -34.77969, 
 -58.3153 -34.78236
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 150 A - Villa Madero por Est.Sáenz','150','A - Villa Madero por Est.Sáenz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 150 A - Villa Madero por Est.Sáenz','150','A - Villa Madero por Est.Sáenz','LINESTRING ( 
 -58.37131 -34.582799, 
 -58.371327 -34.582777, 
 -58.370544 -34.583184, 
@@ -72440,9 +72440,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.494241 -34.688763, 
 -58.492927 -34.687626, 
 -58.491635 -34.68646
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 150 B - Villa Madero por Hospital Aeronautico','150','B - Villa Madero por Hospital Aeronautico','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 150 B - Villa Madero por Hospital Aeronautico','150','B - Villa Madero por Hospital Aeronautico','LINESTRING ( 
 -58.37131 -34.582799, 
 -58.371327 -34.582777, 
 -58.370544 -34.583184, 
@@ -72632,9 +72632,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.494241 -34.688763, 
 -58.492927 -34.687626, 
 -58.491635 -34.68646
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 151 A - Puente Saavedra','151','A - Puente Saavedra','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 151 A - Puente Saavedra','151','A - Puente Saavedra','LINESTRING ( 
 -58.382269 -34.627822, 
 -58.379803 -34.627752, 
 -58.379094 -34.627592, 
@@ -72697,9 +72697,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.474989 -34.540252, 
 -58.476706 -34.537354, 
 -58.478121 -34.5345
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 A - Olivos','152','A - Olivos','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 A - Olivos','152','A - Olivos','LINESTRING ( 
 -58.357228 -34.637939, 
 -58.358902 -34.635326, 
 -58.357573 -34.634796, 
@@ -72794,9 +72794,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.495491 -34.501967, 
 -58.513311 -34.509881, 
 -58.51211 -34.51161
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 B - Olivos por UCA','152','B - Olivos por UCA','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 B - Olivos por UCA','152','B - Olivos por UCA','LINESTRING ( 
 -58.357228 -34.637939, 
 -58.358902 -34.635326, 
 -58.357573 -34.634796, 
@@ -72903,9 +72903,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.495491 -34.501967, 
 -58.513311 -34.509881, 
 -58.51211 -34.51161
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 C - Est. Mitre','152','C - Est. Mitre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 C - Est. Mitre','152','C - Est. Mitre','LINESTRING ( 
 -58.357228 -34.637939, 
 -58.358902 -34.635326, 
 -58.357573 -34.634796, 
@@ -72999,9 +72999,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.489237 -34.511119, 
 -58.489795 -34.510269, 
 -58.490782 -34.51065
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 D - Olivos - Expreso','152','D - Olivos - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 152 D - Olivos - Expreso','152','D - Olivos - Expreso','LINESTRING ( 
 -58.357228 -34.637939, 
 -58.358902 -34.635326, 
 -58.357573 -34.634796, 
@@ -73107,9 +73107,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.495491 -34.501967, 
 -58.513311 -34.509881, 
 -58.51211 -34.51161
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 153 A - Barrio Nuevo','153','A - Barrio Nuevo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 153 A - Barrio Nuevo','153','A - Barrio Nuevo','LINESTRING ( 
 -58.516353 -34.63917, 
 -58.517834 -34.639127, 
 -58.519294 -34.639046, 
@@ -73159,9 +73159,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.689737 -34.696531, 
 -58.675575 -34.706904, 
 -58.665832 -34.70309
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 154 A - Est. Lanús','154','A - Est. Lanús','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 154 A - Est. Lanús','154','A - Est. Lanús','LINESTRING ( 
 -58.382162 -34.627839, 
 -58.382162 -34.627839, 
 -58.379631 -34.627769, 
@@ -73218,9 +73218,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.388643 -34.710574, 
 -58.390917 -34.708986, 
 -58.390659 -34.70792
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 158 A - Est. Lanús','158','A - Est. Lanús','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 158 A - Est. Lanús','158','A - Est. Lanús','LINESTRING ( 
 -58.416344 -34.652909, 
 -58.416538 -34.658203, 
 -58.41774 -34.665334, 
@@ -73241,9 +73241,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.398384 -34.707751, 
 -58.396496 -34.707822, 
 -58.391689 -34.70835
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 A - Alpargatas','159','A - Alpargatas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 A - Alpargatas','159','A - Alpargatas','LINESTRING ( 
 -58.368687 -34.604354, 
 -58.368043 -34.604211, 
 -58.367915 -34.605237, 
@@ -73384,9 +73384,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.189731 -34.840426, 
 -58.190041 -34.840488, 
 -58.190353 -34.84043
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 B - Alpargatas por Av. La Plata','159','B - Alpargatas por Av. La Plata','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 B - Alpargatas por Av. La Plata','159','B - Alpargatas por Av. La Plata','LINESTRING ( 
 -58.368504 -34.603929, 
 -58.368515 -34.604089, 
 -58.368043 -34.604061, 
@@ -73514,9 +73514,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.189731 -34.840426, 
 -58.190041 -34.840488, 
 -58.190353 -34.84043
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 C - Pueblo Nuevo','159','C - Pueblo Nuevo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 C - Pueblo Nuevo','159','C - Pueblo Nuevo','LINESTRING ( 
 -58.368687 -34.604354, 
 -58.368478 -34.604075, 
 -58.368032 -34.604049, 
@@ -73658,9 +73658,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.147652 -34.792616, 
 -58.144711 -34.794562, 
 -58.142588 -34.79594
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 D - Cruce Florencia Varela por Mitre','159','D - Cruce Florencia Varela por Mitre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 D - Cruce Florencia Varela por Mitre','159','D - Cruce Florencia Varela por Mitre','LINESTRING ( 
 -58.368504 -34.604154, 
 -58.368468 -34.604067, 
 -58.368043 -34.604061, 
@@ -73805,9 +73805,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.263565 -34.780307, 
 -58.264767 -34.77969, 
 -58.263406 -34.77891
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 E - Est. Berazategui','159','E - Est. Berazategui','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 E - Est. Berazategui','159','E - Est. Berazategui','LINESTRING ( 
 -58.368504 -34.604154, 
 -58.368468 -34.604067, 
 -58.368043 -34.604061, 
@@ -73930,9 +73930,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.207346 -34.765095, 
 -58.206983 -34.764918, 
 -58.202165 -34.76724
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 F - Barrio Gráfico','159','F - Barrio Gráfico','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 F - Barrio Gráfico','159','F - Barrio Gráfico','LINESTRING ( 
 -58.368504 -34.604154, 
 -58.368468 -34.604067, 
 -58.368043 -34.604061, 
@@ -74017,9 +74017,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.303305 -34.691892, 
 -58.299121 -34.695366, 
 -58.297147 -34.69360
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 G - Cruce Florencio Varela por Villegas','159','G - Cruce Florencio Varela por Villegas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 G - Cruce Florencio Varela por Villegas','159','G - Cruce Florencio Varela por Villegas','LINESTRING ( 
 -58.368504 -34.604154, 
 -58.368468 -34.604067, 
 -58.368043 -34.604061, 
@@ -74160,9 +74160,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.263565 -34.780307, 
 -58.264767 -34.77969, 
 -58.263406 -34.77891
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 H - Barrio Gráfico - Expreso','159','H - Barrio Gráfico - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 H - Barrio Gráfico - Expreso','159','H - Barrio Gráfico - Expreso','LINESTRING ( 
 -58.368504 -34.604154, 
 -58.368468 -34.604067, 
 -58.368043 -34.604061, 
@@ -74242,9 +74242,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.303305 -34.691892, 
 -58.299121 -34.695366, 
 -58.297147 -34.69360
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 I - Rigolleau y Belgrano (R14) por Autopista - Expreso ','159','I - Rigolleau y Belgrano (R14) por Autopista - Expreso ','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 159 I - Rigolleau y Belgrano (R14) por Autopista - Expreso ','159','I - Rigolleau y Belgrano (R14) por Autopista - Expreso ','LINESTRING ( 
 -58.368504 -34.604154, 
 -58.368468 -34.604067, 
 -58.368043 -34.604061, 
@@ -74356,9 +74356,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.221058 -34.763668, 
 -58.218826 -34.766753, 
 -58.253771 -34.78538
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 A - Barrio Don Orione por Aysa y Alsina','160','A - Barrio Don Orione por Aysa y Alsina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 A - Barrio Don Orione por Aysa y Alsina','160','A - Barrio Don Orione por Aysa y Alsina','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438617 -34.546244, 
@@ -74485,9 +74485,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.330021 -34.81568
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 B - Barrio Don Orione por Aysa y Gonzalez','160','B - Barrio Don Orione por Aysa y Gonzalez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 B - Barrio Don Orione por Aysa y Gonzalez','160','B - Barrio Don Orione por Aysa y Gonzalez','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438617 -34.546244, 
@@ -74624,9 +74624,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.329967 -34.8157
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 C - Barrio Don Orione por Aeroparque y Alsina','160','C - Barrio Don Orione por Aeroparque y Alsina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 C - Barrio Don Orione por Aeroparque y Alsina','160','C - Barrio Don Orione por Aeroparque y Alsina','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438597 -34.545572, 
@@ -74769,9 +74769,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.329967 -34.81575
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 D - Barrio Don Orione por Aeroparque y Gonzalez','160','D - Barrio Don Orione por Aeroparque y Gonzalez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 D - Barrio Don Orione por Aeroparque y Gonzalez','160','D - Barrio Don Orione por Aeroparque y Gonzalez','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438597 -34.545572, 
@@ -74925,9 +74925,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.329977 -34.81577
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 E - Barrio Don Orione por Alsina','160','E - Barrio Don Orione por Alsina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 E - Barrio Don Orione por Alsina','160','E - Barrio Don Orione por Alsina','LINESTRING ( 
 -58.425293 -34.571708, 
 -58.427289 -34.572892, 
 -58.424993 -34.5745, 
@@ -75041,9 +75041,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.329945 -34.8157
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 F - Barrio Don Orione por Gonzalez','160','F - Barrio Don Orione por Gonzalez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 F - Barrio Don Orione por Gonzalez','160','F - Barrio Don Orione por Gonzalez','LINESTRING ( 
 -58.425293 -34.571708, 
 -58.427289 -34.572892, 
 -58.424993 -34.5745, 
@@ -75165,9 +75165,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333078 -34.811653, 
 -58.331704 -34.813564, 
 -58.329999 -34.81573
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 G - Nueva Pompeya por Aysa','160','G - Nueva Pompeya por Aysa','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 G - Nueva Pompeya por Aysa','160','G - Nueva Pompeya por Aysa','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438768 -34.545642, 
@@ -75231,9 +75231,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.416237 -34.642071, 
 -58.416494 -34.654356, 
 -58.416832 -34.65878
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 H - Nueva Pompeya por Aeroparque','160','H - Nueva Pompeya por Aeroparque','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 H - Nueva Pompeya por Aeroparque','160','H - Nueva Pompeya por Aeroparque','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438639 -34.545749, 
@@ -75315,9 +75315,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.416237 -34.642071, 
 -58.416494 -34.654356, 
 -58.416832 -34.65878
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 I - Barrio Don Orione por Alsina','160','I - Barrio Don Orione por Alsina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 I - Barrio Don Orione por Alsina','160','I - Barrio Don Orione por Alsina','LINESTRING ( 
 -58.416141 -34.652299, 
 -58.415294 -34.652043, 
 -58.414639 -34.651797, 
@@ -75420,9 +75420,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.329945 -34.8157
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 J - Barrio Don Orione por Gonzalez','160','J - Barrio Don Orione por Gonzalez','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 J - Barrio Don Orione por Gonzalez','160','J - Barrio Don Orione por Gonzalez','LINESTRING ( 
 -58.416141 -34.652299, 
 -58.415294 -34.652043, 
 -58.414639 -34.651797, 
@@ -75528,9 +75528,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.329945 -34.8157
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 K - Est. Lanús por Aysa','160','K - Est. Lanús por Aysa','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 K - Est. Lanús por Aysa','160','K - Est. Lanús por Aysa','LINESTRING ( 
 -58.416141 -34.652299, 
 -58.415294 -34.652043, 
 -58.414639 -34.651797, 
@@ -75633,9 +75633,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.333218 -34.811442, 
 -58.332982 -34.811619, 
 -58.329945 -34.8157
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 L - Est. Lanús por Aeroparque','160','L - Est. Lanús por Aeroparque','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 L - Est. Lanús por Aeroparque','160','L - Est. Lanús por Aeroparque','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438617 -34.546244, 
@@ -75718,9 +75718,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.393214 -34.706746, 
 -58.392935 -34.708139, 
 -58.391427 -34.70823
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 M - Barrio Don Orione por Alsina','160','M - Barrio Don Orione por Alsina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 M - Barrio Don Orione por Alsina','160','M - Barrio Don Orione por Alsina','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438822 -34.545572, 
@@ -75821,9 +75821,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.393214 -34.706746, 
 -58.392935 -34.708139, 
 -58.391427 -34.70823
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 N - Cuidad Universitaria por Aysa - Expreso','160','N - Cuidad Universitaria por Aysa - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 N - Cuidad Universitaria por Aysa - Expreso','160','N - Cuidad Universitaria por Aysa - Expreso','LINESTRING ( 
 -58.439573 -34.545405, 
 -58.439176 -34.545395, 
 -58.438617 -34.546244, 
@@ -75856,9 +75856,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.413963 -34.579658, 
 -58.415207 -34.581532, 
 -58.41937 -34.58138
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 N - Plaza Italia por Aysa - Expreso','160','N - Plaza Italia por Aysa - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 160 N - Plaza Italia por Aysa - Expreso','160','N - Plaza Italia por Aysa - Expreso','LINESTRING ( 
 -58.419328 -34.581426, 
 -58.419929 -34.581372, 
 -58.420186 -34.580965, 
@@ -75893,9 +75893,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.43894 -34.5452, 
 -58.439176 -34.545395, 
 -58.439573 -34.54540
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 A - Liniers por Florida','161','A - Liniers por Florida','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 A - Liniers por Florida','161','A - Liniers por Florida','LINESTRING ( 
 -58.42334 -34.571443, 
 -58.423189 -34.571196, 
 -58.421945 -34.571744, 
@@ -75986,9 +75986,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.539265 -34.639678, 
 -58.534663 -34.639352, 
 -58.530102 -34.63898
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 B - Liniers por Villa Martelli','161','B - Liniers por Villa Martelli','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 B - Liniers por Villa Martelli','161','B - Liniers por Villa Martelli','LINESTRING ( 
 -58.42334 -34.571443, 
 -58.423189 -34.571196, 
 -58.421945 -34.571744, 
@@ -76086,9 +76086,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.528998 -34.650103, 
 -58.529341 -34.650163, 
 -58.530039 -34.65024
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 C - Liniers por Florida y Dorrego','161','C - Liniers por Florida y Dorrego','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 C - Liniers por Florida y Dorrego','161','C - Liniers por Florida y Dorrego','LINESTRING ( 
 -58.42334 -34.571443, 
 -58.423189 -34.571196, 
 -58.421945 -34.571744, 
@@ -76187,9 +76187,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.539265 -34.639678, 
 -58.534663 -34.639352, 
 -58.530102 -34.63898
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 D - Liniers por Villa Martelli y Dorrego','161','D - Liniers por Villa Martelli y Dorrego','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 161 D - Liniers por Villa Martelli y Dorrego','161','D - Liniers por Villa Martelli y Dorrego','LINESTRING ( 
 -58.42334 -34.571443, 
 -58.423189 -34.571196, 
 -58.421945 -34.571744, 
@@ -76301,9 +76301,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.529254 -34.648645, 
 -58.529372 -34.650163, 
 -58.529544 -34.65017
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 163 A - San Miguel','163','A - San Miguel','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 163 A - San Miguel','163','A - San Miguel','LINESTRING ( 
 -58.441777 -34.619183, 
 -58.44196 -34.619272, 
 -58.441471 -34.620472, 
@@ -76379,9 +76379,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.716838 -34.526817, 
 -58.717139 -34.526606, 
 -58.714092 -34.52368
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 163 B - San Miguel','163','B - San Miguel','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 163 B - San Miguel','163','B - San Miguel','LINESTRING ( 
 -58.516433 -34.639087, 
 -58.51948 -34.638936, 
 -58.522593 -34.638812, 
@@ -76444,9 +76444,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.716838 -34.526817, 
 -58.717139 -34.526606, 
 -58.714092 -34.52368
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 A - Monte Grande por Boul.BsAs','165','A - Monte Grande por Boul.BsAs','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 A - Monte Grande por Boul.BsAs','165','A - Monte Grande por Boul.BsAs','LINESTRING ( 
 -58.406087 -34.609281, 
 -58.406044 -34.610111, 
 -58.412332 -34.610587, 
@@ -76553,9 +76553,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.472284 -34.772163, 
 -58.473126 -34.771225, 
 -58.473599 -34.77046
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 B - Monte Grande por San Martín','165','B - Monte Grande por San Martín','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 B - Monte Grande por San Martín','165','B - Monte Grande por San Martín','LINESTRING ( 
 -58.406087 -34.609281, 
 -58.406044 -34.610111, 
 -58.412332 -34.610587, 
@@ -76664,9 +76664,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.472284 -34.772163, 
 -58.473126 -34.771225, 
 -58.473599 -34.77046
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 C - Burzaco por Temperley','165','C - Burzaco por Temperley','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 C - Burzaco por Temperley','165','C - Burzaco por Temperley','LINESTRING ( 
 -58.416324 -34.65095, 
 -58.416409 -34.654673, 
 -58.416581 -34.656615, 
@@ -76730,9 +76730,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.401302 -34.823016, 
 -58.400488 -34.822558, 
 -58.397815 -34.82617
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 D - Loma Verde por Garibaldi','165','D - Loma Verde por Garibaldi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 D - Loma Verde por Garibaldi','165','D - Loma Verde por Garibaldi','LINESTRING ( 
 -58.416324 -34.65095, 
 -58.416451 -34.654409, 
 -58.41671 -34.656581, 
@@ -76790,9 +76790,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.427846 -34.815494, 
 -58.42512 -34.819079, 
 -58.424928 -34.81954
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 E - Estación Monte Grande','165','E - Estación Monte Grande','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 E - Estación Monte Grande','165','E - Estación Monte Grande','LINESTRING ( 
 -58.416324 -34.65095, 
 -58.416451 -34.654409, 
 -58.41671 -34.656581, 
@@ -76839,9 +76839,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.472264 -34.813557, 
 -58.471426 -34.814667, 
 -58.470097 -34.81415
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 F - Monte Grande por Boul.BsAs - Expreso','165','F - Monte Grande por Boul.BsAs - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 165 F - Monte Grande por Boul.BsAs - Expreso','165','F - Monte Grande por Boul.BsAs - Expreso','LINESTRING ( 
 -58.406087 -34.609281, 
 -58.406044 -34.610111, 
 -58.412332 -34.610587, 
@@ -76902,9 +76902,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.471448 -34.772885, 
 -58.472434 -34.772092, 
 -58.473809 -34.77036
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 166 A - Est. Morón','166','A - Est. Morón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 166 A - Est. Morón','166','A - Est. Morón','LINESTRING ( 
 -58.424188 -34.57101, 
 -58.427309 -34.57291, 
 -58.425057 -34.57457, 
@@ -76981,9 +76981,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.622317 -34.642387, 
 -58.619742 -34.644506, 
 -58.619764 -34.6479
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 166 B - Libertad','166','B - Libertad','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 166 B - Libertad','166','B - Libertad','LINESTRING ( 
 -58.424188 -34.57101, 
 -58.427309 -34.57291, 
 -58.425057 -34.57457, 
@@ -77107,9 +77107,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.671605 -34.705432, 
 -58.674458 -34.706561, 
 -58.677602 -34.70778
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 A - San Isidro','168','A - San Isidro','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 A - San Isidro','168','A - San Isidro','LINESTRING ( 
 -58.357936 -34.634019, 
 -58.35871 -34.632775, 
 -58.359395 -34.631459, 
@@ -77206,9 +77206,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.5105 -34.465364, 
 -58.510854 -34.465037, 
 -58.51239 -34.46598
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 B - Puente Saavedra por Córdoba','168','B - Puente Saavedra por Córdoba','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 B - Puente Saavedra por Córdoba','168','B - Puente Saavedra por Córdoba','LINESTRING ( 
 -58.357936 -34.634019, 
 -58.35871 -34.632775, 
 -58.359395 -34.631459, 
@@ -77278,9 +77278,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.475288 -34.539546, 
 -58.47648 -34.537486, 
 -58.476157 -34.53740
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 C - Puente Saavedra por Concepción Arenal','168','C - Puente Saavedra por Concepción Arenal','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 C - Puente Saavedra por Concepción Arenal','168','C - Puente Saavedra por Concepción Arenal','LINESTRING ( 
 -58.357936 -34.634019, 
 -58.35871 -34.632775, 
 -58.359395 -34.631459, 
@@ -77353,9 +77353,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.475288 -34.539546, 
 -58.47648 -34.537486, 
 -58.476157 -34.53740
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 D - Villa Devoto','168','D - Villa Devoto','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 D - Villa Devoto','168','D - Villa Devoto','LINESTRING ( 
 -58.379823 -34.627786, 
 -58.378472 -34.627487, 
 -58.378987 -34.626109, 
@@ -77408,9 +77408,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.501854 -34.580824, 
 -58.516724 -34.589958, 
 -58.518236 -34.58953
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 E - Est. Lacroze','168','E - Est. Lacroze','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 E - Est. Lacroze','168','E - Est. Lacroze','LINESTRING ( 
 -58.379823 -34.627786, 
 -58.378472 -34.627487, 
 -58.378987 -34.626109, 
@@ -77442,9 +77442,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.451942 -34.582168, 
 -58.449432 -34.577927, 
 -58.446793 -34.5732
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 F - Av.Córdoba y Darwin','168','F - Av.Córdoba y Darwin','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 168 F - Av.Córdoba y Darwin','168','F - Av.Córdoba y Darwin','LINESTRING ( 
 -58.357936 -34.634019, 
 -58.35871 -34.632775, 
 -58.359395 -34.631459, 
@@ -77489,9 +77489,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.426709 -34.596282, 
 -58.4307 -34.593896, 
 -58.437932 -34.58903
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 169 A - Loma Hermosa por Est.Coronado','169','A - Loma Hermosa por Est.Coronado','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 169 A - Loma Hermosa por Est.Coronado','169','A - Loma Hermosa por Est.Coronado','LINESTRING ( 
 -58.464475 -34.556547, 
 -58.482435 -34.565719, 
 -58.492434 -34.571001, 
@@ -77559,9 +77559,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.623063 -34.565015, 
 -58.624254 -34.564127, 
 -58.625717 -34.56299
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 169 B - Loma Hermosa por Est.Podestá','169','B - Loma Hermosa por Est.Podestá','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 169 B - Loma Hermosa por Est.Podestá','169','B - Loma Hermosa por Est.Podestá','LINESTRING ( 
 -58.464475 -34.556547, 
 -58.482435 -34.565719, 
 -58.492434 -34.571001, 
@@ -77623,9 +77623,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.623063 -34.565015, 
 -58.624254 -34.564127, 
 -58.625717 -34.56299
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 172 A - Atalaya por Barrio La Marina','172','A - Atalaya por Barrio La Marina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 172 A - Atalaya por Barrio La Marina','172','A - Atalaya por Barrio La Marina','LINESTRING ( 
 -58.436278 -34.623196, 
 -58.436236 -34.624591, 
 -58.434519 -34.624468, 
@@ -77833,9 +77833,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.608069 -34.701664, 
 -58.609892 -34.700324, 
 -58.611449 -34.70139
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 172 B - Atalaya por Ing.Brian','172','B - Atalaya por Ing.Brian','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 172 B - Atalaya por Ing.Brian','172','B - Atalaya por Ing.Brian','LINESTRING ( 
 -58.436301 -34.623249, 
 -58.436236 -34.624555, 
 -58.434508 -34.624468, 
@@ -78008,9 +78008,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.608026 -34.701621, 
 -58.609915 -34.700341, 
 -58.611449 -34.7014
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 A - Laferrere por Humboldt','174','A - Laferrere por Humboldt','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 A - Laferrere por Humboldt','174','A - Laferrere por Humboldt','LINESTRING ( 
 -58.52257 -34.638821, 
 -58.523805 -34.638919, 
 -58.525081 -34.639043, 
@@ -78191,9 +78191,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.60661 -34.729683, 
 -58.607328 -34.7303, 
 -58.608272 -34.73108
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 B - Isidro Casanova','174','B - Isidro Casanova','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 B - Isidro Casanova','174','B - Isidro Casanova','LINESTRING ( 
 -58.52257 -34.638821, 
 -58.523805 -34.638919, 
 -58.525081 -34.639043, 
@@ -78321,9 +78321,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.599701 -34.708007, 
 -58.601128 -34.70693, 
 -58.602029 -34.7062
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 C - Ciudad Evita','174','C - Ciudad Evita','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 C - Ciudad Evita','174','C - Ciudad Evita','LINESTRING ( 
 -58.52257 -34.638821, 
 -58.523805 -34.638919, 
 -58.525092 -34.639045, 
@@ -78658,9 +78658,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.525514 -34.735298, 
 -58.525364 -34.735191, 
 -58.525207 -34.73506
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 D - Est.Morón','174','D - Est.Morón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 D - Est.Morón','174','D - Est.Morón','LINESTRING ( 
 -58.52257 -34.638821, 
 -58.523805 -34.638919, 
 -58.525081 -34.639043, 
@@ -78961,9 +78961,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.619326 -34.648884, 
 -58.618805 -34.648882, 
 -58.6188 -34.64876
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 E - Rafael Castillo por Cristianía','174','E - Rafael Castillo por Cristianía','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 E - Rafael Castillo por Cristianía','174','E - Rafael Castillo por Cristianía','LINESTRING ( 
 -58.52257 -34.638821, 
 -58.523805 -34.638919, 
 -58.525092 -34.639045, 
@@ -79175,9 +79175,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.619115 -34.683725, 
 -58.61948 -34.68347, 
 -58.619371 -34.68337
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 F - Rafael Castillo por Marconi','174','F - Rafael Castillo por Marconi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 F - Rafael Castillo por Marconi','174','F - Rafael Castillo por Marconi','LINESTRING ( 
 -58.52257 -34.638821, 
 -58.523805 -34.638919, 
 -58.525092 -34.639045, 
@@ -79388,9 +79388,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.623247 -34.689466, 
 -58.624105 -34.688859, 
 -58.624873 -34.68839
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 G - Est. Rafael Castillo','174','G - Est. Rafael Castillo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 174 G - Est. Rafael Castillo','174','G - Est. Rafael Castillo','LINESTRING ( 
 -58.52257 -34.638821, 
 -58.523805 -34.638919, 
 -58.525092 -34.639045, 
@@ -79595,9 +79595,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.625045 -34.698534, 
 -58.625193 -34.699581, 
 -58.626212 -34.69945
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 175 A - Loma Hermosa','175','A - Loma Hermosa','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 175 A - Loma Hermosa','175','A - Loma Hermosa','LINESTRING ( 
 -58.462542 -34.555469, 
 -58.463402 -34.555885, 
 -58.464367 -34.556406, 
@@ -79784,9 +79784,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.616588 -34.565162, 
 -58.61795 -34.564127, 
 -58.618679 -34.56359
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 A - Est. Escobar','176','A - Est. Escobar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 A - Est. Escobar','176','A - Est. Escobar','LINESTRING ( 
 -58.448627 -34.592643, 
 -58.450248 -34.591124, 
 -58.451815 -34.589683, 
@@ -80122,9 +80122,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.793432 -34.351877, 
 -58.795726 -34.350282, 
 -58.796799 -34.34944
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 B - Est. Escobar','176','B - Est. Escobar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 B - Est. Escobar','176','B - Est. Escobar','LINESTRING ( 
 -58.448639 -34.592643, 
 -58.451858 -34.589658, 
 -58.450828 -34.588616, 
@@ -80302,9 +80302,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.902811 -34.456446, 
 -58.906438 -34.4568, 
 -58.914678 -34.45703
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 C - Pilar','176','C - Pilar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 C - Pilar','176','C - Pilar','LINESTRING ( 
 -58.448745 -34.592573, 
 -58.451878 -34.589675, 
 -58.450828 -34.588633, 
@@ -80447,9 +80447,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.750269 -34.518368, 
 -58.740098 -34.5137, 
 -58.728619 -34.50924
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 D - Cruce José C. Paz','176','D - Cruce José C. Paz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 D - Cruce José C. Paz','176','D - Cruce José C. Paz','LINESTRING ( 
 -58.448725 -34.59266, 
 -58.451771 -34.589692, 
 -58.450806 -34.588633, 
@@ -80597,9 +80597,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.7522 -34.471308, 
 -58.754517 -34.468353, 
 -58.758273 -34.47033
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 E - Est. Tortuguitas','176','E - Est. Tortuguitas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 E - Est. Tortuguitas','176','E - Est. Tortuguitas','LINESTRING ( 
 -58.448681 -34.592643, 
 -58.451771 -34.589604, 
 -58.45087 -34.58865, 
@@ -80782,9 +80782,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.744272 -34.463585, 
 -58.743831 -34.459702, 
 -58.732545 -34.45396
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 F - Barrio Primero de Mayo por San Martín','176','F - Barrio Primero de Mayo por San Martín','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 F - Barrio Primero de Mayo por San Martín','176','F - Barrio Primero de Mayo por San Martín','LINESTRING ( 
 -58.448659 -34.592607, 
 -58.451793 -34.589666, 
 -58.450828 -34.588616, 
@@ -80966,9 +80966,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.745077 -34.502612, 
 -58.744732 -34.502313, 
 -58.747298 -34.5012
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 G - Fábrica Eaton','176','G - Fábrica Eaton','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 G - Fábrica Eaton','176','G - Fábrica Eaton','LINESTRING ( 
 -58.518279 -34.589578, 
 -58.519126 -34.589305, 
 -58.51917 -34.589224, 
@@ -81116,9 +81116,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.745108 -34.502657, 
 -58.744723 -34.50233, 
 -58.747619 -34.50111
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 H - Fábrica Eaton','176','H - Fábrica Eaton','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 H - Fábrica Eaton','176','H - Fábrica Eaton','LINESTRING ( 
 -58.51829 -34.589561, 
 -58.519835 -34.589162, 
 -58.523246 -34.588147, 
@@ -81291,9 +81291,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.734454 -34.454951, 
 -58.733714 -34.454633, 
 -58.73261 -34.45400
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 I - Cruce Jose C. Paz','176','I - Cruce Jose C. Paz','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 I - Cruce Jose C. Paz','176','I - Cruce Jose C. Paz','LINESTRING ( 
 -58.51829 -34.589561, 
 -58.519835 -34.589162, 
 -58.523246 -34.588147, 
@@ -81556,9 +81556,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.793421 -34.35186, 
 -58.79458 -34.351053, 
 -58.796799 -34.34946
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 J - Barrio Primero de Mayo','176','J - Barrio Primero de Mayo','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 J - Barrio Primero de Mayo','176','J - Barrio Primero de Mayo','LINESTRING ( 
 -58.517974 -34.589649, 
 -58.5191 -34.589353, 
 -58.519196 -34.589255, 
@@ -81922,9 +81922,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.908906 -34.456871, 
 -58.910922 -34.456924, 
 -58.914678 -34.45701
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 K - Est. Escobar','176','K - Est. Escobar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 K - Est. Escobar','176','K - Est. Escobar','LINESTRING ( 
 -58.517974 -34.589649, 
 -58.5191 -34.589353, 
 -58.519196 -34.589255, 
@@ -82195,9 +82195,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.752276 -34.47129, 
 -58.754561 -34.46838, 
 -58.758186 -34.47035
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 L - Pilar','176','L - Pilar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 L - Pilar','176','L - Pilar','LINESTRING ( 
 -58.448659 -34.592607, 
 -58.451793 -34.589666, 
 -58.451371 -34.589255, 
@@ -82710,9 +82710,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.807245 -34.507745, 
 -58.807771 -34.507219, 
 -58.808286 -34.50668
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 M - Est. Tortuguitas','176','M - Est. Tortuguitas','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 M - Est. Tortuguitas','176','M - Est. Tortuguitas','LINESTRING ( 
 -58.448659 -34.592607, 
 -58.451793 -34.589666, 
 -58.450833 -34.588686, 
@@ -83398,9 +83398,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.955157 -34.418407, 
 -58.955137 -34.417592, 
 -58.955019 -34.41636
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 N - Corbeta La Uruguay y Tegucigalpa','176','N - Corbeta La Uruguay y Tegucigalpa','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 N - Corbeta La Uruguay y Tegucigalpa','176','N - Corbeta La Uruguay y Tegucigalpa','LINESTRING ( 
 -58.448627 -34.592643, 
 -58.450248 -34.591124, 
 -58.451815 -34.589683, 
@@ -83721,9 +83721,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.793432 -34.351877, 
 -58.795726 -34.350282, 
 -58.796799 -34.34944
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 Ñ - Parque Industrial Pilar - Expreso','176','Ñ - Parque Industrial Pilar - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 176 Ñ - Parque Industrial Pilar - Expreso','176','Ñ - Parque Industrial Pilar - Expreso','LINESTRING ( 
 -58.509095 -34.569941, 
 -58.509932 -34.569147, 
 -58.510801 -34.568077, 
@@ -83885,9 +83885,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.733092 -34.510933, 
 -58.73042 -34.509951, 
 -58.728521 -34.50920
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 177 A - Est. Burzaco por Lacaze','177','A - Est. Burzaco por Lacaze','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 177 A - Est. Burzaco por Lacaze','177','A - Est. Burzaco por Lacaze','LINESTRING ( 
 -58.415472 -34.652101, 
 -58.414816 -34.65189, 
 -58.41425 -34.651651, 
@@ -84320,9 +84320,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.390819 -34.822324, 
 -58.390934 -34.821361, 
 -58.390579 -34.82118
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 177 B - Est. Burzaco por Av. Eva Perón','177','B - Est. Burzaco por Av. Eva Perón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 177 B - Est. Burzaco por Av. Eva Perón','177','B - Est. Burzaco por Av. Eva Perón','LINESTRING ( 
 -58.415472 -34.652101, 
 -58.414816 -34.65189, 
 -58.41425 -34.651651, 
@@ -84746,9 +84746,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.390819 -34.822324, 
 -58.390934 -34.821361, 
 -58.390579 -34.82118
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 A - Est. Varela por Pte.Gerli y H.Yrigoyen','178','A - Est. Varela por Pte.Gerli y H.Yrigoyen','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 A - Est. Varela por Pte.Gerli y H.Yrigoyen','178','A - Est. Varela por Pte.Gerli y H.Yrigoyen','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651786, 
 -58.414217 -34.651643, 
@@ -85198,9 +85198,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.272835 -34.808967, 
 -58.272768 -34.80995, 
 -58.272716 -34.81081
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 B - Est. Varela por Pte.Gerli y Senzabello','178','B - Est. Varela por Pte.Gerli y Senzabello','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 B - Est. Varela por Pte.Gerli y Senzabello','178','B - Est. Varela por Pte.Gerli y Senzabello','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651786, 
 -58.414217 -34.651643, 
@@ -85659,9 +85659,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.272835 -34.808967, 
 -58.272768 -34.80995, 
 -58.272716 -34.81081
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 C - Los Andes y Gral.Belgrano por Est. Avellaneda','178','C - Los Andes y Gral.Belgrano por Est. Avellaneda','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 C - Los Andes y Gral.Belgrano por Est. Avellaneda','178','C - Los Andes y Gral.Belgrano por Est. Avellaneda','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651786, 
 -58.414217 -34.651643, 
@@ -85890,9 +85890,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.327885 -34.729402, 
 -58.328673 -34.730088, 
 -58.329289 -34.73057
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 D - Est. Zeballos por Mitre','178','D - Est. Zeballos por Mitre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 D - Est. Zeballos por Mitre','178','D - Est. Zeballos por Mitre','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651786, 
 -58.414217 -34.651643, 
@@ -86332,9 +86332,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.2511 -34.819687, 
 -58.250861 -34.820039, 
 -58.25038 -34.82071
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 E - Est. Zeballos por Larralde','178','E - Est. Zeballos por Larralde','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 178 E - Est. Zeballos por Larralde','178','E - Est. Zeballos por Larralde','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651786, 
 -58.414217 -34.651643, 
@@ -86829,9 +86829,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.2511 -34.819687, 
 -58.250861 -34.820039, 
 -58.25038 -34.82071
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 179 A - Est. Fiorito','179','A - Est. Fiorito','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 179 A - Est. Fiorito','179','A - Est. Fiorito','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651783, 
 -58.414256 -34.651654, 
@@ -86968,9 +86968,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.438763 -34.70501, 
 -58.43918 -34.704472, 
 -58.440291 -34.70521
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 179 B - Cementerio de Lomas de Zamora','179','B - Cementerio de Lomas de Zamora','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 179 B - Cementerio de Lomas de Zamora','179','B - Cementerio de Lomas de Zamora','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651783, 
 -58.414256 -34.651654, 
@@ -87112,9 +87112,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.415835 -34.72549, 
 -58.417135 -34.726166, 
 -58.41794 -34.7266
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 179 C - Barrio San José','179','C - Barrio San José','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 179 C - Barrio San José','179','C - Barrio San José','LINESTRING ( 
 -58.41639 -34.651823, 
 -58.415193 -34.651783, 
 -58.414256 -34.651654, 
@@ -87347,9 +87347,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.35354 -34.770254, 
 -58.353119 -34.770811, 
 -58.35235 -34.77181
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 A - 155 - González Catán','180','A - 155 - González Catán','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 A - 155 - González Catán','180','A - 155 - González Catán','LINESTRING ( 
 -58.369073 -34.602904, 
 -58.368194 -34.6028, 
 -58.368397 -34.60105, 
@@ -87645,9 +87645,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.619312 -34.760353, 
 -58.620739 -34.76068, 
 -58.62192 -34.76086
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 B - González Catán por Laferrere','180','B - González Catán por Laferrere','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 B - González Catán por Laferrere','180','B - González Catán por Laferrere','LINESTRING ( 
 -58.433129 -34.62429, 
 -58.433275 -34.623584, 
 -58.433404 -34.622905, 
@@ -88145,9 +88145,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.62061 -34.760644, 
 -58.621631 -34.760829, 
 -58.622059 -34.76088
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 C - González Catán por Barrio San Alberto','180','C - González Catán por Barrio San Alberto','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 C - González Catán por Barrio San Alberto','180','C - González Catán por Barrio San Alberto','LINESTRING ( 
 -58.433129 -34.62429, 
 -58.433222 -34.623911, 
 -58.433399 -34.622914, 
@@ -88636,9 +88636,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.620569 -34.760644, 
 -58.621845 -34.76086, 
 -58.622264 -34.76093
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 D - San Justo por Necochea','180','D - San Justo por Necochea','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 D - San Justo por Necochea','180','D - San Justo por Necochea','LINESTRING ( 
 -58.433104 -34.624256, 
 -58.433404 -34.622861, 
 -58.434122 -34.622957, 
@@ -88800,9 +88800,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.561227 -34.676903, 
 -58.560487 -34.67624, 
 -58.559736 -34.67556
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 E - González Catán por Laferrere','180','E - González Catán por Laferrere','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 E - González Catán por Laferrere','180','E - González Catán por Laferrere','LINESTRING ( 
 -58.502153 -34.651302, 
 -58.503028 -34.652096, 
 -58.50336 -34.652436, 
@@ -89247,9 +89247,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.619999 -34.76052, 
 -58.620359 -34.760609, 
 -58.621861 -34.7608
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 F - González Catán por Barrio San Alberto','180','F - González Catán por Barrio San Alberto','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 F - González Catán por Barrio San Alberto','180','F - González Catán por Barrio San Alberto','LINESTRING ( 
 -58.50224 -34.651321, 
 -58.504669 -34.653663, 
 -58.505738 -34.654466, 
@@ -89796,9 +89796,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.621411 -34.760787, 
 -58.621721 -34.760843, 
 -58.621979 -34.76088
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 G - Primera Junta - Refuerzo entre 5.30hs y 8.15hs','180','G - Primera Junta - Refuerzo entre 5.30hs y 8.15hs','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 G - Primera Junta - Refuerzo entre 5.30hs y 8.15hs','180','G - Primera Junta - Refuerzo entre 5.30hs y 8.15hs','LINESTRING ( 
 -58.570008 -34.721054, 
 -58.570045 -34.720878, 
 -58.569986 -34.720785, 
@@ -90093,9 +90093,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.431525 -34.625217, 
 -58.431429 -34.62561, 
 -58.432834 -34.62570
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 H - González Catán por Laferrere - Expreso','180','H - González Catán por Laferrere - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 H - González Catán por Laferrere - Expreso','180','H - González Catán por Laferrere - Expreso','LINESTRING ( 
 -58.43312 -34.624313, 
 -58.433258 -34.623694, 
 -58.433312 -34.623336, 
@@ -90575,9 +90575,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.621217 -34.76075, 
 -58.621856 -34.76086, 
 -58.62221 -34.76091
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 I - González Catán por Barrio San Alberto - Expreso','180','I - González Catán por Barrio San Alberto - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 180 I - González Catán por Barrio San Alberto - Expreso','180','I - González Catán por Barrio San Alberto - Expreso','LINESTRING ( 
 -58.433124 -34.624299, 
 -58.433253 -34.623694, 
 -58.433399 -34.622892, 
@@ -91241,9 +91241,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.620756 -34.760674, 
 -58.621706 -34.760865, 
 -58.62214 -34.76090
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 181 A - Ramos Mejía por La Merced','181','A - Ramos Mejía por La Merced','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 181 A - Ramos Mejía por La Merced','181','A - Ramos Mejía por La Merced','LINESTRING ( 
 -58.423605 -34.629015, 
 -58.422274 -34.628847, 
 -58.420918 -34.628635, 
@@ -91572,9 +91572,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.582748 -34.641291, 
 -58.582923 -34.640434, 
 -58.583908 -34.63965
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 181 B - Ramos Mejía por Puán','181','B - Ramos Mejía por Puán','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 181 B - Ramos Mejía por Puán','181','B - Ramos Mejía por Puán','LINESTRING ( 
 -58.423605 -34.629015, 
 -58.422274 -34.628847, 
 -58.420918 -34.628635, 
@@ -91907,9 +91907,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.582748 -34.641291, 
 -58.582923 -34.640434, 
 -58.583908 -34.63965
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 A - José C.Paz por Rosales','182','A - José C.Paz por Rosales','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 A - José C.Paz por Rosales','182','A - José C.Paz por Rosales','LINESTRING ( 
 -58.482081 -34.643008, 
 -58.482979 -34.642288, 
 -58.482947 -34.642186, 
@@ -92399,9 +92399,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.766392 -34.499918, 
 -58.766781 -34.499433, 
 -58.76717 -34.49891
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 B - José C.Paz por Marconi','182','B - José C.Paz por Marconi','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 B - José C.Paz por Marconi','182','B - José C.Paz por Marconi','LINESTRING ( 
 -58.482081 -34.643008, 
 -58.482979 -34.642288, 
 -58.482947 -34.642186, 
@@ -92884,9 +92884,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.766392 -34.499918, 
 -58.766781 -34.499433, 
 -58.76717 -34.49891
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 C - El Palomar por Emaús','182','C - El Palomar por Emaús','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 C - El Palomar por Emaús','182','C - El Palomar por Emaús','LINESTRING ( 
 -58.482081 -34.643008, 
 -58.482979 -34.642288, 
 -58.482947 -34.642186, 
@@ -93133,9 +93133,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.595644 -34.606563, 
 -58.595663 -34.605504, 
 -58.595781 -34.60550
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 D - El Palomar por Villa Basso','182','D - El Palomar por Villa Basso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 182 D - El Palomar por Villa Basso','182','D - El Palomar por Villa Basso','LINESTRING ( 
 -58.482081 -34.643008, 
 -58.482979 -34.642288, 
 -58.482947 -34.642186, 
@@ -93372,9 +93372,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.595644 -34.606563, 
 -58.595663 -34.605504, 
 -58.595781 -34.60550
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 184 A - Villa Adelina','184','A - Villa Adelina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 184 A - Villa Adelina','184','A - Villa Adelina','LINESTRING ( 
 -58.453918 -34.587423, 
 -58.455119 -34.586981, 
 -58.453949 -34.585152, 
@@ -93544,9 +93544,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.543599 -34.523963, 
 -58.54448 -34.524715, 
 -58.545799 -34.52370
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 185 A - Liniers','185','A - Liniers','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 185 A - Liniers','185','A - Liniers','LINESTRING ( 
 -58.460526 -34.688681, 
 -58.461792 -34.687375, 
 -58.462887 -34.686351, 
@@ -93649,9 +93649,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.521166 -34.638945, 
 -58.518762 -34.639034, 
 -58.516165 -34.63915
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 185 B - Isidro Casanova','185','B - Isidro Casanova','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 185 B - Isidro Casanova','185','B - Isidro Casanova','LINESTRING ( 
 -58.460205 -34.688628, 
 -58.460655 -34.688575, 
 -58.461277 -34.687956, 
@@ -93748,9 +93748,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.581741 -34.70304, 
 -58.583371 -34.704734, 
 -58.584508 -34.70452
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 185 C - Isidro Casanova','185','C - Isidro Casanova','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 185 C - Isidro Casanova','185','C - Isidro Casanova','LINESTRING ( 
 -58.516058 -34.639211, 
 -58.521143 -34.638945, 
 -58.522539 -34.638821, 
@@ -93801,9 +93801,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.581933 -34.703023, 
 -58.583607 -34.7047, 
 -58.584508 -34.70448
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 A - Ing. Budge','188','A - Ing. Budge','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 A - Ing. Budge','188','A - Ing. Budge','LINESTRING ( 
 -58.416924 -34.581549, 
 -58.420036 -34.581319, 
 -58.420701 -34.580736, 
@@ -93931,9 +93931,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.45705 -34.717981, 
 -58.46029 -34.719763, 
 -58.461255 -34.71859
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 B - Esteban Echeverría por Iparraguirre','188','B - Esteban Echeverría por Iparraguirre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 B - Esteban Echeverría por Iparraguirre','188','B - Esteban Echeverría por Iparraguirre','LINESTRING ( 
 -58.416882 -34.581566, 
 -58.419455 -34.581355, 
 -58.420121 -34.581319, 
@@ -94178,9 +94178,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.460461 -34.777258, 
 -58.459066 -34.779266, 
 -58.460526 -34.78007
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 C - Esteban Echeverría por Perón','188','C - Esteban Echeverría por Perón','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 C - Esteban Echeverría por Perón','188','C - Esteban Echeverría por Perón','LINESTRING ( 
 -58.416924 -34.581601, 
 -58.420014 -34.581336, 
 -58.4204 -34.580948, 
@@ -94440,9 +94440,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.460473 -34.777239, 
 -58.459035 -34.779276, 
 -58.460408 -34.78000
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 D - Esteban Echeverría por Villa Albertina','188','D - Esteban Echeverría por Villa Albertina','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 D - Esteban Echeverría por Villa Albertina','188','D - Esteban Echeverría por Villa Albertina','LINESTRING ( 
 -58.416989 -34.581532, 
 -58.419885 -34.581372, 
 -58.420121 -34.581336, 
@@ -94607,9 +94607,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.460484 -34.777327, 
 -58.459023 -34.779249, 
 -58.460548 -34.78009
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 E - Puente de la Noria','188','E - Puente de la Noria','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 E - Puente de la Noria','188','E - Puente de la Noria','LINESTRING ( 
 -58.416946 -34.58162, 
 -58.420056 -34.581355, 
 -58.420378 -34.580965, 
@@ -94733,9 +94733,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.458444 -34.706145, 
 -58.459046 -34.70597, 
 -58.461514 -34.70422
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 F - Eva Perón y Villa de Luján','188','F - Eva Perón y Villa de Luján','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 F - Eva Perón y Villa de Luján','188','F - Eva Perón y Villa de Luján','LINESTRING ( 
 -58.416795 -34.581584, 
 -58.41995 -34.581372, 
 -58.420378 -34.580984, 
@@ -94866,9 +94866,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.38154 -34.704399, 
 -58.383343 -34.70581, 
 -58.373237 -34.71385
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 G - Ing. Budge - Expreso','188','G - Ing. Budge - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 G - Ing. Budge - Expreso','188','G - Ing. Budge - Expreso','LINESTRING ( 
 -58.416409 -34.652053, 
 -58.416376 -34.653323, 
 -58.416409 -34.65478, 
@@ -94935,9 +94935,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.459175 -34.719146, 
 -58.461384 -34.720398, 
 -58.46235 -34.72092
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 H - Esteban Echeverría - Expreso','188','H - Esteban Echeverría - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 188 H - Esteban Echeverría - Expreso','188','H - Esteban Echeverría - Expreso','LINESTRING ( 
 -58.416924 -34.581549, 
 -58.41997 -34.581372, 
 -58.420551 -34.580719, 
@@ -95126,9 +95126,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.460033 -34.777909, 
 -58.459046 -34.779302, 
 -58.460484 -34.78000
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 193 A - Est. Laferrere por Laferrere Norte','193','A - Est. Laferrere por Laferrere Norte','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 193 A - Est. Laferrere por Laferrere Norte','193','A - Est. Laferrere por Laferrere Norte','LINESTRING ( 
 -58.41467 -34.649644, 
 -58.415959 -34.649661, 
 -58.417374 -34.649732, 
@@ -95313,9 +95313,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.613154 -34.758679, 
 -58.614099 -34.759242, 
 -58.615408 -34.7598
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 193 B - Est. Laferrere por Laferrere Sur','193','B - Est. Laferrere por Laferrere Sur','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 193 B - Est. Laferrere por Laferrere Sur','193','B - Est. Laferrere por Laferrere Sur','LINESTRING ( 
 -58.414552 -34.649644, 
 -58.416356 -34.649661, 
 -58.418973 -34.649802, 
@@ -95485,9 +95485,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.577942 -34.747078, 
 -58.580947 -34.748648, 
 -58.584637 -34.75053
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 193 C - Est. Independencia','193','C - Est. Independencia','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 193 C - Est. Independencia','193','C - Est. Independencia','LINESTRING ( 
 -58.414692 -34.649661, 
 -58.416387 -34.649678, 
 -58.417504 -34.649766, 
@@ -95637,9 +95637,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.579723 -34.749704, 
 -58.581761 -34.751345, 
 -58.583758 -34.75123
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 A - Zárate','194','A - Zárate','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 A - Zárate','194','A - Zárate','LINESTRING ( 
 -58.407418 -34.611347, 
 -58.405852 -34.611241, 
 -58.406044 -34.610146, 
@@ -96114,9 +96114,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.029198 -34.096738, 
 -59.032009 -34.098213, 
 -59.034734 -34.09959
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 B - Est. Escobar','194','B - Est. Escobar','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 B - Est. Escobar','194','B - Est. Escobar','LINESTRING ( 
 -58.407397 -34.611409, 
 -58.405852 -34.611258, 
 -58.40597 -34.610084, 
@@ -96421,9 +96421,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.793035 -34.3534, 
 -58.792273 -34.352693, 
 -58.79621 -34.34991
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 C - Est. Matheu','194','C - Est. Matheu','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 C - Est. Matheu','194','C - Est. Matheu','LINESTRING ( 
 -58.405895 -34.611241, 
 -58.406024 -34.610182, 
 -58.406087 -34.607779, 
@@ -96578,9 +96578,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.802196 -34.361257, 
 -58.804921 -34.364038, 
 -58.806874 -34.36600
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 D - Zárate - Diferencial','194','D - Zárate - Diferencial','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 D - Zárate - Diferencial','194','D - Zárate - Diferencial','LINESTRING ( 
 -58.407353 -34.611364, 
 -58.405808 -34.611206, 
 -58.406153 -34.608186, 
@@ -96860,9 +96860,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.027385 -34.095823, 
 -59.031042 -34.097777, 
 -59.034798 -34.0996
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 E - Zárate - Expreso','194','E - Zárate - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 194 E - Zárate - Expreso','194','E - Zárate - Expreso','LINESTRING ( 
 -58.407226 -34.611418, 
 -58.405873 -34.611277, 
 -58.40598 -34.610111, 
@@ -97510,9 +97510,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -59.031992 -34.098225, 
 -59.032893 -34.0987, 
 -59.034852 -34.09970
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 A - La Plata por Av.Mitre','195','A - La Plata por Av.Mitre','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 A - La Plata por Av.Mitre','195','A - La Plata por Av.Mitre','LINESTRING ( 
 -58.374932 -34.58464, 
 -58.372368 -34.586027, 
 -58.37181 -34.587335, 
@@ -97852,9 +97852,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.954039 -34.905757, 
 -57.954039 -34.905757, 
 -57.954039 -34.90575
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 B - La Plata por Constitución y Autopista','195','B - La Plata por Constitución y Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 B - La Plata por Constitución y Autopista','195','B - La Plata por Constitución y Autopista','LINESTRING ( 
 -58.374825 -34.58465, 
 -58.372399 -34.58601, 
 -58.37181 -34.587325, 
@@ -98205,9 +98205,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.95537 -34.909866, 
 -57.955531 -34.907156, 
 -57.953974 -34.90572
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 C - La Plata por Alem y Autopista','195','C - La Plata por Alem y Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 C - La Plata por Alem y Autopista','195','C - La Plata por Alem y Autopista','LINESTRING ( 
 -58.374878 -34.58465, 
 -58.372377 -34.586027, 
 -58.371842 -34.587255, 
@@ -98577,9 +98577,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.949157 -34.905079, 
 -57.952559 -34.902588, 
 -57.954855 -34.90462
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 D - La Plata por Alem y Autopista','195','D - La Plata por Alem y Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 D - La Plata por Alem y Autopista','195','D - La Plata por Alem y Autopista','LINESTRING ( 
 -58.380553 -34.625597, 
 -58.379587 -34.627822, 
 -58.378537 -34.627478, 
@@ -98912,9 +98912,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.95544 -34.908599, 
 -57.955514 -34.907164, 
 -57.953895 -34.90565
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 E - La Plata por Autopista','195','E - La Plata por Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 E - La Plata por Autopista','195','E - La Plata por Autopista','LINESTRING ( 
 -58.528869 -34.642406, 
 -58.529083 -34.63944, 
 -58.529319 -34.639386, 
@@ -99528,9 +99528,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955407 -34.908875, 
 -57.955514 -34.907181, 
 -57.953974 -34.90571
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 F - La Plata por Constitución y Autopista','195','F - La Plata por Constitución y Autopista','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 F - La Plata por Constitución y Autopista','195','F - La Plata por Constitución y Autopista','LINESTRING ( 
 -58.372034 -34.588279, 
 -58.375039 -34.592377, 
 -58.37534 -34.59259, 
@@ -99786,9 +99786,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955713 -34.903601, 
 -57.955531 -34.907156, 
 -57.953963 -34.90567
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 G - La Plata por Constitución y Autopista - Expreso','195','G - La Plata por Constitución y Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 G - La Plata por Constitución y Autopista - Expreso','195','G - La Plata por Constitución y Autopista - Expreso','LINESTRING ( 
 -58.373237 -34.590082, 
 -58.373686 -34.590594, 
 -58.375478 -34.592652, 
@@ -100054,9 +100054,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955734 -34.903618, 
 -57.955508 -34.907138, 
 -57.953879 -34.90560
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 H - La Plata por Alem y Autopista - Expreso','195','H - La Plata por Alem y Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 H - La Plata por Alem y Autopista - Expreso','195','H - La Plata por Alem y Autopista - Expreso','LINESTRING ( 
 -58.380532 -34.625562, 
 -58.380209 -34.626348, 
 -58.37962 -34.627778, 
@@ -100300,9 +100300,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955606 -34.905405, 
 -57.955488 -34.907173, 
 -57.954039 -34.90577
- )','','')
+ )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 I - La Plata por Autopista - Expreso','195','I - La Plata por Autopista - Expreso','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'8c9a672b-9103-47bf-a373-0648c0f10c5c','Linea 195 I - La Plata por Autopista - Expreso','195','I - La Plata por Autopista - Expreso','LINESTRING ( 
 -58.373922 -34.585188, 
 -58.372377 -34.585984, 
 -58.371744 -34.587609, 
@@ -100543,4 +100543,4 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -57.955455 -34.908844, 
 -57.955477 -34.907156, 
 -57.954576 -34.90618
- )','','')
+ )','')
