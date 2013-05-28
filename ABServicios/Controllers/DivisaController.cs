@@ -133,8 +133,8 @@ namespace ABServicios.Controllers
                 {
                     Nombre = "Dólar",
                     Simbolo = "U$S",
-                    ValorCompra = compra.Substring(0, compra.Length - 1),
-                    ValorVenta = venta.Substring(0, venta.Length - 2),
+                    ValorCompra = compra,
+                    ValorVenta = venta,
                     Variacion = variacion,
                     Actualizacion = fecha,
                 });
@@ -148,8 +148,8 @@ namespace ABServicios.Controllers
                 {
                     Nombre = "Dólar Blue",
                     Simbolo = "U$S",
-                    ValorCompra = compra.Substring(0, compra.Length - 1),
-                    ValorVenta = venta.Substring(0, venta.Length - 1),
+                    ValorCompra = compra,
+                    ValorVenta = venta,
                     Variacion = variacion,
                     Actualizacion = fecha,
                 });
@@ -168,8 +168,8 @@ namespace ABServicios.Controllers
                 {
                     Nombre = "Dólar Turístico",
                     Simbolo = "U$S",
-                    ValorCompra = compra.Substring(0, compra.Length - 1),
-                    ValorVenta = venta.Substring(0, venta.Length - 1),
+                    ValorCompra = compra,
+                    ValorVenta = venta,
                     Variacion = variacionOficial,
                     Actualizacion = fechaOficial,
                 });
