@@ -138,7 +138,7 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.46177 -34.64351
 )','')
 
-INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'e74e932c-bf15-4ed6-ada6-f0cbf0688b78','Linea H','H','Parque Patricios','LINESTRING ( 
+INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'e74e932c-bf15-4ed6-ada6-f0cbf0688b78','Linea H','H','Hospitales','LINESTRING ( 
 -58.405422 -34.604194, 
 -58.406196 -34.607655, 
 -58.406002 -34.610111, 
@@ -155,7 +155,10 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
 -58.402504 -34.637462, 
 -58.403298 -34.636968, 
 -58.404049 -34.636862, 
--58.40628 -34.63726
+-58.40628 -34.63726,
+-58.410873 -34.638116,
+-58.411303 -34.638398,
+-58.413051 -34.642680
 )','')
 
 INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido])VALUES (NEWID(),'e74e932c-bf15-4ed6-ada6-f0cbf0688b78','Linea P','P','Centro Cívico','LINESTRING ( 

@@ -139,6 +139,9 @@ INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Rama
  )','',1)
 
 INSERT INTO [GUIATBA_Transporte]([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido],[Regreso])VALUES (NEWID(),'e74e932c-bf15-4ed6-ada6-f0cbf0688b78','Linea H','H','Corrientes','LINESTRING ( 
+-58.413051 -34.642680,
+-58.411303 -34.638398,
+-58.410873 -34.638116,
 -58.40628 -34.637269, 
 -58.404049 -34.636862, 
 -58.403298 -34.636968, 
