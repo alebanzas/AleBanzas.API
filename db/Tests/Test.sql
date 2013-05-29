@@ -72,7 +72,7 @@ where barrio = 'Monserrat' order by direccion
 
 
 
-select Ubicacion.STBuffer(40), Ubicacion.STNumPoints(), Ubicacion.STPointN(2).STAsText(),* from [GUIATBA_Transporte]
+select Ubicacion.STNumPoints(), Ubicacion.STPointN(2).STAsText(),* from [GUIATBA_Transporte]
 --where Codigo in ('152', '41')
 where tipotransporteid = 'E74E932C-BF15-4ED6-ADA6-F0CBF0688B78'
 where tipotransporteid = '440C21D3-71DE-4C94-849D-66139EADCE4C'
@@ -165,25 +165,8 @@ DECLARE @line1 GEOMETRY = geometry::STGeomFromText('LINESTRING (
  )', 0)
 DECLARE @line2 GEOMETRY = geometry::STGeomFromText('POINT(-58.403379 -34.593778)', 0)
 
-SELECT @line1.STBuffer(0.001)
-
 SELECT  @line1.ShortestLineTo(@line2).STIntersection(@line2).ToString()
 
-
-DECLARE @g geography;
-DECLARE @h geography;
---SET @g = (select Ubicacion from [GUIATBA_Transporte] where ID = '6F8C787A-94DB-4230-A875-67A885E48292') --C
-SET @h = (select Ubicacion from [GUIATBA_Transporte] where ID = '6FE5569A-9693-4553-A777-A81932D971EF') --D
-SET @g = (select Ubicacion from [GUIATBA_Transporte] where ID = '87F36C47-9635-49C0-8203-937A76B5A49C') --A
-SELECT @g.STBuffer(40).STIntersects(@h.STBuffer(40)),
-@g.STBuffer(40).ShortestLineTo(@h.STBuffer(40)).STAsText()
-
-
-
-
-
-
-SELECT @line1.STBuffer(0.001)
 
 ------------------------
 ------STIntersection para combinacion
@@ -213,88 +196,8 @@ SELECT
 @destino.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1) as 'recorridoPuntoDestinoG',
 * 
 FROM [GUIATBA_Transporte]
-WHERE 
-(@origen.STDistance(Ubicacion) + @destino.STDistance(Ubicacion)) < @thh
+WHERE (@origen.STDistance(Ubicacion) + @destino.STDistance(Ubicacion)) < @thh
 ORDER BY 
 (@origen.STDistance(Ubicacion) + @destino.STDistance(Ubicacion)),
 Nombre
 
-
-
-
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
-DECLARE @origen geography;
-DECLARE @destino geography;
-DECLARE @subtable TABLE
-(
-	recorridoPuntoOrigen varchar(max),
-	recorridoPuntoDestino varchar(max),
-	caminarTotal int,
-	caminarOrigen int,
-	caminarDestino int,
-	recorridoPuntoOrigenG geography,
-	recorridoPuntoDestinoG geography,
-	destino int,
-	ID uniqueidentifier NOT NULL,
-	TipoTransporteID uniqueidentifier NOT NULL,
-	Nombre varchar(100) NULL,
-	Codigo nvarchar(50) NOT NULL,
-	Ramal nvarchar(100) NOT NULL,
-	Ubicacion geography NOT NULL,
-	DescripcionRecorrido text NULL,
-	Regreso bit
-)
-DECLARE @thh int;
-SET @origen = geography:: STGeomFromText('POINT(-58.403379 -34.593778)' , 4326); --casa
---SET @destino = geography:: STGeomFromText('POINT(-58.382764 -34.617210)' , 4326); --uade
---SET @destino = geography:: STGeomFromText('POINT(-58.424735 -34.603082)' , 4326); --autocosmos
---SET @destino = geography:: STGeomFromText('POINT(-58.479624 -34.519994)' , 4326); --club banco
---SET @destino = geography:: STGeomFromText('POINT(-58.488765 -34.545944)' , 4326); --DOT
-----sin viaje directo
---SET @destino = geography:: STGeomFromText('POINT(-58.483475 -34.608910)' , 4326); --nazca y jonte
-SET @destino = geography:: STGeomFromText('POINT(-58.313885 -34.704276)' , 4326); --agus house
-SET @thh = 800;
-
-INSERT INTO @subtable (recorridoPuntoOrigen,recorridoPuntoDestino,caminarTotal,caminarOrigen,caminarDestino,recorridoPuntoOrigenG,recorridoPuntoDestinoG,destino,ID,TipoTransporteID,Nombre,Codigo,Ramal,Ubicacion,DescripcionRecorrido,Regreso) (
-	(
-		SELECT 
-			@origen.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1).STAsText() as 'recorridoPuntoOrigen',
-			@destino.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1).STAsText() as 'recorridoPuntoDestino',  
-			(@origen.STDistance(Ubicacion) + @destino.STDistance(Ubicacion)) as 'caminarTotal', 
-			@origen.STDistance(Ubicacion) as 'caminarOrigen',
-			@destino.STDistance(Ubicacion) as 'caminarDestino', 
-			@origen.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1) as 'recorridoPuntoOrigenG',
-			@destino.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1) as 'recorridoPuntoDestinoG',
-			0 as 'destino',
-			* 
-		FROM [GUIATBA_Transporte]
-		WHERE (@origen.STDistance(Ubicacion)) < @thh
-	)
-	UNION ALL
-	(
-		SELECT 
-			@origen.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1).STAsText() as 'recorridoPuntoOrigen',
-			@destino.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1).STAsText() as 'recorridoPuntoDestino',  
-			(@origen.STDistance(Ubicacion) + @destino.STDistance(Ubicacion)) as 'caminarTotal', 
-			@origen.STDistance(Ubicacion) as 'caminarOrigen',
-			@destino.STDistance(Ubicacion) as 'caminarDestino', 
-			@origen.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1) as 'recorridoPuntoOrigenG',
-			@destino.ShortestLineTo(Ubicacion).STBuffer(1).STIntersection(Ubicacion).STPointN(1) as 'recorridoPuntoDestinoG',
-			1 as 'destino',
-			* 
-		FROM [GUIATBA_Transporte]
-		WHERE (@destino.STDistance(Ubicacion)) < @thh
-	)
-)
-
-SELECT * FROM @subtable d WHERE destino = '1'
-
-SELECT * FROM @subtable o WHERE destino = '0'
-
-ORDER BY
-caminarOrigen,
-caminarDestino,
-Nombre
