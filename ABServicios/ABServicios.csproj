@@ -65,6 +65,10 @@
       <Private>True</Private>
       <HintPath>..\packages\ScrapySharp.1.5\lib\net40\FSharp.Core.dll</HintPath>
     </Reference>
+    <Reference Include="GeoAPI, Version=1.5.4307.26530, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\GeoAPI.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\ScrapySharp.1.5\lib\net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -76,6 +80,10 @@
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="NetTopologySuite, Version=1.7.3.17298, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NetTopologySuite.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\Lib\NHibernate.dll</HintPath>
     </Reference>
@@ -84,6 +92,16 @@
     </Reference>
     <Reference Include="NHibernate.Caches.SysCache">
       <HintPath>..\Lib\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Spatial">
+      <HintPath>..\Lib\NHibernate.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Spatial.MsSql2008, Version=3.2.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NHibernate.Spatial.MsSql2008.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>..\Lib\PowerCollections.dll</HintPath>
     </Reference>
     <Reference Include="ScrapySharp">
       <HintPath>..\packages\ScrapySharp.1.5\lib\net40\ScrapySharp.dll</HintPath>

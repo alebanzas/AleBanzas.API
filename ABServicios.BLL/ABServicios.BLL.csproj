@@ -31,10 +31,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GeoAPI, Version=1.5.4307.26530, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL" />
+    <Reference Include="GeoAPI, Version=1.5.4307.26530, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\GeoAPI.dll</HintPath>
+    </Reference>
     <Reference Include="NetTopologySuite, Version=1.7.3.17298, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Desktop\Nh.Spatial\Core\NetTopologySuite.dll</HintPath>
+      <HintPath>..\Lib\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Spatial">
+      <HintPath>..\Lib\NHibernate.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Spatial.MsSql2008">
+      <HintPath>..\Lib\NHibernate.Spatial.MsSql2008.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>..\Lib\PowerCollections.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,7 +77,6 @@
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Entities\ITipoMoneda.cs" />
     <Compile Include="Entities\Local.cs" />
-    <Compile Include="Entities\Point.cs" />
     <Compile Include="Entities\RecargaSUBE.cs" />
     <Compile Include="Entities\Rol.cs" />
     <Compile Include="Entities\TiposMoneda.cs" />

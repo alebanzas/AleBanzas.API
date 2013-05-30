@@ -1,4 +1,6 @@
 ﻿using System;
+using GeoAPI.Geometries;
+using GisSharpBlog.NetTopologySuite.Geometries;
 
 namespace ABServicios.BLL.Entities
 {
@@ -24,19 +26,10 @@ namespace ABServicios.BLL.Entities
 
         public virtual double Lat { get; set; }
         public virtual double Lon { get; set; }
-               
-        public virtual Point Ubicacion
-        {
-            get { return new Point(Lat, Lon); }
-            set
-            {
-                if (value == null) throw new ArgumentNullException("value");
-                Lat = value.X;
-                Lon = value.Y;
-            }
-        }
 
-        public virtual string toString()
+        public virtual Point Ubicacion { get; set; }
+        
+        public override string ToString()
         {
             return string.Format("{0} {1} {2}, {3}, {4}, {5}, {6} | {7} | {8}", base.ID, Nombre, Direccion, Barrio, Ciudad, Provincia, Telefono, Sitio, string.Format("{0}, {1}", Ubicacion.X, Ubicacion.Y));
         }

@@ -5,7 +5,7 @@ namespace RoadTrip.Data
 {
 	public static class ReflectionExtensions
 	{
-		// TODO: mover la clase completa en Autocosmos.Common
+		// TODO: mover la clase completa en Common
 		public static TResult Instantiate<TResult>(this Type type) where TResult: class
 		{
 			try

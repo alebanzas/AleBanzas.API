@@ -2,10 +2,10 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
            assembly="ABServicios.BLL"
 				   namespace="ABServicios.BLL.Entities">
-  <!--typedef name="Geometry" class="NHibernate.Spatial.Type.GeometryType, NHibernate.Spatial">
+  <!--<typedef name="Geometry" class="NHibernate.Spatial.Type.GeometryType, NHibernate.Spatial">
     <param name="srid">4269</param>
     <param name="subtype">GEOMETRY</param>
-  </typedef -->
+  </typedef>-->
   <class name="RecargaSUBE" table="SUBE_Recarga">
     <id name="ID">
       <generator class="guid"/>
@@ -15,7 +15,6 @@
     
     <property name="Lat" column="lat" />
     <property name="Lon" column="lon" />
-    <!-- Hasta que no enganche spatial -->
-    <!--property name="Ubicacion" type="Geometry" column="ubicacion" />-->
+    <property name="Ubicacion" column="ubicacion" type="NHibernate.Spatial.Type.MsSql2008GeographyType, NHibernate.Spatial.MsSql2008" />
   </class>
 </hibernate-mapping>

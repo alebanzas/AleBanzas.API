@@ -15,7 +15,6 @@
 
     <property name="Lat" column="lat" />
     <property name="Lon" column="lon" />
-    <!-- Hasta que no enganche spatial -->
-    <!--property name="Ubicacion" type="Geometry" column="ubicacion" />-->
+    <property name="Ubicacion" column="ubicacion" type="NHibernate.Spatial.Type.MsSql2008GeographyType, NHibernate.Spatial.MsSql2008" />
   </class>
 </hibernate-mapping>

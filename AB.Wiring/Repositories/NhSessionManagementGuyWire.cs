@@ -7,6 +7,7 @@ using Castle.Windsor;
 using NHibernate;
 using NHibernate.Caches.SysCache;
 using NHibernate.Cfg;
+using NHibernate.Spatial.Mapping;
 
 namespace AB.Wiring.Repositories
 {
@@ -26,6 +27,7 @@ namespace AB.Wiring.Repositories
 		public void Wire()
 		{
             var conf = new Configuration();
+            conf.AddAuxiliaryDatabaseObject(new SpatialAuxiliaryDatabaseObject(conf));
             conf.DataBaseIntegration(x =>
             {
                 x.Dialect<ABSqlDialect>();

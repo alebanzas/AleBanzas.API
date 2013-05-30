@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.Entities;
-using ABServicios.Models;
+using GisSharpBlog.NetTopologySuite.Geometries;
 using Microsoft.Practices.ServiceLocation;
 
 namespace ABServicios.Controllers
@@ -28,14 +26,14 @@ namespace ABServicios.Controllers
         {
             IEnumerable<RecargaSUBE> puntos = _recargaSUBERepo;
 
-            return Json(puntos.Select(ConvertTo).ToList());
+            return Json(puntos.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult VentaAll()
         {
             IEnumerable<VentaSUBE> puntos = _ventaSUBERepo;
 
-            return Json(puntos.Select(ConvertTo).ToList());
+            return Json(puntos.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult RecargaNear(double lat, double lon, int cant = 1)
@@ -46,10 +44,10 @@ namespace ABServicios.Controllers
 
             var result =
                 puntos.ToList()
-                      .OrderBy(point => Point.Distance(source, point.Ubicacion))
+                      .OrderBy(point => source.Distance(point.Ubicacion))
                       .Take(cant).Select(ConvertTo);
 
-            return Json(result);
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult VentaNear(double lat, double lon, int cant = 1)
@@ -60,10 +58,10 @@ namespace ABServicios.Controllers
 
             var result =
                 puntos.ToList()
-                      .OrderBy(point => Point.Distance(source, point.Ubicacion))
+                      .OrderBy(point => source.Distance(point.Ubicacion))
                       .Take(cant).Select(ConvertTo);
-
-            return Json(result);
+            
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
         
         //public ActionResult PorBarrio(string barrio)

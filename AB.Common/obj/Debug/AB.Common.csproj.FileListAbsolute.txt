@@ -1,4 +1,0 @@
-C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Common\bin\Debug\AB.Common.dll
-C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Common\bin\Debug\AB.Common.pdb
-C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Common\obj\Debug\AB.Common.dll
-C:\Users\Usuario\Documents\Proyectos\ABServicios\AB.Common\obj\Debug\AB.Common.pdb

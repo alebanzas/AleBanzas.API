@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using ABServicios.BLL.Entities;
 using ABServicios.Models;
+using GisSharpBlog.NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers
 {
@@ -61,8 +62,10 @@ namespace ABServicios.Controllers
                            Id1 = hotel.Id1,
                            Id2 = hotel.Id2,
                            Id3 = hotel.Id3,
-                           Latitud = hotel.Ubicacion.X,
-                           Longitud = hotel.Ubicacion.Y,
+                           Latitud = 0,
+                           Longitud = 0,
+                           //Latitud = hotel.Ubicacion.X, //TODO: poner como corresponde
+                           //Longitud = hotel.Ubicacion.Y, //TODO: poner como corresponde
                            Nombre = hotel.Nombre,
                            Provincia = hotel.Provincia,
                            Sitio = hotel.Sitio,
