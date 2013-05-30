@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Prueba de Servicio";
+}
+
+<div id="form">
+    @Html.TextBox("controller", "", new { id = "controller" })
+    @Html.TextBox("action", "", new { id = "action" })
+    @Html.TextBox("param", "", new { id = "param" })
+    <button onclick="Test();">TEST</button>
+</div>
+
+<textarea id="result" style="width: 100%; height: 300px;"></textarea>
+
+<script type="text/javascript">
+
+function JsonFromServerAction(urlAction, serverAction, params, onsuccess) {
+    $("#result").val("WAIT...");
+    var url = '/' + urlAction;
+    if (serverAction) {
+        url += '/' + serverAction;
+    }
+    if (params) {
+        url += '/?' + params;
+    }
+    $.ajax({
+        type: "POST",
+        url: url,
+        contentType: "application/json",
+        dataType: "json",
+        success: onsuccess
+    });
+
+}
+
+function Test() {
+    JsonFromServerAction($("#controller").val(), $("#action").val(), $("#param").val(), function (a) {
+        $("#result").val(JSON.stringify(a));
+    });
+}
+
+</script>

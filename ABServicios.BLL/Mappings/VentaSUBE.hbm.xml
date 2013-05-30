@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+           assembly="ABServicios.BLL"
+				   namespace="ABServicios.BLL.Entities">
+  <!--typedef name="Geometry" class="NHibernate.Spatial.Type.GeometryType, NHibernate.Spatial">
+    <param name="srid">4269</param>
+    <param name="subtype">GEOMETRY</param>
+  </typedef -->
+  <class name="VentaSUBE" table="SUBE_Venta">
+    <id name="ID">
+      <generator class="guid"/>
+    </id>
+
+    <property name="Nombre" column="nombre" />
+
+    <property name="Lat" column="lat" />
+    <property name="Lon" column="lon" />
+    <property name="Ubicacion" column="ubicacion" type="NHibernate.Spatial.Type.MsSql2008GeographyType, NHibernate.Spatial.MsSql2008" />
+  </class>
+</hibernate-mapping>
