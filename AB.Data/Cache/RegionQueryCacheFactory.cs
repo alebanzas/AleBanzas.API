@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using NHibernate.Cache;
 using NHibernate.Cfg;
-using RoadTrip.Data;
-using uNhAddIns.Cache;
 
 namespace AB.Data.Cache
 {

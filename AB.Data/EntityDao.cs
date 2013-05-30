@@ -1,8 +1,7 @@
 using ABServicios.BLL.DataInterfaces;
 using NHibernate;
-using RoadTrip.BLL.DataInterfaces;
 
-namespace RoadTrip.Data
+namespace AB.Data
 {
 	public class EntityDao<T, TId> : IEntityDao<T, TId>
 	{

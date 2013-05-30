@@ -3,7 +3,7 @@ using System.Reflection;
 using NHibernate.Cfg;
 using NHibernate.Mapping;
 
-namespace RoadTrip.Data
+namespace AB.Data
 {
 	public static class NHibernateConfigurationExtensions
 	{
