@@ -1,7 +1,7 @@
 using System;
 using NHibernate;
 
-namespace RoadTrip.Data
+namespace AB.Data
 {
 	public static class ReflectionExtensions
 	{

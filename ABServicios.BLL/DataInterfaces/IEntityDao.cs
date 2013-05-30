@@ -1,5 +1,3 @@
-using RoadTrip.BLL.DataInterfaces;
-
 namespace ABServicios.BLL.DataInterfaces
 {
 	/// <summary>
