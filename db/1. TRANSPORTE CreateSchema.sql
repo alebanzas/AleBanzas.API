@@ -22,3 +22,10 @@ CREATE TABLE dbo.GUIATBA_Transporte
 	)  ON [PRIMARY]
 	 TEXTIMAGE_ON [PRIMARY]
 GO
+
+CREATE TABLE dbo.GUIATBA_TransporteIntersecciones
+	(
+	CodigoO nvarchar(50) NOT NULL,
+	CodigoD nvarchar(50) NOT NULL
+	)  ON [PRIMARY]
+GO
