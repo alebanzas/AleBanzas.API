@@ -5,7 +5,6 @@ using ABServicios.BLL.Entities;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using NHibernate;
-using NHibernate.Caches.SysCache;
 using NHibernate.Cfg;
 using NHibernate.Spatial.Mapping;
 
@@ -37,7 +36,6 @@ namespace AB.Wiring.Repositories
             });
             conf.Cache(x =>
             {
-                x.Provider<SysCacheProvider>();
                 x.UseQueryCache = true;
                 x.DefaultExpiration = 120;
             });
