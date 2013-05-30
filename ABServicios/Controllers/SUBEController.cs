@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using ABServicios.Attributes;
@@ -6,6 +7,7 @@ using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.Entities;
 using GisSharpBlog.NetTopologySuite.Geometries;
 using Microsoft.Practices.ServiceLocation;
+using NHibernate;
 
 namespace ABServicios.Controllers
 {
@@ -34,6 +36,27 @@ namespace ABServicios.Controllers
             IEnumerable<VentaSUBE> puntos = _ventaSUBERepo;
 
             return Json(puntos.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Test()
+        {
+            var ventaSUBE = new VentaSUBE
+            {
+                ID = Guid.NewGuid(),
+                Ubicacion = new Point(DateTime.Now.Minute, DateTime.Now.Second),
+                Nombre = DateTime.UtcNow.ToShortTimeString(),
+            };
+            
+            var sessionFactory = ServiceLocator.Current.GetInstance<ISessionFactory>();
+            using (var session = sessionFactory.OpenSession())
+            using (var tx = session.BeginTransaction())
+            {
+                _ventaSUBERepo.Add(ventaSUBE);
+                
+                tx.Commit();
+            }
+
+            return Json(ventaSUBE, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult RecargaNear(double lat, double lon, int cant = 1)
@@ -75,8 +98,8 @@ namespace ABServicios.Controllers
         {
             return new RecargaSUBEViewModel
             {
-                Latitud = hotel.Ubicacion.X,
-                Longitud = hotel.Ubicacion.Y,
+                Latitud = hotel.Ubicacion != null ? hotel.Ubicacion.X : 10,
+                Longitud = hotel.Ubicacion != null ? hotel.Ubicacion.Y : 10,
                 Nombre = hotel.Nombre.ToUpperInvariant(),
             };
         }

@@ -39,11 +39,50 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NHibernate">
-      <HintPath>..\..\..\..\Libs\NHibernate.dll</HintPath>
+    <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Usuario\Documents\Proyectos\IC2013\Libs\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Usuario\Documents\Proyectos\IC2013\Libs\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoAPI, Version=1.1.0.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite, Version=1.7.3.17298, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Spatial, Version=3.2.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Spatial.MsSql2008, Version=3.2.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.Spatial.MsSql2008.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\..\..\Libs\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>..\Lib\PowerCollections.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,8 +93,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Insert\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaUtils\SchemaUpdateUtil.cs" />
+    <Compile Include="TestServerContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="hibernate.cfg.xml">
@@ -63,10 +104,31 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AB.Common\AB.Common.csproj">
+      <Project>{E3E70B35-9ADF-40B2-A211-55859542854B}</Project>
+      <Name>AB.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AB.Data\AB.Data.csproj">
       <Project>{67C0C6F5-BFF0-4892-95B6-41D9FECDFFD5}</Project>
       <Name>ABServicios.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AB.Wiring\AB.Wiring.csproj">
+      <Project>{af3cd334-528a-4c92-91b8-6ecc2ef4952a}</Project>
+      <Name>AB.Wiring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABServicios.BLL\ABServicios.BLL.csproj">
+      <Project>{de11105b-f395-4987-95ad-75255e2f539d}</Project>
+      <Name>ABServicios.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABServicios\ABServicios.csproj">
+      <Project>{5A28A6EA-596D-41F7-A654-F44315D91942}</Project>
+      <Name>ABServicios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.configuration.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
