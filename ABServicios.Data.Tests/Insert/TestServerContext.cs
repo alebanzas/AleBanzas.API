@@ -6,17 +6,17 @@ using AB.Wiring.PlugIns;
 using AB.Wiring.Repositories;
 using NUnit.Framework;
 
-namespace ABServicios.Data.Tests
+namespace ABServicios.Data.Tests.Insert
 {
 	[SetUpFixture]
 	public class TestServerContext
 	{
-		private GuyWire guyWire;
+        private TestGuyWire guyWire;
 
 		[SetUp]
 		public void RunBeforeAnyTests()
 		{
-			guyWire = new GuyWire();
+            guyWire = new TestGuyWire();
 			guyWire.Wire();
 		}
 
@@ -26,17 +26,16 @@ namespace ABServicios.Data.Tests
 			guyWire.Dewire();
 		}
 
-		private class GuyWire : AbstractGuyWire
+		private class TestGuyWire : AbstractGuyWire
 		{
 			protected override IEnumerable<IGuyWire> GuyWires
 			{
 				get
 				{
-					yield return new ServiceLocatorGuyWire(Container);
-					yield return new NhSessionManagementGuyWire(Container);
-					yield return new ApplicationServicesGuyWire(Container);
-					yield return new DomainEventsGuyWire(Container);
-					yield return new ServiciosPlugInsGuyWire(Container);
+                    yield return new ServiceLocatorGuyWire(Container);
+                    yield return new NhibernateGuyWire(Container);
+                    yield return new DaosGuyWire(Container);
+                    yield return new DomainEventsGuyWire(Container);
 				}
 			}
 		}

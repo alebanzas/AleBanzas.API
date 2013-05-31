@@ -2642,5 +2642,5 @@ INSERT INTO [SUBE_Venta] ([ID],[nombre],[lat],[lon]) VALUES ((SELECT NEWID()),'A
 INSERT INTO [SUBE_Venta] ([ID],[nombre],[lat],[lon]) VALUES ((SELECT NEWID()),'AV. RIVADAVIA 12602 - CIUDADELA','-34.613791','-58.539151');
 
 UPDATE [SUBE_Venta]
-SET [ubicacion] = geometry::STGeomFromText('POINT(' + CAST([lat] AS VARCHAR(20)) + ' ' + CAST([lon] AS VARCHAR(20)) + ')', 4326);
+SET [ubicacion] = geography::STGeomFromText('POINT(' + CAST([lat] AS VARCHAR(20)) + ' ' + CAST([lon] AS VARCHAR(20)) + ')', 4326);
 GO

@@ -5,7 +5,9 @@ using ABServicios.BLL.Entities;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using NHibernate;
+using NHibernate.Caches.SysCache;
 using NHibernate.Cfg;
+using NHibernate.Spatial.Dialect;
 using NHibernate.Spatial.Mapping;
 
 namespace AB.Wiring.Repositories
@@ -25,6 +27,7 @@ namespace AB.Wiring.Repositories
 
 		public void Wire()
 		{
+
             var conf = new Configuration();
             conf.AddAuxiliaryDatabaseObject(new SpatialAuxiliaryDatabaseObject(conf));
             conf.DataBaseIntegration(x =>
@@ -36,13 +39,17 @@ namespace AB.Wiring.Repositories
             });
             conf.Cache(x =>
             {
+                x.Provider<SysCacheProvider>();
                 x.UseQueryCache = true;
                 x.DefaultExpiration = 120;
             });
-            conf.AddAssembly(typeof(Hotel).Assembly);
+            //conf.QueryCache().ResolveRegion("SearchStatistic").Using<TolerantQueryCache>().AlwaysTolerant();
+            //conf.AddResource("Mapping.CustomTypes.xml", typeof(Hotel).Assembly);
+            conf.AddAssembly(typeof(RecargaSUBE).Assembly);
+            conf.SetProperty(Environment.SqlExceptionConverter, typeof(MsSqlExceptionConverter).AssemblyQualifiedName);
             conf.Configure();
-
-			container.Register(Component.For<ISessionFactory>().UsingFactoryMethod(() => conf.BuildSessionFactory()));
+            //#endif
+            container.Register(Component.For<ISessionFactory>().UsingFactoryMethod(() => conf.BuildSessionFactory()));
 		}
 
 		public void Dewire()

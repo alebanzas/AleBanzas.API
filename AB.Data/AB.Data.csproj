@@ -52,6 +52,9 @@
     <Reference Include="NHibernate.Spatial.MsSql2008">
       <HintPath>..\Lib\NHibernate.Spatial.MsSql2008.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate.Spatial.MsSqlSpatial">
+      <HintPath>..\Lib\NHibernate.Spatial.MsSqlSpatial.dll</HintPath>
+    </Reference>
     <Reference Include="PowerCollections">
       <HintPath>..\Lib\PowerCollections.dll</HintPath>
     </Reference>
@@ -93,7 +96,7 @@
     <Compile Include="Queries\SampleQuery.cs" />
     <Compile Include="ReflectionExtensions.cs" />
     <Compile Include="Repository.cs" />
-    <Compile Include="RoadTripDao.cs" />
+    <Compile Include="ABDao.cs" />
     <Compile Include="UserTypes\GenericWellKnownInstanceType.cs" />
     <Compile Include="UserTypes\RolWellKnownInstanceType.cs" />
     <Compile Include="WebContextCountryConnectionProvider.cs" />

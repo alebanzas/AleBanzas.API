@@ -5,26 +5,14 @@
   <!--typedef name="Geometry" class="NHibernate.Spatial.Type.GeometryType, NHibernate.Spatial">
     <param name="srid">4269</param>
     <param name="subtype">GEOMETRY</param>
-  </typedef-->
-  <class name="Hotel" table="TELO_Hotel">
+  </typedef -->
+  <class name="CorteTransito" table="GUIATBA_CorteTransito">
     <id name="ID">
       <generator class="guid"/>
     </id>
 
     <property name="Nombre" column="nombre" />
     <property name="Descripcion" column="descripcion" />
-    <property name="Direccion" column="direccion" />
-    <property name="Barrio" column="barrio" />
-    <property name="Ciudad" column="ciudad" />
-    <property name="Provincia" column="provincia" />
-    <property name="Sitio" column="sitio" />
-    <property name="Telefono" column="telefono" />
-    <property name="Id1" column="id1" />
-    <property name="Id2" column="id2" />
-    <property name="Id3" column="id3" />
-    
-    <property name="Lat" column="lat" />
-    <property name="Lon" column="lon" />
     <property name="Ubicacion" column="ubicacion" type="NHibernate.Spatial.Type.MsSql2008GeographyType, NHibernate.Spatial.MsSql2008" />
   </class>
 </hibernate-mapping>

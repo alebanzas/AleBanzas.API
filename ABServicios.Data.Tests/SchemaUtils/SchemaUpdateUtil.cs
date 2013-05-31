@@ -13,7 +13,7 @@ namespace ABServicios.Data.Tests.SchemaUtils
 		{
 			var cfg = new Configuration().Configure();
 			//cfg.CreateIndexesForForeignKeys();
-
+            
 			var sb = new StringBuilder();
 			new SchemaUpdate(cfg).Execute(s=> sb.Append(s), false);
 			Console.WriteLine(sb.ToString());

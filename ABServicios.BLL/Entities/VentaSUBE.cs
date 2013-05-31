@@ -1,5 +1,5 @@
 ﻿using System;
-using GisSharpBlog.NetTopologySuite.Geometries;
+using NetTopologySuite.Geometries;
 
 namespace ABServicios.BLL.Entities
 {

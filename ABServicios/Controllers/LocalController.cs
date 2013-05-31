@@ -3,7 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using ABServicios.BLL.Entities;
 using ABServicios.Models;
-using GisSharpBlog.NetTopologySuite.Geometries;
+using NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers
 {
