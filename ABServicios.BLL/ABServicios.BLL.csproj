@@ -93,6 +93,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Mappings\Hotel.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\VentaSUBE.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -22,10 +22,7 @@ namespace ABServicios.BLL.Entities
         public virtual string Id1 { get; set; }
         public virtual string Id2 { get; set; }
         public virtual string Id3 { get; set; }
-
-        public virtual double Lat { get; set; }
-        public virtual double Lon { get; set; }
-
+        
         public virtual Point Ubicacion { get; set; }
         
         public override string ToString()
