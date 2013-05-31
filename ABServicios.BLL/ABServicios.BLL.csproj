@@ -75,15 +75,15 @@
     <Compile Include="DataInterfaces\Queries\ISampleQuery.cs" />
     <Compile Include="EmbeddedRepositories\Roles.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />
+    <Compile Include="Entities\Transporte.cs" />
     <Compile Include="Entities\CorteTransito.cs" />
     <Compile Include="Entities\DolarHistorico.cs" />
     <Compile Include="Entities\Hotel.cs" />
     <Compile Include="Entities\IEntity.cs" />
-    <Compile Include="Entities\ITipoMoneda.cs" />
     <Compile Include="Entities\Local.cs" />
     <Compile Include="Entities\RecargaSUBE.cs" />
     <Compile Include="Entities\Rol.cs" />
-    <Compile Include="Entities\TiposMoneda.cs" />
+    <Compile Include="Entities\TiposTransporte.cs" />
     <Compile Include="Entities\VentaSUBE.cs" />
     <Compile Include="Exceptions\ConstraintViolationException.cs" />
     <Compile Include="Exceptions\UniquenessViolationException.cs" />
@@ -109,9 +109,22 @@
     <EmbeddedResource Include="Mappings\CorteTransito.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\Transporte.hbm.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\CustomTypes.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Mappings\Queries.hbm.xml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AB.Common\AB.Common.csproj">
+      <Project>{E3E70B35-9ADF-40B2-A211-55859542854B}</Project>
+      <Name>AB.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -64,8 +64,8 @@ namespace ABServicios.Controllers
                            Id3 = hotel.Id3,
                            Latitud = 0,
                            Longitud = 0,
-                           //Latitud = hotel.Ubicacion.X, //TODO: poner como corresponde
-                           //Longitud = hotel.Ubicacion.Y, //TODO: poner como corresponde
+                           //Y = hotel.Ubicacion.X, //TODO: poner como corresponde
+                           //X = hotel.Ubicacion.Y, //TODO: poner como corresponde
                            Nombre = hotel.Nombre,
                            Provincia = hotel.Provincia,
                            Sitio = hotel.Sitio,

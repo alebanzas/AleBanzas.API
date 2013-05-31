@@ -6,7 +6,6 @@ using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.Entities;
 using Microsoft.Practices.ServiceLocation;
-using NHibernate;
 using NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers

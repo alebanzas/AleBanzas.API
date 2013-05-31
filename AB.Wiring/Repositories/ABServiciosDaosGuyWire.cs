@@ -14,6 +14,7 @@ namespace AB.Wiring.Repositories
             RegisterEntityDao<RecargaSUBE, Guid>();
             RegisterEntityDao<VentaSUBE, Guid>();
             RegisterEntityDao<DolarHistorico, Guid>();
+            RegisterEntityDao<Transporte, Guid>();
 
 			RegisterQueries();
 		}
