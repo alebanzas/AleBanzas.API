@@ -12,9 +12,6 @@ namespace ABServicios.BLL.Entities
 
         public virtual string Nombre { get; set; }
 
-        public virtual double Lat { get; set; }
-        public virtual double Lon { get; set; }
-
         public virtual Point Ubicacion { get; set; }
     }
 }
