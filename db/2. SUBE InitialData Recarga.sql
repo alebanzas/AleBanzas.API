@@ -4458,5 +4458,5 @@ INSERT INTO [SUBE_Recarga] ([ID],[nombre],[lat],[lon]) VALUES ((SELECT NEWID()),
 INSERT INTO [SUBE_Recarga] ([ID],[nombre],[lat],[lon]) VALUES ((SELECT NEWID()),'Av Dardo Rocha 711 - Berazategui','-34.771','-58.244');
 
 UPDATE [SUBE_Recarga]
-SET [ubicacion] = geometry::STGeomFromText('POINT(' + CAST([lat] AS VARCHAR(20)) + ' ' + CAST([lon] AS VARCHAR(20)) + ')', 4326);
+SET [ubicacion] = geography::STGeomFromText('POINT(' + CAST([lat] AS VARCHAR(20)) + ' ' + CAST([lon] AS VARCHAR(20)) + ')', 4326);
 GO

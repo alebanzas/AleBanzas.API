@@ -100,6 +100,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\NHibernate.Spatial.MsSql2008.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate.Spatial.MsSqlSpatial">
+      <HintPath>..\Lib\NHibernate.Spatial.MsSqlSpatial.dll</HintPath>
+    </Reference>
     <Reference Include="PowerCollections">
       <HintPath>..\Lib\PowerCollections.dll</HintPath>
     </Reference>

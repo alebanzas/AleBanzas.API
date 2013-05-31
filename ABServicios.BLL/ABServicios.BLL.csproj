@@ -48,6 +48,9 @@
     <Reference Include="NHibernate.Spatial.MsSql2008">
       <HintPath>..\Lib\NHibernate.Spatial.MsSql2008.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate.Spatial.MsSqlSpatial">
+      <HintPath>..\Lib\NHibernate.Spatial.MsSqlSpatial.dll</HintPath>
+    </Reference>
     <Reference Include="PowerCollections">
       <HintPath>..\Lib\PowerCollections.dll</HintPath>
     </Reference>
@@ -66,12 +69,13 @@
     <Compile Include="DataInterfaces\IEntityDao.cs" />
     <Compile Include="DataInterfaces\IPagedResults.cs" />
     <Compile Include="DataInterfaces\IRepository.cs" />
-    <Compile Include="DataInterfaces\IRoadtripDao.cs" />
+    <Compile Include="DataInterfaces\IABDao.cs" />
     <Compile Include="DataInterfaces\ITempStorageAccessor.cs" />
     <Compile Include="DataInterfaces\PagedResults.cs" />
     <Compile Include="DataInterfaces\Queries\ISampleQuery.cs" />
     <Compile Include="EmbeddedRepositories\Roles.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />
+    <Compile Include="Entities\CorteTransito.cs" />
     <Compile Include="Entities\DolarHistorico.cs" />
     <Compile Include="Entities\Hotel.cs" />
     <Compile Include="Entities\IEntity.cs" />
@@ -92,11 +96,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\VentaSUBE.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\RecargaSUBE.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\DolarHistorico.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\CorteTransito.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Mappings\Queries.hbm.xml">

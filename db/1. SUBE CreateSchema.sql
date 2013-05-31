@@ -6,7 +6,7 @@ CREATE TABLE [SUBE_Recarga]
 	nombre nvarchar(MAX) NULL,
 	lat float(53) NULL,
 	lon float(53) NULL,
-	ubicacion geometry NULL
+	ubicacion geography NULL
 	)  ON [PRIMARY]
 	 TEXTIMAGE_ON [PRIMARY]
 GO
@@ -21,7 +21,7 @@ CREATE TABLE [SUBE_Venta]
 	nombre nvarchar(MAX) NULL,
 	lat float(53) NULL,
 	lon float(53) NULL,
-	ubicacion geometry NULL
+	ubicacion geography NULL
 	)  ON [PRIMARY]
 	 TEXTIMAGE_ON [PRIMARY]
 GO

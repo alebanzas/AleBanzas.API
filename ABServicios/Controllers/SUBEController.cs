@@ -5,9 +5,9 @@ using System.Web.Mvc;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.Entities;
-using GisSharpBlog.NetTopologySuite.Geometries;
 using Microsoft.Practices.ServiceLocation;
 using NHibernate;
+using NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers
 {
@@ -38,6 +38,8 @@ namespace ABServicios.Controllers
             return Json(puntos.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
         }
 
+
+        [NeedRelationalPersistence]
         public ActionResult Test()
         {
             var ventaSUBE = new VentaSUBE
@@ -47,16 +49,9 @@ namespace ABServicios.Controllers
                 Nombre = DateTime.UtcNow.ToShortTimeString(),
             };
             
-            var sessionFactory = ServiceLocator.Current.GetInstance<ISessionFactory>();
-            using (var session = sessionFactory.OpenSession())
-            using (var tx = session.BeginTransaction())
-            {
-                _ventaSUBERepo.Add(ventaSUBE);
-                
-                tx.Commit();
-            }
-
-            return Json(ventaSUBE, JsonRequestBehavior.AllowGet);
+            _ventaSUBERepo.Add(ventaSUBE);
+            
+            return Json(ConvertTo(ventaSUBE), JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult RecargaNear(double lat, double lon, int cant = 1)
