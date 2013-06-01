@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
+using ABServicios.BLL.DataInterfaces.Queries;
 using ABServicios.BLL.Entities;
 using Microsoft.Practices.ServiceLocation;
 using NetTopologySuite.Geometries;
@@ -27,73 +27,60 @@ namespace ABServicios.Controllers
         {
             IEnumerable<RecargaSUBE> puntos = _recargaSUBERepo;
 
-            return Json(puntos.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
+            return Json(puntos.Select(x => x.ToRecargaSUBEViewModel()).ToList(), JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult VentaAll()
         {
             IEnumerable<VentaSUBE> puntos = _ventaSUBERepo;
 
-            return Json(puntos.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
+            return Json(puntos.Select(x => x.ToVentaSUBEViewModel()).ToList(), JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult RecargaNear(double lat, double lon, int cant = 1)
         {
-            var source = new Point(lat, lon);
+            var query = ServiceLocator.Current.GetInstance<IGetSUBECercanoQuery>();
 
-            IEnumerable<RecargaSUBE> puntos = _recargaSUBERepo;
+            var list = query.GetRecargaMasCercanos(new Point(lat, lon), cant);
 
-            var result =
-                puntos.ToList()
-                      .OrderBy(point => source.Distance(point.Ubicacion))
-                      .Take(cant).Select(ConvertTo);
+            var result = list.Select(x => x.ToRecargaSUBEViewModel());
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult VentaNear(double lat, double lon, int cant = 1)
         {
-            var source = new Point(lat, lon);
+            var query = ServiceLocator.Current.GetInstance<IGetSUBECercanoQuery>();
 
-            IEnumerable<VentaSUBE> puntos = _ventaSUBERepo;
+            var list = query.GetVentaMasCercanos(new Point(lat, lon), cant);
 
-            var result =
-                puntos.ToList()
-                      .OrderBy(point => source.Distance(point.Ubicacion))
-                      .Take(cant).Select(ConvertTo);
-            
+            var result = list.Select(x => x.ToVentaSUBEViewModel());
+
             return Json(result, JsonRequestBehavior.AllowGet);
         }
-        
-        //public ActionResult PorBarrio(string barrio)
-        //{
-        //    IEnumerable<Hotel> hotels = _hotelRepo.Where(x => x.Barrio.Equals(barrio));
-
-        //    return Json(hotels.Select(ConvertTo).ToList());
-        //}
-
-        private RecargaSUBEViewModel ConvertTo(RecargaSUBE hotel)
+    }
+    
+    public static class SUBEExtensions
+    {
+        public static RecargaSUBEViewModel ToRecargaSUBEViewModel(this RecargaSUBE puntoRecarga)
         {
             return new RecargaSUBEViewModel
             {
-                Latitud = hotel.Ubicacion != null ? hotel.Ubicacion.X : 10,
-                Longitud = hotel.Ubicacion != null ? hotel.Ubicacion.Y : 10,
-                Nombre = hotel.Nombre.ToUpperInvariant(),
+                Latitud = puntoRecarga.Ubicacion != null ? puntoRecarga.Ubicacion.X : 10,
+                Longitud = puntoRecarga.Ubicacion != null ? puntoRecarga.Ubicacion.Y : 10,
+                Nombre = puntoRecarga.Nombre.ToUpperInvariant(),
             };
         }
 
-
-        private VentaSUBEViewModel ConvertTo(VentaSUBE hotel)
+        public static VentaSUBEViewModel ToVentaSUBEViewModel(this VentaSUBE puntoVenta)
         {
             return new VentaSUBEViewModel
             {
-                Latitud = hotel.Ubicacion.X,
-                Longitud = hotel.Ubicacion.Y,
-                Nombre = hotel.Nombre.ToUpperInvariant(),
+                Latitud = puntoVenta.Ubicacion.X,
+                Longitud = puntoVenta.Ubicacion.Y,
+                Nombre = puntoVenta.Nombre.ToUpperInvariant(),
             };
         }
-   
-
     }
 
     public class RecargaSUBEViewModel
