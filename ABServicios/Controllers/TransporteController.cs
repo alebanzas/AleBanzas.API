@@ -8,8 +8,8 @@ using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.DataInterfaces.Queries;
 using ABServicios.BLL.Entities;
 using GeoAPI.Geometries;
-using GisSharpBlog.NetTopologySuite.Geometries;
 using Microsoft.Practices.ServiceLocation;
+using NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers
 {

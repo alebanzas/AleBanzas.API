@@ -20,6 +20,8 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,13 +53,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Castle.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="GeoAPI, Version=1.1.0.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\GeoAPI.dll</HintPath>
+    <Reference Include="GeoAPI">
+      <HintPath>..\packages\GeoAPI.1.7.1\lib\net40-client\GeoAPI.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\Lib\log4net.dll</HintPath>
@@ -70,58 +70,34 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="NetTopologySuite, Version=1.7.3.17298, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+    <Reference Include="NetTopologySuite">
+      <HintPath>..\packages\NetTopologySuite.1.13.0\lib\net40-client\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4000\lib\Net35\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache, Version=3.3.3.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\NetTopologySuite.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.GDB">
-      <HintPath>..\Lib\NetTopologySuite.IO.GDB.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.GeoTools">
-      <HintPath>..\Lib\NetTopologySuite.IO.GeoTools.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.MsSqlSpatial">
-      <HintPath>..\Lib\NetTopologySuite.IO.MsSqlSpatial.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.Oracle">
-      <HintPath>..\Lib\NetTopologySuite.IO.Oracle.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.PostGis">
-      <HintPath>..\Lib\NetTopologySuite.IO.PostGis.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.ShapeFile">
-      <HintPath>..\Lib\NetTopologySuite.IO.ShapeFile.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.SpatiaLite">
-      <HintPath>..\Lib\NetTopologySuite.IO.SpatiaLite.dll</HintPath>
-    </Reference>
-    <Reference Include="NetTopologySuite.IO.SqlServer2008">
-      <HintPath>..\Lib\NetTopologySuite.IO.SqlServer2008.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\NHibernate.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate.Caches.SysCache, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\NHibernate.Caches.SysCache.dll</HintPath>
+      <HintPath>..\packages\NHibernate.Caches.SysCache.3.3.3.4000\lib\net35\NHibernate.Caches.SysCache.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Spatial, Version=3.2.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\NHibernate.Spatial.dll</HintPath>
+      <HintPath>..\NHibernate.Spatial\bin\Debug\NHibernate.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Spatial.MsSql2008, Version=3.2.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\NHibernate.Spatial.MsSql2008.dll</HintPath>
+      <HintPath>..\bin\debug\NHibernate.Spatial.MsSql2008.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Spatial.MsSqlSpatial">
-      <HintPath>..\Lib\NHibernate.Spatial.MsSqlSpatial.dll</HintPath>
+      <HintPath>..\bin\debug\NHibernate.Spatial.MsSqlSpatial.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\..\..\Libs\nunit.framework.dll</HintPath>
+      <HintPath>..\Lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="PowerCollections">
-      <HintPath>..\Lib\PowerCollections.dll</HintPath>
+      <HintPath>..\packages\NetTopologySuite.1.13.0\lib\net40-client\PowerCollections.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="SharpTestsEx">
       <HintPath>..\Lib\SharpTestsEx.dll</HintPath>
@@ -138,10 +114,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Insert\Test.cs" />
+    <Compile Include="AplicationServices\Insert\Test.cs" />
+    <Compile Include="AplicationServices\PersistenceRequest.cs" />
+    <Compile Include="AplicationServices\Queries\GetTransporteCercanoQueryTests.cs" />
+    <Compile Include="AplicationServices\ReadOnlyTestsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaUtils\SchemaUpdateUtil.cs" />
-    <Compile Include="Insert\TestServerContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="hibernate.cfg.xml">
@@ -155,7 +133,7 @@
     </ProjectReference>
     <ProjectReference Include="..\AB.Data\AB.Data.csproj">
       <Project>{67C0C6F5-BFF0-4892-95B6-41D9FECDFFD5}</Project>
-      <Name>ABServicios.Data</Name>
+      <Name>AB.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\AB.Wiring\AB.Wiring.csproj">
       <Project>{af3cd334-528a-4c92-91b8-6ecc2ef4952a}</Project>
@@ -175,7 +153,12 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

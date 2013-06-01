@@ -43,7 +43,6 @@ namespace ABServicios.Controllers
         {
             var ventaSUBE = new VentaSUBE
             {
-                ID = Guid.NewGuid(),
                 Ubicacion = new Point(DateTime.Now.Minute, DateTime.Now.Second),
                 Nombre = DateTime.UtcNow.ToShortTimeString(),
             };

@@ -26,6 +26,7 @@ syntax: glob
 obj/
 *resharper*
 _ReSharper*/
+packages/
 [Bb]ld
 *.orig
 Thumbs.db

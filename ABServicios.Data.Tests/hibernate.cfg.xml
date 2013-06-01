@@ -18,6 +18,5 @@
     <property name="cache.use_query_cache">true</property>
     <property name="cache.use_second_level_cache">true</property>
 
-    <mapping assembly="ABServicios.BLL" />
   </session-factory>
 </hibernate-configuration>
