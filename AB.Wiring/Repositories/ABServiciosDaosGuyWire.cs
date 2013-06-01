@@ -23,8 +23,9 @@ namespace AB.Wiring.Repositories
 		}
 
 		private void RegisterQueries()
-		{
+        {
             Container.Register(Component.For<IGetTransporteCercanoQuery>().ImplementedBy<GetTransporteCercanoQuery>());
+            Container.Register(Component.For<IGetSUBECercanoQuery>().ImplementedBy<GetSUBECercanoQuery>());
 		}
 	}
 }
