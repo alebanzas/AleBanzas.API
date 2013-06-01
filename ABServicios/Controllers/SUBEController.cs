@@ -37,21 +37,6 @@ namespace ABServicios.Controllers
             return Json(puntos.Select(ConvertTo).ToList(), JsonRequestBehavior.AllowGet);
         }
 
-
-        [NeedRelationalPersistence]
-        public ActionResult Test()
-        {
-            var ventaSUBE = new VentaSUBE
-            {
-                Ubicacion = new Point(DateTime.Now.Minute, DateTime.Now.Second),
-                Nombre = DateTime.UtcNow.ToShortTimeString(),
-            };
-            
-            _ventaSUBERepo.Add(ventaSUBE);
-            
-            return Json(ConvertTo(ventaSUBE), JsonRequestBehavior.AllowGet);
-        }
-
         public ActionResult RecargaNear(double lat, double lon, int cant = 1)
         {
             var source = new Point(lat, lon);
