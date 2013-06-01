@@ -9,6 +9,11 @@
 
     <property name="Nombre" column="nombre" />
 
-    <property name="Ubicacion" column="ubicacion" type="NHibernate.Spatial.Type.MsSql2008GeographyType, NHibernate.Spatial.MsSql2008" />
+    <property name="Ubicacion" column="ubicacion">
+      <type name="AB.Data.Wgs84GeographyType, AB.Data">
+        <param name="srid">4326</param>
+        <param name="subtype">POINT</param>
+      </type>
+    </property>
   </class>
 </hibernate-mapping>

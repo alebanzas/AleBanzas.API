@@ -1,5 +1,8 @@
 using System;
+using AB.Data.Queries;
+using ABServicios.BLL.DataInterfaces.Queries;
 using ABServicios.BLL.Entities;
+using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 
 namespace AB.Wiring.Repositories
@@ -21,7 +24,7 @@ namespace AB.Wiring.Repositories
 
 		private void RegisterQueries()
 		{
-			//Container.Register(Component.For<IUltimasVersionesQuery>().ImplementedBy<UltimasVersionesQuery>());
+            Container.Register(Component.For<IGetTransporteCercanoQuery>().ImplementedBy<GetTransporteCercanoQuery>());
 		}
 	}
 }

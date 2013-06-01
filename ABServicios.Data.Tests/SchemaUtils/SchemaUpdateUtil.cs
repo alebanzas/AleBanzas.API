@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
+using Configuration = NHibernate.Cfg.Configuration;
 
 namespace ABServicios.Data.Tests.SchemaUtils
 {
