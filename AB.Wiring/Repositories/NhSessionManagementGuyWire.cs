@@ -1,15 +1,12 @@
 using AB.Common.Wiring;
 using AB.Data;
-using AB.Data.Cache;
 using ABServicios.BLL.Entities;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using NHibernate;
 using NHibernate.Caches.SysCache;
 using NHibernate.Cfg;
-using NHibernate.Spatial.Dialect;
 using NHibernate.Spatial.Mapping;
-using NHibernate.Spatial.Type;
 
 namespace AB.Wiring.Repositories
 {

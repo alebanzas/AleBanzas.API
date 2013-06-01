@@ -143,10 +143,6 @@
       <Project>{de11105b-f395-4987-95ad-75255e2f539d}</Project>
       <Name>ABServicios.BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ABServicios\ABServicios.csproj">
-      <Project>{5A28A6EA-596D-41F7-A654-F44315D91942}</Project>
-      <Name>ABServicios</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="log4net.configuration.xml">
