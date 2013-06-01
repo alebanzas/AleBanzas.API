@@ -2,7 +2,7 @@
 <hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2">
   <session-factory name="ABServicios">
     <property name="connection.connection_string">
-      Data Source=localhost\SQLEXPRESS;Initial Catalog=ABServicios;Persist Security Info=True;User ID=sa2;Password=sa2
+      Data Source=.;Initial Catalog=ABServicios;Persist Security Info=True;
     </property>
     <property name="dialect">AB.Data.ABSqlDialect, AB.Data</property>
 
