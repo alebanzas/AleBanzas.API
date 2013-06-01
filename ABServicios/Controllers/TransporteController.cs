@@ -72,7 +72,7 @@ namespace ABServicios.Controllers
         {
             var query = ServiceLocator.Current.GetInstance<IGetTransporteCercanoQuery>();
 
-            var list = query.GetMasCercanos(new Point(lat, lon), caminar);
+            var list = query.GetMasCercanos(new Point(lon, lat), caminar);
 
             var result = list.Select(x => x.ToTransporteViewModel(puntos));
 

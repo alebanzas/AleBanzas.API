@@ -41,7 +41,7 @@ namespace ABServicios.Controllers
         {
             var query = ServiceLocator.Current.GetInstance<IGetSUBECercanoQuery>();
 
-            var list = query.GetRecargaMasCercanos(new Point(lat, lon), cant);
+            var list = query.GetRecargaMasCercanos(new Point(lon, lat), cant);
 
             var result = list.Select(x => x.ToRecargaSUBEViewModel());
 
@@ -52,7 +52,7 @@ namespace ABServicios.Controllers
         {
             var query = ServiceLocator.Current.GetInstance<IGetSUBECercanoQuery>();
 
-            var list = query.GetVentaMasCercanos(new Point(lat, lon), cant);
+            var list = query.GetVentaMasCercanos(new Point(lon, lat), cant);
 
             var result = list.Select(x => x.ToVentaSUBEViewModel());
 
@@ -66,8 +66,8 @@ namespace ABServicios.Controllers
         {
             return new RecargaSUBEViewModel
             {
-                Latitud = puntoRecarga.Ubicacion != null ? puntoRecarga.Ubicacion.X : 10,
-                Longitud = puntoRecarga.Ubicacion != null ? puntoRecarga.Ubicacion.Y : 10,
+                Latitud = puntoRecarga.Ubicacion.Y,
+                Longitud = puntoRecarga.Ubicacion.X,
                 Nombre = puntoRecarga.Nombre.ToUpperInvariant(),
             };
         }
@@ -76,8 +76,8 @@ namespace ABServicios.Controllers
         {
             return new VentaSUBEViewModel
             {
-                Latitud = puntoVenta.Ubicacion.X,
-                Longitud = puntoVenta.Ubicacion.Y,
+                Latitud = puntoVenta.Ubicacion.Y,
+                Longitud = puntoVenta.Ubicacion.X,
                 Nombre = puntoVenta.Nombre.ToUpperInvariant(),
             };
         }
