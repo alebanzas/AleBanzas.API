@@ -74,19 +74,15 @@ INSERT INTO @recorridosDestino (recorridoPuntoOrigen,recorridoPuntoDestino,camin
 		FROM [GUIATBA_Transporte]
 		WHERE (@destino.STDistance(Ubicacion)) < @thh
 	)
-
-SELECT Nombre, * FROM @recorridosOrigen order by Codigo
-SELECT Nombre, * FROM @recorridosDestino order by Codigo
-
---SELECT * FROM @recorridosOrigen
---INNER JOIN @recorridosDestino
---WHERE
-/*
-Select * from sys.spatial_reference_systems
-where well_known_text like '%arg%'
-or authorized_spatial_reference_id = 4269
-or authorized_spatial_reference_id = 4326
-
---4961
-
-*/
+	
+SELECT 
+ro.Codigo as 'CodigoO'
+,rd.Codigo as 'CodigoD'
+--,(ro.caminarOrigen + rd.caminarDestino) as 'caminarTotal'
+FROM @recorridosOrigen ro
+INNER JOIN GUIATBA_TransporteIntersecciones ti ON ro.Codigo = ti.CodigoO
+INNER JOIN @recorridosDestino rd ON rd.Codigo = ti.CodigoD
+WHERE (ro.caminarOrigen + rd.caminarDestino) < @thh
+GROUP BY ro.Codigo, rd.Codigo
+--HAVING (ro.caminarOrigen + rd.caminarDestino) < @thh
+--ORDER BY (ro.caminarOrigen + rd.caminarDestino)
