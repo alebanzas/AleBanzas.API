@@ -5,10 +5,11 @@ using System.Web.Mvc;
 using AB.Common.Helpers;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
+using ABServicios.BLL.DataInterfaces.Queries;
 using ABServicios.BLL.Entities;
 using GeoAPI.Geometries;
+using GisSharpBlog.NetTopologySuite.Geometries;
 using Microsoft.Practices.ServiceLocation;
-using NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers
 {
@@ -63,10 +64,13 @@ namespace ABServicios.Controllers
         [NeedRelationalPersistence]
         public ActionResult Cercano(double lat, double lon, string tipo, int cant = int.MaxValue, int caminar = 800)
         {
-            var minCaminar = (double)caminar / 1080000; //paso a grados
-
             var source = new Point(lat, lon);
 
+            var query = ServiceLocator.Current.GetInstance<IGetTransporteCercanoQuery>();
+
+            var list = query.GetMasCercanos(new Point(lat, lon), caminar);
+
+            /*
             IEnumerable<Transporte> transportes = _transportesRepo;
 
             IEnumerable<Transporte> query = transportes.Where(point =>
@@ -76,8 +80,9 @@ namespace ABServicios.Controllers
             {
                 query = query.Where(x => x.Tipo == TiposTransporte.ByNickName(tipo));
             }
-
             var result = query.Take(cant).ToList().Select(ConvertTo);
+            */
+            var result = list.Select(ConvertTo);
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
@@ -98,7 +103,7 @@ namespace ABServicios.Controllers
 
     public static class CoordinatesExtensions
     {
-        public static List<PuntoViewModel> ToPuntoViewModel(this Coordinate[] source)
+        public static List<PuntoViewModel> ToPuntoViewModel(this ICoordinate[] source)
         {
             return source.Select(x => new PuntoViewModel
                 {
