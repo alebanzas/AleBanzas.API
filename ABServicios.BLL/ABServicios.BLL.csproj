@@ -60,6 +60,7 @@
     <Compile Include="DataInterfaces\IABDao.cs" />
     <Compile Include="DataInterfaces\ITempStorageAccessor.cs" />
     <Compile Include="DataInterfaces\PagedResults.cs" />
+    <Compile Include="DataInterfaces\Queries\IGetSUBECercanoQuery.cs" />
     <Compile Include="DataInterfaces\Queries\IGetTransporteCercanoQuery.cs" />
     <Compile Include="DataInterfaces\Queries\ISampleQuery.cs" />
     <Compile Include="EmbeddedRepositories\Roles.cs" />
