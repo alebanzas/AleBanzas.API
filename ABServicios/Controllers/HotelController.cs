@@ -29,7 +29,7 @@ namespace ABServicios.Controllers
 
         public ActionResult Near(double lat, double lon)
         {
-            var point = new Point(lat, lon);
+            var point = new Point(lon, lat);
 
             IEnumerable<Hotel> hotels = _hotelRepo;
 
@@ -61,8 +61,8 @@ namespace ABServicios.Controllers
                            Id1 = hotel.Id1,
                            Id2 = hotel.Id2,
                            Id3 = hotel.Id3,
-                           Latitud = hotel.Ubicacion.X,
-                           Longitud = hotel.Ubicacion.Y,
+                           Latitud = hotel.Ubicacion.Y,
+                           Longitud = hotel.Ubicacion.X,
                            Nombre = hotel.Nombre,
                            Provincia = hotel.Provincia,
                            Sitio = hotel.Sitio,
