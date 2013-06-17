@@ -10,6 +10,9 @@ SET @origen = geography:: STGeomFromText('POINT(-58.403379 -34.593778)' , 4326);
 ----sin viaje directo
 --SET @destino = geography:: STGeomFromText('POINT(-58.483475 -34.608910)' , 4326); --nazca y jonte
 SET @destino = geography:: STGeomFromText('POINT(-58.313885 -34.704276)' , 4326); --agus house
+--SET @destino = geography:: STGeomFromText('POINT(-58.503603 -34.598446)' , 4326); --amiga de jose
+--SET @destino = geography:: STGeomFromText('POINT(-58.785699 -34.324601)' , 4326); --gorbea escobar
+--SET @destino = geography:: STGeomFromText('POINT(-58.85801 -34.635388)' , 4326); --quinta gaby
 SET @thh = 800;
 
 SELECT DISTINCT
