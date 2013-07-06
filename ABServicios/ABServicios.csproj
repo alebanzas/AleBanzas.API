@@ -255,6 +255,7 @@
     <Content Include="Views\License\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\VPS.pubxml" />
     <Content Include="Views\Status\Index.cshtml" />
   </ItemGroup>
