@@ -19,7 +19,7 @@ namespace AB.Wiring.DomainEvents
 		{
 			//var castleDomainEventHandlersStore = new CastleDomainEventHandlersStore(container);
 			//container.Register(Component.For<IDomainEventHandlersStore>().Instance(castleDomainEventHandlersStore));
-			//Autocosmos.Common.Events.DomainEvents.Initialize(castleDomainEventHandlersStore);
+			//ABServicios.Common.Events.DomainEvents.Initialize(castleDomainEventHandlersStore);
 			//container.Register(AllTypes.FromAssemblyContaining<UserSignInEvent>().BasedOn(typeof(IDomainEventHandler<>)).WithService.FromInterface());
 		}
 

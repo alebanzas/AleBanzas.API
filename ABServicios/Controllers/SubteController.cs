@@ -10,7 +10,7 @@ using ScrapySharp.Extensions;
 
 namespace ABServicios.Controllers
 {
-    public class SubteController : Controller
+    public class SubteController : BaseController
     {
         public static string CacheKey = "Subte";
 

@@ -11,7 +11,7 @@ namespace AB.Common.Wiring
 			@"La implementación de la clase que cablea toda la applicación no fue configurada.
 Ejemplo
 	<appSettings>
-		<add key='GuyWire' value='Roadtrip.Wiring.GuyWire, Roadtrip.Wiring.Castle'/>
+		<add key='GuyWire' value='ABServicios.Wiring.GuyWire, ABServicios.Wiring.Castle'/>
 	</appSettings>";
 
 		public static IGuyWire GetGuyWire()

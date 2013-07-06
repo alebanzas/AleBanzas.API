@@ -54,8 +54,8 @@ namespace AB.Wiring.Repositories
             //container.Register(Component.For<IDocumentDaoPerCountry<ComparacionesDestacadas>>().Instance(new BlobDocumentDaoPerCountry<ComparacionesDestacadas>(AzureAccount.Acs2Account())));
             //container.Register(Component.For<IDocumentDaoPerCountry<MapasConcesionaria>>().Instance(new BlobDocumentDaoPerCountry<MapasConcesionaria>(AzureAccount.Acs2Account())));
             //
-			//			container.Register(Component.For<IDocumentDaoPerCountry<RoadTrip.BLL.ViewModels.HomeForm>>().Instance(new NewsForHomeBlobDocumentDao()));
-			//			container.Register(Component.For<INoticiasPorMarcaDao>().Instance(new OnAzureNoticiasPorMarcaDao(Autocosmos.Azure.Storage.AzureAccount.DefaultAccount())));
+			//			container.Register(Component.For<IDocumentDaoPerCountry<ABServicios.BLL.ViewModels.HomeForm>>().Instance(new NewsForHomeBlobDocumentDao()));
+			//			container.Register(Component.For<INoticiasPorMarcaDao>().Instance(new OnAzureNoticiasPorMarcaDao(AzureAccount.DefaultAccount())));
             //
 			//NewsletterTemplateRegistration.Initialize();
             //container.Register(Component.For<INewsletterDefDao<NewsletterClasificadoModel>>().Instance(new NewsletterDefDao<NewsletterClasificadoModel>(AzureAccount.Acs2Account(), new NewsletterTransformerClasificados())));
