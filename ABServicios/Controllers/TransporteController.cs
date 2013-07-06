@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers
 {
-    public class TransporteController : Controller
+    public class TransporteController : BaseController
     {
         private readonly IRepository<Transporte> _transportesRepo;
 

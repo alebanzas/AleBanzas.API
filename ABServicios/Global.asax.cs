@@ -1,8 +1,11 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web;
+using System.Web.Mvc;
 using System.Web.Routing;
 using AB.Common.Wiring;
 using AB.Data;
 using ABServicios.Azure.Storage;
+using ABServicios.Extensions;
 using ABServicios.Services;
 
 namespace ABServicios
@@ -43,6 +46,17 @@ namespace ABServicios
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+        }
+
+        protected void Application_Error(Object sender, EventArgs e)
+        {
+			var context = HttpContext.Current;
+			var ex = context.Server.GetLastError();
+
+			ex.Log(context);
+
+			//no hago el clear, porque sino no entra en el customerrors
+			//context.Server.ClearError();
         }
 
         protected void Application_End()

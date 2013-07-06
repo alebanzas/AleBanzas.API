@@ -4,7 +4,7 @@ using ABServicios.Attributes;
 namespace ABServicios.Controllers
 {
     [NeedRelationalPersistence]
-    public class BocaController : Controller
+    public class BocaController : BaseController
     {
         //
         // GET: /Boca/

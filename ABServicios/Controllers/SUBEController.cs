@@ -11,7 +11,7 @@ using NetTopologySuite.Geometries;
 namespace ABServicios.Controllers
 {
     [NeedRelationalPersistence]
-    public class SUBEController : Controller
+    public class SUBEController : BaseController
     {
         private readonly IRepository<RecargaSUBE> _recargaSUBERepo;
         private readonly IRepository<VentaSUBE> _ventaSUBERepo;
