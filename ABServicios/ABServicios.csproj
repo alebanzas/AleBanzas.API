@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BicicletasController.cs" />
     <Compile Include="Controllers\BocaController.cs" />
     <Compile Include="Controllers\TransporteController.cs" />
@@ -213,7 +214,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -262,6 +265,10 @@
     <ProjectReference Include="..\AB.Wiring\AB.Wiring.csproj">
       <Project>{AF3CD334-528A-4C92-91B8-6ECC2EF4952A}</Project>
       <Name>AB.Wiring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABServicios.Azure.Storage\ABServicios.Azure.Storage.csproj">
+      <Project>{3F2476BF-8BA8-4126-AFDF-0115587BABFC}</Project>
+      <Name>ABServicios.Azure.Storage</Name>
     </ProjectReference>
     <ProjectReference Include="..\ABServicios.BLL\ABServicios.BLL.csproj">
       <Project>{DE11105B-F395-4987-95AD-75255E2F539D}</Project>

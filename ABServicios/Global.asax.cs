@@ -2,6 +2,7 @@
 using System.Web.Routing;
 using AB.Common.Wiring;
 using AB.Data;
+using ABServicios.Azure.Storage;
 using ABServicios.Services;
 
 namespace ABServicios
@@ -37,6 +38,8 @@ namespace ABServicios
             guywire.Wire();
 
             AreaRegistration.RegisterAllAreas();
+
+            FullStorageInitializer.Initialize();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
