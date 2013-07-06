@@ -15,7 +15,7 @@ using ScrapySharp.Extensions;
 
 namespace ABServicios.Controllers
 {
-    public class DivisaController : Controller
+    public class DivisaController : BaseController
     {
         private readonly IRepository<DolarHistorico> _dolarRepo;
 

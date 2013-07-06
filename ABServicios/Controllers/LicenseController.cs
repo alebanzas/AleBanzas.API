@@ -2,7 +2,7 @@
 
 namespace ABServicios.Controllers
 {
-    public class LicenseController : Controller
+    public class LicenseController : BaseController
     {
         public ActionResult Index()
         {

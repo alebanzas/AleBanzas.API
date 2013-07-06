@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
 using ABServicios.Models;
@@ -10,7 +9,7 @@ using ScrapySharp.Extensions;
 
 namespace ABServicios.Controllers
 {
-    public class TrenesController : Controller
+    public class TrenesController : BaseController
     {
         public static string CacheKey = "Trenes";
 

@@ -11,7 +11,7 @@ using NetTopologySuite.Geometries;
 namespace ABServicios.Controllers
 {
     [NeedRelationalPersistence]
-    public class HotelController : Controller
+    public class HotelController : BaseController
     {
         private readonly IRepository<Hotel> _hotelRepo;
 

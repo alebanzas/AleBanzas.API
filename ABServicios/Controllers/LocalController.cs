@@ -7,7 +7,7 @@ using NetTopologySuite.Geometries;
 
 namespace ABServicios.Controllers
 {
-    public class LocalController : Controller
+    public class LocalController : BaseController
     {
         public ActionResult All()
         {

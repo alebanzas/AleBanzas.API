@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
@@ -10,7 +7,7 @@ using Microsoft.Practices.ServiceLocation;
 
 namespace ABServicios.Controllers
 {
-    public class StatusController : Controller
+    public class StatusController : BaseController
     {
         private IRepository<Hotel> _hotelRepo;
 
