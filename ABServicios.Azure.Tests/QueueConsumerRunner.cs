@@ -16,9 +16,17 @@ namespace ABServicios.Azure.Tests
 
         [Test]
         public void StartConsumigMailsMessagesSender()
-        {										
+        {
             QueueConsumerFor<MailMessage>.WithinCurrentThread.Using(new MailsMessagesSender())
                                                                                         .With(PollingFrequencer.For(MailsMessagesSender.EstimatedTime))
+                                                                                        .StartConsimung();
+        }
+
+        [Test]
+        public void StartConsumigApiAccessLogSaver()
+        {
+            QueueConsumerFor<ApiAccessLog>.WithinCurrentThread.Using(new ApiAccessLogSaver())
+                                                                                        .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
                                                                                         .StartConsimung();
         }
 	}
