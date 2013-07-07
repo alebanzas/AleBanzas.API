@@ -1,6 +1,7 @@
 using System;
 using System.Reflection;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage.Table;
+using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
@@ -18,34 +19,10 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 	/// </remarks>
 	public static class TableStorageExtensions
 	{
-		/// <summary>
-		///   Creates a new table with the provided schema.
-		/// </summary>
-		/// <typeparam name = "T">A TableServiceEntity derived class with the required schema.</typeparam>
-		/// <param name = "tableStorage">The table storage client instance.</param>
-		/// <param name = "entityName">The name of the table.</param>
-		/// <returns>true if the table was created, false if the table already existed.</returns>
-		/// <remarks>
-		///   Use this method instead of the non-generic variant in StorageClient.
-		/// </remarks>
-		public static bool CreateTableIfNotExist<T>(this CloudTableClient tableStorage, string entityName)
-			where T : TableServiceEntity, new()
-		{
-			bool result = tableStorage.CreateTableIfNotExist(entityName);
-
-			// Execute conditionally for development storage only
-			if (tableStorage.BaseUri.IsLoopback)
-			{
-				InitializeTableSchemaFromEntity(tableStorage, entityName, new T());
-			}
-
-			return result;
-		}
-
 		public static void InitializeTableSchemaFromEntity(this CloudTableClient tableStorage, string entityName,
 		                                                    object entity)
 		{
-			TableServiceContext context = tableStorage.GetDataServiceContext();
+			TableServiceContext context = tableStorage.GetTableServiceContext();
 			DateTime now = DateTime.UtcNow;
 			entity.GetType().GetProperty("PartitionKey").SetValue(entity, Guid.NewGuid().ToString(), null);
 			entity.GetType().GetProperty("RowKey").SetValue(entity, Guid.NewGuid().ToString(), null);

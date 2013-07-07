@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace ABServicios.Azure.Storage
 {
 	public class BlobContainerWalker
 	{
-		private readonly CloudStorageAccount account;
-		private readonly string containerName;
+		private readonly CloudStorageAccount _account;
+		private readonly string _containerName;
 
 		public BlobContainerWalker(CloudStorageAccount account, string containerName)
 		{
@@ -16,25 +16,26 @@ namespace ABServicios.Azure.Storage
 			{
 				throw new ArgumentNullException("containerName");
 			}
-			this.account = account;
-			this.containerName = containerName;
+			this._account = account;
+			this._containerName = containerName;
 		}
 
 		public IEnumerable<Uri> GetAllUri()
 		{
-			CloudBlobContainer container = account.CreateCloudBlobClient().GetContainerReference(containerName);
-
-			var options = new BlobRequestOptions {UseFlatBlobListing = true, BlobListingDetails = BlobListingDetails.None};
-			ResultSegment<IListBlobItem> resultSegment = container.ListBlobsSegmented(options);
+			CloudBlobContainer container = _account.CreateCloudBlobClient().GetContainerReference(_containerName);
+            BlobRequestOptions options = new BlobRequestOptions();
+            OperationContext operationContext = new OperationContext();
+            
+            BlobResultSegment resultSegment = container.ListBlobsSegmented(string.Empty, true, BlobListingDetails.None, 2000, null, options, operationContext);
 			foreach (var blobItem in resultSegment.Results)
 			{
 				yield return blobItem.Uri;
 			}
-			ResultContinuation continuationToken = resultSegment.ContinuationToken;
+            BlobContinuationToken continuationToken = resultSegment.ContinuationToken;
 
 			while (continuationToken != null)
 			{
-				resultSegment = container.ListBlobsSegmented(2000, continuationToken, options);
+                resultSegment = container.ListBlobsSegmented(string.Empty, true, BlobListingDetails.None, 2000, continuationToken, options, operationContext);
 				foreach (var blobItem in resultSegment.Results)
 				{
 					yield return blobItem.Uri;

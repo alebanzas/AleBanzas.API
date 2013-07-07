@@ -1,14 +1,14 @@
 using System;
 using System.Linq;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace ABServicios.Azure.Storage
 {
 	public class ImagesStorageInitializer : IStorageInitializer
 	{
-		private readonly CloudStorageAccount account;
-		private readonly string documentsContainerName;
+		private readonly CloudStorageAccount _account;
+		private readonly string _documentsContainerName;
 
 		public ImagesStorageInitializer(CloudStorageAccount account, string containerName)
 		{
@@ -20,17 +20,17 @@ namespace ABServicios.Azure.Storage
 			{
 				throw new ArgumentException("The name of the container is requested.", "containerName");
 			}
-			this.account = account;
-			documentsContainerName = containerName.ToLowerInvariant();
+			_account = account;
+			_documentsContainerName = containerName.ToLowerInvariant();
 		}
 
 		#region IStorageInitializer Members
 
 		public void Initialize()
 		{
-			CloudBlobClient blobStorageType = account.CreateCloudBlobClient();
-			CloudBlobContainer container = blobStorageType.GetContainerReference(documentsContainerName);
-			container.CreateIfNotExist();
+			CloudBlobClient blobStorageType = _account.CreateCloudBlobClient();
+			CloudBlobContainer container = blobStorageType.GetContainerReference(_documentsContainerName);
+			container.CreateIfNotExists();
 			var perm = new BlobContainerPermissions
 			           	{
 			           		PublicAccess = BlobContainerPublicAccessType.Container
@@ -40,10 +40,10 @@ namespace ABServicios.Azure.Storage
 
 		public void Drop()
 		{
-			CloudBlobClient blobStorageType = account.CreateCloudBlobClient();
-			if (blobStorageType.ListContainers().Select(c => c.Name).Contains(documentsContainerName))
+			CloudBlobClient blobStorageType = _account.CreateCloudBlobClient();
+			if (blobStorageType.ListContainers().Select(c => c.Name).Contains(_documentsContainerName))
 			{
-				CloudBlobContainer container = blobStorageType.GetContainerReference(documentsContainerName);
+				CloudBlobContainer container = blobStorageType.GetContainerReference(_documentsContainerName);
 				container.Delete();
 			}
 		}

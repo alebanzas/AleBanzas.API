@@ -2,7 +2,7 @@ using System;
 using System.Data.Services.Client;
 using System.Linq;
 using System.Net;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
@@ -27,7 +27,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 				var query =
 					(from te in tableContext.CreateQuery<TDataRow>(entityTableName)
 					 where te.PartitionKey == partitionKey && te.RowKey == rowKey
-					 select te).AsTableServiceQuery();
+					 select te).AsTableServiceQuery(tableContext);
 				return query.Execute().SingleOrDefault();
 			}
 			catch (DataServiceQueryException e)

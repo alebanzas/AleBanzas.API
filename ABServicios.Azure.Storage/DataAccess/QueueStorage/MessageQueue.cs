@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
 using Newtonsoft.Json;
 
 namespace ABServicios.Azure.Storage.DataAccess.QueueStorage
@@ -45,12 +45,8 @@ namespace ABServicios.Azure.Storage.DataAccess.QueueStorage
 			get
 			{
 				CloudQueue queueRef = queueClient.GetQueueReference(queueName);
-				queueRef.RetrieveApproximateMessageCount();
-				if (queueRef.ApproximateMessageCount.HasValue)
-				{
-					return queueRef.ApproximateMessageCount.Value;
-				}
-				return 0;
+				var count = queueRef.ApproximateMessageCount;
+                return count.HasValue ? count.Value : 0;
 			}
 		}
 

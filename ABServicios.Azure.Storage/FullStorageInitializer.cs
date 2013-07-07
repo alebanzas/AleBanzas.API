@@ -1,6 +1,6 @@
 ﻿using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using ABServicios.Azure.Storage.DataAccess.TableStorage;
-using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Storage;
 
 namespace ABServicios.Azure.Storage
 {

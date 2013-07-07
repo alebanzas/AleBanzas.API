@@ -1,7 +1,8 @@
 using System;
 using System.Linq;
 using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace ABServicios.Azure.Storage
 {
@@ -38,7 +39,7 @@ namespace ABServicios.Azure.Storage
 		{
 			CloudBlobClient blobStorageType = account.CreateCloudBlobClient();
 			CloudBlobContainer container = blobStorageType.GetContainerReference(documentsContainerName);
-			container.CreateIfNotExist();
+			container.CreateIfNotExists();
 			var perm = new BlobContainerPermissions
 			{
                 PublicAccess = accessType

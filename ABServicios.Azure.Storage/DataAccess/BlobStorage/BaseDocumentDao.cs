@@ -1,16 +1,15 @@
 using System;
 using System.IO;
-using System.Net;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace ABServicios.Azure.Storage.DataAccess.BlobStorage
 {
 	public class BaseDocumentDao<TDocument> where TDocument:class
 	{
 		// TODO : Hacer esta clase abstract con el metodo InitializeStorageContainer
-		private readonly IDocumentSerializer<TDocument> documentSerializer;
-		private Func<CloudStorageAccount> accountgetter;
+		private readonly IDocumentSerializer<TDocument> _documentSerializer;
+		private readonly Func<CloudStorageAccount> _accountgetter;
 
 		public BaseDocumentDao(CloudStorageAccount account)
 			: this(account, new JsonDocumentSerializer<TDocument>())
@@ -37,11 +36,11 @@ namespace ABServicios.Azure.Storage.DataAccess.BlobStorage
 			{
 				throw new ArgumentNullException("documentSerializer");
 			}
-			this.accountgetter = accountgetter;
-			this.documentSerializer = documentSerializer;
+			_accountgetter = accountgetter;
+			_documentSerializer = documentSerializer;
 		}
 
-		protected CloudStorageAccount Account { get { return accountgetter(); } }
+		protected CloudStorageAccount Account { get { return _accountgetter(); } }
 
 		protected virtual string DocumentsContainerName { get; private set; }
 
@@ -52,19 +51,28 @@ namespace ABServicios.Azure.Storage.DataAccess.BlobStorage
 			var blobAddressUri = documentName;
 
 			var serializationStream = new MemoryStream();
-			try
-			{
-				container.GetBlobReference(blobAddressUri).DownloadToStream(serializationStream);
-			}
-			catch (StorageClientException e)
-			{
-				if (e.StatusCode == HttpStatusCode.NotFound)
-				{
-					return null;
-				}
-				throw;
-			}
-			return documentSerializer.Deserialize(serializationStream);
+			//try
+			//{
+			//	container.GetBlobReference(blobAddressUri).DownloadToStream(serializationStream);
+			//}
+			//catch (StorageClientException e)
+			//{
+			//	if (e.StatusCode == HttpStatusCode.NotFound)
+			//	{
+			//		return null;
+			//	}
+			//	throw;
+			//}
+            //TODO: revisar que tipo de exception tira
+		    try
+		    {
+                container.GetBlockBlobReference(blobAddressUri).DownloadToStream(serializationStream);
+		    }
+		    catch (Exception)
+		    {
+		        return null;
+		    }
+			return _documentSerializer.Deserialize(serializationStream);
 		}
 
 		public void Persist(string documentName, TDocument document)
@@ -72,12 +80,12 @@ namespace ABServicios.Azure.Storage.DataAccess.BlobStorage
 			var blobAddressUri = documentName;
 			CloudBlobClient blobStorageType = Account.CreateCloudBlobClient();
 			CloudBlobContainer container = blobStorageType.GetContainerReference(DocumentsContainerName);
-            CloudBlob blobReference = container.GetBlobReference(blobAddressUri);
+            CloudBlockBlob blobReference = container.GetBlockBlobReference(blobAddressUri);
             AdjustBlobAttribute(blobReference);
-		    blobReference.UploadFromStream(documentSerializer.Serialize(document));
+		    blobReference.UploadFromStream(_documentSerializer.Serialize(document));
 		}
 
-	    protected virtual void AdjustBlobAttribute(CloudBlob blobReference)
+	    protected virtual void AdjustBlobAttribute(CloudBlockBlob blobReference)
 	    {
 	    }
 
@@ -86,7 +94,7 @@ namespace ABServicios.Azure.Storage.DataAccess.BlobStorage
 			CloudBlobClient blobStorageType = Account.CreateCloudBlobClient();
 			CloudBlobContainer container = blobStorageType.GetContainerReference(DocumentsContainerName);
 
-			container.GetBlobReference(documentName).DeleteIfExists();
+			container.GetBlockBlobReference(documentName).DeleteIfExists();
 		}
 	}
 }

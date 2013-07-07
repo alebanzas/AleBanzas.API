@@ -1,30 +1,17 @@
-using System.Configuration;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.ServiceRuntime;
+using Microsoft.WindowsAzure.Storage;
 
 namespace ABServicios.Azure.Storage
 {
 	public static class AzureAccount
 	{
-		private const string DefaultDataconnectionstring = "ABSConnectionString";
-
-		static AzureAccount()
-		{
-			CloudStorageAccount.SetConfigurationSettingPublisher((configName, configSetter) =>
-			{
-				string value = ConfigurationManager.AppSettings[configName];
-				if (RoleEnvironment.IsAvailable)
-				{
-					value = RoleEnvironment.GetConfigurationSettingValue(configName);
-				}
-				
-				configSetter(value);
-			});
-		}
-
+		private const string DefaultDataConnectionString = "ABSConnectionString";
+        
 		public static CloudStorageAccount DefaultAccount()
 		{
-			return CloudStorageAccount.FromConfigurationSetting(DefaultDataconnectionstring);
+		    CloudStorageAccount account;
+            return CloudStorageAccount.TryParse(DefaultDataConnectionString, out account) ? 
+                            account :
+                            CloudStorageAccount.DevelopmentStorageAccount;
 		}
 	}
 }
