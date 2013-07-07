@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
@@ -30,20 +30,23 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 
 		public void Initialize()
 		{
-			var client = new CloudTableClient(account.TableEndpoint.ToString(), account.Credentials);
-			client.CreateTableIfNotExist(entityTableName);
+			var client = new CloudTableClient(account.TableEndpoint, account.Credentials);
+            var table = client.GetTableReference(entityTableName);
+            table.CreateIfNotExists();
 			// Execute conditionally for development storage only
-			if (client.BaseUri.IsLoopback)
-			{
-				var instance = Activator.CreateInstance(typeof (TTableEntity), true);
-				client.InitializeTableSchemaFromEntity(entityTableName, instance);
-			}
+            // AB: not necessary for SDK 2.0
+			//if (client.BaseUri.IsLoopback)
+			//{
+			//	var instance = Activator.CreateInstance(typeof (TTableEntity), true);
+			//	client.InitializeTableSchemaFromEntity(entityTableName, instance);
+			//}
 		}
 
 		public void Drop()
 		{
-			var client = new CloudTableClient(account.TableEndpoint.ToString(), account.Credentials);
-			client.DeleteTableIfExist(entityTableName);
+			var client = new CloudTableClient(account.TableEndpoint, account.Credentials);
+		    var table = client.GetTableReference(entityTableName);
+			table.DeleteIfExists();
 		}
 	}
 }

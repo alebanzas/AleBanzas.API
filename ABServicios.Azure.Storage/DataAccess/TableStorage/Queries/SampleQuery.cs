@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
-using Newtonsoft.Json;
+﻿using System.Linq;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 {
 	public class SampleQuery
 	{
-		private readonly TableServiceContext tableContext;
-        private readonly TablePersister<TableSampleData> tableSamplePersister;
+		private readonly TableServiceContext _tableContext;
+        private readonly TablePersister<TableSampleData> _tableSamplePersister;
 
 		public SampleQuery(CloudStorageAccount account)
 		{
-			tableContext = new TableServiceContext(account.TableEndpoint.ToString(), account.Credentials);
-            tableSamplePersister = new TablePersister<TableSampleData>(tableContext);
+		    var client = account.CreateCloudTableClient();
+			_tableContext = client.GetTableServiceContext();
+            _tableSamplePersister = new TablePersister<TableSampleData>(_tableContext);
 		}
 
         public TableSampleData GetResultsFromPublicacion(string ex1, int ex2)
 		{
-            var row = tableSamplePersister.Get(TableSampleData.GetPartionKeyFor(ex1, ex2), TableSampleData.GetRowKey(ex1, ex2));
+            var row = _tableSamplePersister.Get(TableSampleData.GetPartionKeyFor(ex1, ex2), TableSampleData.GetRowKey(ex1, ex2));
 
 			return row;
 		}
@@ -29,9 +27,9 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 		{
             var pk = TableSampleData.GetPartionKeyFor(ex1, ex2);
 
-            var queryable = tableContext.CreateQuery<TableSampleData>(typeof(TableSampleData).AsTableStorageName());
+            var queryable = _tableContext.CreateQuery<TableSampleData>(typeof(TableSampleData).AsTableStorageName());
 
-			var result = (from data in queryable where data.PartitionKey == pk select data).AsTableServiceQuery().Execute();
+			var result = (from data in queryable where data.PartitionKey == pk select data).AsTableServiceQuery(_tableContext).Execute();
 		}
 	}
 }

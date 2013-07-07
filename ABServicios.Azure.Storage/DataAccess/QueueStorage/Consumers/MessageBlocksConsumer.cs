@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Storage;
 
 namespace ABServicios.Azure.Storage.DataAccess.QueueStorage.Consumers
 {

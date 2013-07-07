@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
 
 namespace ABServicios.Azure.Storage
 {
@@ -27,7 +27,7 @@ namespace ABServicios.Azure.Storage
 		{
 			CloudQueueClient queueClient = account.CreateCloudQueueClient();
 			CloudQueue queue = queueClient.GetQueueReference(queueName);
-			queue.CreateIfNotExist();
+			queue.CreateIfNotExists();
 		}
 
 		public void Drop()
