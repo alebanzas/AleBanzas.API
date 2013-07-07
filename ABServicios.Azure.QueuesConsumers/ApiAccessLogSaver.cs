@@ -26,7 +26,7 @@ namespace ABServicios.Azure.QueuesConsumers
         public void ProcessMessages(QueueMessage<ApiAccessLog> message)
         {
             var messageLog = message.Data;
-            _tablePersister.Add(new ApiAccessLogData(messageLog.DateTime)
+            _tablePersister.Add(new ApiAccessLogData(message.Id ,messageLog.DateTime)
                 {
                     Host = messageLog.Host,
                     PathAndQuery = messageLog.PathAndQuery,
