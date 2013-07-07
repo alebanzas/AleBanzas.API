@@ -6,4 +6,10 @@
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=alebanzas;AccountKey=a/z6lgL6GaCgB2P5X0OHsCS8FH6q+UOcCMCY/HoEYDFzcuAGaEcHxaukYmaTIRVXMzrlCsQmio0zKvuEBLzC2A==" />
     </ConfigurationSettings>
   </Role>
+  <Role name="ABServicios.Azure.Worker1">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
 </ServiceConfiguration>
