@@ -103,6 +103,7 @@
     <Compile Include="DataAccess\QueueStorage\MessagePollQueueConsumer.cs" />
     <Compile Include="DataAccess\QueueStorage\MessageQueue.cs" />
     <Compile Include="DataAccess\QueueStorage\ApiAction.cs" />
+    <Compile Include="DataAccess\QueueStorage\Messages\AppErrorReport.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\AppException.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\ApiAccessLog.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\MailMessage.cs" />

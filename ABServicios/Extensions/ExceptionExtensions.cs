@@ -51,14 +51,28 @@ namespace ABServicios.Extensions
                 UrlReferrer = urlreferer,
             };
 
-            if (ExceptionAction.Enqueue.Equals(action) || ExceptionAction.SendMailAndEnqueue.Equals(action))
+            try
             {
-                AzureQueue.Enqueue(message);
+                if (ExceptionAction.Enqueue.Equals(action) || ExceptionAction.SendMailAndEnqueue.Equals(action))
+                {
+                    AzureQueue.Enqueue(message);
+                }
+            }
+            catch (Exception ex)
+            {
+                //estamos en la B, error del error
             }
 
-            if (ExceptionAction.SendMail.Equals(action) || ExceptionAction.SendMailAndEnqueue.Equals(action))
+            try
             {
-                //TODO: envio de mail con exception
+                if (ExceptionAction.SendMail.Equals(action) || ExceptionAction.SendMailAndEnqueue.Equals(action))
+                {
+                    //TODO: envio de mail con exception
+                }
+            }
+            catch (Exception ex)
+            {
+                //estamos en la B, error del error
             }
         }
     }
