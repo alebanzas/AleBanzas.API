@@ -14,7 +14,9 @@ namespace ABServicios.Controllers
 
             var request = ctx.HttpContext.Request;
 
-            AzureQueue.Enqueue(new ApiAccessLog
+            try
+            {
+                AzureQueue.Enqueue(new ApiAccessLog
                 {
                     DateTime = DateTime.UtcNow,
                     FullUrl = request.Url != null ? request.Url.ToString() : "",
@@ -22,6 +24,11 @@ namespace ABServicios.Controllers
                     PathAndQuery = request.Url != null ? request.Url.PathAndQuery : "",
                     //Request = JsonConvert.SerializeObject(request),
                 });
+            }
+            catch (Exception)
+            {
+                //No hay queue
+            }
 
             //ctx.HttpContext.Trace.Write("Log: OnActionExecuting",
             //     "Calling " +

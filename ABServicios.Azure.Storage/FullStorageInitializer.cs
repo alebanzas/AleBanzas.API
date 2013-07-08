@@ -13,6 +13,7 @@ namespace ABServicios.Azure.Storage
             new QueueStorageInitializer<AppException>(account).Initialize();
             new QueueStorageInitializer<MailMessage>(account).Initialize();
             new QueueStorageInitializer<ApiAccessLog>(account).Initialize();
+            new QueueStorageInitializer<AppErrorReport>(account).Initialize();
 
             new TableStorageInitializer<TableSampleData>(account).Initialize();
             new TableStorageInitializer<ApiAccessLogData>(account).Initialize();

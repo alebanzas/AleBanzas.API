@@ -9,21 +9,28 @@ namespace ABServicios.Azure.Storage
 	{
 		public static void LogSilentNoHttp(this Exception exception, string logMessage = null)
 		{
-			if (exception == null)
-			{
-				return;
-			}
-			CloudStorageAccount account = AzureAccount.DefaultAccount();
-			new QueueStorageInitializer<AppException>(account).Initialize();
+		    try
+		    {
+                if (exception == null)
+                {
+                    return;
+                }
+                CloudStorageAccount account = AzureAccount.DefaultAccount();
+                new QueueStorageInitializer<AppException>(account).Initialize();
 
-			var queueTags = new MessageQueue<AppException>();
-			queueTags.Enqueue(new AppException
-			{
-				LogMessage = logMessage,
-				Message = exception.Message,
-				StackTrace = exception.StackTrace,
-				InnerExceptionMessage = (exception.InnerException != null) ? exception.InnerException.Message : string.Empty
-			});
+                var queueTags = new MessageQueue<AppException>();
+                queueTags.Enqueue(new AppException
+                {
+                    LogMessage = logMessage,
+                    Message = exception.Message,
+                    StackTrace = exception.StackTrace,
+                    InnerExceptionMessage = (exception.InnerException != null) ? exception.InnerException.Message : string.Empty
+                });
+		    }
+		    catch (Exception)
+		    {
+		        //estamos en la B, error del error
+		    }
 		}
 	}
 }
