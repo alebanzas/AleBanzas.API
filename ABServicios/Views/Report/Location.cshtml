@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ABServicios.Azure.Storage.DataAccess.TableStorage.ApiAccessLogData>
+
+<h2></h2>
+
+<table>
+@foreach (var data in Model)
+{
+    <tr>
+        <td>@data.PartitionKey</td>
+        <td>@data.RowKey</td>
+        <td>@data.Date</td>
+        <td>@data.PathAndQuery</td>
+        <td>@data.Timestamp</td>
+        <td>@data.Type</td>
+    </tr> 
+}
+</table>
+
