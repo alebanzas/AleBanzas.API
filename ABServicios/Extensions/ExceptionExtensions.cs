@@ -34,13 +34,12 @@ namespace ABServicios.Extensions
 
         public static void Log(this Exception exception, HttpContext context, string customMessage, ExceptionAction action = ExceptionAction.Enqueue)
         {
-            string url = "Not available";
-            string urlreferer = "Not available";
+            var url = context.Request.Url.ToString();
+            var urlreferer = "Not available";
 
-            if (HttpContext.Current.Request.UrlReferrer != null)
+            if (context.Request.UrlReferrer != null)
             {
-                url = HttpContext.Current.Request.Url.ToString();
-                urlreferer = HttpContext.Current.Request.UrlReferrer.ToString();
+                urlreferer = context.Request.UrlReferrer.ToString();
             }
 
             var message = new AppException
