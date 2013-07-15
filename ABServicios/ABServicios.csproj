@@ -294,6 +294,7 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\VPS.pubxml" />
     <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Report\Location.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AB.Common\AB.Common.csproj">

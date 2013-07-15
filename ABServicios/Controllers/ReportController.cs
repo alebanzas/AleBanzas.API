@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
+using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
+using ABServicios.Azure.Storage.DataAccess.TableStorage.Queries;
 using ABServicios.Models;
 
 namespace ABServicios.Controllers
@@ -34,5 +37,15 @@ namespace ABServicios.Controllers
             }
         }
 
+        public ActionResult Location(DateTime? date)
+        {
+            var dateTime = date.HasValue ? date.Value : DateTime.UtcNow;
+            var query = new LocationAccessLogQuery(AzureAccount.DefaultAccount());
+            var results = query.GetResultsFromDate(dateTime);
+
+            var model = results.Where(data => data.PathAndQuery.Contains("lat=") && data.PathAndQuery.Contains("lon="));
+
+            return View(model);
+        }
     }
 }

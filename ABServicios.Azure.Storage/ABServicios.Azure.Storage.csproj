@@ -113,6 +113,7 @@
     <Compile Include="DataAccess\QueueStorage\QueueMessageBlockConsumer.cs" />
     <Compile Include="DataAccess\QueueStorage\QueueMessageConsumer.cs" />
     <Compile Include="DataAccess\TableStorage\ApiAccessLogData.cs" />
+    <Compile Include="DataAccess\TableStorage\Queries\LocationAccessLogQuery.cs" />
     <Compile Include="DataAccess\TableStorage\TableSampleData.cs" />
     <Compile Include="DataAccess\TableStorage\IPersister.cs" />
     <Compile Include="DataAccess\TableStorage\Queries\SampleQuery.cs" />

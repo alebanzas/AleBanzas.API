@@ -10,6 +10,10 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
         public string Host { get; set; }
         public string PathAndQuery { get; set; }
 
+	    public ApiAccessLogData()
+	    {
+	    }
+
 	    public ApiAccessLogData(string id, DateTime dateTime)
 	    {
 	        Id = id;
@@ -18,12 +22,17 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 
 		protected override string CreatePartitionKey()
 		{
-            return Date.ToString("yyyyMMdd");
+            return GetPartionKeyFor(Date);
 		}
         
 		protected override string CreateRowKey()
 		{
             return string.Format("{0}-{1}", Date.ToString("HHmmssfffffff"), Id);
 		}
-	}
+
+	    public static string GetPartionKeyFor(DateTime date)
+	    {
+            return date.ToString("yyyyMMdd");
+	    }
+    }
 }
