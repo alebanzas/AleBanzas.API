@@ -2,12 +2,12 @@
     ViewBag.Title = "Prueba de Servicio";
 }
 
-<div id="form">
+<form id="form" onsubmit="return false;">
     @Html.TextBox("controller", "", new { id = "controller" })
     @Html.TextBox("action", "", new { id = "action" })
     @Html.TextBox("param", "", new { id = "param" })
     <button onclick="Test();">TEST</button>
-</div>
+</form>
 
 <textarea id="result" style="width: 100%; height: 300px;"></textarea>
 
@@ -27,7 +27,10 @@ function JsonFromServerAction(urlAction, serverAction, params, onsuccess) {
         url: url,
         contentType: "application/json",
         dataType: "json",
-        success: onsuccess
+        success: onsuccess,
+        error: function(r, m, e) {
+            $("#result").val(m + " " + e);
+        }
     });
 
 }
