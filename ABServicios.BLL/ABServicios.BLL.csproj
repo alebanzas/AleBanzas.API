@@ -65,6 +65,7 @@
     <Compile Include="DataInterfaces\Queries\ISampleQuery.cs" />
     <Compile Include="EmbeddedRepositories\Roles.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />
+    <Compile Include="Entities\TerminalesAereas.cs" />
     <Compile Include="Entities\Transporte.cs" />
     <Compile Include="Entities\CorteTransito.cs" />
     <Compile Include="Entities\DolarHistorico.cs" />
