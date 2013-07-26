@@ -192,6 +192,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BicicletasController.cs" />
     <Compile Include="Controllers\BocaController.cs" />
+    <Compile Include="Controllers\AvionesController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\TransporteController.cs" />
     <Compile Include="Controllers\TrenesController.cs" />
@@ -208,6 +209,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BicicletasStatusModel.cs" />
+    <Compile Include="Models\AvionesStatusModel.cs" />
     <Compile Include="Models\ErrorReportModel.cs" />
     <Compile Include="Models\TrenesStatusModel.cs" />
     <Compile Include="Models\SubteStatusModel.cs" />
