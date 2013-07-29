@@ -11,13 +11,6 @@ namespace ABServicios.Models
         }
 
         public IList<AvionesTerminalStatusModel> Terminales { get; set; }
-
-        public DateTime Actualizacion { get; set; }
-
-        public string ActualizacionStr
-        {
-            get { return string.Format("{0} {1}", Actualizacion.ToLongDateString(), Actualizacion.ToLongTimeString()); }
-        }
     }
 
     public class AvionesTerminalStatusModel
@@ -35,10 +28,19 @@ namespace ABServicios.Models
         public IList<VueloPartidaModel> Partidas { get; set; }
 
         public IList<VueloArriboModel> Arribos { get; set; }
+
+        public DateTime Actualizacion { get; set; }
+
+        public string ActualizacionStr
+        {
+            get { return string.Format("{0} {1}", Actualizacion.ToLongDateString(), Actualizacion.ToLongTimeString()); }
+        }
     }
 
     public class VueloPartidaModel
     {
+        public string Id { get; set; }
+
         public string Nombre { get; set; }
 
         public string Linea { get; set; }
@@ -58,6 +60,8 @@ namespace ABServicios.Models
 
     public class VueloArriboModel
     {
+        public string Id { get; set; }
+
         public string Nombre { get; set; }
 
         public string Linea { get; set; }
