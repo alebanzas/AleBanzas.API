@@ -7,6 +7,7 @@
     @Html.TextBox("action", "", new { id = "action" })
     @Html.TextBox("param", "", new { id = "param" })
     <button onclick="Test();">TEST</button>
+    @DateTime.Now.ToLongTimeString()
 </form>
 
 <textarea id="result" style="width: 100%; height: 300px;"></textarea>
