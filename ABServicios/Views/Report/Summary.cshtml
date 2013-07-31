@@ -1,0 +1,28 @@
+﻿@model Dictionary<string, int>
+<h2></h2>
+
+<table style="float: left;">
+    @{
+        foreach (var data in Model.OrderBy(x => x.Key))
+        {
+            <tr>
+                <td>@data.Key</td>
+                <td>@data.Value</td>
+            </tr>
+        }
+    }
+</table>
+
+<table style="float: left;margin-left: 20px;">
+    @{
+        foreach (var data in Model.OrderByDescending(x => x.Value))
+        {
+            <tr>
+                <td>@data.Key</td>
+                <td>@data.Value</td>
+            </tr>
+        }
+    }
+</table>
+
+<div style="clear: both;"></div>

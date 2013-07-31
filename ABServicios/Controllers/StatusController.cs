@@ -1,25 +1,15 @@
 ﻿using System;
 using System.Web.Mvc;
 using ABServicios.Attributes;
-using ABServicios.BLL.DataInterfaces;
-using ABServicios.BLL.Entities;
-using Microsoft.Practices.ServiceLocation;
 
 namespace ABServicios.Controllers
 {
     public class StatusController : BaseController
     {
-        private IRepository<Hotel> _hotelRepo;
-
-        public StatusController()
-		{
-            _hotelRepo = ServiceLocator.Current.GetInstance<IRepository<Hotel>>();
-		}
-
         //
-        // GET: /Status/
+        // GET: /Status/Test
 
-        public ActionResult Index()
+        public ActionResult Test()
         {
             return View();
         }
