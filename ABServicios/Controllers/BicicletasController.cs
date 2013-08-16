@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Web.Caching;
 using System.Web.Mvc;
+using ABServicios.Extensions;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
@@ -12,25 +14,46 @@ namespace ABServicios.Controllers
 {
     public class BicicletasController : BaseController
     {
+        private readonly WebCache cache = new WebCache();
         public static string CacheKey = "Bicicletas";
+        public static string CacheControlKey = "BicicletasControl";
+        private static readonly BicicletasStatusModel DefaultModel = new BicicletasStatusModel
+            {
+                Actualizacion = DateTime.UtcNow,
+                Estaciones = new List<BicicletaEstacion>(),
+            };
 
         //
         // GET: /Bicicletas/
 
         public ActionResult Index(string version = "1", string type = "ALL")
         {
-            var cache = new WebCache();
+            return Json(cache.Get<BicicletasStatusModel>(CacheKey) ?? DefaultModel, JsonRequestBehavior.AllowGet);
+        }
+        
+        //
+        // GET: /Bicicletas/Start
+        public ActionResult Start()
+        {
+            cache.Put(CacheControlKey, new BicicletasStatusModel(), new TimeSpan(0, 3, 0), CacheItemPriority.NotRemovable,
+                (key, value, reason) =>
+                {
+                    try
+                    {
+                        var result = GetModel();
+                        cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.Log();
+                    }
+                    finally
+                    {
+                        Start();
+                    }
+                });
 
-            var result = cache.Get<BicicletasStatusModel>(CacheKey);
-
-            if (result == null) //busco datos y lleno la cache
-            {
-                result = GetModel();
-
-                cache.Put(CacheKey, result, new TimeSpan(0,5,0));
-            }        
-
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return Json(cache.Get<BicicletasStatusModel>(CacheKey), JsonRequestBehavior.AllowGet);
         }
 
         //

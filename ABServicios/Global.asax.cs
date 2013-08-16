@@ -5,6 +5,7 @@ using System.Web.Routing;
 using AB.Common.Wiring;
 using AB.Data;
 using ABServicios.Azure.Storage;
+using ABServicios.Controllers;
 using ABServicios.Extensions;
 using ABServicios.Services;
 
@@ -44,8 +45,17 @@ namespace ABServicios
 
             FullStorageInitializer.Initialize();
 
+            DataStart();
+
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+        }
+
+        private void DataStart()
+        {
+            new SubteController().Start();
+            new TrenesController().Start();
+            new BicicletasController().Start();
         }
 
         protected void Application_Error(Object sender, EventArgs e)
