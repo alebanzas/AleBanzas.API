@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.Caching;
 using System.Web.Mvc;
+using ABServicios.Extensions;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
@@ -11,25 +13,42 @@ namespace ABServicios.Controllers
 {
     public class TrenesController : BaseController
     {
+        public static WebCache cache = new WebCache();
         public static string CacheKey = "Trenes";
+        public static string CacheControlKey = "TrenesControl";
+        private static TrenesStatusModel DefaultModel = new TrenesStatusModel();
 
         //
         // GET: /Trenes/
 
         public ActionResult Index(string version = "1", string type = "ALL")
         {
-            var cache = new WebCache();
+            return Json(cache.Get<TrenesStatusModel>(CacheKey) ?? DefaultModel, JsonRequestBehavior.AllowGet);
+        }
 
-            var result = cache.Get<TrenesStatusModel>(CacheKey);
+        //
+        // GET: /Trenes/Start
+        public ActionResult Start()
+        {
+            cache.Put(CacheControlKey, new TrenesStatusModel(), new TimeSpan(0, 3, 0), CacheItemPriority.NotRemovable,
+                (key, value, reason) =>
+                {
+                    try
+                    {
+                        var result = GetModel();
+                        cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
+                    }
+                    catch(Exception ex)
+                    {
+                        ex.Log();
+                    }
+                    finally
+                    {
+                        Start();
+                    }
+                });
 
-            if (result == null) //busco datos y lleno la cache
-            {
-                result = GetModel();
-
-                cache.Put(CacheKey, result, new TimeSpan(0,5,0));
-            }        
-
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return Json(cache.Get<TrenesStatusModel>(CacheKey), JsonRequestBehavior.AllowGet);
         }
 
         //
