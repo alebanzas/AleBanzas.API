@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<ABServicios.Azure.Storage.DataAccess.TableStorage.ApiAccessLogData>
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+
 <script type="text/javascript">
     var geocoder;
 
@@ -38,7 +39,7 @@
         geocoder = new google.maps.Geocoder();
 
         var myOptions = {
-            zoom: 15,
+            zoom: 11,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         map = new google.maps.Map(document.getElementById('map_canvas'),
@@ -50,11 +51,14 @@
             addToMap(direcciones[i]);
         }
     }
-</script>
+</script>
+
 
 <h2></h2>
 
-<table>
+<a href="#" onclick="$('table').fadeToggle();return false;">ver/ocultar detalles</a>
+
+<table style="display: none;">
     @{
     var i = 0;
     foreach (var data in Model)
