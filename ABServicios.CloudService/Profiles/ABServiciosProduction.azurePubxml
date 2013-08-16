@@ -15,8 +15,8 @@
     <AzureEnableProfiling>False</AzureEnableProfiling>
     <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
     <AzureSolutionConfiguration>Release</AzureSolutionConfiguration>
-    <AzureStorageAccountLabel>alebanzas</AzureStorageAccountLabel>
-    <AzureStorageAccountName>alebanzas</AzureStorageAccountName>
+    <AzureStorageAccountLabel>ABServicios</AzureStorageAccountLabel>
+    <AzureStorageAccountName>abservicios</AzureStorageAccountName>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
   </PropertyGroup>
 </Project>
