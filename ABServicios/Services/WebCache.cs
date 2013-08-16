@@ -33,7 +33,7 @@ namespace ABServicios.Services
             return string.Format("{0}_{1}", id, typeof(T).Name);
         }
 
-        public T Put<T>(string id, T value, TimeSpan relativeExpiration)
+        public T Put<T>(string id, T value, TimeSpan relativeExpiration, CacheItemPriority priority = CacheItemPriority.Default, CacheItemRemovedCallback callback = null)
         {
             if (id == null)
             {
@@ -42,12 +42,19 @@ namespace ABServicios.Services
             lock (Mutex)
             {
                 string cacheKey = CreateCacheKey<T>(id);
-                HttpRuntime.Cache.Insert(cacheKey, value, null, DateTime.UtcNow.Add(relativeExpiration), Cache.NoSlidingExpiration);
+                if (callback == null)
+                {
+                    HttpRuntime.Cache.Insert(cacheKey, value, null, DateTime.UtcNow.Add(relativeExpiration), Cache.NoSlidingExpiration);
+                }
+                else
+                {
+                    HttpRuntime.Cache.Insert(cacheKey, value, null, DateTime.UtcNow.Add(relativeExpiration), Cache.NoSlidingExpiration, priority, callback);   
+                }
                 return value;
             }
         }
 
-        public T PutWithSliding<T>(string id, T value, TimeSpan slidingExpiration)
+        public T PutWithSliding<T>(string id, T value, TimeSpan slidingExpiration, CacheItemPriority priority = CacheItemPriority.Default, CacheItemRemovedCallback callback = null)
         {
             if (id == null)
             {
@@ -56,7 +63,14 @@ namespace ABServicios.Services
             lock (Mutex)
             {
                 string cacheKey = CreateCacheKey<T>(id);
-                HttpRuntime.Cache.Insert(cacheKey, value, null, Cache.NoAbsoluteExpiration, slidingExpiration);
+                if (callback == null)
+                {
+                    HttpRuntime.Cache.Insert(cacheKey, value, null, Cache.NoAbsoluteExpiration, slidingExpiration);
+                }
+                else
+                {
+                    HttpRuntime.Cache.Insert(cacheKey, value, null, Cache.NoAbsoluteExpiration, slidingExpiration, priority, callback);
+                }
                 return value;
             }
         }
