@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.Caching;
 
 namespace AB.Data
 {
@@ -19,8 +20,10 @@ namespace AB.Data
         /// <param name="id">The identifier for the <typeparamref name="T"/> instance.</param>
         /// <param name="value">The object to be inserted into or overriden in the cache.</param>
         /// <param name="relativeExpiration">The time at which the inserted object expires and is removed from the cache (it is relative to <see cref="DateTime.UtcNow"/>).</param>
+        /// <param name="priority">Priority for GC to remove the object</param>
+        /// <param name="callback">The function to call when cache expires</param>
         /// <returns>The object inserted in the cache or <see langword="default"/> where the <paramref name="id"/> is invalid.</returns>
-        T Put<T>(string id, T value, TimeSpan relativeExpiration);
+        T Put<T>(string id, T value, TimeSpan relativeExpiration, CacheItemPriority priority, CacheItemRemovedCallback callback);
 
         /// <summary>
         /// Inserts or override an item into the cache with a cache.
@@ -29,8 +32,10 @@ namespace AB.Data
         /// <param name="id">The identifier for the <typeparamref name="T"/> instance.</param>
         /// <param name="value">The object to be inserted into or overriden in the cache.</param>
         /// <param name="slidingExpiration">The interval between the time the inserted object is last accessed and the time at which that object expires.</param>
+        /// <param name="priority">Priority for GC to remove the object</param>
+        /// <param name="callback">The function to call when cache expires</param>
         /// <returns>The object inserted in the cache or <see langword="default"/> where the <paramref name="id"/> is invalid.</returns>
-        T PutWithSliding<T>(string id, T value, TimeSpan slidingExpiration);
+        T PutWithSliding<T>(string id, T value, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback callback);
 
         /// <summary>
         /// Removes the specified item from the application's cache object.
