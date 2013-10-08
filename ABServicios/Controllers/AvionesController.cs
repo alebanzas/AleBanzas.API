@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Web.Caching;
 using System.Web.Mvc;
 using ABServicios.BLL.Entities;
+using ABServicios.Extensions;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
@@ -14,9 +16,19 @@ namespace ABServicios.Controllers
 {
     public class AvionesController : BaseController
     {
+        private readonly WebCache cache = new WebCache();
+        public static string CacheControlKey = "AvionesControl";
         private static string GetCacheKey(string nickName)
         {
             return string.Format("Aviones-{0}", nickName.ToLowerInvariant());
+        }
+
+        protected AvionesTerminalStatusModel DefaultModel
+        {
+            get
+            {
+                return new AvionesTerminalStatusModel();
+            }
         }
 
         //
@@ -31,29 +43,39 @@ namespace ABServicios.Controllers
         public ActionResult Index(List<string> t, string version = "1", string type = "ALL")
         {
             if (t == null) return new HttpNotFoundResult();
-            
-            var cache = new WebCache();
 
-            var result = new List<AvionesTerminalStatusModel>();
-
-            foreach (var ta in t)
-            {
-                var terminal = TerminalesAereas.ByNickName(ta);
-
-                if (terminal == null) continue;
-
-                var r = cache.Get<AvionesTerminalStatusModel>(GetCacheKey(terminal.NickName));
-
-                if (r == null) //busco datos y lleno la cache
-                {
-                    r = GetModel(terminal);
-
-                    cache.Put(GetCacheKey(terminal.NickName), r, new TimeSpan(0, 2, 0));
-                }    
-                result.Add(r);
-            }
+            var result = t.Select(ta => (AvionesTerminalStatusModel) (cache.Get<AvionesTerminalStatusModel>(GetCacheKey(ta)) ?? DefaultModel)).ToList();
 
             return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        //
+        // GET: /Subte/Start
+        public ActionResult Start()
+        {
+            cache.Put(CacheControlKey, new AvionesTerminalStatusModel(), new TimeSpan(0, 2, 0), CacheItemPriority.NotRemovable,
+                (key, value, reason) =>
+                {
+                    try
+                    {
+                        foreach (var terminalAerea in TerminalesAereas.Repository)
+                        {
+                            var result = GetModel(terminalAerea);
+
+                            cache.Put(GetCacheKey(terminalAerea.NickName), result, new TimeSpan(1, 0, 0, 0));
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.Log();
+                    }
+                    finally
+                    {
+                        Start();
+                    }
+                });
+
+            return Json(DefaultModel, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Partidas(string t, string version = "1", string type = "ALL")
