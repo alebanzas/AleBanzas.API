@@ -14,6 +14,15 @@ namespace ABServicios.Controllers
             return View();
         }
 
+
+        //
+        // GET: /Status/Check
+
+        public ActionResult Check()
+        {
+            return new HttpStatusCodeResult(200);
+        }
+
         //
         // GET: /Ping/
         [NeedRelationalPersistence]
