@@ -25,6 +25,9 @@ namespace ABServicios.Azure.QueuesConsumers
 
         public void ProcessMessages(QueueMessage<ApiAccessLog> message)
         {
+            if (message.DequeueCount > 100)
+                return;
+
             var messageLog = message.Data;
             _tablePersister.Add(new ApiAccessLogData(message.Id ,messageLog.DateTime)
                 {
