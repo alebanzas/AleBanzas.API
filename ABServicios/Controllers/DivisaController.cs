@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Web.Caching;
 using System.Web.Mvc;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.Entities;
+using ABServicios.Extensions;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
@@ -17,9 +19,18 @@ namespace ABServicios.Controllers
 {
     public class DivisaController : BaseController
     {
+        private readonly WebCache cache = new WebCache();
+        public static string CacheKey = "Divisa";
+        public static string CacheKeyRofex = "DivisaRofex";
+        public static string CacheControlKey = "DivisaControl";
+
+        public DivisaModel DefaultModel = new DivisaModel
+        {
+            Actualizacion = DateTime.UtcNow,
+            Divisas = new List<DivisaViewModel>(),
+        };
         private readonly IRepository<DolarHistorico> _dolarRepo;
 
-        public static string CacheKey = "Divisa";
 
         public DivisaController()
         {
@@ -28,21 +39,44 @@ namespace ABServicios.Controllers
 
         //
         // GET: /Divisa/
-
         public ActionResult Index(string version = "1", string type = "ALL")
         {
-            var cache = new WebCache();
-            
-            var result = cache.Get<DivisaModel>(CacheKey);
+            return Json(cache.Get<DivisaModel>(CacheKey) ?? DefaultModel, JsonRequestBehavior.AllowGet);
+        }
 
-            if (result == null) //busco datos y lleno la cache
-            {
-                result = GetModel();
+        //
+        // GET: /Divisa/Rofex
+        public ActionResult Rofex(string version = "1", string type = "ALL")
+        {
+            return Json(cache.Get<DivisaModel>(CacheKeyRofex) ?? DefaultModel, JsonRequestBehavior.AllowGet);
+        }
 
-                cache.Put(CacheKey, result, new TimeSpan(1,0,0));
-            }        
+        //
+        // GET: /Divisa/Start
+        public ActionResult Start()
+        {
+            cache.Put(CacheControlKey, new DivisaModel(), new TimeSpan(0, 20, 0), CacheItemPriority.NotRemovable,
+                (key, value, reason) =>
+                {
+                    try
+                    {
+                        var result = GetModel();
+                        cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
 
-            return Json(result, JsonRequestBehavior.AllowGet);
+                        var rresult = GetRofexModel();
+                        cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.Log();
+                    }
+                    finally
+                    {
+                        Start();
+                    }
+                });
+
+            return Json(cache.Get<SubteStatusModel>(CacheKey), JsonRequestBehavior.AllowGet);
         }
 
         //
@@ -109,10 +143,7 @@ namespace ABServicios.Controllers
             }
             return new HttpStatusCodeResult(200);
         }
-
-
-
-
+        
         private static DivisaModel GetModel()
         {
             var divisas = new List<DivisaViewModel>();
@@ -181,5 +212,44 @@ namespace ABServicios.Controllers
 
             return result;
         }
+
+
+        public static DivisaModel GetRofexModel()
+        {
+            var divisas = new List<DivisaViewModel>();
+
+            HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.rofex.com.ar/"));
+
+            var cierre = html.CssSelect("#cierre");
+            var tabla = cierre.CssSelect("table tr").Skip(1);
+
+            foreach (var htmlNode in tabla)
+            {
+                var tds = htmlNode.CssSelect("td").ToArray();
+
+                var nombre = tds[0];
+                var compra = tds[1];
+                var venta = tds[1];
+                var variacion = tds[3];
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = nombre.InnerText,
+                    Simbolo = "U$S",
+                    ValorCompra = compra.InnerText,
+                    ValorVenta = venta.InnerText,
+                    Variacion = variacion.InnerText,
+                });
+            }
+            
+            var result = new DivisaModel
+            {
+                Actualizacion = DateTime.Now,
+                Divisas = divisas,
+            };
+
+            return result;
+        }
+    
     }
 }

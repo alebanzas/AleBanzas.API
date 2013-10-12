@@ -57,6 +57,7 @@ namespace ABServicios
             new TrenesController().Start();
             new BicicletasController().Start();
             new AvionesController().Start();
+            new DivisaController().Start();
         }
 
         protected void Application_Error(Object sender, EventArgs e)
