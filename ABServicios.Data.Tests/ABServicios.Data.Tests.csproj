@@ -81,6 +81,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NHibernate.Caches.SysCache.3.3.3.4000\lib\net35\NHibernate.Caches.SysCache.dll</HintPath>
     </Reference>
+    <ProjectReference Include="..\ABServicios\ABServicios.csproj">
+      <Project>{5A28A6EA-596D-41F7-A654-F44315D91942}</Project>
+      <Name>ABServicios</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NHibernate.Spatial.MsSql2008\NHibernate.Spatial.MsSql2008.csproj">
       <Project>{eac092d9-6d47-4a30-803c-7a8583f99dfe}</Project>
       <Name>NHibernate.Spatial.MsSql2008</Name>
@@ -108,6 +112,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -121,6 +126,7 @@
     <Compile Include="AplicationServices\ReadOnlyTestsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaUtils\SchemaUpdateUtil.cs" />
+    <Compile Include="Scraping\DivisaControllerTests.cs" />
     <Compile Include="Storage\InitQueue.cs" />
   </ItemGroup>
   <ItemGroup>
