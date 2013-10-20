@@ -2,26 +2,24 @@
 <h2></h2>
 
 <table style="float: left;">
-    <tr>
-        <td>TOTAL</td>
-        <td>@Model.Count</td>
-    </tr>
     @{
+        var i = 0;
         foreach (var data in Model.OrderBy(x => x.Key))
         {
+            i += data.Value;
             <tr>
                 <td>@data.Key</td>
                 <td>@data.Value</td>
             </tr>
         }
     }
+    <tr>
+        <td>TOTAL</td>
+        <td>@i</td>
+    </tr>
 </table>
 
 <table style="float: left;margin-left: 20px;">
-    <tr>
-        <td>TOTAL</td>
-        <td>@Model.Count</td>
-    </tr>
     @{
         foreach (var data in Model.OrderByDescending(x => x.Value))
         {
@@ -31,6 +29,10 @@
             </tr>
         }
     }
+    <tr>
+        <td>TOTAL</td>
+        <td>@i</td>
+    </tr>
 </table>
 
 <div style="clear: both;"></div>
