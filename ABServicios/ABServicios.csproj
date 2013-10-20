@@ -300,6 +300,7 @@
     <None Include="Properties\PublishProfiles\VPS.pubxml" />
     <Content Include="Views\Report\Location.cshtml" />
     <Content Include="Views\Report\Summary.cshtml" />
+    <Content Include="Views\Report\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AB.Common\AB.Common.csproj">
