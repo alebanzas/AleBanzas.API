@@ -57,21 +57,16 @@
 
 <h2></h2>
 
-<a href="#" onclick="$('table').fadeToggle();return false;">ver/ocultar detalles</a>
-
-    @{
-        var i = 0;
-        Html.Raw("<script type=\"text/javascript\">");
-        foreach (var data in Model)
-        {
-            string.Join("direcciones[1] = { lat: \"",
-                        HttpUtility.ParseQueryString(data.PathAndQuery.Replace(" ? ", " & ")).Get("lat"),
-                        "\", lon: \"",
-                        HttpUtility.ParseQueryString(data.PathAndQuery.Replace(" ? ", " & ")).Get("lon"),
-                        "\"};");
-        }
-        Html.Raw("</script>");
-    }
+@{
+    var i = 0;
+    foreach (var data in Model)
+    {
+        <script type="text/javascript">
+            direcciones[@(i)] = { lat: "@HttpUtility.ParseQueryString(data.PathAndQuery.Replace("?", "&")).Get("lat")", lon: "@HttpUtility.ParseQueryString(data.PathAndQuery).Get("lon")"};
+        </script>
+        i++;
+     }
+}
 
 <div id="map_canvas" style="height: 400px;"></div>
 
