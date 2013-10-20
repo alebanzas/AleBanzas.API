@@ -1,4 +1,5 @@
-﻿@model IEnumerable<ABServicios.Azure.Storage.DataAccess.TableStorage.ApiAccessLogData>
+﻿@using ABServicios.Azure.Storage.DataAccess.TableStorage;
+@model IEnumerable<ApiAccessLogData>
 
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 
@@ -58,28 +59,19 @@
 
 <a href="#" onclick="$('table').fadeToggle();return false;">ver/ocultar detalles</a>
 
-<table style="display: none;">
     @{
-    var i = 0;
-    foreach (var data in Model)
-    {
-        <tr>
-            <td>
-                <script type="text/javascript">
-                    direcciones[@(i)] = { lat: "@HttpUtility.ParseQueryString(data.PathAndQuery.Replace("?", "&")).Get("lat")", lon: "@HttpUtility.ParseQueryString(data.PathAndQuery).Get("lon")"};
-                </script>
-                @data.PartitionKey
-            </td>
-            <td>@data.RowKey</td>
-            <td>@data.Date</td>
-            <td>@data.PathAndQuery</td>
-            <td>@data.Timestamp</td>
-            <td>@data.Type</td>
-        </tr>
-        i++;
+        var i = 0;
+        Html.Raw("<script type=\"text/javascript\">");
+        foreach (var data in Model)
+        {
+            string.Join("direcciones[1] = { lat: \"",
+                        HttpUtility.ParseQueryString(data.PathAndQuery.Replace(" ? ", " & ")).Get("lat"),
+                        "\", lon: \"",
+                        HttpUtility.ParseQueryString(data.PathAndQuery.Replace(" ? ", " & ")).Get("lon"),
+                        "\"};");
+        }
+        Html.Raw("</script>");
     }
-}
-</table>
 
 <div id="map_canvas" style="height: 400px;"></div>
 

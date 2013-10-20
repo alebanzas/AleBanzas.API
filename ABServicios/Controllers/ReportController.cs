@@ -45,7 +45,18 @@ namespace ABServicios.Controllers
             var query = new LocationAccessLogQuery(AzureAccount.DefaultAccount());
             var results = query.GetResultsFromDate(dateTime);
 
-            var model = results.Where(data => data.PathAndQuery.Contains("lat=") && data.PathAndQuery.Contains("lon="));
+            IEnumerable<ApiAccessLogData> model = results.Where(data => data.PathAndQuery.Contains("lat=") && data.PathAndQuery.Contains("lon="));
+
+            return View(model);
+        }
+
+        public ActionResult Detail(DateTime? date)
+        {
+            var dateTime = date.HasValue ? date.Value : DateTime.UtcNow;
+            var query = new LocationAccessLogQuery(AzureAccount.DefaultAccount());
+            var results = query.GetResultsFromDate(dateTime);
+
+            IEnumerable<ApiAccessLogData> model = results.Where(data => data.PathAndQuery.Contains("lat=") && data.PathAndQuery.Contains("lon="));
 
             return View(model);
         }

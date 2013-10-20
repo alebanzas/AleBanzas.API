@@ -62,7 +62,18 @@ namespace ABServicios.Controllers
                     {
                         var result = GetModel();
                         cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.Log();
+                    }
+                    finally
+                    {
+                        Start();
+                    }
 
+                    try
+                    {
                         var rresult = GetRofexModel();
                         cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
                     }
@@ -75,6 +86,9 @@ namespace ABServicios.Controllers
                         Start();
                     }
                 });
+
+            cache.Put(CacheKey, GetModel(), new TimeSpan(1, 0, 0, 0));
+            cache.Put(CacheKeyRofex, GetRofexModel(), new TimeSpan(1, 0, 0, 0));
 
             return Json(cache.Get<SubteStatusModel>(CacheKey), JsonRequestBehavior.AllowGet);
         }
