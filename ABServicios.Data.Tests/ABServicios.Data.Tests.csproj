@@ -127,6 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaUtils\SchemaUpdateUtil.cs" />
     <Compile Include="Scraping\BicicletasControllerTests.cs" />
+    <Compile Include="Scraping\AvionesControllerTests.cs" />
     <Compile Include="Scraping\DivisaControllerTests.cs" />
     <Compile Include="Storage\InitQueue.cs" />
   </ItemGroup>
