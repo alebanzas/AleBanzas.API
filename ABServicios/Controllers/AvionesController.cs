@@ -49,6 +49,19 @@ namespace ABServicios.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
+        
+        //
+        // GET: /Subte/Start
+        public ActionResult FirstStart()
+        {
+            var terminalAerea = TerminalesAereas.Ezeiza;
+            var result = GetModel(terminalAerea);
+
+            cache.Put(GetCacheKey(terminalAerea.NickName), result, new TimeSpan(1, 0, 0, 0));
+
+            return new EmptyResult();
+        }
+
         //
         // GET: /Subte/Start
         public ActionResult Start()
@@ -122,9 +135,9 @@ namespace ABServicios.Controllers
             return Json(result.ToArribos(), JsonRequestBehavior.AllowGet);
         }
 
-        private static AvionesTerminalStatusModel GetModel(TerminalAerea terminal)
+        public static AvionesTerminalStatusModel GetModel(TerminalAerea terminal)
         {
-            HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/arribose.aspx?qA=" + terminal.NickName));
+            HtmlNode html = new Scraper(Encoding.UTF7, "http://www.aa2000.com.ar/").GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/arribose.aspx?qA=" + terminal.NickName));
 
             var cssSelect = html.CssSelect("table.grilla");
             var script = cssSelect.CssSelect("tr");
