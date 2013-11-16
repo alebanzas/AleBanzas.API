@@ -37,7 +37,9 @@ DECLARE @recorridosDestino TABLE
 	Regreso bit
 )
 DECLARE @thh int;
-SET @origen = geography:: STGeomFromText('POINT(-58.403379 -34.593778)' , 4326); --casa
+
+--SET @origen = geography:: STGeomFromText('POINT(-58.403379 -34.593778)' , 4326); --casa
+SET @origen = geography:: STGeomFromText('POINT(-58.52652 -34.463498)' , 4326); --casa facu
 --SET @destino = geography:: STGeomFromText('POINT(-58.382764 -34.617210)' , 4326); --uade
 --SET @destino = geography:: STGeomFromText('POINT(-58.424735 -34.603082)' , 4326); --autocosmos
 --SET @destino = geography:: STGeomFromText('POINT(-58.479624 -34.519994)' , 4326); --club banco
@@ -45,7 +47,9 @@ SET @origen = geography:: STGeomFromText('POINT(-58.403379 -34.593778)' , 4326);
 --SET @destino = geography:: STGeomFromText('POINT(-58.436047 -34.577044)' , 4326); --casa vane
 ----sin viaje directo
 --SET @destino = geography:: STGeomFromText('POINT(-58.483475 -34.608910)' , 4326); --nazca y jonte
-SET @destino = geography:: STGeomFromText('POINT(-58.313885 -34.704276)' , 4326); --agus house
+--SET @destino = geography:: STGeomFromText('POINT(-58.313885 -34.704276)' , 4326); --agus house
+SET @destino = geography:: STGeomFromText('POINT(-58.369482 -34.599289)' , 4326); --MS
+
 SET @thh = 800;
 
 INSERT INTO @recorridosOrigen (recorridoPuntoOrigen,recorridoPuntoDestino,caminarTotal,caminarOrigen,caminarDestino,recorridoPuntoOrigenG,recorridoPuntoDestinoG,ID,TipoTransporteID,Nombre,Codigo,Ramal,Ubicacion,DescripcionRecorrido,Regreso) (
