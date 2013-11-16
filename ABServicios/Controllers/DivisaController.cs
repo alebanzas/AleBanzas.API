@@ -52,6 +52,23 @@ namespace ABServicios.Controllers
         }
 
         //
+        // GET: /Divisa/FirstStart
+        public ActionResult FirstStart()
+        {
+            try
+            {
+                cache.Put(CacheKey, GetModel(), new TimeSpan(1, 0, 0, 0));
+                cache.Put(CacheKeyRofex, GetRofexModel(), new TimeSpan(1, 0, 0, 0));
+            }
+            catch (Exception ex)
+            {
+                ex.Log();
+            }
+
+            return Start();
+        }
+
+        //
         // GET: /Divisa/Start
         public ActionResult Start()
         {
@@ -86,9 +103,6 @@ namespace ABServicios.Controllers
                         Start();
                     }
                 });
-
-            cache.Put(CacheKey, GetModel(), new TimeSpan(1, 0, 0, 0));
-            cache.Put(CacheKeyRofex, GetRofexModel(), new TimeSpan(1, 0, 0, 0));
 
             return Json(cache.Get<SubteStatusModel>(CacheKey), JsonRequestBehavior.AllowGet);
         }

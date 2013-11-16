@@ -30,6 +30,22 @@ namespace ABServicios.Controllers
         {
             return Json(cache.Get<BicicletasStatusModel>(CacheKey) ?? DefaultModel, JsonRequestBehavior.AllowGet);
         }
+
+        //
+        // GET: /Bicicletas/FirstStart
+        public ActionResult FirstStart()
+        {
+            try
+            {
+                cache.Put(CacheKey, GetModel(), new TimeSpan(1, 0, 0, 0));
+            }
+            catch (Exception ex)
+            {
+                ex.Log();
+            }
+
+            return Start();
+        }
         
         //
         // GET: /Bicicletas/Start
@@ -67,26 +83,28 @@ namespace ABServicios.Controllers
         }
 
 
-        private static BicicletasStatusModel GetModel()
+        public static BicicletasStatusModel GetModel()
         {
             IList<BicicletaEstacion> estaciones = new List<BicicletaEstacion>();
 
             HtmlNode html = new Scraper().GetNodes(new Uri("http://www.bicicletapublica.com.ar/mapa.aspx"));
 
             var cssSelect = html.CssSelect("script");
-            var script = cssSelect.Skip(1).FirstOrDefault().InnerText;
+            var script = cssSelect.Last().InnerText;
 
-            foreach (var posta in script.Split(new[] { "new GLatLng(" }, StringSplitOptions.RemoveEmptyEntries).Skip(2))
+            foreach (var posta in script.Split(new[] { "google.maps.LatLng(" }, StringSplitOptions.RemoveEmptyEntries).Skip(2))
             {
-                var a = posta.Split(new[] { "openInfoWindowHtml('" }, StringSplitOptions.RemoveEmptyEntries);
+                var a = posta.Split(new[] { "),clickable" }, StringSplitOptions.RemoveEmptyEntries);
 
                 //-34.592308,-58.37501
-                string arg0 = a[0].Split(new[] { ")," }, StringSplitOptions.RemoveEmptyEntries)[0];
+                string arg0 = a[0];
 
                 var lat = double.Parse(arg0.Split(',')[0].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
                 var lon = double.Parse(arg0.Split(',')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
 
-                string arg1 = a[1].Split(new[] { "'," }, StringSplitOptions.RemoveEmptyEntries)[0];
+                string arg01 = posta.Split(new[] { "google.maps.InfoWindow({content:'" }, StringSplitOptions.RemoveEmptyEntries)[1];
+
+                string arg1 = arg01.Split(new[] { "',maxWidth:120}" }, StringSplitOptions.RemoveEmptyEntries)[0];
 
                 var arg2 = arg1.Split(new[] { "<br>" }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -100,7 +118,7 @@ namespace ABServicios.Controllers
                     //<div style="height:100px;"><span class="style1">RETIRO
                     //<br>Cerrado. Horario de atención: Lun a Vie de 8 a 20. Sáb 9 a 15.</span>
                     //<br><span class="style2">Cant. Bicicletas disponibles: 8</span><br></div>
-                    nombre = arg2[0].Split('>')[2].Trim();
+                    nombre = arg2[0].Split('>')[2].Trim().ToUpperInvariant();
 
                     estado = arg2[1].Split('.')[0].Trim();
 
@@ -112,7 +130,7 @@ namespace ABServicios.Controllers
                 {
                     //<div style="height:100px;"><span class="style1">RETIRO</span>
                     //<br><span class="style2">Cant. Bicicletas disponibles: 2</span><br></div>
-                    nombre = arg2[0].Split('>')[2].Split('<')[0].Trim();
+                    nombre = arg2[0].Split('>')[2].Split('<')[0].Trim().ToUpperInvariant();
 
                     cantidad = int.Parse(arg2[1].Split(':')[1].Split('<')[0].Trim());
 
