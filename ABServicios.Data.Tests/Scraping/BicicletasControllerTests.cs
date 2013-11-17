@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ABServicios.Controllers;
 using NUnit.Framework;
+using ABServicios.Models;
 
 namespace ABServicios.Data.Tests.Scraping
 {
