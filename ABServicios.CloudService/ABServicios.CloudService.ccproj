@@ -45,14 +45,6 @@
       <RoleName>ABServicios.Azure.Worker1</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
-    <ProjectReference Include="..\ABServicios\ABServicios.csproj">
-      <Name>ABServicios</Name>
-      <Project>{5a28a6ea-596d-41f7-a654-f44315d91942}</Project>
-      <Private>True</Private>
-      <RoleType>Web</RoleType>
-      <RoleName>ABServicios</RoleName>
-      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Profiles" />
