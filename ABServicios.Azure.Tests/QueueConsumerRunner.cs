@@ -29,5 +29,13 @@ namespace ABServicios.Azure.Tests
                                                                                         .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
                                                                                         .StartConsimung();
         }
+
+        [Test]
+        public void StartConsumigAzureChristmasVoteLogSaver()
+        {
+            QueueConsumerFor<AzureChristmasVoteLog>.WithinCurrentThread.Using(new AzureChristmasVoteLogSaver())
+                                                                                        .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
+                                                                                        .StartConsimung();
+        }
 	}
 }
