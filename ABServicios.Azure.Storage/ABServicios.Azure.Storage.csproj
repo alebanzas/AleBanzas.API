@@ -69,9 +69,7 @@
       <HintPath>..\Lib\Microsoft.WindowsAzure.ServiceRuntime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Storage">
-      <HintPath>..\packages\WindowsAzure.Storage.2.0.6.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -109,12 +107,15 @@
     <Compile Include="DataAccess\QueueStorage\Messages\AppErrorReport.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\AppException.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\ApiAccessLog.cs" />
+    <Compile Include="DataAccess\QueueStorage\Messages\AzureChristmasVoteLog.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\MailMessage.cs" />
     <Compile Include="DataAccess\QueueStorage\PollingFrequencer.cs" />
     <Compile Include="DataAccess\QueueStorage\QueueConsumerFor.cs" />
     <Compile Include="DataAccess\QueueStorage\QueueMessage.cs" />
     <Compile Include="DataAccess\QueueStorage\QueueMessageBlockConsumer.cs" />
     <Compile Include="DataAccess\QueueStorage\QueueMessageConsumer.cs" />
+    <Compile Include="DataAccess\TableStorage\AzureChristmasVoteUserData.cs" />
+    <Compile Include="DataAccess\TableStorage\AzureChristmasVoteLogData.cs" />
     <Compile Include="DataAccess\TableStorage\ApiAccessLogData.cs" />
     <Compile Include="DataAccess\TableStorage\Queries\SummaryAccessLogQuery.cs" />
     <Compile Include="DataAccess\TableStorage\Queries\LocationAccessLogQuery.cs" />

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Web.Caching;
 using System.Web.Mvc;
@@ -139,6 +142,12 @@ namespace ABServicios.Controllers
         {
             HtmlNode html = new Scraper(Encoding.UTF7, "http://www.aa2000.com.ar/").GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/arribose.aspx?qA=" + terminal.NickName));
 
+            var httpClient = new HttpClient();
+            var result = httpClient.PostAsJsonAsync("http://www.aa2000.com.ar/vuelos/arribose.aspx/cbverestado", new { aeropuerto = terminal.NickName, aerolinea = "...", procedencia = "...", vuelo = "", fecha = string.Format("{0}/{1}/{2}", DateTime.UtcNow.Day, DateTime.UtcNow.Month, DateTime.UtcNow.Year) }).Result;
+
+            var estados = GetEstadosFromService(result);
+
+
             var cssSelect = html.CssSelect("table.grilla");
             var script = cssSelect.CssSelect("tr");
 
@@ -181,10 +190,9 @@ namespace ABServicios.Controllers
                 var vueloHora = vuelo.CssSelect("td.a4").FirstOrDefault();
                 if (vueloHora != null)
                 {
-                    //24/07 23:10
-                    var a = vueloHora.InnerText.Split(' ');
-                    var b = string.Format("{0}/{1} {2}", a[0], DateTime.UtcNow.AddHours(-3).Year, a[1]);
-                    arribo.Hora = DateTime.Parse(b, culture).ToUniversalTime();
+                    //23:10
+                    DateTime dateTime;
+                    arribo.Hora = DateTime.TryParse(vueloHora.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : DateTime.MinValue;
                 }
 
                 var vueloEstima = vuelo.CssSelect("td.a5").FirstOrDefault();
@@ -211,16 +219,12 @@ namespace ABServicios.Controllers
                                     : null;
 
                 var vueloEstado = vuelo.CssSelect("td.a8").FirstOrDefault();
-                arribo.Estado = vueloEstado != null
-                                    ? (!string.IsNullOrWhiteSpace(vueloEstado.InnerText.Replace("&nbsp;", ""))
-                                           ? vueloEstado.InnerText.Replace("&nbsp;", "")
-                                           : null)
-                                    : null;
+                arribo.Estado = GetEstadoFinalArribos(vueloEstado, estados);
                 
                 vueloArriboModels.Add(arribo);
             }
 
-            html = new Scraper(Encoding.ASCII).GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/partidase.aspx?qA=" + terminal.NickName));
+            html = new Scraper(Encoding.ASCII, "http://www.aa2000.com.ar/").GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/partidase.aspx?qA=" + terminal.NickName));
 
             cssSelect = html.CssSelect("table.grilla");
             script = cssSelect.CssSelect("tr");
@@ -297,8 +301,8 @@ namespace ABServicios.Controllers
                 partida.Estado = vueloEstado != null
                                     ? (!string.IsNullOrWhiteSpace(vueloEstado.InnerText.Replace("&nbsp;", ""))
                                            ? vueloEstado.InnerText.Replace("&nbsp;", "")
-                                           : null)
-                                    : null;
+                                           : "No disponible")
+                                    : "No disponible";
 
 
                 vueloPartidaModels.Add(partida);
@@ -312,6 +316,31 @@ namespace ABServicios.Controllers
                     Arribos = vueloArriboModels,
                     Partidas = vueloPartidaModels,
                 };
+        }
+
+        private static string GetEstadoFinalArribos(HtmlNode vueloEstado, Dictionary<string, string> estados)
+        {
+            var span = vueloEstado.CssSelect("span").FirstOrDefault();
+            
+            if (span == null) return "No disponible";
+
+            var idVuelo = span.GetAttributeValue("id", "");
+            var sf = estados.ContainsKey(idVuelo) ? estados[idVuelo] : "No disponible";
+            return sf;
+        }
+
+        private static Dictionary<string, string> GetEstadosFromService(HttpResponseMessage result)
+        {
+            try
+            {
+                var rr = result.Content.ReadAsStringAsync().Result.Split('"')[3];
+                var ru = rr.Split(';');
+                return ru.Select(ss => ss.Split(',')).ToDictionary(strings => "estado" + strings[0], strings => strings.Length == 2 ? strings[1] : "No disponible");
+            }
+            catch (Exception)
+            { }
+            
+            return new Dictionary<string, string>();
         }
     }
 

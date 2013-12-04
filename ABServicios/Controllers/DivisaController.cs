@@ -79,18 +79,7 @@ namespace ABServicios.Controllers
                     {
                         var result = GetModel();
                         cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
-                    }
-                    catch (Exception ex)
-                    {
-                        ex.Log();
-                    }
-                    finally
-                    {
-                        Start();
-                    }
 
-                    try
-                    {
                         var rresult = GetRofexModel();
                         cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
                     }
@@ -220,8 +209,8 @@ namespace ABServicios.Controllers
 
             try
             {
-                compra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
-                venta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture)*1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
+                compra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.35).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
+                venta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture)*1.35).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
 
                 divisas.Add(new DivisaViewModel
                 {

@@ -40,10 +40,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ABServicios.Azure.Tests\bin\Debug\Microsoft.WindowsAzure.Storage.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -60,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AzureChristmasVoteLogSaver.cs" />
     <Compile Include="ApiCallExtensions.cs" />
     <Compile Include="ApiAccessLogSaver.cs" />
     <Compile Include="MailsMessagesSender.cs" />

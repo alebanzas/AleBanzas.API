@@ -13,7 +13,9 @@ namespace ABServicios.Data.Tests.Scraping
         [Test]
         public void WhenGetAvionesModel()
         {
-            var model = AvionesController.GetModel(TerminalesAereas.Ezeiza);
+            var ta = new TerminalAerea(){ NickName = "EZE" };
+
+            var model = AvionesController.GetModel(ta);
 
 
         }
