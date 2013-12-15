@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using ABServicios.Api.Controllers;
 using ABServicios.Attributes;
 
 namespace ABServicios.Controllers
@@ -30,9 +31,9 @@ namespace ABServicios.Controllers
         {
             try
             {
-                (new SubteController()).Index();
-                (new TrenesController()).Index();
-                (new DivisaController()).Index();
+                (new SubteController()).Get();
+                (new TrenController()).Get();
+                (new CotizacionController()).Get();
                 (new BicicletasController()).Index();
                 (new SUBEController()).RecargaAll();
                 (new SUBEController()).VentaAll();

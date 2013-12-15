@@ -1,4 +1,6 @@
 ﻿using System.Web.Mvc;
+using ABServicios.Api.Controllers;
+using ABServicios.Api.Models;
 using ABServicios.Models;
 using ABServicios.Services;
 
@@ -17,11 +19,12 @@ namespace ABServicios.Controllers
 
             cache.Evict<BicicletasStatusModel>(BicicletasController.CacheKey);
 
-            cache.Evict<TrenesStatusModel>(TrenesController.CacheKey);
+            cache.Evict<TrenesStatusModel>(TrenController.CacheKey);
 
             cache.Evict<SubteStatusModel>(SubteController.CacheKey);
 
-            cache.Evict<DivisaModel>(DivisaController.CacheKey);
+            cache.Evict<DivisaModel>(CotizacionController.CacheKey);
+            cache.Evict<DivisaModel>(CotizacionController.CacheKeyRofex);
             
             
             return new HttpStatusCodeResult(200);

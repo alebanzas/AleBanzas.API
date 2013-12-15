@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ABServicios.Controllers;
+﻿using ABServicios.Api.Controllers;
 using NUnit.Framework;
 
 namespace ABServicios.Data.Tests.Scraping
@@ -12,7 +8,7 @@ namespace ABServicios.Data.Tests.Scraping
         [Test]
         public void WhenGetRofexModel()
         {
-            var model = DivisaController.GetRofexModel();
+            var model = CotizacionController.GetRofexModel();
 
         }
     }

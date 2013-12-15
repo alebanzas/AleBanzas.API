@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ABServicios.Models
+namespace ABServicios.Api.Models
 {
     public class SubteStatusModel
     {
@@ -25,5 +25,6 @@ namespace ABServicios.Models
         public string Nombre { get; set; }
 
         public string Detalles { get; set; }
+        public string Id { get; set; }
     }
 }

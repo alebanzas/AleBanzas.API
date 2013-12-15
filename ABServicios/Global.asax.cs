@@ -37,6 +37,8 @@ namespace ABServicios
         protected void Application_Error(Object sender, EventArgs e)
         {
             var context = HttpContext.Current;
+            if (context == null) return;
+
             var ex = context.Server.GetLastError();
 
             ex.Log(context);

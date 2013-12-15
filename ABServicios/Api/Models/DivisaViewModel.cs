@@ -1,4 +1,4 @@
-﻿namespace ABServicios.Models
+﻿namespace ABServicios.Api.Models
 {
     public class DivisaViewModel
     {

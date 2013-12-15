@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ABServicios.Models
+namespace ABServicios.Api.Models
 {
     public class TrenesStatusModel
     {
