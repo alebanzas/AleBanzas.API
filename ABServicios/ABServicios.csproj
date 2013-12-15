@@ -222,6 +222,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\ABServiciosHmacBuilder.cs" />
+    <Compile Include="Api\ActionFilters\AccessLogActionFilter.cs" />
+    <Compile Include="Api\Binders\FromHeaderAttribute.cs" />
+    <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
+    <Compile Include="Api\Controllers\BaseController.cs" />
+    <Compile Include="Api\Controllers\CotizacionController.cs" />
+    <Compile Include="Api\Controllers\SubteController.cs" />
+    <Compile Include="Api\Controllers\TrenController.cs" />
+    <Compile Include="Api\FormattingConfiguration.cs" />
+    <Compile Include="Api\HmacAuthenticationHandler.cs" />
+    <Compile Include="Api\HmacHelpers.cs" />
+    <Compile Include="Api\HttpRequestExtensions.cs" />
+    <Compile Include="Api\TaskHelpers.cs" />
     <Compile Include="App_Start\DataConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -232,31 +245,27 @@
     <Compile Include="Controllers\AvionesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BicicletasController.cs" />
-    <Compile Include="Controllers\BocaController.cs" />
-    <Compile Include="Controllers\DivisaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\LicenseController.cs" />
-    <Compile Include="Controllers\LocalController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Controllers\SUBEController.cs" />
-    <Compile Include="Controllers\SubteController.cs" />
     <Compile Include="Controllers\TransporteController.cs" />
-    <Compile Include="Controllers\TrenesController.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\RouteExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AvionesStatusModel.cs" />
     <Compile Include="Models\BicicletasStatusModel.cs" />
-    <Compile Include="Models\DivisaModel.cs" />
-    <Compile Include="Models\DivisaViewModel.cs" />
+    <Compile Include="Api\Models\DivisaModel.cs" />
+    <Compile Include="Api\Models\DivisaViewModel.cs" />
     <Compile Include="Models\ErrorReportModel.cs" />
     <Compile Include="Models\HotelViewModel.cs" />
     <Compile Include="Models\LocalViewModel.cs" />
-    <Compile Include="Models\SubteStatusModel.cs" />
-    <Compile Include="Models\TrenesStatusModel.cs" />
+    <Compile Include="Api\Models\SubteStatusModel.cs" />
+    <Compile Include="Api\Models\TrenesStatusModel.cs" />
     <Compile Include="MvcGuyWire.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scraper.cs" />

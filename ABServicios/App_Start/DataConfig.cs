@@ -1,6 +1,5 @@
-﻿using ABServicios.Controllers;
-using System.Web;
-using System.Web.Optimization;
+﻿using ABServicios.Api.Controllers;
+using ABServicios.Controllers;
 
 namespace ABServicios
 {
@@ -9,10 +8,10 @@ namespace ABServicios
         public static void StartInitial()
         {
             new SubteController().Start();
-            new TrenesController().Start();
+            new TrenController().Start();
             new BicicletasController().FirstStart();
             new AvionesController().Start();
-            new DivisaController().FirstStart();
+            new CotizacionController().Start();
         }
     }
 }

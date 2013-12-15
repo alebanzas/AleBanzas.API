@@ -1,66 +1,83 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web.Caching;
-using System.Web.Mvc;
+using System.Web.Http;
+using ABServicios.Api.ActionFilters;
+using ABServicios.Api.Models;
 using ABServicios.Extensions;
-using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
 using ScrapySharp.Extensions;
 
-namespace ABServicios.Controllers
+namespace ABServicios.Api.Controllers
 {
-    public class TrenesController : BaseController
+
+    [AccessLog]
+    public class TrenController : ApiController
     {
         public static WebCache cache = new WebCache();
         public static string CacheKey = "Trenes";
         public static string CacheControlKey = "TrenesControl";
         private static TrenesStatusModel DefaultModel = new TrenesStatusModel();
-
-        //
-        // GET: /Trenes/
-
-        public ActionResult Index(string version = "1", string type = "ALL")
+        private TrenesStatusModel TrenStatusCollection
         {
-            return Json(cache.Get<TrenesStatusModel>(CacheKey) ?? DefaultModel, JsonRequestBehavior.AllowGet);
+            get { return cache.Get<TrenesStatusModel>(CacheKey) ?? DefaultModel; }
         }
 
-        //
-        // GET: /Trenes/Start
-        public ActionResult Start()
+        // GET api/<controller>
+        public TrenesStatusModel Get()
         {
-            cache.Put(CacheControlKey, new TrenesStatusModel(), new TimeSpan(0, 3, 0), CacheItemPriority.NotRemovable,
-                (key, value, reason) =>
-                {
-                    try
-                    {
-                        var result = GetModel();
-                        cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
-                    }
-                    catch(Exception ex)
-                    {
-                        ex.Log();
-                    }
-                    finally
-                    {
-                        Start();
-                    }
-                });
-
-            return Json(cache.Get<TrenesStatusModel>(CacheKey), JsonRequestBehavior.AllowGet);
+            return TrenStatusCollection;
         }
 
-        //
-        // GET: /Trenes/Message
-
-        public ActionResult Message(string version = "1", string type = "ALL")
+        // GET api/<controller>/sarmiento
+        public LineaTrenModel Get(string id)
         {
-            dynamic result = new { Message = "" };
-
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return TrenStatusCollection.Lineas.FirstOrDefault(x => x.Nombre.Contains(id));
         }
 
+        // POST api/<controller>
+        public void Post([FromBody]string value)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+        // PUT api/<controller>/5
+        public void Put(int id, [FromBody]string value)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+        // DELETE api/<controller>/5
+        public void Delete(int id)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+
+        private void Refresh()
+        {
+            cache.Put(CacheControlKey, new TrenesStatusModel(), new TimeSpan(0, 3, 0), CacheItemPriority.NotRemovable, (key, value, reason) => Start());
+        }
+
+        public void Start()
+        {
+            try
+            {
+                var result = GetModel();
+                cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
+            }
+            catch (Exception ex)
+            {
+                ex.Log();
+            }
+            finally
+            {
+                Refresh();
+            }
+        }
 
         private static TrenesStatusModel GetModel()
         {
@@ -121,10 +138,10 @@ namespace ABServicios.Controllers
             }
 
             return new TrenesStatusModel
-                {
-                    Actualizacion = DateTime.UtcNow,
-                    Lineas = lineas,
-                };
+            {
+                Actualizacion = DateTime.UtcNow,
+                Lineas = lineas,
+            };
         }
     }
 }
