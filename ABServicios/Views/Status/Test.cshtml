@@ -24,7 +24,7 @@ function JsonFromServerAction(urlAction, serverAction, params, onsuccess) {
         url += '/?' + params;
     }
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: url,
         contentType: "application/json",
         dataType: "json",
