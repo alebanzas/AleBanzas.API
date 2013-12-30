@@ -227,11 +227,15 @@
     <Compile Include="Api\ApiAuthorizeAttribute.cs" />
     <Compile Include="Api\Binders\FromHeaderAttribute.cs" />
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
+    <Compile Include="Api\Binders\NeedDataBaseContextAttribute.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
     <Compile Include="Api\Controllers\CotizacionController.cs" />
     <Compile Include="Api\Controllers\SubteController.cs" />
     <Compile Include="Api\Controllers\TestController.cs" />
+    <Compile Include="Api\Controllers\TransporteController.cs" />
     <Compile Include="Api\Controllers\TrenController.cs" />
+    <Compile Include="Api\Extensions\CoordinatesExtensions.cs" />
+    <Compile Include="Api\Extensions\TransporteExtensions.cs" />
     <Compile Include="Api\FormattingConfiguration.cs" />
     <Compile Include="Api\HmacAuthenticationHandler.cs" />
     <Compile Include="Api\HmacHelpers.cs" />
@@ -253,7 +257,7 @@
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Controllers\SUBEController.cs" />
-    <Compile Include="Controllers\TransporteController.cs" />
+    <Compile Include="Api\Controllers\_TransporteController.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\RouteExtensions.cs" />
     <Compile Include="Global.asax.cs">
