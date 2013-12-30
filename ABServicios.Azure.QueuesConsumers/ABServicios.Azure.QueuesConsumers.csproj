@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AzureChristmasVoteLogDespegar.cs" />
     <Compile Include="AzureChristmasVoteLogSaver.cs" />
     <Compile Include="ApiCallExtensions.cs" />
     <Compile Include="ApiAccessLogSaver.cs" />
