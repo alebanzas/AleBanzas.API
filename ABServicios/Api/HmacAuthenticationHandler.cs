@@ -95,6 +95,8 @@ namespace ABServicios.Api
 			bool isAuthenticated = await IsAuthenticated(request);
 			if (!isAuthenticated)
 			{
+			    request.Headers.Authorization = null;
+
 				return await base.SendAsync(request, cancellationToken).ContinueWith(task =>
 				{
 					HttpResponseMessage response = task.Result;
