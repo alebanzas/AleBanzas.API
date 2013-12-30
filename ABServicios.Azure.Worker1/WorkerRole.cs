@@ -21,11 +21,17 @@ namespace ABServicios.Azure.Worker1
                                                                                         .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
                                                                                         .StartConsimung();
 
-            QueueConsumerFor<AzureChristmasVoteLog>.WithinCurrentThread.Using(new AzureChristmasVoteLogSaver())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
-                                                                                        .StartConsimung();
 
-            var waitForNothing = TimeSpan.FromMinutes(5);
+            //QueueConsumerFor<AzureChristmasVoteLog>.WithinCurrentThread.Using(new AzureChristmasVoteLogDespegar())
+            //                                                                            .With(PollingFrequencer.For(AzureChristmasVoteLogDespegar.EstimatedTime))
+            //                                                                            .StartConsimung();
+
+            //QueueConsumerFor<AzureChristmasVoteLog>.WithinCurrentThread.Using(new AzureChristmasVoteLogSaver())
+            //                                                                            .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
+            //                                                                            .StartConsimung();
+
+
+            var waitForNothing = TimeSpan.FromSeconds(1);
             while (true)
             {
                 Thread.Sleep(waitForNothing);
