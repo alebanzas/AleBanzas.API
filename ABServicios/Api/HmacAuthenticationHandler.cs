@@ -7,6 +7,7 @@ using System.Runtime.Caching;
 using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.Entities;
 
@@ -97,7 +98,7 @@ namespace ABServicios.Api
 				return await base.SendAsync(request, cancellationToken).ContinueWith(task =>
 				{
 					HttpResponseMessage response = task.Result;
-
+            
 					if (response.StatusCode == HttpStatusCode.Unauthorized)
 					{
 						response.Headers.WwwAuthenticate.Add(new AuthenticationHeaderValue(hmacb.AuthenticationScheme, "AppKey"));
@@ -105,27 +106,8 @@ namespace ABServicios.Api
 					return response;
 				});
 			}
-			var principal = CreatePrincipal(request);
-			Thread.CurrentPrincipal = principal;
-			// No es claro si tambien hay que setear el principal en el HttpContext (con todos estos tasks dando vuelta no me queda claro cual será el thread)
-			return await base.SendAsync(request, cancellationToken);
-		}
-
-		private IPrincipal CreatePrincipal(HttpRequestMessage request)
-		{
-			var credetials = hmacb.GetCredentials(request.Headers.Authorization);
-			Guid appKey;
-			if (!Guid.TryParse(credetials.Key, out appKey))
-			{
-				return null;
-			}
-			Application app = secretRepository.FirstOrDefault(x => x.AppKey == appKey);
-			if (app == null)
-			{
-				return null;
-			}
-
-			return new GenericPrincipal(new GenericIdentity(app.Mnemonico, hmacb.AuthenticationScheme), app.Roles.ToArray());
+			var r = await base.SendAsync(request, cancellationToken);
+		    return r;
 		}
 	}
 }
