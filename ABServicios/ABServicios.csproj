@@ -224,11 +224,13 @@
   <ItemGroup>
     <Compile Include="Api\ABServiciosHmacBuilder.cs" />
     <Compile Include="Api\ActionFilters\AccessLogActionFilter.cs" />
+    <Compile Include="Api\ApiAuthorizeAttribute.cs" />
     <Compile Include="Api\Binders\FromHeaderAttribute.cs" />
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
     <Compile Include="Api\Controllers\CotizacionController.cs" />
     <Compile Include="Api\Controllers\SubteController.cs" />
+    <Compile Include="Api\Controllers\TestController.cs" />
     <Compile Include="Api\Controllers\TrenController.cs" />
     <Compile Include="Api\FormattingConfiguration.cs" />
     <Compile Include="Api\HmacAuthenticationHandler.cs" />

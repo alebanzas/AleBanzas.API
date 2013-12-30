@@ -13,7 +13,7 @@ namespace ABServicios.Api
 	{
 		private const string authenticationScheme = "ABS-H";
 		public const string CustomHeaderPrefix = "X-ABS";
-		private const string AcsDateHeader = CustomHeaderPrefix + "-Date";
+		private const string AbsDateHeader = CustomHeaderPrefix + "-Date";
 		private const int validityPeriodInMinutes = 15;
 
 		public IEnumerable<string> GetCanonicalParts(HttpRequestMessage request)
@@ -23,7 +23,7 @@ namespace ABServicios.Api
 			yield return request.Method.Method;
 			yield return httpContentHeaders != null && httpContentHeaders.ContentMD5 != null ? Convert.ToBase64String(httpContentHeaders.ContentMD5) : string.Empty;
 			yield return httpContentHeaders != null && httpContentHeaders.ContentType != null ? httpContentHeaders.ContentType.MediaType : string.Empty;
-			if (httpRequestHeaders.Contains(AcsDateHeader))
+			if (httpRequestHeaders.Contains(AbsDateHeader))
 			{
 				yield return "";
 			}
@@ -78,7 +78,7 @@ namespace ABServicios.Api
 			DateTime utcNow = DateTime.UtcNow;
 			DateTime date;
 			IEnumerable<string> dateStrings;
-			if (headers.TryGetValues(AcsDateHeader, out dateStrings))
+			if (headers.TryGetValues(AbsDateHeader, out dateStrings))
 			{
 				var dateString = dateStrings.FirstOrDefault();
 				if (!DateTime.TryParseExact(dateString, "r", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out date))

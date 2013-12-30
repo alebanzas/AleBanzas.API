@@ -1,5 +1,7 @@
 using System;
+using AB.Data;
 using AB.Data.Queries;
+using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.DataInterfaces.Queries;
 using ABServicios.BLL.Entities;
 using Castle.MicroKernel.Registration;
@@ -18,8 +20,8 @@ namespace AB.Wiring.Repositories
             RegisterEntityDao<VentaSUBE, Guid>();
             RegisterEntityDao<DolarHistorico, Guid>();
             RegisterEntityDao<Transporte, Guid>();
-            RegisterEntityDao<Application, int>();
 
+            RegisterInMemoryRepositories();
 			RegisterQueries();
 		}
 
@@ -28,5 +30,10 @@ namespace AB.Wiring.Repositories
             Container.Register(Component.For<IGetTransporteCercanoQuery>().ImplementedBy<GetTransporteCercanoQuery>());
             Container.Register(Component.For<IGetSUBECercanoQuery>().ImplementedBy<GetSUBECercanoQuery>());
 		}
+
+        protected virtual void RegisterInMemoryRepositories()
+        {
+            Container.Register(Component.For<IRepository<Application>>().ImplementedBy<InMemoryApplicationsRepository>());
+        }
 	}
 }
