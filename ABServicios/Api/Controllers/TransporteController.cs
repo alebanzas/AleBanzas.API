@@ -46,7 +46,7 @@ namespace ABServicios.Api.Controllers
         // GET api/<controller>/5
         [ApiAuthorize]
         [NeedDataBaseContext]
-        public IEnumerable<TransporteViewModel> Get(string linea, bool puntos = false)
+        public IEnumerable<TransporteViewModel> Get(double lat, double lon, string linea, bool puntos = false)
         {
             return _transportesRepo.Where(x => x.Linea == linea.ToUrl()).ToList().Select(x => x.ToTransporteViewModel(puntos));
         }
