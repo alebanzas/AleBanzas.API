@@ -23,6 +23,7 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>
+        [ApiAuthorize]
         [NeedDataBaseContext]
         public IEnumerable<TransporteViewModel> Get(int cant, bool puntos = false)
         {
@@ -35,6 +36,7 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>/5
+        [ApiAuthorize]
         [NeedDataBaseContext]
         public TransporteViewModel Get(Guid id, bool puntos = false)
         {
@@ -42,6 +44,7 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>/5
+        [ApiAuthorize]
         [NeedDataBaseContext]
         public IEnumerable<TransporteViewModel> Get(string linea, bool puntos = false)
         {
@@ -63,16 +66,19 @@ namespace ABServicios.Api.Controllers
         }
 
         // POST api/<controller>
+        [ApiAuthorize]
         public void Post([FromBody]string value)
         {
         }
 
         // PUT api/<controller>/5
+        [ApiAuthorize]
         public void Put(int id, [FromBody]string value)
         {
         }
 
         // DELETE api/<controller>/5
+        [ApiAuthorize]
         public void Delete(int id)
         {
         }
