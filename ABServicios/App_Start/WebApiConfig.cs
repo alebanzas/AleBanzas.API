@@ -17,7 +17,7 @@ namespace ABServicios
             config.Routes.MapHttpRoute(
                     name: "DefaultApi",
                     routeTemplate: "api/{controller}/{id}",
-                    defaults: new { id = RouteParameter.Optional },
+                    defaults: new { id = RouteParameter.Optional, lat = RouteParameter.Optional, lon = RouteParameter.Optional },
                     constraints: null,
                     handler: new HmacAuthenticationHandler(ServiceLocator.Current.GetInstance<IRepository<Application>>()) { InnerHandler = new HttpControllerDispatcher(config) }
             );
