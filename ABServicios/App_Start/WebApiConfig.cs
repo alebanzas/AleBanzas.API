@@ -19,7 +19,13 @@ namespace ABServicios
                     routeTemplate: "api/{controller}/{id}",
                     defaults: new { id = RouteParameter.Optional, lat = RouteParameter.Optional, lon = RouteParameter.Optional },
                     constraints: null,
-                    handler: new HmacAuthenticationHandler(ServiceLocator.Current.GetInstance<IRepository<Application>>()) { InnerHandler = new HttpControllerDispatcher(config) }
+                    handler: new AccessLogHandler
+                    {
+                        InnerHandler = new HmacAuthenticationHandler(ServiceLocator.Current.GetInstance<IRepository<Application>>())
+                        {
+                            InnerHandler = new HttpControllerDispatcher(config)
+                        }
+                    }
             );
             var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
             json.MediaTypeMappings.Clear();
