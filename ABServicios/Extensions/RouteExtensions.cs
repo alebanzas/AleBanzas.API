@@ -26,12 +26,22 @@ namespace ABServicios.Extensions
             {
                 string virtualPath = _redirectUrl.Substring(2);
                 var route = new Route(virtualPath, null);
-                var vpd = route.GetVirtualPath(requestContext,
-                    requestContext.RouteData.Values);
+                var vpd = route.GetVirtualPath(requestContext, requestContext.RouteData.Values);
                 if (vpd != null)
                 {
                     _redirectUrl = "~/" + vpd.VirtualPath;
                 }
+            }
+
+            if (requestContext.HttpContext.Request.Url != null)
+            {
+                if (_redirectUrl.Split('?').Length == 2)
+                {
+                    _redirectUrl = _redirectUrl.Split('?')[0];
+                }
+
+                if (requestContext.HttpContext.Request.Url.PathAndQuery.Split('?').Length > 1)
+                    _redirectUrl += "?" + requestContext.HttpContext.Request.Url.PathAndQuery.Split('?')[1];
             }
 
             return new RedirectHandler(_redirectUrl, false);
