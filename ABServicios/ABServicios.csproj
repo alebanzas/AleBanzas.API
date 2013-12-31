@@ -237,6 +237,7 @@
     <Compile Include="Api\Extensions\CoordinatesExtensions.cs" />
     <Compile Include="Api\Extensions\TransporteExtensions.cs" />
     <Compile Include="Api\FormattingConfiguration.cs" />
+    <Compile Include="Api\AccessLogHandler.cs" />
     <Compile Include="Api\HmacAuthenticationHandler.cs" />
     <Compile Include="Api\HmacHelpers.cs" />
     <Compile Include="Api\HttpRequestExtensions.cs" />
