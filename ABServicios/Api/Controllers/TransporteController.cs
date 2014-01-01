@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web.Http;
 using AB.Common.Helpers;
 using ABServicios.Api.Binders;
 using ABServicios.Api.Extensions;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.DataInterfaces.Queries;
+using ABServicios.BLL.EmbeddedRepositories;
 using ABServicios.BLL.Entities;
 using Microsoft.Practices.ServiceLocation;
 using NetTopologySuite.Geometries;
@@ -31,6 +33,10 @@ namespace ABServicios.Api.Controllers
             {
                 cant = 100;
             }
+            if (!ExtendedTypeResponseAllowed(ApplicationsRoles.Transporte))
+            {
+                puntos = false;
+            }
 
             return _transportesRepo.Take(cant).ToList().Select(x => x.ToTransporteViewModel(puntos));
         }
@@ -40,6 +46,10 @@ namespace ABServicios.Api.Controllers
         [NeedDataBaseContext]
         public TransporteViewModel Get(Guid id, bool puntos = false)
         {
+            if (!ExtendedTypeResponseAllowed(ApplicationsRoles.Transporte))
+            {
+                puntos = false;
+            }
             return _transportesRepo.FirstOrDefault(x => x.ID == id).ToTransporteViewModel(puntos);
         }
 
@@ -48,6 +58,10 @@ namespace ABServicios.Api.Controllers
         [NeedDataBaseContext]
         public IEnumerable<TransporteViewModel> Get(double lat, double lon, string linea, bool puntos = false)
         {
+            if (!ExtendedTypeResponseAllowed(ApplicationsRoles.Transporte))
+            {
+                puntos = false;
+            }
             return _transportesRepo.Where(x => x.Linea == linea.ToUrl()).ToList().Select(x => x.ToTransporteViewModel(puntos));
         }
 
@@ -56,6 +70,11 @@ namespace ABServicios.Api.Controllers
         public IEnumerable<TransporteViewModel> Get(double lat, double lon, int cant = int.MaxValue,
             int caminar = 800, bool puntos = false)
         {
+            if (!ExtendedTypeResponseAllowed(ApplicationsRoles.Transporte))
+            {
+                puntos = false;
+            }
+
             var query = ServiceLocator.Current.GetInstance<IGetTransporteCercanoQuery>();
 
             var list = query.GetMasCercanos(new Point(lon, lat), caminar);
@@ -81,6 +100,12 @@ namespace ABServicios.Api.Controllers
         [ApiAuthorize]
         public void Delete(int id)
         {
+        }
+
+        protected bool ExtendedTypeResponseAllowed(string role)
+        {
+            var currentPrincipal = Thread.CurrentPrincipal;
+            return currentPrincipal != null && currentPrincipal.IsInRole(role);
         }
     }
 }
