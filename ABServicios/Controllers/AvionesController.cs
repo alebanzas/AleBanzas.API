@@ -140,10 +140,12 @@ namespace ABServicios.Controllers
 
         public static AvionesTerminalStatusModel GetModel(TerminalAerea terminal)
         {
+            var dateString = string.Format("{0}/{1}/{2}", DateTime.UtcNow.AddHours(-3).Year, DateTime.UtcNow.AddHours(-3).Month, DateTime.UtcNow.AddHours(-3).Day);
+
             HtmlNode html = new Scraper(Encoding.UTF7, "http://www.aa2000.com.ar/").GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/arribose.aspx?qA=" + terminal.NickName));
 
             var httpClient = new HttpClient();
-            var result = httpClient.PostAsJsonAsync("http://www.aa2000.com.ar/vuelos/arribose.aspx/cbverestado", new { aeropuerto = terminal.NickName, aerolinea = "...", procedencia = "...", vuelo = "", fecha = string.Format("{0}/{1}/{2}", DateTime.UtcNow.Day, DateTime.UtcNow.Month, DateTime.UtcNow.Year) }).Result;
+            var result = httpClient.PostAsJsonAsync("http://www.aa2000.com.ar/vuelos/arribose.aspx/cbverestado", new { aeropuerto = terminal.NickName, aerolinea = "...", procedencia = "...", vuelo = "", fecha = string.Format("{0}/{1}/{2}", DateTime.UtcNow.AddHours(-3).Day, DateTime.UtcNow.AddHours(-3).Month, DateTime.UtcNow.AddHours(-3).Year) }).Result;
 
             var estados = GetEstadosFromService(result);
 
@@ -192,7 +194,7 @@ namespace ABServicios.Controllers
                 {
                     //23:10
                     DateTime dateTime;
-                    arribo.Hora = DateTime.TryParse(vueloHora.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : DateTime.MinValue;
+                    arribo.Hora = DateTime.TryParse(dateString + " " + vueloHora.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : DateTime.MinValue;
                 }
 
                 var vueloEstima = vuelo.CssSelect("td.a5").FirstOrDefault();
@@ -200,7 +202,7 @@ namespace ABServicios.Controllers
                 {
                     //03:30
                     DateTime dateTime;
-                    arribo.Estima = DateTime.TryParse(vueloEstima.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?) null;
+                    arribo.Estima = DateTime.TryParse(dateString + " " + vueloEstima.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?)null;
                 }
 
                 var vueloArribo = vuelo.CssSelect("td.a6").FirstOrDefault();
@@ -208,7 +210,7 @@ namespace ABServicios.Controllers
                 {
                     //03:30
                     DateTime dateTime;
-                    arribo.Arribo = DateTime.TryParse(vueloArribo.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?) null;
+                    arribo.Arribo = DateTime.TryParse(dateString + " " + vueloArribo.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?)null;
                 }
 
                 var vueloTerminal = vuelo.CssSelect("td.a7").FirstOrDefault();
@@ -279,7 +281,7 @@ namespace ABServicios.Controllers
                 {
                     //03:30
                     DateTime dateTime;
-                    partida.Estima = DateTime.TryParse(vueloEstima.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?)null;
+                    partida.Estima = DateTime.TryParse(dateString + " " + vueloEstima.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?)null;
                 }
 
                 var vueloArribo = vuelo.CssSelect("td.a6").FirstOrDefault();
@@ -287,7 +289,7 @@ namespace ABServicios.Controllers
                 {
                     //03:30
                     DateTime dateTime;
-                    partida.Partida = DateTime.TryParse(vueloArribo.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?)null;
+                    partida.Partida = DateTime.TryParse(dateString + " " + vueloArribo.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?)null;
                 }
                 
                 var vueloTerminal = vuelo.CssSelect("td.a7").FirstOrDefault();
