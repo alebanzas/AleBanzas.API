@@ -58,7 +58,7 @@ namespace ABServicios.Api.Controllers
         // GET api/<controller>/rofex
         [System.Web.Http.HttpGet]
         [System.Web.Http.ActionName("Rofex")]
-        public DivisaModel Rofex(string id)
+        public DivisaModel Rofex()
         {
             return CotizacionesRofexCollection;
         }
