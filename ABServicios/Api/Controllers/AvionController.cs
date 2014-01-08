@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using System.Web.Caching;
-using System.Web.Mvc;
+using System.Web.Http;
+using ABServicios.Api.Extensions;
 using ABServicios.BLL.Entities;
 using ABServicios.Extensions;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
 using ScrapySharp.Extensions;
+using System.Web.Caching;
 
-namespace ABServicios.Controllers
+namespace ABServicios.Api.Controllers
 {
-    public class AvionesController : BaseController
+    public class AvionController : ApiController
     {
-        private readonly WebCache cache = new WebCache();
+        private readonly WebCache _cache = new WebCache();
         public static string CacheControlKey = "AvionesControl";
         private static string GetCacheKey(string nickName)
         {
@@ -33,109 +33,104 @@ namespace ABServicios.Controllers
                 return new AvionesTerminalStatusModel();
             }
         }
-
-        //
-        // GET: /Aviones/
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="t">siglas de terminales</param>
-        /// <param name="version">(opcional)</param>
-        /// <param name="type">(opcional)</param>
-        /// <returns></returns>
-        public ActionResult Index(List<string> t, string version = "1", string type = "ALL")
+        // GET api/<controller>
+        public List<AvionesTerminalStatusModel> Get(List<string> t)
         {
-            if (t == null) return new HttpNotFoundResult();
+            if (t == null) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
 
-            var result = t.Select(ta => (AvionesTerminalStatusModel) (cache.Get<AvionesTerminalStatusModel>(GetCacheKey(ta)) ?? DefaultModel)).ToList();
+            var result = t.Select(ta => (_cache.Get<AvionesTerminalStatusModel>(GetCacheKey(ta)) ?? DefaultModel)).ToList();
 
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return result;
         }
 
-        
-        //
-        // GET: /Subte/Start
-        public ActionResult FirstStart()
+        // GET api/<controller>/partidas
+        [HttpGet]
+        [ActionName("Partidas")]
+        public AvionesTerminalStatusModel Partidas(string t)
         {
-            var terminalAerea = TerminalesAereas.Ezeiza;
-            var result = GetModel(terminalAerea);
+            if (string.IsNullOrWhiteSpace(t)) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
 
-            cache.Put(GetCacheKey(terminalAerea.NickName), result, new TimeSpan(1, 0, 0, 0));
+            var terminal = TerminalesAereas.ByNickName(t);
 
-            return new EmptyResult();
+            if (terminal == null) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
+
+            var result = _cache.Get<AvionesTerminalStatusModel>(GetCacheKey(terminal.NickName));
+
+            if (result == null) //busco datos y lleno la cache
+            {
+                result = GetModel(terminal);
+
+                _cache.Put(GetCacheKey(terminal.NickName), result, new TimeSpan(0, 2, 0));
+            }
+
+            return result.ToPartidas();
         }
 
-        //
-        // GET: /Subte/Start
-        public ActionResult Start()
+        // GET api/<controller>/arribos
+        [HttpGet]
+        [ActionName("Arribos")]
+        public AvionesTerminalStatusModel Arribos(string t)
         {
-            cache.Put(CacheControlKey, new AvionesTerminalStatusModel(), new TimeSpan(0, 2, 0), CacheItemPriority.NotRemovable,
-                (key, value, reason) =>
+            if (string.IsNullOrWhiteSpace(t)) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
+            
+            var terminal = TerminalesAereas.ByNickName(t);
+
+            if (terminal == null) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
+
+            var result = _cache.Get<AvionesTerminalStatusModel>(GetCacheKey(terminal.NickName));
+
+            if (result == null) //busco datos y lleno la cache
+            {
+                result = GetModel(terminal);
+
+                _cache.Put(GetCacheKey(terminal.NickName), result, new TimeSpan(0, 2, 0));
+            }
+
+            return result.ToArribos();
+        }
+
+        // POST api/<controller>
+        public void Post([FromBody]string value)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+        // PUT api/<controller>/5
+        public void Put(int id, [FromBody]string value)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+        // DELETE api/<controller>/5
+        public void Delete(int id)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+        private void Refresh()
+        {
+            _cache.Put(CacheControlKey, new AvionesTerminalStatusModel(), new TimeSpan(0, 2, 0), CacheItemPriority.NotRemovable, (key, value, reason) => Start());
+        }
+
+        public void Start()
+        {
+            try
+            {
+                foreach (var terminalAerea in TerminalesAereas.Repository)
                 {
-                    try
-                    {
-                        foreach (var terminalAerea in TerminalesAereas.Repository)
-                        {
-                            var result = GetModel(terminalAerea);
+                    var result = GetModel(terminalAerea);
 
-                            cache.Put(GetCacheKey(terminalAerea.NickName), result, new TimeSpan(1, 0, 0, 0));
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        ex.Log();
-                    }
-                    finally
-                    {
-                        Start();
-                    }
-                });
-
-            return Json(DefaultModel, JsonRequestBehavior.AllowGet);
-        }
-
-        public ActionResult Partidas(string t, string version = "1", string type = "ALL")
-        {
-            if (string.IsNullOrWhiteSpace(t)) return new HttpNotFoundResult();
-
-            var cache = new WebCache();
-
-            var terminal = TerminalesAereas.ByNickName(t);
-
-            if (terminal == null) return new HttpNotFoundResult();
-
-            var result = cache.Get<AvionesTerminalStatusModel>(GetCacheKey(terminal.NickName));
-
-            if (result == null) //busco datos y lleno la cache
-            {
-                result = GetModel(terminal);
-
-                cache.Put(GetCacheKey(terminal.NickName), result, new TimeSpan(0, 2, 0));
+                    _cache.Put(GetCacheKey(terminalAerea.NickName), result, new TimeSpan(1, 0, 0, 0));
+                }
             }
-
-            return Json(result.ToPartidas(), JsonRequestBehavior.AllowGet);
-        }
-
-        public ActionResult Arribos(string t, string version = "1", string type = "ALL")
-        {
-            if (string.IsNullOrWhiteSpace(t)) return new HttpNotFoundResult();
-
-            var cache = new WebCache();
-
-            var terminal = TerminalesAereas.ByNickName(t);
-
-            if (terminal == null) return new HttpNotFoundResult();
-
-            var result = cache.Get<AvionesTerminalStatusModel>(GetCacheKey(terminal.NickName));
-
-            if (result == null) //busco datos y lleno la cache
+            catch (Exception ex)
             {
-                result = GetModel(terminal);
-
-                cache.Put(GetCacheKey(terminal.NickName), result, new TimeSpan(0, 2, 0));
+                ex.Log();
             }
-
-            return Json(result.ToArribos(), JsonRequestBehavior.AllowGet);
+            finally
+            {
+                Refresh();
+            }
         }
 
         public static AvionesTerminalStatusModel GetModel(TerminalAerea terminal)
@@ -165,7 +160,7 @@ namespace ABServicios.Controllers
                                            ? lineaName.Attributes["alt"].Value.Replace("&nbsp;", "")
                                            : null)
                                     : null;
-                
+
                 var vueloId = vuelo.CssSelect("td.a2 a").FirstOrDefault();
                 if (vueloId != null)
                 {
@@ -222,7 +217,7 @@ namespace ABServicios.Controllers
 
                 var vueloEstado = vuelo.CssSelect("td.a8").FirstOrDefault();
                 arribo.Estado = GetEstadoFinalArribos(vueloEstado, estados);
-                
+
                 vueloArriboModels.Add(arribo);
             }
 
@@ -236,7 +231,7 @@ namespace ABServicios.Controllers
             foreach (var vuelo in script)
             {
                 var partida = new VueloPartidaModel();
-                
+
                 var lineaName = vuelo.CssSelect("td.a1 img.imgAirline").FirstOrDefault();
                 partida.Linea = lineaName != null
                                     ? (!string.IsNullOrWhiteSpace(lineaName.Attributes["alt"].Value.Replace("&nbsp;", ""))
@@ -291,7 +286,7 @@ namespace ABServicios.Controllers
                     DateTime dateTime;
                     partida.Partida = DateTime.TryParse(dateString + " " + vueloArribo.InnerText, culture, DateTimeStyles.None, out dateTime) ? dateTime : (DateTime?)null;
                 }
-                
+
                 var vueloTerminal = vuelo.CssSelect("td.a7").FirstOrDefault();
                 partida.Terminal = vueloTerminal != null
                                     ? (!string.IsNullOrWhiteSpace(vueloTerminal.InnerText.Replace("&nbsp;", ""))
@@ -311,19 +306,19 @@ namespace ABServicios.Controllers
             }
 
             return new AvionesTerminalStatusModel
-                {
-                    Actualizacion = DateTime.UtcNow,
-                    NickName = terminal.NickName,
-                    Nombre = terminal.Nombre,
-                    Arribos = vueloArriboModels,
-                    Partidas = vueloPartidaModels,
-                };
+            {
+                Actualizacion = DateTime.UtcNow,
+                NickName = terminal.NickName,
+                Nombre = terminal.Nombre,
+                Arribos = vueloArriboModels,
+                Partidas = vueloPartidaModels,
+            };
         }
 
         private static string GetEstadoFinalArribos(HtmlNode vueloEstado, Dictionary<string, string> estados)
         {
             var span = vueloEstado.CssSelect("span").FirstOrDefault();
-            
+
             if (span == null) return "No disponible";
 
             var idVuelo = span.GetAttributeValue("id", "");
@@ -341,33 +336,8 @@ namespace ABServicios.Controllers
             }
             catch (Exception)
             { }
-            
+
             return new Dictionary<string, string>();
-        }
-    }
-
-    public static class AvionesStatusModelExtensions
-    {
-        public static AvionesTerminalStatusModel ToArribos(this AvionesTerminalStatusModel source)
-        {
-            return new AvionesTerminalStatusModel
-            {
-                Actualizacion = source.Actualizacion,
-                NickName = source.NickName,
-                Arribos = source.Arribos,
-                Nombre = source.Nombre,
-            };
-        }
-
-        public static AvionesTerminalStatusModel ToPartidas(this AvionesTerminalStatusModel source)
-        {
-            return new AvionesTerminalStatusModel
-            {
-                Actualizacion = source.Actualizacion,
-                NickName = source.NickName,
-                Partidas = source.Partidas,
-                Nombre = source.Nombre,
-            };
         }
     }
 }

@@ -10,7 +10,7 @@ namespace ABServicios
             new SubteController().Start();
             new TrenController().Start();
             new BicicletaController().Start();
-            new AvionesController().Start();
+            new AvionController().Start();
             new CotizacionController().Start();
         }
     }
