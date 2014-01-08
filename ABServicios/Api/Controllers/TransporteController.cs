@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading;
 using System.Web.Http;
 using AB.Common.Helpers;
 using ABServicios.Api.Binders;
 using ABServicios.Api.Extensions;
+using ABServicios.Api.Models;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.DataInterfaces.Queries;
-using ABServicios.BLL.EmbeddedRepositories;
 using ABServicios.BLL.Entities;
 using Microsoft.Practices.ServiceLocation;
 using NetTopologySuite.Geometries;
@@ -88,18 +89,21 @@ namespace ABServicios.Api.Controllers
         [ApiAuthorize]
         public void Post([FromBody]string value)
         {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
         // PUT api/<controller>/5
         [ApiAuthorize]
         public void Put(int id, [FromBody]string value)
         {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
         // DELETE api/<controller>/5
         [ApiAuthorize]
         public void Delete(int id)
         {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
         protected bool ExtendedTypeResponseAllowed(string role)

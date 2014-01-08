@@ -2,86 +2,73 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Web.Caching;
-using System.Web.Mvc;
+using System.Web.Http;
 using ABServicios.Extensions;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
 using ScrapySharp.Extensions;
 
-namespace ABServicios.Controllers
+namespace ABServicios.Api.Controllers
 {
-    public class BicicletasController : BaseController
+    public class BicicletaController : ApiController
     {
         private readonly WebCache cache = new WebCache();
         public static string CacheKey = "Bicicletas";
         public static string CacheControlKey = "BicicletasControl";
         private static readonly BicicletasStatusModel DefaultModel = new BicicletasStatusModel
-            {
-                Actualizacion = DateTime.UtcNow,
-                Estaciones = new List<BicicletaEstacion>(),
-            };
-
-        //
-        // GET: /Bicicletas/
-
-        public ActionResult Index(string version = "1", string type = "ALL")
         {
-            return Json(cache.Get<BicicletasStatusModel>(CacheKey) ?? DefaultModel, JsonRequestBehavior.AllowGet);
+            Actualizacion = DateTime.UtcNow,
+            Estaciones = new List<BicicletaEstacion>(),
+        };
+
+        // GET api/<controller>
+        public BicicletasStatusModel Get()
+        {
+            return cache.Get<BicicletasStatusModel>(CacheKey) ?? DefaultModel;
+        }
+        
+        // POST api/<controller>
+        public void Post([FromBody]string value)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
-        //
-        // GET: /Bicicletas/FirstStart
-        public ActionResult FirstStart()
+        // PUT api/<controller>/5
+        public void Put(int id, [FromBody]string value)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+        // DELETE api/<controller>/5
+        public void Delete(int id)
+        {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
+        }
+
+        private void Refresh()
+        {
+            cache.Put(CacheControlKey, new BicicletasStatusModel(), new TimeSpan(0, 2, 0), CacheItemPriority.NotRemovable, (key, value, reason) => Start());
+        }
+
+        public void Start()
         {
             try
             {
-                cache.Put(CacheKey, GetModel(), new TimeSpan(1, 0, 0, 0));
+                var result = GetModel();
+                cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
             }
             catch (Exception ex)
             {
                 ex.Log();
             }
-
-            return Start();
+            finally
+            {
+                Refresh();
+            }
         }
-        
-        //
-        // GET: /Bicicletas/Start
-        public ActionResult Start()
-        {
-            cache.Put(CacheControlKey, new BicicletasStatusModel(), new TimeSpan(0, 3, 0), CacheItemPriority.NotRemovable,
-                (key, value, reason) =>
-                {
-                    try
-                    {
-                        var result = GetModel();
-                        cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
-                    }
-                    catch (Exception ex)
-                    {
-                        ex.Log();
-                    }
-                    finally
-                    {
-                        Start();
-                    }
-                });
-
-            return Json(cache.Get<BicicletasStatusModel>(CacheKey), JsonRequestBehavior.AllowGet);
-        }
-
-        //
-        // GET: /Bicicletas/Message
-
-        public ActionResult Message(string version = "1", string type = "ALL")
-        {
-            dynamic result = new { Message = "" };
-
-            return Json(result, JsonRequestBehavior.AllowGet);
-        }
-
 
         public static BicicletasStatusModel GetModel()
         {
@@ -140,23 +127,23 @@ namespace ABServicios.Controllers
                 }
 
                 var estacion = new BicicletaEstacion
-                    {
-                        Latitud = lat,
-                        Longitud = lon,
-                        Nombre = nombre,
-                        Estado = estado,
-                        Horario = horario,
-                        Cantidad = cantidad
-                    };
+                {
+                    Latitud = lat,
+                    Longitud = lon,
+                    Nombre = nombre,
+                    Estado = estado,
+                    Horario = horario,
+                    Cantidad = cantidad
+                };
 
                 estaciones.Add(estacion);
             }
 
             return new BicicletasStatusModel
-                {
-                    Actualizacion = DateTime.UtcNow,
-                    Estaciones = estaciones,
-                };
+            {
+                Actualizacion = DateTime.UtcNow,
+                Estaciones = estaciones,
+            };
         }
 
         private static string GetEstadoByCantidad(int cantidad)

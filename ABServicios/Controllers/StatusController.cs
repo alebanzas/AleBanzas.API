@@ -34,7 +34,7 @@ namespace ABServicios.Controllers
                 (new SubteController()).Get();
                 (new TrenController()).Get();
                 (new CotizacionController()).Get();
-                (new BicicletasController()).Index();
+                (new BicicletaController()).Get();
                 (new SUBEController()).RecargaAll();
                 (new SUBEController()).VentaAll();
             }

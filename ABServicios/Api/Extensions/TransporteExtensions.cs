@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using AB.Common.Helpers;
-using ABServicios.Api.Controllers;
+using ABServicios.Api.Models;
 using ABServicios.BLL.Entities;
 
 namespace ABServicios.Api.Extensions
