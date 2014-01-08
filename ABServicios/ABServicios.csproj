@@ -229,6 +229,7 @@
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
     <Compile Include="Api\Binders\NeedDataBaseContextAttribute.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
+    <Compile Include="Api\Controllers\BicicletaController.cs" />
     <Compile Include="Api\Controllers\CotizacionController.cs" />
     <Compile Include="Api\Controllers\SubteController.cs" />
     <Compile Include="Api\Controllers\TestController.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="Api\HmacAuthenticationHandler.cs" />
     <Compile Include="Api\HmacHelpers.cs" />
     <Compile Include="Api\HttpRequestExtensions.cs" />
+    <Compile Include="Api\Models\TransporteViewModel.cs" />
     <Compile Include="Api\TaskHelpers.cs" />
     <Compile Include="App_Start\DataConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -251,7 +253,6 @@
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
     <Compile Include="Controllers\AvionesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\BicicletasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\LicenseController.cs" />

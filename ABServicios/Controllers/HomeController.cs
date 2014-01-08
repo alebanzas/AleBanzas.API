@@ -17,7 +17,7 @@ namespace ABServicios.Controllers
         {
             var cache = new WebCache();
 
-            cache.Evict<BicicletasStatusModel>(BicicletasController.CacheKey);
+            cache.Evict<BicicletasStatusModel>(BicicletaController.CacheKey);
 
             cache.Evict<TrenesStatusModel>(TrenController.CacheKey);
 

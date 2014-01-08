@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using ABServicios.Api.Controllers;
+using ABServicios.Api.Models;
 using GeoAPI.Geometries;
 
 namespace ABServicios.Api.Extensions
