@@ -15,6 +15,8 @@ namespace ABServicios
             routes.Redirect("divisa/rofex", "/api/cotizacion/rofex");
             routes.Redirect("transporte/cercano", "/api/transporte/");
             routes.Redirect("transporte/porlinea", "/api/transporte/");
+            routes.Redirect("sube/recarganear", "/api/recargasube/");
+            routes.Redirect("sube/ventanear", "/api/ventasube/");
 
             routes.MapRoute(
                 name: "Default",

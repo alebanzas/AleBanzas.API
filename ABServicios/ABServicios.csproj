@@ -234,6 +234,8 @@
     <Compile Include="Api\Controllers\TestController.cs" />
     <Compile Include="Api\Controllers\TransporteController.cs" />
     <Compile Include="Api\Controllers\TrenController.cs" />
+    <Compile Include="Api\Controllers\RecargaSubeController.cs" />
+    <Compile Include="Api\Controllers\VentaSubeController.cs" />
     <Compile Include="Api\Extensions\CoordinatesExtensions.cs" />
     <Compile Include="Api\Extensions\TransporteExtensions.cs" />
     <Compile Include="Api\FormattingConfiguration.cs" />
@@ -254,10 +256,11 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
-    <Compile Include="Controllers\LicenseController.cs" />
+    <Compile Include="Api\Models\RecargaSUBEViewModel.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\StatusController.cs" />
-    <Compile Include="Controllers\SUBEController.cs" />
+    <Compile Include="Api\Extensions\SUBEExtensions.cs" />
+    <Compile Include="Api\Models\VentaSUBEViewModel.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\RouteExtensions.cs" />
     <Compile Include="Global.asax.cs">
