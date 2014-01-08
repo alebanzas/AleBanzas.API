@@ -268,7 +268,7 @@ namespace ABServicios.Api.Controllers
                     //24/07 23:10
                     var a = vueloHora.InnerText.Split(' ');
                     var b = string.Format("{0}/{1} {2}", a[0], DateTime.UtcNow.AddHours(-3).Year, a[1]);
-                    partida.Hora = DateTime.Parse(b, culture).ToUniversalTime();
+                    partida.Hora = DateTime.Parse(b, culture);
                 }
 
                 var vueloEstima = vuelo.CssSelect("td.a5").FirstOrDefault();
