@@ -223,7 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\ABServiciosHmacBuilder.cs" />
-    <Compile Include="Api\ActionFilters\AccessLogActionFilter.cs" />
     <Compile Include="Api\ApiAuthorizeAttribute.cs" />
     <Compile Include="Api\Binders\FromHeaderAttribute.cs" />
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
@@ -323,6 +322,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Api\ActionFilters\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

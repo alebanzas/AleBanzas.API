@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Web.Caching;
 using System.Web.Http;
-using ABServicios.Api.ActionFilters;
 using ABServicios.Api.Models;
 using ABServicios.Extensions;
 using ABServicios.Services;
@@ -13,8 +12,6 @@ using ScrapySharp.Extensions;
 
 namespace ABServicios.Api.Controllers
 {
-
-    [AccessLog]
     public class TrenController : ApiController
     {
         public static WebCache cache = new WebCache();

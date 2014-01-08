@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ABServicios.Controllers;
+﻿using ABServicios.Api.Controllers;
 using NUnit.Framework;
-using ABServicios.Models;
 
 namespace ABServicios.Data.Tests.Scraping
 {
@@ -13,7 +8,7 @@ namespace ABServicios.Data.Tests.Scraping
         [Test]
         public void WhenGetBicicletasModel()
         {
-            var model = BicicletasController.GetModel();
+            var model = BicicletaController.GetModel();
 
         }
     }
