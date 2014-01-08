@@ -258,7 +258,6 @@
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Controllers\SUBEController.cs" />
-    <Compile Include="Api\Controllers\_TransporteController.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\RouteExtensions.cs" />
     <Compile Include="Global.asax.cs">
