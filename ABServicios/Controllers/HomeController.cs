@@ -18,11 +18,8 @@ namespace ABServicios.Controllers
             var cache = new WebCache();
 
             cache.Evict<BicicletasStatusModel>(BicicletaController.CacheKey);
-
             cache.Evict<TrenesStatusModel>(TrenController.CacheKey);
-
             cache.Evict<SubteStatusModel>(SubteController.CacheKey);
-
             cache.Evict<DivisaModel>(CotizacionController.CacheKey);
             cache.Evict<DivisaModel>(CotizacionController.CacheKeyRofex);
             
