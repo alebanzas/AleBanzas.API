@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Text;
 using System.Web.Caching;
 using System.Web.Http;
 using System.Web.Mvc;
-using ABServicios.Api.ActionFilters;
 using ABServicios.Api.Models;
 using ABServicios.Attributes;
 using ABServicios.BLL.DataInterfaces;
@@ -21,7 +19,6 @@ using ScrapySharp.Extensions;
 
 namespace ABServicios.Api.Controllers
 {
-    [AccessLog]
     public class CotizacionController : ApiController
     {
         private readonly WebCache cache = new WebCache();

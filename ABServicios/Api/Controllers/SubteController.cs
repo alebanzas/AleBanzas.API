@@ -5,18 +5,14 @@ using System.Net;
 using System.Text;
 using System.Web.Caching;
 using System.Web.Http;
-using ABServicios.Api.ActionFilters;
 using ABServicios.Api.Models;
 using ABServicios.Extensions;
-using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;
 using ScrapySharp.Extensions;
 
 namespace ABServicios.Api.Controllers
 {
-
-    [AccessLog]
     public class SubteController : ApiController
     {
         private readonly WebCache cache = new WebCache();
