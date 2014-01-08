@@ -227,6 +227,8 @@
     <Compile Include="Api\Binders\FromHeaderAttribute.cs" />
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
     <Compile Include="Api\Binders\NeedDataBaseContextAttribute.cs" />
+    <Compile Include="Api\Controllers\AvionController.cs" />
+    <Compile Include="Api\Extensions\AvionesStatusModelExtensions.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
     <Compile Include="Api\Controllers\BicicletaController.cs" />
     <Compile Include="Api\Controllers\CotizacionController.cs" />
@@ -252,7 +254,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
-    <Compile Include="Controllers\AvionesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />

@@ -14,6 +14,21 @@ namespace ABServicios
     {
         public static void Register(HttpConfiguration config)
         {
+
+            config.Routes.MapHttpRoute(
+                    name: "DefaultActionApi",
+                    routeTemplate: "api/{controller}/{action}/{id}",
+                    defaults: new { id = RouteParameter.Optional, lat = RouteParameter.Optional, lon = RouteParameter.Optional },
+                    constraints: null,
+                    handler: new AccessLogHandler
+                    {
+                        InnerHandler = new HmacAuthenticationHandler(ServiceLocator.Current.GetInstance<IRepository<Application>>())
+                        {
+                            InnerHandler = new HttpControllerDispatcher(config)
+                        }
+                    }
+            );
+
             config.Routes.MapHttpRoute(
                     name: "DefaultApi",
                     routeTemplate: "api/{controller}/{id}",
@@ -27,6 +42,7 @@ namespace ABServicios
                         }
                     }
             );
+
             var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
             json.MediaTypeMappings.Clear();
             foreach (var minetype in FormattingConfiguration.ContentTypesJsonEnabled())
