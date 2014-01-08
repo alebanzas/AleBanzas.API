@@ -11,7 +11,7 @@ namespace ABServicios
             routes.Redirect("subte", "/api/subte");
             routes.Redirect("trenes", "/api/tren");
             routes.Redirect("bicicletas", "/api/bicicleta");
-            routes.Redirect("divisa", "/api/cotizacion");
+            routes.Redirect("divisa", "/api/cotizacion/divisas");
             routes.Redirect("divisa/rofex", "/api/cotizacion/rofex");
             routes.Redirect("transporte/cercano", "/api/transporte/");
             routes.Redirect("transporte/porlinea", "/api/transporte/");

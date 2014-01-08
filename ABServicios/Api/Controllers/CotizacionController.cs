@@ -21,7 +21,7 @@ namespace ABServicios.Api.Controllers
 {
     public class CotizacionController : ApiController
     {
-        private readonly WebCache cache = new WebCache();
+        private readonly WebCache _cache = new WebCache();
         public static string CacheKey = "Divisa";
         public static string CacheKeyRofex = "DivisaRofex";
         public static string CacheControlKey = "DivisaControl";
@@ -35,12 +35,12 @@ namespace ABServicios.Api.Controllers
 
         private DivisaModel CotizacionesCollection
         {
-            get { return cache.Get<DivisaModel>(CacheKey) ?? DefaultModel; }
+            get { return _cache.Get<DivisaModel>(CacheKey) ?? DefaultModel; }
         }
 
         private DivisaModel CotizacionesRofexCollection
         {
-            get { return cache.Get<DivisaModel>(CacheKeyRofex) ?? DefaultModel; }
+            get { return _cache.Get<DivisaModel>(CacheKeyRofex) ?? DefaultModel; }
         }
 
 
@@ -49,8 +49,10 @@ namespace ABServicios.Api.Controllers
             _dolarRepo = ServiceLocator.Current.GetInstance<IRepository<DolarHistorico>>();
         }
 
-        // GET api/<controller>
-        public DivisaModel Get()
+        // GET api/<controller>/divisas
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.ActionName("Divisas")]
+        public DivisaModel Divisas()
         {
             return CotizacionesCollection;
         }
@@ -64,6 +66,7 @@ namespace ABServicios.Api.Controllers
         }
         
         // POST api/<controller>
+        [ApiAuthorize]
         [NeedRelationalPersistence]
         public HttpStatusCodeResult Post(DateTime date, double compra, double venta, int tipoMoneda = 1)
         {
@@ -100,7 +103,7 @@ namespace ABServicios.Api.Controllers
 
         private void Refresh()
         {
-            cache.Put(CacheControlKey, new DivisaModel(), new TimeSpan(0, 20, 0), CacheItemPriority.NotRemovable, (key, value, reason) => Start());
+            _cache.Put(CacheControlKey, new DivisaModel(), new TimeSpan(0, 20, 0), CacheItemPriority.NotRemovable, (key, value, reason) => Start());
 
         }
 
@@ -109,10 +112,10 @@ namespace ABServicios.Api.Controllers
             try
             {
                 var result = GetModel();
-                cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
+                _cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
 
                 var rresult = GetRofexModel();
-                cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
+                _cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
             }
             catch (Exception ex)
             {

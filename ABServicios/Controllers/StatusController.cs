@@ -33,7 +33,7 @@ namespace ABServicios.Controllers
             {
                 (new SubteController()).Get();
                 (new TrenController()).Get();
-                (new CotizacionController()).Get();
+                (new CotizacionController()).Divisas();
                 (new BicicletaController()).Get();
                 (new RecargaSubeController()).Get(-54, -38, 10);
                 (new VentaSubeController()).Get(-54, -38, 10);
