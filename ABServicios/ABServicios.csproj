@@ -175,12 +175,6 @@
     <Reference Include="System.Web.Http.WebHost">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -228,6 +222,8 @@
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
     <Compile Include="Api\Binders\NeedDataBaseContextAttribute.cs" />
     <Compile Include="Api\Controllers\AvionController.cs" />
+    <Compile Include="Api\Controllers\GeocoderController.cs" />
+    <Compile Include="Api\Controllers\RouteController.cs" />
     <Compile Include="Api\Extensions\AvionesStatusModelExtensions.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
     <Compile Include="Api\Controllers\BicicletaController.cs" />
