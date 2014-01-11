@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Web.Http;
+using Geocoding;
+using Geocoding.Google;
 
 namespace ABServicios.Api.Controllers
 {
@@ -13,13 +17,29 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>/ecuador 1419
-        public List<GeocoderResult> Get(int id)
+        public List<GeocoderResult> Get(string id)
         {
-            return new List<GeocoderResult>
+            try
             {
-                new GeocoderResult { X = -34.5555, Y = -58.6666, Nombre = "Ecuador 1419, Ciudad de Buenos Aires" },
-                new GeocoderResult { X = -34.8888, Y = -58.9999, Nombre = "Bouchard 710, Ciudad de Buenos Aires" },
-            };
+                IGeocoder geocoder = new GoogleGeocoder
+                {
+                    //ApiKey = "AIzaSyA4guD0ambG70ooNV5D_Cg8zR42GK1rP_I",
+                    Language = "es",
+                    RegionBias = "ar",
+                    BoundsBias = new Bounds(new Location(-34.937171, -57.872254), new Location(-34.150454, -59.248109)),
+                };
+
+                return geocoder.Geocode(id).Select(x => new GeocoderResult
+                {
+                    Nombre = x.FormattedAddress,
+                    X = x.Coordinates.Latitude,
+                    Y = x.Coordinates.Longitude,
+                }).ToList();
+            }
+            catch (Exception)
+            {
+                return new List<GeocoderResult>();
+            }
         }
 
         // POST api/<controller>

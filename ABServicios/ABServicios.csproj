@@ -64,6 +64,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\GeoAPI.dll</HintPath>
     </Reference>
+    <Reference Include="Geocoding">
+      <HintPath>..\packages\Geocoding.net.3.0.0\lib\net40\Geocoding.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\ScrapySharp.2.2.61\lib\net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
