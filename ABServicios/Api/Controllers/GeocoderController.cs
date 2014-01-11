@@ -21,15 +21,18 @@ namespace ABServicios.Api.Controllers
         {
             try
             {
+                var boundsBias = new Bounds(new Location(-34.937171, -59.248109), new Location(-34.150454, -57.872254));
                 IGeocoder geocoder = new GoogleGeocoder
                 {
                     //ApiKey = "AIzaSyA4guD0ambG70ooNV5D_Cg8zR42GK1rP_I",
                     Language = "es",
                     RegionBias = "ar",
-                    BoundsBias = new Bounds(new Location(-34.937171, -57.872254), new Location(-34.150454, -59.248109)),
+                    BoundsBias = boundsBias,
                 };
 
-                return geocoder.Geocode(id).Select(x => new GeocoderResult
+                IEnumerable<Address> result = geocoder.Geocode(id).Where(x => IsInBound(boundsBias, new Location(x.Coordinates.Latitude, x.Coordinates.Longitude)));
+                
+                return result.Select(x => new GeocoderResult
                 {
                     Nombre = x.FormattedAddress,
                     X = x.Coordinates.Latitude,
@@ -40,6 +43,13 @@ namespace ABServicios.Api.Controllers
             {
                 return new List<GeocoderResult>();
             }
+        }
+
+        private bool IsInBound(Bounds boundsBias, Location location)
+        {
+            return (boundsBias.SouthWest.Latitude < location.Latitude) && (location.Latitude < boundsBias.NorthEast.Latitude) &&
+                   (boundsBias.SouthWest.Longitude < location.Longitude) && (location.Longitude < boundsBias.NorthEast.Longitude);
+
         }
 
         // POST api/<controller>
