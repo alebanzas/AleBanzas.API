@@ -17,6 +17,7 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>/ecuador 1419
+        [ApiAuthorize]
         public List<GeocoderResult> Get(string id)
         {
             try
