@@ -24,14 +24,23 @@ namespace AB.Data
 				Roles = new string[0]
 			});
 
-			repo.Add(new Application
-			{
-				ID = 2,
-				Mnemonico = "ABServicios",
+            repo.Add(new Application
+            {
+                ID = 2,
+                Mnemonico = "ABServicios",
                 AppKey = new Guid("8463adb1-94f4-4436-a046-ac36229f1571"),
                 AppSecret = new Guid("68555023-26fe-42f2-b8ff-63a9cbba52c8"),
-				Roles = ApplicationsRoles.InHouseApplication
-			});
+                Roles = ApplicationsRoles.InHouseApplication
+            });
+
+            repo.Add(new Application
+            {
+                ID = 3,
+                Mnemonico = "DolarBlueWP",
+                AppKey = new Guid("78f00a47-badb-4b8e-afad-f5e7114d917a"),
+                AppSecret = new Guid("7a691d5e-604f-4662-8601-eb6b8c4fca3a"),
+                Roles = new [] { ApplicationsRoles.DolarBlue },
+            });
 
 		}
 
