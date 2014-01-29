@@ -323,6 +323,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Status\Test.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Report\ByVersion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api\ActionFilters\" />
