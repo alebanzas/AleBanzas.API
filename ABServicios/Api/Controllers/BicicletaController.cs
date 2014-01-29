@@ -74,7 +74,7 @@ namespace ABServicios.Api.Controllers
         {
             IList<BicicletaEstacion> estaciones = new List<BicicletaEstacion>();
 
-            HtmlNode html = new Scraper().GetNodes(new Uri("http://www.bicicletapublica.com.ar/mapa.aspx"));
+            HtmlNode html = new Scraper().GetNodes(new Uri("http://bicis.buenosaires.gob.ar/mapa.aspx"));
 
             var cssSelect = html.CssSelect("script");
             var script = cssSelect.Last().InnerText;
