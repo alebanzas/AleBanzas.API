@@ -127,7 +127,7 @@ namespace ABServicios.Api.Controllers
             }
         }
         
-        private static DivisaModel GetModel()
+        public static DivisaModel GetModel()
         {
             var divisas = new List<DivisaViewModel>();
 
@@ -153,10 +153,10 @@ namespace ABServicios.Api.Controllers
                 Actualizacion = fecha,
             });
 
-            compra = html.CssSelect("div.columna2 div.ultimo big").FirstOrDefault().InnerText;
-            venta = html.CssSelect("div.columna2 div.cierreAnterior big").FirstOrDefault().InnerText;
-            variacion = html.CssSelect("div.columna2 div.variacion big").FirstOrDefault().InnerText;
-            fecha = html.CssSelect("div.columna2 div.dolarFecha big").FirstOrDefault().InnerText;
+            compra = html.CssSelect("div.columna3 div.ultimo big").FirstOrDefault().InnerText;
+            venta = html.CssSelect("div.columna3 div.cierreAnterior big").FirstOrDefault().InnerText;
+            variacion = html.CssSelect("div.columna3 div.variacion big").FirstOrDefault().InnerText;
+            fecha = html.CssSelect("div.columna3 div.dolarFecha big").FirstOrDefault().InnerText;
 
             divisas.Add(new DivisaViewModel
             {
@@ -167,11 +167,6 @@ namespace ABServicios.Api.Controllers
                 Variacion = variacion,
                 Actualizacion = fecha,
             });
-            var result = new DivisaModel
-            {
-                Actualizacion = DateTime.Now,
-                Divisas = divisas,
-            };
 
             try
             {
@@ -180,7 +175,7 @@ namespace ABServicios.Api.Controllers
 
                 divisas.Add(new DivisaViewModel
                 {
-                    Nombre = "Dólar Turístico",
+                    Nombre = "Dólar Tarjeta",
                     Simbolo = "U$S",
                     ValorCompra = compra,
                     ValorVenta = venta,
@@ -192,6 +187,99 @@ namespace ABServicios.Api.Controllers
             {
 
             }
+
+            try
+            {
+                compra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
+                venta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "Dólar Ahorro",
+                    Simbolo = "U$S",
+                    ValorCompra = compra,
+                    ValorVenta = venta,
+                    Variacion = variacionOficial,
+                    Actualizacion = fechaOficial,
+                });
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                compra = html.CssSelect("div.columna1 div.ultimo big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.columna1 div.cierreAnterior big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna1 div.variacion big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.columna1 div.dolarFecha big").Skip(1).Take(1).FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "Mayorista Bancos",
+                    Simbolo = "U$S",
+                    ValorCompra = compra,
+                    ValorVenta = venta,
+                    Variacion = variacion,
+                    Actualizacion = fecha,
+                });
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                compra = html.CssSelect("div.columna1 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.columna1 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna1 div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.columna1 div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "Dólar Soja",
+                    Simbolo = "U$S",
+                    ValorCompra = compra,
+                    ValorVenta = venta,
+                    Variacion = variacion,
+                    Actualizacion = fecha,
+                });
+            }
+            catch
+            {
+
+            }
+
+
+            try
+            {
+                compra = html.CssSelect("div.columna2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.columna2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna2 div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.columna2 div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "Dólar Soja",
+                    Simbolo = "U$S",
+                    ValorCompra = compra,
+                    ValorVenta = venta,
+                    Variacion = variacion,
+                    Actualizacion = fecha,
+                });
+            }
+            catch
+            {
+
+            }
+
+            var result = new DivisaModel
+            {
+                Actualizacion = DateTime.Now,
+                Divisas = divisas,
+            };
 
             return result;
         }
