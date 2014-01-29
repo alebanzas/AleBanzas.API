@@ -232,10 +232,10 @@ namespace ABServicios.Api.Controllers
 
             try
             {
-                compra = html.CssSelect("div.columna1 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                venta = html.CssSelect("div.columna1 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                variacion = html.CssSelect("div.columna1 div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                fecha = html.CssSelect("div.columna1 div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                compra = html.CssSelect("div.columna1y2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.columna1y2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna1y2 div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.columna1y2 div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
 
                 divisas.Add(new DivisaViewModel
                 {
@@ -262,7 +262,7 @@ namespace ABServicios.Api.Controllers
 
                 divisas.Add(new DivisaViewModel
                 {
-                    Nombre = "Dólar Soja",
+                    Nombre = "Dólar Bolsa",
                     Simbolo = "U$S",
                     ValorCompra = compra,
                     ValorVenta = venta,
