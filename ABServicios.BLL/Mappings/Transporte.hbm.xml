@@ -11,6 +11,8 @@
     <property name="Linea" column="codigo" />
     <property name="Ramal" column="ramal" />
     <property name="RecorridoText" column="descripcionrecorrido" />
+    
+    <property name="Regreso" column="regreso" />
 
     <property name="Tipo" type="TipoTransporte" column="TipoTransporteID"/>
 

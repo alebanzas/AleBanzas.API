@@ -13,7 +13,7 @@ namespace ABServicios.Api.Extensions
             {
                 ID = transporte.ID,
                 TipoNickName = transporte.Tipo.Nombre.ToUrl(),
-                Nombre = transporte.Nombre,
+                Nombre = string.Concat(transporte.Nombre, " ", transporte.Regreso ? " (ida)" : " (vuelta)"),
                 Linea = transporte.Linea,
                 Ramal = transporte.Ramal,
                 Puntos = incluyePuntos ? transporte.Ubicacion.Coordinates.ToPuntoViewModel() : new List<PuntoViewModel>(),
