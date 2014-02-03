@@ -22,5 +22,7 @@ namespace ABServicios.BLL.Entities
         public virtual LineString Ubicacion { get; set; }
 
         public virtual string RecorridoText { get; set; }
+
+        public virtual bool Regreso { get; set; }
     }
 }
