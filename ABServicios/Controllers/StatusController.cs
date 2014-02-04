@@ -15,12 +15,22 @@ namespace ABServicios.Controllers
             return View();
         }
 
+        public ActionResult Ok()
+        {
+            return new HttpStatusCodeResult(200);
+        }
+
 
         //
         // GET: /Status/Check
 
-        public ActionResult Check()
+        public ActionResult Check(string versionId)
         {
+            if (versionId == "1.4.2.0d")
+            {
+                return new HttpStatusCodeResult(426, "probando mensaje por aca");    
+            }
+
             return new HttpStatusCodeResult(200);
         }
 
