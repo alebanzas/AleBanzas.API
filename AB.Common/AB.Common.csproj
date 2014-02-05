@@ -64,6 +64,8 @@
     <Compile Include="Inflectors\IRuleApplier.cs" />
     <Compile Include="Inflectors\NounsRule.cs" />
     <Compile Include="Inflectors\SpanishInflector.cs" />
+    <Compile Include="Mail\GeneralMailSender.cs" />
+    <Compile Include="Mail\IMailSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ContentRoute.cs" />
     <Compile Include="Services\ContentRouteCollection.cs" />

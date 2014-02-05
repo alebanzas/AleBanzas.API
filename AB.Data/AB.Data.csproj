@@ -86,6 +86,7 @@
     <Compile Include="EntityDao.cs" />
     <Compile Include="ICacheProvider.cs" />
     <Compile Include="InMemoryApplicationsRepository.cs" />
+    <Compile Include="Models\MailMessage.cs" />
     <Compile Include="MsSqlExceptionConverter.cs" />
     <Compile Include="NHibernateConfigurationExtensions.cs" />
     <Compile Include="NHibernateDaoFactory.cs" />
