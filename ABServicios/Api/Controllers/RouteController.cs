@@ -13,18 +13,18 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>/5
-        public string Get(RoutePoint x, RoutePoint y)
+        public string Get(double xX, double xY, double yX, double yY)
         {
-            if (x == null)
-            {
-                return "x NULL";
-            }
-            if (y == null)
-            {
-                return "y NULL";
-            }
-            
-            return string.Format("X: {0}, Y: {1}", x, y);
+            //if (x == null)
+            //{
+            //    return "x NULL";
+            //}
+            //if (y == null)
+            //{
+            //    return "y NULL";
+            //}
+
+            return string.Format("X: {0}, Y: {1}", string.Format("{0}|{1}", xX, xY), string.Format("{0}|{1}", yX, yY));
         }
 
         // POST api/<controller>

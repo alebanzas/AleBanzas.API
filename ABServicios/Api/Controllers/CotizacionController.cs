@@ -24,6 +24,7 @@ namespace ABServicios.Api.Controllers
         private readonly WebCache _cache = new WebCache();
         public static string CacheKey = "Divisa";
         public static string CacheKeyRofex = "DivisaRofex";
+        public static string CacheKeyTasas = "DivisaTasas";
         public static string CacheControlKey = "DivisaControl";
 
         public DivisaModel DefaultModel = new DivisaModel
@@ -41,6 +42,11 @@ namespace ABServicios.Api.Controllers
         private DivisaModel CotizacionesRofexCollection
         {
             get { return _cache.Get<DivisaModel>(CacheKeyRofex) ?? DefaultModel; }
+        }
+
+        private DivisaModel CotizacionesTasasCollection
+        {
+            get { return _cache.Get<DivisaModel>(CacheKeyTasas) ?? DefaultModel; }
         }
 
 
@@ -63,6 +69,14 @@ namespace ABServicios.Api.Controllers
         public DivisaModel Rofex()
         {
             return CotizacionesRofexCollection;
+        }
+
+        // GET api/<controller>/Tasas
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.ActionName("Tasas")]
+        public DivisaModel Tasas()
+        {
+            return CotizacionesTasasCollection;
         }
         
         // POST api/<controller>
@@ -116,10 +130,13 @@ namespace ABServicios.Api.Controllers
 
                 var rresult = GetRofexModel();
                 _cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
+
+                var tresult = GetTasasModel();
+                _cache.Put(CacheKeyTasas, tresult, new TimeSpan(1, 0, 0, 0));
             }
             catch (Exception ex)
             {
-                ex.Log();
+                ex.Log(ExceptionAction.SendMailAndEnqueue);
             }
             finally
             {
@@ -320,5 +337,143 @@ namespace ABServicios.Api.Controllers
 
             return result;
         }
+
+        public static DivisaModel GetTasasModel()
+        {
+            var divisas = new List<DivisaViewModel>();
+
+            HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.ambito.com/economia/mercados/tasas/"));
+
+            string ultimo;
+            string cierreAnterior;
+            string variacion;
+
+            try
+            {
+                ultimo = html.CssSelect("div.columna1 div.ultimo big").FirstOrDefault().InnerText;
+                cierreAnterior = html.CssSelect("div.columna1 div.cierreAnterior big").FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna1 div.variacion big").FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "BADLAR ENTIDADES PRIVADAS EN $",
+                    ValorCompra = ultimo,
+                    ValorVenta = cierreAnterior,
+                    Variacion = variacion,
+                });
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                ultimo = html.CssSelect("div.columna2 div.ultimo big").FirstOrDefault().InnerText;
+                cierreAnterior = html.CssSelect("div.columna2 div.cierreAnterior big").FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna2 div.variacion big").FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "CALL A 1 DÍA ENTIDADES DE 1º LÍNEA",
+                    ValorCompra = ultimo,
+                    ValorVenta = cierreAnterior,
+                    Variacion = variacion,
+                });
+            }
+            catch
+            {
+
+            }
+
+
+            try
+            {
+                ultimo = html.CssSelect("div.columna3 div.ultimo big").FirstOrDefault().InnerText;
+                cierreAnterior = html.CssSelect("div.columna3 div.cierreAnterior big").FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna3 div.variacion big").FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "CALL A 1 DÍA ENTIDADES DE 2º LÍNEA",
+                    ValorCompra = ultimo,
+                    ValorVenta = cierreAnterior,
+                    Variacion = variacion,
+                });
+            }
+            catch
+            {
+
+            }
+
+
+            try
+            {
+                ultimo = html.CssSelect("div.columna1 div.ultimo big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                cierreAnterior = html.CssSelect("div.columna1 div.cierreAnterior big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna1 div.variacion big").Skip(1).Take(1).FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "BAIBAR PROMEDIO PONDERADO EN $",
+                    ValorCompra = ultimo,
+                    ValorVenta = cierreAnterior,
+                    Variacion = variacion,
+                });
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                ultimo = html.CssSelect("div.columna2 div.ultimo big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                cierreAnterior = html.CssSelect("div.columna2 div.cierreAnterior big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna2 div.variacion big").Skip(1).Take(1).FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "BAIBOR EN $ A 6 MESES",
+                    ValorCompra = ultimo,
+                    ValorVenta = cierreAnterior,
+                    Variacion = variacion,
+                });
+            }
+            catch
+            {
+
+            }
+
+
+            try
+            {
+                ultimo = html.CssSelect("div.columna3 div.ultimo big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                cierreAnterior = html.CssSelect("div.columna3 div.cierreAnterior big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.columna3 div.variacion big").Skip(1).Take(1).FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "ENCUESTA PLAZO FIJO 30 DÍAS EN $",
+                    ValorCompra = ultimo,
+                    ValorVenta = cierreAnterior,
+                    Variacion = variacion,
+                });
+            }
+            catch
+            {
+
+            }
+
+            
+            var result = new DivisaModel
+            {
+                Actualizacion = DateTime.Now,
+                Divisas = divisas,
+            };
+
+            return result;
+        }
+
     }
 }

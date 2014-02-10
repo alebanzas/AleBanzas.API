@@ -1,17 +1,35 @@
 ﻿using ABServicios.Api.Controllers;
-using ABServicios.Controllers;
 
 namespace ABServicios
 {
-    public class DataConfig
+    public static class DataConfig
     {
         public static void StartInitial()
         {
-            new SubteController().Start();
-            new TrenController().Start();
-            new BicicletaController().Start();
-            new AvionController().Start();
-            new CotizacionController().Start();
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                new SubteController().Start();
+            }, null);
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                new TrenController().Start();
+            }, null);
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                new BicicletaController().Start();
+            }, null);
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                new AvionController().Start();
+            }, null);
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                new CotizacionController().Start();
+            }, null);
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                new ReservasController().Start();
+            }, null);
         }
     }
 }
