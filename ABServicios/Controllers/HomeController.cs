@@ -22,6 +22,7 @@ namespace ABServicios.Controllers
             cache.Evict<SubteStatusModel>(SubteController.CacheKey);
             cache.Evict<DivisaModel>(CotizacionController.CacheKey);
             cache.Evict<DivisaModel>(CotizacionController.CacheKeyRofex);
+            cache.Evict<DivisaModel>(CotizacionController.CacheKeyTasas);
             
             
             return new HttpStatusCodeResult(200);

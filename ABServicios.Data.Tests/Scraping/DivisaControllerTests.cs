@@ -18,6 +18,13 @@ namespace ABServicios.Data.Tests.Scraping
             var model = CotizacionController.GetRofexModel();
 
         }
+
+        [Test]
+        public void WhenGetTasasModel()
+        {
+            var model = CotizacionController.GetTasasModel();
+
+        }
     }
 
 }
