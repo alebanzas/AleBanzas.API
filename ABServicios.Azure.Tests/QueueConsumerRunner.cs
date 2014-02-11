@@ -20,14 +20,14 @@ namespace ABServicios.Azure.Tests
             var i = 1;
             while (i <= 5)
             {
-                i++;
                 AzureQueue.Enqueue(new MailMessage
                 {
                     From = "noreply@abhosting.com.ar",
                     Subject = "TEST" + i,
                     To = "alebanzas@outlook.com",
                     Body = "<b>probando</b> el mensaje",
-                });    
+                });
+                i++; 
             }
         }
 
