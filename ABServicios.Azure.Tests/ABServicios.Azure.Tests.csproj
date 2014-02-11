@@ -57,6 +57,10 @@
     <Compile Include="QueueConsumerRunner.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AB.Common\AB.Common.csproj">
+      <Project>{E3E70B35-9ADF-40B2-A211-55859542854B}</Project>
+      <Name>AB.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ABServicios.Azure.QueuesConsumers\ABServicios.Azure.QueuesConsumers.csproj">
       <Project>{836a53b6-4e8a-4c1d-9c5a-4543e1d4071c}</Project>
       <Name>ABServicios.Azure.QueuesConsumers</Name>

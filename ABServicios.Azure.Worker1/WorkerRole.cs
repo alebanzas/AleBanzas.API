@@ -15,11 +15,11 @@ namespace ABServicios.Azure.Worker1
         public override void Run()
         {
 
-            QueueConsumerFor<ApiAccessLog>.WithinCurrentThread.Using(new ApiAccessLogSaver())
+            QueueConsumerFor<ApiAccessLog>.WithStandaloneThread.Using(new ApiAccessLogSaver())
                                                                                         .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
                                                                                         .StartConsimung();
 
-            QueueConsumerFor<MailMessage>.WithinCurrentThread.Using(new MailsMessagesSender())
+            QueueConsumerFor<MailMessage>.WithStandaloneThread.Using(new MailsMessagesSender())
                                                                                         .With(PollingFrequencer.For(MailsMessagesSender.EstimatedTime))
                                                                                         .StartConsimung();
 
