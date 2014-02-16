@@ -225,6 +225,7 @@
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
     <Compile Include="Api\Binders\NeedDataBaseContextAttribute.cs" />
     <Compile Include="Api\Controllers\AvionController.cs" />
+    <Compile Include="Api\Controllers\DenunciaPreciosController.cs" />
     <Compile Include="Api\Controllers\GeocoderController.cs" />
     <Compile Include="Api\Controllers\RouteController.cs" />
     <Compile Include="Api\Controllers\ReservasController.cs" />
