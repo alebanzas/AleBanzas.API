@@ -30,6 +30,10 @@ namespace ABServicios
             {
                 new ReservasController().Start();
             }, null);
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                new LiveTrenController().Start();
+            }, null);
         }
     }
 }
