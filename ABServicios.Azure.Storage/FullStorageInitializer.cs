@@ -18,6 +18,7 @@ namespace ABServicios.Azure.Storage
 
             new TableStorageInitializer<TableSampleData>(account).Initialize();
             new TableStorageInitializer<ApiAccessLogData>(account).Initialize();
+            new TableStorageInitializer<DenunciaPreciosData>(account).Initialize();
 		}
 	}
 }
