@@ -48,6 +48,14 @@ namespace ABServicios.Azure.Tests
         }
 
         [Test]
+        public void StartConsumigDenunciaPreciosSaver()
+        {
+            QueueConsumerFor<DenunciaPrecios>.WithinCurrentThread.Using(new DenunciaPreciosSaver())
+                                                                                        .With(PollingFrequencer.For(DenunciaPreciosSaver.EstimatedTime))
+                                                                                        .StartConsimung();
+        }
+
+        [Test]
         public void StartConsumigAzureChristmasVoteLogSaver()
         {
             QueueConsumerFor<AzureChristmasVoteLog>.WithinCurrentThread.Using(new AzureChristmasVoteLogSaver())
