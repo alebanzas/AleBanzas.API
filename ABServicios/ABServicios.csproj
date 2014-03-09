@@ -229,6 +229,7 @@
     <Compile Include="Api\Controllers\GeocoderController.cs" />
     <Compile Include="Api\Controllers\RouteController.cs" />
     <Compile Include="Api\Controllers\ReservasController.cs" />
+    <Compile Include="Api\Controllers\LiveTrenController.cs" />
     <Compile Include="Api\Extensions\AvionesStatusModelExtensions.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
     <Compile Include="Api\Controllers\BicicletaController.cs" />
@@ -247,6 +248,7 @@
     <Compile Include="Api\HmacHelpers.cs" />
     <Compile Include="Api\HttpRequestExtensions.cs" />
     <Compile Include="Api\Models\ReservasModel.cs" />
+    <Compile Include="Api\Models\LiveTrenModel.cs" />
     <Compile Include="Api\Models\TransporteViewModel.cs" />
     <Compile Include="Api\TaskHelpers.cs" />
     <Compile Include="App_Start\DataConfig.cs" />
