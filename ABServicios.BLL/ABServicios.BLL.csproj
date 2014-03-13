@@ -70,6 +70,7 @@
     <Compile Include="Entities\AbstractEntity.cs" />
     <Compile Include="Entities\Application.cs" />
     <Compile Include="Entities\ApplicationsRoles.cs" />
+    <Compile Include="Entities\DreamSparkItem.cs" />
     <Compile Include="Entities\TerminalesAereas.cs" />
     <Compile Include="Entities\Transporte.cs" />
     <Compile Include="Entities\CorteTransito.cs" />
@@ -87,6 +88,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Mappings\DreamSparkItem.hbm.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mappings\Hotel.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
