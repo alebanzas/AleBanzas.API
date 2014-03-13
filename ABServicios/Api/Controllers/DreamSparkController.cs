@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
+using System.Net;
 using System.Web.Http;
-using System.Web.Mvc;
-using AB.Common.Helpers;
 using ABServicios.Api.Binders;
 using ABServicios.BLL.DataInterfaces;
 using ABServicios.BLL.Entities;
@@ -26,7 +24,7 @@ namespace ABServicios.Api.Controllers
                          _dsRepo.FirstOrDefault(x => x.Email == null);
 
             if (dsCode == null)
-                return string.Empty;
+                throw Request.CreateExceptionResponse(HttpStatusCode.NoContent, string.Empty);
 
             dsCode.Nombre = nombre;
             dsCode.Apellido = apellido;
@@ -38,16 +36,19 @@ namespace ABServicios.Api.Controllers
         // POST api/<controller>
         public void Post([FromBody]string value)
         {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
         // PUT api/<controller>/5
         public void Put(int id, [FromBody]string value)
         {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
+            throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
     }
 }
