@@ -230,6 +230,7 @@
     <Compile Include="Api\Controllers\RouteController.cs" />
     <Compile Include="Api\Controllers\ReservasController.cs" />
     <Compile Include="Api\Controllers\LiveTrenController.cs" />
+    <Compile Include="Api\Controllers\DreamSparkController.cs" />
     <Compile Include="Api\Extensions\AvionesStatusModelExtensions.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
     <Compile Include="Api\Controllers\BicicletaController.cs" />
