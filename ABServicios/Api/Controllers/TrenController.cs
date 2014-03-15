@@ -24,12 +24,14 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>
+        [ApiAuthorize]
         public TrenesStatusModel Get()
         {
             return TrenStatusCollection;
         }
 
         // GET api/<controller>/sarmiento
+        [ApiAuthorize]
         public LineaTrenModel Get(string id)
         {
             return TrenStatusCollection.Lineas.FirstOrDefault(x => x.Nombre.Contains(id));

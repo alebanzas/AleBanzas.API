@@ -34,6 +34,7 @@ namespace ABServicios.Api.Controllers
             }
         }
         // GET api/<controller>
+        [ApiAuthorize]
         public List<AvionesTerminalStatusModel> Get(List<string> t)
         {
             if (t == null) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
@@ -46,6 +47,7 @@ namespace ABServicios.Api.Controllers
         // GET api/<controller>/partidas
         [HttpGet]
         [ActionName("Partidas")]
+        [ApiAuthorize]
         public AvionesTerminalStatusModel Partidas(string t)
         {
             if (string.IsNullOrWhiteSpace(t)) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
@@ -69,6 +71,7 @@ namespace ABServicios.Api.Controllers
         // GET api/<controller>/arribos
         [HttpGet]
         [ActionName("Arribos")]
+        [ApiAuthorize]
         public AvionesTerminalStatusModel Arribos(string t)
         {
             if (string.IsNullOrWhiteSpace(t)) throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);

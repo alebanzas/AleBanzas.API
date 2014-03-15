@@ -20,6 +20,7 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>
+        [ApiAuthorize]
         [NeedDataBaseContext]
         public IEnumerable<RecargaSUBEViewModel> Get(double lat, double lon, int cant = 1)
         {

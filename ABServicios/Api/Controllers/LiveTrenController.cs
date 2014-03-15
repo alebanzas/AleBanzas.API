@@ -17,6 +17,14 @@ namespace ABServicios.Api.Controllers
         {
             new Tuple<string, Uri>("sarmiento", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=1&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
             new Tuple<string, Uri>("mitre-r-t", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=5&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            new Tuple<string, Uri>("mitre-r-m", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=7&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            new Tuple<string, Uri>("mitre-r-l", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=9&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            new Tuple<string, Uri>("roca-c-lp", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=11&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            new Tuple<string, Uri>("roca-c-b", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=13&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            new Tuple<string, Uri>("belgranosur-b-mdcgb", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=21&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            new Tuple<string, Uri>("belgranosur-b-gc", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=25&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            new Tuple<string, Uri>("sanmartin-r-p", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=31&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
+            //new Tuple<string, Uri>("delacosta", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=41&rnd=5E5HvXkCkDz2JW0H&key=v%23v%23QTUtWp%23MpWRy80Q0knTE10I30kj%23FNyZ")),
         };
 
         private readonly WebCache _cache = new WebCache();
@@ -34,7 +42,7 @@ namespace ABServicios.Api.Controllers
         };
         
         // GET api/<controller>/A
-        //[ApiAuthorize]
+        [ApiAuthorize]
         public LiveTrenModel Get(string id)
         {
             return _cache.Get<LiveTrenModel>(GetCacheKey(id)) ?? _defaultModel;
@@ -60,7 +68,7 @@ namespace ABServicios.Api.Controllers
         
         private void Refresh()
         {
-            _cache.Put(CacheControlKey, new LiveTrenModel(), new TimeSpan(0, 0, 20), CacheItemPriority.NotRemovable, (key, value, reason) => Start());
+            _cache.Put(CacheControlKey, new LiveTrenModel(), new TimeSpan(0, 0, 15), CacheItemPriority.NotRemovable, (key, value, reason) => Start());
         }
 
         public void Start()
