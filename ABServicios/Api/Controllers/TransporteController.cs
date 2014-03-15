@@ -86,6 +86,29 @@ namespace ABServicios.Api.Controllers
             return result;
         }
 
+        // GET api/<controller>/?lat=0&lon=0&lat2=0&lon2=0
+        [ApiAuthorize]
+        [NeedDataBaseContext]
+        public IEnumerable<TransporteViewModel> Get(double lat, double lon, double lat2, double lon2,
+            int cant = int.MaxValue,
+            int caminar = 800, bool puntos = false)
+        {
+            if (!ExtendedTypeResponseAllowed(ApplicationsRoles.Transporte))
+            {
+                puntos = false;
+            }
+
+            var query = ServiceLocator.Current.GetInstance<IGetTransporteCercanoQuery>();
+
+            var listOrigen = query.GetMasCercanos(new Point(lon, lat), caminar);
+
+            var listDestino = query.GetMasCercanos(new Point(lon2, lat2), caminar);
+
+            var result = listOrigen.Intersect(listDestino).Select(x => x.ToTransporteViewModel(puntos));
+
+            return result;
+        }
+
         // POST api/<controller>
         [ApiAuthorize]
         public void Post([FromBody]string value)
