@@ -40,12 +40,14 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>
+        [ApiAuthorize]
         public SubteStatusModel Get()
         {
             return SubteStatusCollection;
         }
 
         // GET api/<controller>/A
+        [ApiAuthorize]
         public SubteStatusItem Get(string id)
         {
             return SubteStatusCollection.Lineas.FirstOrDefault(x => x.Nombre.Contains(id));

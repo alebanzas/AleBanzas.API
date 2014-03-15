@@ -25,6 +25,7 @@ namespace ABServicios.Api.Controllers
         };
 
         // GET api/<controller>
+        [ApiAuthorize]
         public BicicletasStatusModel Get()
         {
             return cache.Get<BicicletasStatusModel>(CacheKey) ?? DefaultModel;

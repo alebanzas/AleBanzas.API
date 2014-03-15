@@ -67,6 +67,7 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>/?lat=0&lon=0
+        [ApiAuthorize]
         [NeedDataBaseContext]
         public IEnumerable<TransporteViewModel> Get(double lat, double lon, int cant = int.MaxValue,
             int caminar = 800, bool puntos = false)

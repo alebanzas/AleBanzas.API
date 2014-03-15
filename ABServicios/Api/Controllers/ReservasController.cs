@@ -34,6 +34,7 @@ namespace ABServicios.Api.Controllers
         }
 
         // GET api/<controller>
+        [ApiAuthorize]
         public ReservasModel Get()
         {
             return ReservasCollection;
