@@ -15,7 +15,11 @@ namespace ABServicios.Api.Controllers
             if (!url.AbsoluteUri.Contains("microsoftvirtualacademy.com/Profile.aspx?alias="))
                 throw Request.CreateExceptionResponse(HttpStatusCode.BadRequest, string.Empty);
 
-            return GetProfileStatus(url);
+            var profileStatus = GetProfileStatus(url);
+            if (profileStatus == null)
+                throw Request.CreateExceptionResponse(HttpStatusCode.NotFound, string.Empty);
+
+            return profileStatus;
         }
 
         private IEnumerable<MvaElement> GetProfileStatus(Uri url)
@@ -28,6 +32,9 @@ namespace ABServicios.Api.Controllers
             };
 
             var html = new Scraper(Encoding.UTF7).GetNodes(url);
+
+            var hasMicrosite = html.CssSelect("#microsite").Any();
+            if (!hasMicrosite) return null;
 
             var elements = html.CssSelect(".approved-study-name"); 
 
