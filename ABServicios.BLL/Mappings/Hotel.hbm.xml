@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+           assembly="ABServicios.BLL"
+				   namespace="ABServicios.BLL.Entities">
+  <class name="Hotel" table="TELO_Hotel">
+    <id name="ID">
+      <generator class="guid"/>
+    </id>
+
+    <property name="Nombre" column="nombre" />
+    <property name="Descripcion" column="descripcion" />
+    <property name="Direccion" column="direccion" />
+    <property name="Barrio" column="barrio" />
+    <property name="Ciudad" column="ciudad" />
+    <property name="Provincia" column="provincia" />
+    <property name="Sitio" column="sitio" />
+    <property name="Telefono" column="telefono" />
+    <property name="Id1" column="id1" />
+    <property name="Id2" column="id2" />
+    <property name="Id3" column="id3" />
+
+    <property name="Ubicacion" column="ubicacion">
+      <type name="AB.Data.Wgs84GeographyType, AB.Data">
+        <param name="srid">4326</param>
+        <param name="subtype">POINT</param>
+      </type>
+    </property>
+  </class>
+</hibernate-mapping>
