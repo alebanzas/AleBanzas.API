@@ -21,6 +21,7 @@ namespace AB.Wiring.Repositories
             RegisterEntityDao<DolarHistorico, Guid>();
             RegisterEntityDao<Transporte, Guid>();
             RegisterEntityDao<DreamSparkItem, Guid>();
+            RegisterEntityDao<CandyApp, Guid>();
 
             RegisterInMemoryRepositories();
 			RegisterQueries();
