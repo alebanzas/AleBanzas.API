@@ -26,10 +26,10 @@ namespace ABServicios
             {
                 new CotizacionController().Start();
             }, null);
-            System.Threading.ThreadPool.QueueUserWorkItem(delegate
-            {
-                new ReservasController().Start();
-            }, null);
+            //System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            //{
+            //    new ReservasController().Start();
+            //}, null);
             System.Threading.ThreadPool.QueueUserWorkItem(delegate
             {
                 new LiveTrenController().Start();
