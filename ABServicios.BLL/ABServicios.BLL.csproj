@@ -71,6 +71,7 @@
     <Compile Include="Entities\Application.cs" />
     <Compile Include="Entities\ApplicationsRoles.cs" />
     <Compile Include="Entities\DreamSparkItem.cs" />
+    <Compile Include="Entities\CandyApp.cs" />
     <Compile Include="Entities\TerminalesAereas.cs" />
     <Compile Include="Entities\Transporte.cs" />
     <Compile Include="Entities\CorteTransito.cs" />
@@ -115,6 +116,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\CustomTypes.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\CandyApp.hbm.xml">
+      <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Mappings\Queries.hbm.xml">
