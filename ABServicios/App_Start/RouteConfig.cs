@@ -8,6 +8,7 @@ namespace ABServicios
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.Redirect("azure.jpg", "/home/azure");
             routes.Redirect("subte", "/api/subte");
             routes.Redirect("trenes", "/api/tren");
             routes.Redirect("bicicletas", "/api/bicicleta");

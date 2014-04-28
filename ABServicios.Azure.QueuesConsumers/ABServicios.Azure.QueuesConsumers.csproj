@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DenunciaPreciosSaver.cs" />
-    <Compile Include="AzureChristmasVoteLogDespegar.cs" />
     <Compile Include="AzureChristmasVoteLogSaver.cs" />
     <Compile Include="ApiCallExtensions.cs" />
     <Compile Include="ApiAccessLogSaver.cs" />
