@@ -31,7 +31,7 @@ namespace ABServicios.Api.Controllers
                 new MvaElement { Url = new Uri("http://www.microsoftvirtualacademy.com/training-courses/diseno-de-aplicaciones-de-windows-8-en-html-5"), Finalizado = false },
             };
 
-            var html = new Scraper(Encoding.UTF7).GetNodes(url);
+            var html = new Scraper(url, Encoding.UTF7).GetNodes();
 
             var hasMicrosite = html.CssSelect("#microsite").Any();
             if (!hasMicrosite) return null;
