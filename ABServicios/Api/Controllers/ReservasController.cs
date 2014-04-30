@@ -102,7 +102,7 @@ namespace ABServicios.Api.Controllers
             postParameters.Add("descri", "1");
             postParameters.Add("campo", "Res_Int_BCRA");
 
-            var html = new Scraper(Encoding.ASCII, "http://www.bcra.gov.ar/estadis/es010100.asp?descri=1&fecha=Fecha_Serie&campo=Res_Int_BCRA").GetNodes(new Uri("http://www.bcra.gov.ar/estadis/es010100.asp"), HttpMethod.Post, postParameters);
+            var html = new Scraper(new Uri("http://www.bcra.gov.ar/estadis/es010100.asp"), Encoding.ASCII, "http://www.bcra.gov.ar/estadis/es010100.asp?descri=1&fecha=Fecha_Serie&campo=Res_Int_BCRA").GetNodes(HttpMethod.Post, postParameters);
 
             var table = html.CssSelect("table").First();
 

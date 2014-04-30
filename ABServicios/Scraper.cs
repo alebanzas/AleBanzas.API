@@ -16,30 +16,38 @@ namespace ABServicios
     {
         private readonly Encoding _encoding;
         private readonly string _referer;
-        
-        public Scraper(){}
 
-        public Scraper(Encoding encoding)
+        public HttpWebRequest Request { get; set; }
+        
+        private Scraper(){}
+
+	    public Scraper(Uri url)
         {
+            Request = (HttpWebRequest)WebRequest.Create(url);
+	    }
+
+        public Scraper(Uri url, Encoding encoding)
+        {
+            Request = (HttpWebRequest)WebRequest.Create(url);
             _encoding = encoding;
         }
 
-        public Scraper(Encoding encoding, string referer)
+        public Scraper(Uri url, Encoding encoding, string referer)
         {
+            Request = (HttpWebRequest)WebRequest.Create(url);
             _encoding = encoding;
             _referer = referer;
         }
 
-	    public HtmlNode GetNodes(Uri url)
+	    public HtmlNode GetNodes()
 	    {
-	        return GetNodes(url, HttpMethod.Get, null);
+	        return GetNodes(HttpMethod.Get, null);
 	    }
 
-        public HtmlNode GetNodes(Uri url, HttpMethod method, Dictionary<string, object> postParameters)
+        public HtmlNode GetNodes(HttpMethod method, Dictionary<string, object> postParameters)
         {
             // Create the WebRequest for the URL we are using
-            var req = (HttpWebRequest)WebRequest.Create(url);
-            req.Method = method.Method;
+            Request.Method = method.Method;
 
             if (HttpMethod.Post.Equals(method))
             {
@@ -53,10 +61,10 @@ namespace ABServicios
 
                     byte[] postBytes = _encoding.GetBytes(postData.ToString());
 
-                    req.ContentType = "application/x-www-form-urlencoded";
-                    req.ContentLength = postBytes.Length;
+                    Request.ContentType = "application/x-www-form-urlencoded";
+                    Request.ContentLength = postBytes.Length;
 
-                    Stream postStream = req.GetRequestStream();
+                    Stream postStream = Request.GetRequestStream();
                     postStream.Write(postBytes, 0, postBytes.Length);
                     postStream.Flush();
                     postStream.Close();
@@ -65,11 +73,11 @@ namespace ABServicios
 
             if (!string.IsNullOrWhiteSpace(_referer))
             {
-                req.Referer = _referer;
+                Request.Referer = _referer;
             }
 
             // Get the stream from the returned web response
-            var stream = _encoding != null ? new StreamReader(req.GetResponse().GetResponseStream(), _encoding) : new StreamReader(req.GetResponse().GetResponseStream());
+            var stream = _encoding != null ? new StreamReader(Request.GetResponse().GetResponseStream(), _encoding) : new StreamReader(Request.GetResponse().GetResponseStream());
 
             var htmlDocument = new HtmlDocument();
             htmlDocument.Load(stream);
