@@ -8,7 +8,6 @@ namespace ABServicios
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.Redirect("azure.jpg", "/home/azure");
             routes.Redirect("subte", "/api/subte");
             routes.Redirect("trenes", "/api/tren");
             routes.Redirect("bicicletas", "/api/bicicleta");
@@ -22,7 +21,7 @@ namespace ABServicios
             routes.Redirect("aviones/arribos", "/api/avion/arribos");
             routes.Redirect("aviones/partidas", "/api/avion/partidas");
             routes.Redirect("divisa/message", "/status/ok");
-
+            
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
