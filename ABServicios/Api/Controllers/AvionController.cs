@@ -140,7 +140,7 @@ namespace ABServicios.Api.Controllers
         {
             var dateString = string.Format("{0}/{1}/{2}", DateTime.UtcNow.AddHours(-3).Year, DateTime.UtcNow.AddHours(-3).Month, DateTime.UtcNow.AddHours(-3).Day);
 
-            HtmlNode html = new Scraper(Encoding.UTF7, "http://www.aa2000.com.ar/").GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/arribose.aspx?qA=" + terminal.NickName));
+            HtmlNode html = new Scraper(new Uri("http://www.aa2000.com.ar/vuelos/arribose.aspx?qA=" + terminal.NickName), Encoding.UTF7, "http://www.aa2000.com.ar/").GetNodes();
 
             var httpClient = new HttpClient();
             var result = httpClient.PostAsJsonAsync("http://www.aa2000.com.ar/vuelos/arribose.aspx/cbverestado", new { aeropuerto = terminal.NickName, aerolinea = "...", procedencia = "...", vuelo = "", fecha = string.Format("{0}/{1}/{2}", DateTime.UtcNow.AddHours(-3).Day, DateTime.UtcNow.AddHours(-3).Month, DateTime.UtcNow.AddHours(-3).Year) }).Result;
@@ -224,7 +224,7 @@ namespace ABServicios.Api.Controllers
                 vueloArriboModels.Add(arribo);
             }
 
-            html = new Scraper(Encoding.ASCII, "http://www.aa2000.com.ar/").GetNodes(new Uri("http://www.aa2000.com.ar/vuelos/partidase.aspx?qA=" + terminal.NickName));
+            html = new Scraper(new Uri("http://www.aa2000.com.ar/vuelos/partidase.aspx?qA=" + terminal.NickName), Encoding.ASCII, "http://www.aa2000.com.ar/").GetNodes();
 
             cssSelect = html.CssSelect("table.grilla");
             script = cssSelect.CssSelect("tr");
