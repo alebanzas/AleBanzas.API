@@ -137,6 +137,7 @@
     <Compile Include="Scraping\BicicletasControllerTests.cs" />
     <Compile Include="Scraping\AvionesControllerTests.cs" />
     <Compile Include="Scraping\LiveTrenControllerTests.cs" />
+    <Compile Include="Scraping\TrenesControllerTests.cs" />
     <Compile Include="Scraping\ReservasControllerTests.cs" />
     <Compile Include="Scraping\DivisaControllerTests.cs" />
     <Compile Include="Storage\InitQueue.cs" />

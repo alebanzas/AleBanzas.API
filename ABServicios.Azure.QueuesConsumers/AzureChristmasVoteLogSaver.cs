@@ -10,7 +10,7 @@ using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.QueuesConsumers
 {
-    public class AzureChristmasVoteLogSaver : IQueueMessageBlocksConsumer<AzureChristmasVoteLog>
+    public class AzureChristmasVoteLogSaver : IQueueMessageConsumer<AzureChristmasVoteLog>
 	{
 		public static readonly TimeSpan EstimatedTime = TimeSpan.FromSeconds(1);
 
@@ -47,7 +47,6 @@ namespace ABServicios.Azure.QueuesConsumers
 
             var groups =
                     from c in queueMessages
-                    where !c.Data.UserId.Contains("luchogifts.cloudapp.net")
                     group c by new
                     {
                         c.Data.UserId,
@@ -55,15 +54,15 @@ namespace ABServicios.Azure.QueuesConsumers
                         c.Data.Date.Day,
                     } into gcs
                     select new AzureChristmasVoteLogMessage{
-                    Data = new AzureChristmasVoteLog
-                    {
-                        Date = gcs.FirstOrDefault().Data.Date,
-                        Ip = gcs.Key.Ip,
-                        UserId = gcs.Key.UserId,
-                        Referer = gcs.FirstOrDefault().Data.Referer,
-                    },
-                    Id = gcs.FirstOrDefault().Id,
-                    Count = gcs.Count(),
+                        Data = new AzureChristmasVoteLog
+                        {
+                            Date = gcs.FirstOrDefault().Data.Date,
+                            Ip = gcs.Key.Ip,
+                            UserId = gcs.Key.UserId,
+                            Referer = gcs.FirstOrDefault().Data.Referer,
+                        },
+                        Id = gcs.FirstOrDefault().Id,
+                        Count = gcs.Count(),
                     };
 
             
@@ -83,10 +82,12 @@ namespace ABServicios.Azure.QueuesConsumers
                         Console.WriteLine(group.Count);
                     }
 
-                    _tableContext.SaveChangesWithRetries(SaveChangesOptions.Batch);
+                    //_tableContext.SaveChangesWithRetries(SaveChangesOptions.Batch);
+                    _tableContext.SaveChangesWithRetries();
                 }
                 catch (Exception)
                 {
+                    return;
                 }
 
             messagesRemover.RemoveProcessedMessages(queueMessages);
@@ -94,8 +95,8 @@ namespace ABServicios.Azure.QueuesConsumers
 
         public void ProcessMessages(QueueMessage<AzureChristmasVoteLog> message)
         {
-            if (message.DequeueCount > 100)
-                return;
+            //if (message.DequeueCount > 100)
+            //    return;
             
             try
             {
@@ -113,7 +114,7 @@ namespace ABServicios.Azure.QueuesConsumers
             }
             catch (Exception)
             {
-                
+
             }
         }
 	}

@@ -21,7 +21,7 @@ namespace ABServicios
             routes.Redirect("aviones/arribos", "/api/avion/arribos");
             routes.Redirect("aviones/partidas", "/api/avion/partidas");
             routes.Redirect("divisa/message", "/status/ok");
-
+            
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

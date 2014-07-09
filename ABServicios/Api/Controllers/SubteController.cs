@@ -116,7 +116,7 @@ namespace ABServicios.Api.Controllers
 
         private static SubteStatusModel GetModelFromMetrovias()
         {
-            var html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.metrovias.com.ar/V2/InfoSubteSplash.asp"));
+            var html = new Scraper(new Uri("http://www.metrovias.com.ar/V2/InfoSubteSplash.asp"), Encoding.UTF7).GetNodes();
 
             var script = html.CssSelect("script").First().InnerText;
 
@@ -146,7 +146,11 @@ namespace ABServicios.Api.Controllers
 
         private static SubteStatusModel GetModelFromLaNacion()
         {
-            HtmlNode html = new Scraper().GetNodes(new Uri("http://servicios.lanacion.com.ar/transito/?sitio=desktop"));
+            var scraper = new Scraper(new Uri("http://servicios.lanacion.com.ar/transito/?sitio=desktop"));
+            scraper.Request.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36";
+            scraper.Request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+
+            HtmlNode html = scraper.GetNodes();
 
             var cssSelect = html.CssSelect("section.subtes");
             var script = cssSelect.CssSelect("ul li");

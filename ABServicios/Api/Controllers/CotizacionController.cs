@@ -148,7 +148,7 @@ namespace ABServicios.Api.Controllers
         {
             var divisas = new List<DivisaViewModel>();
 
-            HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.ambito.com/economia/mercados/monedas/dolar/"));
+            HtmlNode html = new Scraper(new Uri("http://www.ambito.com/economia/mercados/monedas/dolar/"), Encoding.UTF7).GetNodes();
 
             var compra = html.CssSelect("div.columna1 div.ultimo big").FirstOrDefault().InnerText;
             var venta = html.CssSelect("div.columna1 div.cierreAnterior big").FirstOrDefault().InnerText;
@@ -305,7 +305,7 @@ namespace ABServicios.Api.Controllers
         {
             var divisas = new List<DivisaViewModel>();
 
-            HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.rofex.com.ar/"));
+            HtmlNode html = new Scraper(new Uri("http://www.rofex.com.ar/"), Encoding.UTF7).GetNodes();
 
             var cierre = html.CssSelect("#cierre");
             var tabla = cierre.CssSelect("table tr").Skip(1);
@@ -342,7 +342,7 @@ namespace ABServicios.Api.Controllers
         {
             var divisas = new List<DivisaViewModel>();
 
-            HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.ambito.com/economia/mercados/tasas/"));
+            HtmlNode html = new Scraper(new Uri("http://www.ambito.com/economia/mercados/tasas/"), Encoding.UTF7).GetNodes();
 
             string ultimo;
             string cierreAnterior;
