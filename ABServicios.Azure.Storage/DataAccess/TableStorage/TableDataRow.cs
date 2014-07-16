@@ -3,7 +3,7 @@ using System.Data.Services.Common;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
-	[DataServiceKey(new[] {"PartitionKey", "RowKey"})]
+    [DataServiceKey(new[] { "PartitionKey", "RowKey" })]
 	[CLSCompliant(false)]
 	public abstract class TableDataRow
 	{

@@ -175,6 +175,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Scripts\jquery-2.0.3.min.map" />
   </ItemGroup>
