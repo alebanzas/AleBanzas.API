@@ -1,0 +1,27 @@
+﻿@model ABServicios.BLL.Entities.InetForm
+
+@{
+    ViewBag.Title = "title";
+    Layout = null;
+}
+
+<h2>title</h2>
+
+
+<form action="/AceptoElReto" enctype="multipart/form-data" method="post">
+    
+    <p>Equipo</p>
+    @Html.EditorFor(x => Model.Team)
+    <p>Institución</p>
+    @Html.EditorFor(x => Model.Institucion)
+    <p>Provincia</p>
+    @Html.EditorFor(x => Model.Provincia)
+    
+    <p>Archivo</p>
+    <input type="file" name="file" id="file" />
+
+    <p>
+        <input type="submit" value="ENVIAR" />
+    </p>
+
+</form>

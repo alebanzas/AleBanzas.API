@@ -280,6 +280,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
+    <Compile Include="Controllers\AceptoElRetoController.cs" />
     <Compile Include="Controllers\AzureLogController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -356,6 +357,8 @@
     <Content Include="Views\Status\Test.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Report\ByVersion.cshtml" />
+    <Content Include="Views\AceptoElReto\Index.cshtml" />
+    <Content Include="Views\AceptoElReto\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api\ActionFilters\" />
