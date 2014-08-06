@@ -19,7 +19,7 @@ namespace ABServicios.BLL.Entities
 
         public virtual Uri FileUrl { get; set; }
 
-        public virtual IEnumerable<TeamMember> Members { get; set; }
+        public virtual IList<TeamMember> Members { get; set; }
         public virtual DateTime Date { get; set; }
     }
 

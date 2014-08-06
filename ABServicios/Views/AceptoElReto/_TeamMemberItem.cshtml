@@ -1,0 +1,13 @@
+﻿@using ABServicios.Services
+@model ABServicios.BLL.Entities.TeamMember
+
+@using (Html.BeginCollectionItem("Members"))
+{
+    <div class="item">
+
+        @Html.EditorFor(x => Model)
+        <hr />
+
+    </div>
+}
+

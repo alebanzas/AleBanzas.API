@@ -13,8 +13,8 @@
     <property name="Provincia" />
     <property name="Date" />
 
-    <bag name="Members">
-      <key column="ID" />
+    <bag name="Members" cascade="all-delete-orphan">
+      <key column="IDTeam"/>
       <one-to-many class="TeamMember" />
     </bag>
     
