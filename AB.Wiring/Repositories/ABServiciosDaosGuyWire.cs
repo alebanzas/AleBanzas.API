@@ -23,6 +23,7 @@ namespace AB.Wiring.Repositories
             RegisterEntityDao<DreamSparkItem, Guid>();
             RegisterEntityDao<CandyApp, Guid>();
             RegisterEntityDao<InetForm, Guid>();
+            RegisterEntityDao<TeamMember, Guid>();
 
             RegisterInMemoryRepositories();
 			RegisterQueries();
