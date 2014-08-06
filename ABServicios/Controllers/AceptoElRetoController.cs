@@ -71,14 +71,14 @@ namespace ABServicios.Controllers
                 return View(form);
             }
             
-            //var id = Guid.NewGuid();
-            //var blobStorageType = AzureAccount.DefaultAccount().CreateCloudBlobClient();
-            //var container = blobStorageType.GetContainerReference("inet");
-            //var strings = file.FileName.Split('.');
-            //var blockBlob = container.GetBlockBlobReference("inet-" + id.ToString("N") + "." + strings[strings.Length - 1]);
-            //blockBlob.UploadFromStream(file.InputStream);
+            var id = Guid.NewGuid();
+            var blobStorageType = AzureAccount.DefaultAccount().CreateCloudBlobClient();
+            var container = blobStorageType.GetContainerReference("inet");
+            var strings = file.FileName.Split('.');
+            var blockBlob = container.GetBlockBlobReference("inet-" + id.ToString("N") + "." + strings[strings.Length - 1]);
+            blockBlob.UploadFromStream(file.InputStream);
             
-            //form.FileUrl = blockBlob.Uri;
+            form.FileUrl = blockBlob.Uri;
             form.Date = DateTime.UtcNow;
             _inetFormRepo.Add(form);
 
