@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Web.Caching;
 using System.Web.Http;
@@ -9,6 +10,7 @@ using ABServicios.Api.Models;
 using ABServicios.Extensions;
 using ABServicios.Services;
 using HtmlAgilityPack;
+using Newtonsoft.Json;
 using ScrapySharp.Extensions;
 
 namespace ABServicios.Api.Controllers
@@ -19,7 +21,7 @@ namespace ABServicios.Api.Controllers
         public static string CacheKey = "Subte";
         public static string CacheControlKey = "SubteControl";
 
-        public SubteStatusModel DefaultModel = new SubteStatusModel
+        public static SubteStatusModel DefaultModel = new SubteStatusModel
         {
             Actualizacion = DateTime.UtcNow,
             Lineas = new List<SubteStatusItem>
@@ -93,7 +95,7 @@ namespace ABServicios.Api.Controllers
             }
         }
 
-        private SubteStatusModel GetModel()
+        public static SubteStatusModel GetModel()
         {
             try
             {
@@ -116,31 +118,36 @@ namespace ABServicios.Api.Controllers
 
         private static SubteStatusModel GetModelFromMetrovias()
         {
-            var html = new Scraper(new Uri("http://www.metrovias.com.ar/V2/InfoSubteSplash.asp"), Encoding.UTF7).GetNodes();
+            var httpClient = new HttpClient();
+            var result = httpClient.GetStringAsync("http://www.metrovias.com.ar/Subterraneos/Estado?site=Metrovias").Result;
 
-            var script = html.CssSelect("script").First().InnerText;
+            var r = JsonConvert.DeserializeObject<List<SubteStatusResultItem>>(result);
 
-            var infos = script;//script.Split(new[] { "if" }, StringSplitOptions.RemoveEmptyEntries)[0];
-
-            var lineas = new List<SubteStatusItem>();
-            foreach (string info in infos.Split(new[] { "pausecontent" }, StringSplitOptions.RemoveEmptyEntries).Skip(2))
+            var lineas = r.Where(x => x.LineName != "U").Select(subteStatusResultItem => new SubteStatusItem
             {
-                string[] linea = info.Split(new[] { "] = '" }, StringSplitOptions.RemoveEmptyEntries);
-                if (linea.Length < 2) continue;
-                string[] il = linea[1].Replace("';", "").Split(':');
-                string infolinea = il.Skip(1).Aggregate(string.Empty, (current, s) => current + ":" + s);
-                string nombre = il[0].Replace("&nbsp;", "").Replace("<b>", "").Trim();
-                if ("Línea U".Equals(nombre)) continue;
-                var id = nombre.Split(' ');
-                if (id.Length == 2)
-                    lineas.Add(new SubteStatusItem { Id = id[1], Nombre = nombre, Detalles = infolinea.Remove(0, 1).Replace("&nbsp;", "").Replace("</b>", "").Trim() });
-            }
+                Id = subteStatusResultItem.LineName, Nombre = "Línea " + subteStatusResultItem.LineName, Detalles = subteStatusResultItem.LineStatus + " " + SegToMinStr(subteStatusResultItem.LineFrequency),
+            }).ToList();
 
             return new SubteStatusModel
             {
                 Actualizacion = DateTime.UtcNow,
                 Lineas = lineas,
             };
+        }
+
+        private static string SegToMinStr(string p)
+        {
+            int num;
+            if(int.TryParse(p, out num))
+            {
+                int min = num / 60;
+                var seg = (int)Math.Round(((num / 60f) - min) * 60f, 0);
+                if (seg == 0)
+                    return "(cada " + min + " mins)";
+
+                return "(cada " + min + ":" + seg.ToString("D2") + " mins)";
+            }
+            return string.Empty;
         }
 
 
@@ -183,5 +190,12 @@ namespace ABServicios.Api.Controllers
             };
         }
 
+    }
+
+    internal class SubteStatusResultItem
+    {
+        public string LineName { get; set; }
+        public string LineStatus { get; set; }
+        public string LineFrequency { get; set; }
     }
 }
