@@ -1,0 +1,71 @@
+﻿@model ABServicios.BLL.Entities.InetForm
+
+@{
+    ViewBag.Title = "title";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+        <style>
+            body {
+                padding-top: 0px;
+                font-family: 'Segoe UI', Segoe, Tahoma, Helvetica, Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="/AceptoElReto" enctype="multipart/form-data" method="post">
+            
+            @Html.ValidationSummary()
+
+            <fieldset>
+                <legend>Equipo</legend>
+
+                <p>Nombre</p>
+                @Html.EditorFor(x => Model.Team)
+                <p>Institución</p>
+                @Html.EditorFor(x => Model.Institucion)
+                <p>Provincia</p>
+                @Html.EditorFor(x => Model.Provincia)
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Archivo</legend>
+                <input type="file" name="file" id="file" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Integrantes</legend>
+                <div id="list-order-items">
+                    @Html.EditorFor(x => x.Members)
+                </div>
+                <p>
+                    <a href="#" onclick="AddItem(); return false;">Agregar Integrante</a>
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="submit" value="ENVIAR" />
+            </p>
+
+        </form>
+        <script>
+            function AddItem() {
+                $.get("/aceptoelreto/additem/", function (e) {
+                    $("#list-order-items").append(e);
+                });
+            }
+
+        </script>
+    </body>
+</html>

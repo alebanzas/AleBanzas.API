@@ -1,0 +1,75 @@
+﻿@using ABServicios.Azure.Storage.DataAccess.TableStorage;
+@model IEnumerable<ApiAccessLogData>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+
+<script type="text/javascript">
+    var geocoder;
+
+    var map;
+
+    var direcciones = [];
+
+    var marker;
+
+    function addToMap(direccion) {
+
+        var pos = new google.maps.LatLng(direccion.lat, direccion.lon);
+
+        var icon = new google.maps.MarkerImage(
+            "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png",
+            new google.maps.Size(20, 34),
+            new google.maps.Point(0, 0),
+            new google.maps.Point(10, 34)
+        );
+
+        marker = new google.maps.Marker({
+            'position': pos,
+            'map': map,
+            'icon': icon
+        });
+        
+        var millisecondsToWait = 500;
+        setTimeout(function() {
+            marker.setMap(map);
+        }, millisecondsToWait);
+    }
+    
+    function initialize() {
+
+        geocoder = new google.maps.Geocoder();
+
+        var myOptions = {
+            zoom: 11,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            myOptions);
+       
+        map.setCenter(new google.maps.LatLng(-34.59365, -58.403835), 14);
+
+        for (var i = 0; i < direcciones.length; i++) {
+            addToMap(direcciones[i]);
+        }
+    }
+</script>
+
+
+<h2></h2>
+
+@{
+    var i = 0;
+    foreach (var data in Model)
+    {
+        <script type="text/javascript">
+            direcciones[@(i)] = { lat: "@HttpUtility.ParseQueryString(data.PathAndQuery.Replace("?", "&")).Get("lat")", lon: "@HttpUtility.ParseQueryString(data.PathAndQuery).Get("lon")"};
+        </script>
+        i++;
+     }
+}
+
+<div id="map_canvas" style="height: 400px;"></div>
+
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>

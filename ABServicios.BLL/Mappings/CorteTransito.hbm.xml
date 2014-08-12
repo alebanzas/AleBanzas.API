@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+           assembly="ABServicios.BLL"
+				   namespace="ABServicios.BLL.Entities">
+  <class name="CorteTransito" table="GUIATBA_CorteTransito">
+    <id name="ID">
+      <generator class="guid"/>
+    </id>
+
+    <property name="Nombre" column="nombre" />
+    <property name="Descripcion" column="descripcion" />
+    <property name="Ubicacion" column="ubicacion">
+      <type name="AB.Data.Wgs84GeographyType, AB.Data">
+        <param name="srid">4326</param>
+        <param name="subtype">POINT</param>
+      </type>
+    </property>
+  </class>
+</hibernate-mapping>
