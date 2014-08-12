@@ -60,6 +60,7 @@ namespace ABServicios.Azure.QueuesConsumers
                             Ip = gcs.Key.Ip,
                             UserId = gcs.Key.UserId,
                             Referer = gcs.FirstOrDefault().Data.Referer,
+                            Referal = gcs.FirstOrDefault().Data.Referal,
                         },
                         Id = gcs.FirstOrDefault().Id,
                         Count = gcs.Count(),
@@ -70,11 +71,15 @@ namespace ABServicios.Azure.QueuesConsumers
                 {
                     foreach (AzureChristmasVoteLogMessage @group in groups)
                     {
+                        if (string.IsNullOrWhiteSpace(group.Data.UserId)) continue;
+                        if (string.IsNullOrWhiteSpace(group.Data.Referer)) continue;
+
                         _tablePersister.Add(new AzureChristmasVoteLogData(group.Id, group.Data.UserId)
                         {
                             Date = group.Data.Date,
                             Ip = group.Data.Ip,
                             Referer = group.Data.Referer,
+                            Referal = group.Data.Referal,
                         });
 
                         _tableImagePersister.Add(new AzureChristmasVoteUserData(group.Id, group.Data.UserId));
@@ -101,11 +106,15 @@ namespace ABServicios.Azure.QueuesConsumers
             try
             {
                 var messageLog = message.Data;
+                if (string.IsNullOrWhiteSpace(messageLog.UserId)) return;
+                if (string.IsNullOrWhiteSpace(messageLog.Referer)) return;
+
                 _tablePersister.Add(new AzureChristmasVoteLogData(message.Id, messageLog.UserId)
                 {
                     Date = messageLog.Date,
                     Ip = messageLog.Ip,
                     Referer = messageLog.Referer,
+                    Referal = messageLog.Referal,
                 });
 
                 _tableImagePersister.Add(new AzureChristmasVoteUserData(message.Id, messageLog.UserId));

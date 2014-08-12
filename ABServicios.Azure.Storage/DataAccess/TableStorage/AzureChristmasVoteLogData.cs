@@ -14,6 +14,11 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 
         public string Referer { get; set; }
 
+        /// <summary>
+        /// quien refiere al usuario
+        /// </summary>
+	    public string Referal { get; set; }
+
 
 	    public AzureChristmasVoteLogData()
 	    {
