@@ -7,7 +7,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
         public string Id { get; set; }
 
         public string UserId { get; set; }
-
+        
         public DateTime Date { get; set; }
 
         public string Ip { get; set; }
@@ -24,10 +24,11 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 	    {
 	    }
 
-	    public AzureChristmasVoteLogData(string id, string userId)
+        public AzureChristmasVoteLogData(string id, string referal, string userId)
 	    {
-	        Id = id;
-	        UserId = userId;
+            Id = id;
+            Referal = referal;
+            UserId = userId;
 	    }
 
 		protected override string CreatePartitionKey()

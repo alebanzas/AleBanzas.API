@@ -6,21 +6,23 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
     {
         public string Id { get; set; }
 
+        public string ReferalId { get; set; }
         public string UserId { get; set; }
 
 	    public AzureChristmasVoteUserData()
 	    {
 	    }
 
-        public AzureChristmasVoteUserData(string id, string userId)
+        public AzureChristmasVoteUserData(string id, string referalId, string userId)
 	    {
-	        Id = id;
-	        UserId = userId;
+            Id = id;
+            ReferalId = referalId;
+            UserId = userId;
 	    }
 
 		protected override string CreatePartitionKey()
 		{
-            return UserId;
+            return ReferalId;
 		}
         
 		protected override string CreateRowKey()
