@@ -105,6 +105,7 @@
     <Compile Include="DataAccess\QueueStorage\MessagePollQueueConsumer.cs" />
     <Compile Include="DataAccess\QueueStorage\MessageQueue.cs" />
     <Compile Include="DataAccess\QueueStorage\ApiAction.cs" />
+    <Compile Include="DataAccess\QueueStorage\Messages\AzureChristmasRefreshReferal.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\TrenEnEstacion.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\DenunciaPrecios.cs" />
     <Compile Include="DataAccess\QueueStorage\Messages\AppErrorReport.cs" />

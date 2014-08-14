@@ -11,5 +11,7 @@ namespace ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages
         public string Ip { get; set; }
 
         public string Referer { get; set; }
+         
+        public string Referal { get; set; }
     }
 }
