@@ -74,7 +74,7 @@ namespace ABServicios.Azure.QueuesConsumers
                         if (string.IsNullOrWhiteSpace(group.Data.UserId)) continue;
                         if (string.IsNullOrWhiteSpace(group.Data.Referer)) continue;
 
-                        _tablePersister.Add(new AzureChristmasVoteLogData(group.Id, group.Data.UserId)
+                        _tablePersister.Add(new AzureChristmasVoteLogData(group.Id, group.Data.Referal, group.Data.UserId)
                         {
                             Date = group.Data.Date,
                             Ip = group.Data.Ip,
@@ -82,7 +82,12 @@ namespace ABServicios.Azure.QueuesConsumers
                             Referal = group.Data.Referal,
                         });
 
-                        _tableImagePersister.Add(new AzureChristmasVoteUserData(group.Id, group.Data.UserId));
+                        _tableImagePersister.Add(new AzureChristmasVoteUserData(group.Id, group.Data.Referal, group.Data.UserId));
+
+                        if (!string.IsNullOrWhiteSpace(group.Data.Referal))
+                        {
+                            AzureQueue.Enqueue(new AzureChristmasRefreshReferal{ Referal = group.Data.Referal });
+                        }
 
                         Console.WriteLine(group.Count);
                     }
@@ -106,10 +111,11 @@ namespace ABServicios.Azure.QueuesConsumers
             try
             {
                 var messageLog = message.Data;
+                
                 if (string.IsNullOrWhiteSpace(messageLog.UserId)) return;
                 if (string.IsNullOrWhiteSpace(messageLog.Referer)) return;
 
-                _tablePersister.Add(new AzureChristmasVoteLogData(message.Id, messageLog.UserId)
+                _tablePersister.Add(new AzureChristmasVoteLogData(message.Id, messageLog.Referal, messageLog.UserId)
                 {
                     Date = messageLog.Date,
                     Ip = messageLog.Ip,
@@ -117,7 +123,12 @@ namespace ABServicios.Azure.QueuesConsumers
                     Referal = messageLog.Referal,
                 });
 
-                _tableImagePersister.Add(new AzureChristmasVoteUserData(message.Id, messageLog.UserId));
+                _tableImagePersister.Add(new AzureChristmasVoteUserData(message.Id, messageLog.Referal, messageLog.UserId));
+
+                if (!string.IsNullOrWhiteSpace(messageLog.Referal))
+                {
+                    AzureQueue.Enqueue(new AzureChristmasRefreshReferal { Referal = messageLog.Referal });
+                }
 
                 _tableContext.SaveChangesWithRetries();
             }
