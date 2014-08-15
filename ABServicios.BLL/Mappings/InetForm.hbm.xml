@@ -12,7 +12,13 @@
     <property name="Institucion" />
     <property name="Provincia" />
     <property name="Date" />
-
+    <property name="Direccion" />
+    
+    <property name="TutorNombre" />
+    <property name="TutorMail" />
+    <property name="TutorDireccion" />
+    <property name="TutorDocumento" />
+              
     <bag name="Members" cascade="all-delete-orphan">
       <key column="IDTeam"/>
       <one-to-many class="TeamMember" />
