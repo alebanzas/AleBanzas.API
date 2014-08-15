@@ -13,6 +13,7 @@
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>ABServicios.CloudService</Name>
     <UseEmulatorExpressByDefault>False</UseEmulatorExpressByDefault>
+    <PackageEnableRemoteDebugger>False</PackageEnableRemoteDebugger>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,20 +39,25 @@
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ABServicios.Azure.Worker1\ABServicios.Azure.Worker1.csproj">
-      <Name>ABServicios.Azure.Worker1</Name>
-      <Project>{1300a59f-672a-47b9-8643-6622766e99da}</Project>
-      <Private>True</Private>
-      <RoleType>Worker</RoleType>
-      <RoleName>ABServicios.Azure.Worker1</RoleName>
-      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="ABServicios.Azure.Worker1Content" />
     <Folder Include="Profiles" />
   </ItemGroup>
   <ItemGroup>
     <PublishProfile Include="Profiles\ABServiciosProduction.azurePubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ABServicios.Azure.Worker1Content\diagnostics.wadcfg">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABServicios.Azure.Worker1\ABServicios.Azure.Worker1.csproj">
+      <Name>ABServicios.Azure.Worker1</Name>
+      <Project>{2837b1cb-73fb-40f6-9d84-c603dccdf584}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>ABServicios.Azure.Worker1</RoleName>
+    </ProjectReference>
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
