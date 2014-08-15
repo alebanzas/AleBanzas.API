@@ -8,8 +8,9 @@
     </id>
 
     <property name="Nombre" />
-    <property name="Apellido" />
     <property name="Email" />
+    <property name="Documento" />
+    <property name="FechaNacimiento" />
     
   </class>
 </hibernate-mapping>

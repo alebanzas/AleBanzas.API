@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace ABServicios.BLL.Entities
 {
@@ -16,21 +14,25 @@ namespace ABServicios.BLL.Entities
         public virtual string Team { get; set; }
         public virtual string Institucion { get; set; }
         public virtual string Provincia { get; set; }
-
         public virtual Uri FileUrl { get; set; }
-
         public virtual IList<TeamMember> Members { get; set; }
         public virtual DateTime Date { get; set; }
+
+        public virtual string Direccion { get; set; }
+        public virtual string TutorNombre { get; set; }
+        public virtual string TutorMail { get; set; }
+        public virtual string TutorDireccion { get; set; }
+        public virtual string TutorDocumento { get; set; }
     }
 
     public class TeamMember : AbstractEntity<Guid>
     {
         public virtual string Nombre { get; set; }
-
-        public virtual string Apellido { get; set; }
-
         public virtual string Email { get; set; }
+        public virtual string Documento { get; set; }
 
-
+        [Display(Name = "Fecha de nacimiento")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd}")]
+        public virtual DateTime FechaNacimiento { get; set; }
     }
 }
