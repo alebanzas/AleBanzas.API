@@ -1,4 +1,5 @@
-﻿using ABServicios.Azure.QueuesConsumers;
+﻿using System;
+using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
@@ -61,6 +62,33 @@ namespace ABServicios.Azure.Tests
             QueueConsumerFor<AzureChristmasVoteLog>.WithinCurrentThread.Using(new AzureChristmasVoteLogSaver())
                                                                                         .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
                                                                                         .StartConsimung();
+        }
+
+        [Test]
+        public void StartEnqueuingChristmasVotes()
+        {
+            var i = 1;
+            while (i <= 5)
+            {
+                AzureQueue.Enqueue(new AzureChristmasVoteLog
+                {
+                    Date = DateTime.UtcNow,
+                    Ip = "127.0.0." + i,
+                    Referal = "abhost" + i + ".cloudapp.net",
+                    Referer = "http://pepe.clopudapp.net/Home/Index/",
+                    UserId = "pepe.cloudapp.net"
+                });
+                AzureQueue.Enqueue(new AzureChristmasVoteLog
+                {
+                    Date = DateTime.UtcNow,
+                    Ip = "127.0.0." + i,
+                    Referal = "abhost" + i + ".cloudapp.net",
+                    Referer = "http://pepe.clopudapp.net/Home/Index/",
+                    UserId = "pepe.cloudapp.net"
+                });
+                i++;
+            }
+
         }
     }
 }
