@@ -9,6 +9,7 @@
 
     <property name="Nombre" />
     <property name="Email" />
+    <property name="Domicilio" />
     <property name="Documento" />
     <property name="FechaNacimiento" />
     
