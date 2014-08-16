@@ -35,8 +35,6 @@
                 @Html.EditorFor(x => Model.Team)
                 <p>Institución</p>
                 @Html.EditorFor(x => Model.Institucion)
-                <p>Dirección</p>
-                @Html.EditorFor(x => Model.Direccion)
                 <p>Provincia</p>
                 @Html.EditorFor(x => Model.Provincia)
 
@@ -70,6 +68,10 @@
                     <a href="#" onclick="AddItem(); return false;">Agregar Integrante</a>
                 </p>
             </fieldset>
+
+            <p>
+                <a href="http://aceptoelreto.inet.edu.ar/Paginas/bases.aspx" target="_blank">Bases y condiciones.</a>
+            </p>
 
             <p>
                 <input type="submit" value="ENVIAR" />

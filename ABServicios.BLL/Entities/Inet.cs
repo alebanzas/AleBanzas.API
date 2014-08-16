@@ -18,7 +18,6 @@ namespace ABServicios.BLL.Entities
         public virtual IList<TeamMember> Members { get; set; }
         public virtual DateTime Date { get; set; }
 
-        public virtual string Direccion { get; set; }
         public virtual string TutorNombre { get; set; }
         public virtual string TutorMail { get; set; }
         public virtual string TutorDireccion { get; set; }
@@ -29,10 +28,12 @@ namespace ABServicios.BLL.Entities
     {
         public virtual string Nombre { get; set; }
         public virtual string Email { get; set; }
+        [Display(Name = "DNI")]
         public virtual string Documento { get; set; }
 
         [Display(Name = "Fecha de nacimiento")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd}")]
         public virtual DateTime FechaNacimiento { get; set; }
+        public virtual string Domicilio { get; set; }
     }
 }
