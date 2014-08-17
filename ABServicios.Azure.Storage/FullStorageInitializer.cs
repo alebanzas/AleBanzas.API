@@ -17,11 +17,13 @@ namespace ABServicios.Azure.Storage
 
             new QueueStorageInitializer<DenunciaPrecios>(account).Initialize();
 
+            new QueueStorageInitializer<TrenEnEstacion>(account).Initialize();
+            new QueueStorageInitializer<TrenEnEstacionClean>(account).Initialize();
+
             new QueueStorageInitializer<AzureChristmasVoteLog>(account).Initialize();
             new QueueStorageInitializer<AzureChristmasRefreshReferal>(account).Initialize();
 
-
-
+            
             new TableStorageInitializer<TableSampleData>(account).Initialize();
             new TableStorageInitializer<ApiAccessLogData>(account).Initialize();
             new TableStorageInitializer<DenunciaPreciosData>(account).Initialize();
