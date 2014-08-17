@@ -79,6 +79,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TrenEnEstacionReduceDuplicates.cs" />
+    <Compile Include="AzureChristmasReferalRefresh.cs" />
     <Compile Include="DenunciaPreciosSaver.cs" />
     <Compile Include="AzureChristmasVoteLogSaver.cs" />
     <Compile Include="ApiCallExtensions.cs" />
