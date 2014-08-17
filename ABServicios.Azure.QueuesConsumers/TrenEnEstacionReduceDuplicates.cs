@@ -29,15 +29,39 @@ namespace ABServicios.Azure.QueuesConsumers
                 return;
             }
 
-            //TODO: implementar cuenta refresh
-            //TODO: armar tabla de resultados en una tabla nueva
-            //TODO: refrescar la tabla a demanda con este consumer
-            //TODO: la tabla se va armando con el otro consumer
-            //TODO: si no esta el userid en este consumer, ignoro el mensaje y vuelve a la cola
+            var cleanList = queueMessages.Select(x => x.Data).Distinct(new TrenEnEstacionCompare()).ToList();
+
+            foreach (var queueMessage in cleanList)
+            {
+                AzureQueue.Enqueue(new TrenEnEstacionClean
+                {
+                    Estacion = queueMessage.Estacion,
+                    Key = queueMessage.Key,
+                    SentidoDescription = queueMessage.SentidoDescription,
+                    Time = queueMessage.Time,
+                    Vuelta = queueMessage.Vuelta,
+                });
+            }
 
             messagesRemover.RemoveProcessedMessages(queueMessages);
         }
 
+        class TrenEnEstacionCompare : IEqualityComparer<TrenEnEstacion>
+        {
+            public bool Equals(TrenEnEstacion x, TrenEnEstacion y)
+            {
+                var diff = (x.Time.Subtract(y.Time)).TotalSeconds;
+
+                return x.Key.Equals(y.Key) && 
+                        x.Vuelta.Equals(y.Vuelta) &&
+                        x.Estacion.Equals(y.Estacion) &&
+                        diff < 300; //5 mins
+            }
+            public int GetHashCode(TrenEnEstacion codeh)
+            {
+                return codeh.GetHashCode();
+            }
+        }
 	}
 
 }

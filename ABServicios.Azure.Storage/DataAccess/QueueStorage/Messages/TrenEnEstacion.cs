@@ -13,5 +13,6 @@ namespace ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages
         public bool Vuelta { get; set; }
 
         public string SentidoDescription { get; set; }
-	}
+    }
+    public class TrenEnEstacionClean : TrenEnEstacion { }
 }
