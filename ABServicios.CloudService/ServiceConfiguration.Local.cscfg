@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceConfiguration serviceName="ABServicios.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
   <Role name="ABServicios.Azure.Worker1">
-    <Instances count="1" />
+    <Instances count="5" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=alebanzas;AccountKey=k6kGnt48YwLwZj07re6ONi1Uqo8LFs9h3jrkDjmq4zBO4v7OP00Qh5j/pY43r4nFoBjdtUToAisdLEQZBaydow==" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="alebanzas" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBeqyL8zN4SRRofI8dMaSXYwDQYJKoZIhvcNAQEBBQAEggEATfsJTU6WAVGlL+EUxgRo2jFWq3DWEPpxv/9h1sGUwA7YOMc1HOsuunghNRA5LsB8f7wdBEePypQX7BLB6pCgzEI3bNcstPw9DNpF6BnR67jkyllFYLKvHWGKwvkC3tm69inU6Xb0Ec3NnNXJd5rl27EkIUZ1rRupjdS6Z4uolAKE9N8Jnb6Pf219L3ZZQsZ1sgqLlbBa7zruSUpE+Bsrq6m7T1GkEdUNvCC2p8ujB15JGqQoTzHsD14eOhz6PFL4pQI3Al7OFNKtXMXyM6+0thBWnUVJGPjQd6cpMyMda8CksCQSawxV4Chjlbyu7WX3Peng5u4kMPIeWSMIZdnjyzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECFTZsh4/gwlQgBDoos2iRaCaOp2pn40Hk3hc" />
