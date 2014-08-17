@@ -65,6 +65,22 @@ namespace ABServicios.Azure.Tests
         }
 
         [Test]
+        public void StartConsumigAzureChristmasReferalRefresh()
+        {
+            QueueConsumerFor<AzureChristmasRefreshReferal>.WithinCurrentThread.Using(new AzureChristmasReferalRefresh())
+                                                                                        .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+                                                                                        .StartConsimung();
+        }
+
+        [Test]
+        public void StartConsumigTrenEnEstacionReduceDuplicates()
+        {
+            QueueConsumerFor<TrenEnEstacion>.WithinCurrentThread.Using(new TrenEnEstacionReduceDuplicates())
+                                                                                        .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
+                                                                                        .StartConsimung();
+        }
+
+        [Test]
         public void StartEnqueuingChristmasVotes()
         {
             var i = 1;

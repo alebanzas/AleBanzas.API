@@ -76,6 +76,14 @@ namespace ABServicios.Azure.Worker1
                                                                                         .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
                                                                                         .StartConsimung();
 
+            QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
+                                                                                        .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+                                                                                        .StartConsimung();
+
+            QueueConsumerFor<TrenEnEstacion>.WithStandaloneThread.Using(new TrenEnEstacionReduceDuplicates())
+                                                                                        .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
+                                                                                        .StartConsimung();
+
 
             // TODO: Replace the following with your own logic.
             while (!cancellationToken.IsCancellationRequested)
