@@ -29,7 +29,7 @@ namespace ABServicios.Azure.QueuesConsumers
                 return;
             }
 
-            var cleanList = queueMessages.Select(x => x.Data).Distinct(new TrenEnEstacionCompare()).ToList();
+            var cleanList = queueMessages.Where(x => x.DequeueCount <= 1).Select(x => x.Data).Distinct(new TrenEnEstacionCompare()).ToList();
 
             foreach (var queueMessage in cleanList)
             {

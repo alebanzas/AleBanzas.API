@@ -281,6 +281,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
     <Compile Include="Controllers\AceptoElRetoController.cs" />
+    <Compile Include="Controllers\AzureDevDayController.cs" />
     <Compile Include="Controllers\AzureLogController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -368,6 +369,7 @@
   <ItemGroup>
     <Folder Include="Api\ActionFilters\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AzureDevDay\" />
     <Folder Include="Views\AzureLog\" />
   </ItemGroup>
   <ItemGroup>

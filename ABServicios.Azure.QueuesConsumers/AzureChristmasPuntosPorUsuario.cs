@@ -10,9 +10,9 @@ using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.QueuesConsumers
 {
-    public class AzureChristmasReferalRefresh : IQueueMessageBlocksConsumer<AzureChristmasRefreshReferal>
+    public class AzureChristmasPuntosPorUsuario : IQueueMessageBlocksConsumer<PuntosProcesados>
 	{
-		public static readonly TimeSpan EstimatedTime = TimeSpan.FromSeconds(1);
+		public static readonly TimeSpan EstimatedTime = TimeSpan.FromMinutes(1);
 
         public TimeSpan? EstimatedTimeToProcessMessageBlock
         {
@@ -25,18 +25,16 @@ namespace ABServicios.Azure.QueuesConsumers
         }
         
         private static TableServiceContext _tableContext;
-        private static TablePersister<AzureChristmasVoteLogData> _tablePersister;
-        private static TablePersister<AzureChristmasVoteUserData> _tableImagePersister;
+        private static TablePersister<AzureChristmasPuntosUsuarioData> _tablePersister;
 
-        public AzureChristmasReferalRefresh()
+        public AzureChristmasPuntosPorUsuario()
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tableContext = new TableServiceContext(tableClient);
-            _tablePersister = new TablePersister<AzureChristmasVoteLogData>(_tableContext);
-            _tableImagePersister = new TablePersister<AzureChristmasVoteUserData>(_tableContext);
+            _tablePersister = new TablePersister<AzureChristmasPuntosUsuarioData>(_tableContext);
         }
 
-        public void ProcessMessagesGroup(IQueueMessageRemover<AzureChristmasRefreshReferal> messagesRemover, IEnumerable<QueueMessage<AzureChristmasRefreshReferal>> messages)
+        public void ProcessMessagesGroup(IQueueMessageRemover<PuntosProcesados> messagesRemover, IEnumerable<QueueMessage<PuntosProcesados>> messages)
         {
             var queueMessages = messages.ToList();
             var focusingMessagge = queueMessages.FirstOrDefault();
@@ -44,14 +42,25 @@ namespace ABServicios.Azure.QueuesConsumers
             {
                 return;
             }
+            var rows =
+                    from c in queueMessages
+                    group c by c.Data.UserID
+                    into gcs
+                    select new AzureChristmasPuntosUsuarioData(gcs.Key, gcs.Count());
+            
+            try
+            {
+                foreach (var row in rows)
+                {
+                    _tablePersister.Add(row);
+                }
 
-
-
-            //TODO: implementar cuenta refresh
-            //TODO: armar tabla de resultados en una tabla nueva
-            //TODO: refrescar la tabla a demanda con este consumer
-            //TODO: la tabla se va armando con el otro consumer
-            //TODO: si no esta el userid en este consumer, ignoro el mensaje y vuelve a la cola
+                _tableContext.SaveChangesWithRetries();
+            }
+            catch (Exception)
+            {
+                return;
+            }
 
             messagesRemover.RemoveProcessedMessages(queueMessages);
         }
