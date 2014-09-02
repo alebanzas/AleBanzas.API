@@ -61,7 +61,7 @@ namespace ABServicios.Controllers
 
             if (!ModelState.IsValid)
             {
-                return View(form);
+                //return View(form);
             }
             
             //var id = Guid.NewGuid();

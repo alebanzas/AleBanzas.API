@@ -27,52 +27,64 @@
         <form action="/AceptoElReto" enctype="multipart/form-data" method="post">
             
             @Html.ValidationSummary()
-
+            
             <fieldset>
-                <legend>Equipo</legend>
+                <legend>Ingresá tu mail para recibir información para participar!</legend>
 
-                <p>Nombre</p>
-                @Html.EditorFor(x => Model.Team)
-                <p>Institución</p>
-                @Html.EditorFor(x => Model.Institucion)
-                <p>Provincia</p>
-                @Html.EditorFor(x => Model.Provincia)
-
-            </fieldset>
-
-
-            <!--fieldset>
-                <legend>Archivo</legend>
-                <input type="file" name="file" id="file" />
-            </fieldset-->
-
-            <fieldset>
-                <legend>Tutor</legend>
-                
-                <p>Nombre</p>
-                @Html.EditorFor(x => Model.TutorNombre)
                 <p>Mail</p>
                 @Html.EditorFor(x => Model.TutorMail)
-                <p>Dirección</p>
-                @Html.EditorFor(x => Model.TutorDireccion)
-                <p>Documento</p>
-                @Html.EditorFor(x => Model.TutorDocumento)
+                
             </fieldset>
 
-            <fieldset>
-                <legend>Integrantes</legend>
-                <div id="list-order-items">
-                    @Html.EditorFor(x => x.Members)
-                </div>
-                <p>
-                    <a href="#" onclick="AddItem(); return false;">Agregar Integrante</a>
-                </p>
-            </fieldset>
+            @*
 
-            <p>
-                <a href="http://aceptoelreto.inet.edu.ar/Paginas/bases.aspx" target="_blank">Bases y condiciones.</a>
-            </p>
 
+    <fieldset>
+        <legend>Equipo</legend>
+
+        <p>Nombre</p>
+        @Html.EditorFor(x => Model.Team)
+        <p>Institución</p>
+        @Html.EditorFor(x => Model.Institucion)
+        <p>Provincia</p>
+        @Html.EditorFor(x => Model.Provincia)
+
+    </fieldset>
+
+
+    <!--fieldset>
+        <legend>Archivo</legend>
+        <input type="file" name="file" id="file" />
+    </fieldset-->
+
+    <fieldset>
+        <legend>Tutor</legend>
+
+        <p>Nombre</p>
+        @Html.EditorFor(x => Model.TutorNombre)
+        <p>Mail</p>
+        @Html.EditorFor(x => Model.TutorMail)
+        <p>Dirección</p>
+        @Html.EditorFor(x => Model.TutorDireccion)
+        <p>Documento</p>
+        @Html.EditorFor(x => Model.TutorDocumento)
+    </fieldset>
+
+    <fieldset>
+        <legend>Integrantes</legend>
+        <div id="list-order-items">
+            @Html.EditorFor(x => x.Members)
+        </div>
+        <p>
+            <a href="#" onclick="AddItem(); return false;">Agregar Integrante</a>
+        </p>
+    </fieldset>
+
+    <p>
+        <a href="http://aceptoelreto.inet.edu.ar/Paginas/bases.aspx" target="_blank">Bases y condiciones.</a>
+    </p>
+
+            *@
             <p>
                 <input type="submit" value="ENVIAR" />
             </p>
@@ -92,4 +104,4 @@
 
         </script>
     </body>
-</html>
+</html
