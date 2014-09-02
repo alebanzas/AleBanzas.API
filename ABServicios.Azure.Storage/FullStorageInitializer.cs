@@ -22,6 +22,7 @@ namespace ABServicios.Azure.Storage
 
             new QueueStorageInitializer<AzureChristmasVoteLog>(account).Initialize();
             new QueueStorageInitializer<AzureChristmasRefreshReferal>(account).Initialize();
+            new QueueStorageInitializer<PuntosProcesados>(account).Initialize();
 
             
             new TableStorageInitializer<TableSampleData>(account).Initialize();
@@ -30,6 +31,7 @@ namespace ABServicios.Azure.Storage
 
             new TableStorageInitializer<AzureChristmasVoteLogData>(account).Initialize();
             new TableStorageInitializer<AzureChristmasVoteUserData>(account).Initialize();
+            new TableStorageInitializer<AzureChristmasPuntosUsuarioData>(account).Initialize();
 
 		}
 	}

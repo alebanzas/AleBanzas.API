@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
@@ -70,6 +71,15 @@ namespace ABServicios.Azure.Tests
             QueueConsumerFor<AzureChristmasRefreshReferal>.WithinCurrentThread.Using(new AzureChristmasReferalRefresh())
                                                                                         .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
                                                                                         .StartConsimung();
+        }
+
+        [Test]
+        public void StartConsumigAzureChristmasPuntosPorUsuario()
+        {
+            QueueConsumerFor<PuntosProcesados>.WithStandaloneThread.Using(new AzureChristmasPuntosPorUsuario())
+                                                                                        .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
+                                                                                        .StartConsimung();
+
         }
 
         [Test]

@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
-using Microsoft.WindowsAzure.Storage;
 
 namespace ABServicios.Azure.Worker1
 {
@@ -70,15 +64,19 @@ namespace ABServicios.Azure.Worker1
             QueueConsumerFor<MailMessage>.WithStandaloneThread.Using(new MailsMessagesSender())
                                                                                         .With(PollingFrequencer.For(MailsMessagesSender.EstimatedTime))
                                                                                         .StartConsimung();
-
+            
 
             QueueConsumerFor<AzureChristmasVoteLog>.WithStandaloneThread.Using(new AzureChristmasVoteLogSaver())
                                                                                         .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
                                                                                         .StartConsimung();
 
-            QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+            QueueConsumerFor<PuntosProcesados>.WithStandaloneThread.Using(new AzureChristmasPuntosPorUsuario())
+                                                                                        .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
                                                                                         .StartConsimung();
+
+            //QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
+            //                                                                            .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+            //                                                                            .StartConsimung();
 
             QueueConsumerFor<TrenEnEstacion>.WithStandaloneThread.Using(new TrenEnEstacionReduceDuplicates())
                                                                                         .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
