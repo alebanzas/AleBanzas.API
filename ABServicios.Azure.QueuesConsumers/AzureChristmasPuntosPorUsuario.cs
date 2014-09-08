@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Services.Client;
 using System.Linq;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
@@ -25,13 +24,13 @@ namespace ABServicios.Azure.QueuesConsumers
         }
         
         private static TableServiceContext _tableContext;
-        private static TablePersister<AzureChristmasPuntosUsuarioData> _tablePersister;
+        private static TablePersister<AzureChristmasVoteUserResultData> _tablePersister;
 
         public AzureChristmasPuntosPorUsuario()
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tableContext = new TableServiceContext(tableClient);
-            _tablePersister = new TablePersister<AzureChristmasPuntosUsuarioData>(_tableContext);
+            _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(_tableContext);
         }
 
         public void ProcessMessagesGroup(IQueueMessageRemover<PuntosProcesados> messagesRemover, IEnumerable<QueueMessage<PuntosProcesados>> messages)
@@ -46,16 +45,20 @@ namespace ABServicios.Azure.QueuesConsumers
                     from c in queueMessages
                     group c by c.Data.UserID
                     into gcs
-                    select new AzureChristmasPuntosUsuarioData(gcs.Key, gcs.Count());
+                        select new AzureChristmasVoteUserResultData(gcs.Key)
+                        {
+                            Puntos = gcs.Count()
+                        };
             
             try
             {
                 foreach (var row in rows)
                 {
-                    _tablePersister.Add(row);
+                    //TODO: update de los puntos, si no existe row, creo
+                    //_tablePersister.Add(row);
                 }
 
-                _tableContext.SaveChangesWithRetries();
+                //_tableContext.SaveChangesWithRetries();
             }
             catch (Exception)
             {

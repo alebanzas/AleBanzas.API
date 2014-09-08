@@ -30,7 +30,7 @@ namespace ABServicios.Azure.Storage
             new TableStorageInitializer<DenunciaPreciosData>(account).Initialize();
 
             new TableStorageInitializer<AzureChristmasVoteLogData>(account).Initialize();
-            new TableStorageInitializer<AzureChristmasVoteUserData>(account).Initialize();
+            new TableStorageInitializer<AzureChristmasVoteUserResultData>(account).Initialize();
             new TableStorageInitializer<AzureChristmasPuntosUsuarioData>(account).Initialize();
 
 		}

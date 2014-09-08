@@ -25,15 +25,13 @@ namespace ABServicios.Azure.QueuesConsumers
         }
         
         private static TableServiceContext _tableContext;
-        private static TablePersister<AzureChristmasVoteLogData> _tablePersister;
-        private static TablePersister<AzureChristmasVoteUserData> _tableImagePersister;
+        private static TablePersister<AzureChristmasVoteUserResultData> _tablePersister;
 
         public AzureChristmasReferalRefresh()
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tableContext = new TableServiceContext(tableClient);
-            _tablePersister = new TablePersister<AzureChristmasVoteLogData>(_tableContext);
-            _tableImagePersister = new TablePersister<AzureChristmasVoteUserData>(_tableContext);
+            _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(_tableContext);
         }
 
         public void ProcessMessagesGroup(IQueueMessageRemover<AzureChristmasRefreshReferal> messagesRemover, IEnumerable<QueueMessage<AzureChristmasRefreshReferal>> messages)
@@ -45,13 +43,8 @@ namespace ABServicios.Azure.QueuesConsumers
                 return;
             }
 
-
-
-            //TODO: implementar cuenta refresh
-            //TODO: armar tabla de resultados en una tabla nueva
-            //TODO: refrescar la tabla a demanda con este consumer
-            //TODO: la tabla se va armando con el otro consumer
-            //TODO: si no esta el userid en este consumer, ignoro el mensaje y vuelve a la cola
+            //TODO: query que actualiza puntos referidos, si no existe la row, no hago dequeue
+            //TODO: ver si encolo usuario o referido
 
             messagesRemover.RemoveProcessedMessages(queueMessages);
         }
