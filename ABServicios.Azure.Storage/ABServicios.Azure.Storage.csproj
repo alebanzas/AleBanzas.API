@@ -99,6 +99,7 @@
     <Compile Include="DataAccess\QueueStorage\QueueMessageBlockConsumer.cs" />
     <Compile Include="DataAccess\QueueStorage\QueueMessageConsumer.cs" />
     <Compile Include="DataAccess\TableStorage\AzureChristmasPuntosUsuarioData.cs" />
+    <Compile Include="DataAccess\TableStorage\AzureChristmasVoteLogDataComparer.cs" />
     <Compile Include="DataAccess\TableStorage\DenunciaPreciosData.cs" />
     <Compile Include="DataAccess\TableStorage\AzureChristmasVoteUserData.cs" />
     <Compile Include="DataAccess\TableStorage\AzureChristmasVoteLogData.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="DataAccess\TableStorage\Queries\AzureChristmasResultQuery.cs" />
     <Compile Include="DataAccess\TableStorage\Queries\SummaryAccessLogQuery.cs" />
     <Compile Include="DataAccess\TableStorage\Queries\LocationAccessLogQuery.cs" />
+    <Compile Include="DataAccess\TableStorage\Queries\VotacionModel.cs" />
     <Compile Include="DataAccess\TableStorage\TableSampleData.cs" />
     <Compile Include="DataAccess\TableStorage\IPersister.cs" />
     <Compile Include="DataAccess\TableStorage\Queries\SampleQuery.cs" />

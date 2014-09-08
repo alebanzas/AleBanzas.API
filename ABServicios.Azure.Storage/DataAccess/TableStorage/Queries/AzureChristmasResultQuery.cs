@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
@@ -18,7 +16,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
             _tablePersister = new TablePersister<AzureChristmasVoteLogData>(_tableContext);
 		}
 
-        public IEnumerable<IGrouping<string, AzureChristmasVoteLogData>> GetResults()
+        public VotacionModel GetResults()
 		{
             var queryable = _tableContext.CreateQuery<AzureChristmasVoteLogData>(typeof(AzureChristmasVoteLogData).AsTableStorageName());
 
@@ -34,7 +32,24 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 
 		    var group = list.GroupBy(x => x.UserId);
 
-		    return group;
+            var rr = new VotacionModel();
+
+            foreach (IGrouping<string, AzureChristmasVoteLogData> item in group.OrderByDescending(x => x.Count()))
+            {
+                if (item.Key.ToLowerInvariant().Contains("google")) continue;
+
+                int count = item.Distinct(new AzureChristmasVoteLogDataComparer()).Count();
+
+                rr.Lista.Add(new VotacionItem
+                {
+                    Nombre = item.Key,
+                    Count = count,
+                });
+            }
+
+            rr.Lista = rr.Lista.OrderByDescending(x => x.Count).ToList();
+
+            return rr;
 		}
 	}
 }

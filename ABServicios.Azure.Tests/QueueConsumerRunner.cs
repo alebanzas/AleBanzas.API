@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
+using ABServicios.Azure.Storage.DataAccess.TableStorage;
+using ABServicios.Azure.Storage.DataAccess.TableStorage.Queries;
 using NUnit.Framework;
 
 namespace ABServicios.Azure.Tests
@@ -91,6 +95,18 @@ namespace ABServicios.Azure.Tests
         }
 
         [Test]
+        public void GetAzureChristmasResultsQuery()
+        {
+            var result = new AzureChristmasResultQuery(AzureAccount.DefaultAccount()).GetResults();
+
+            foreach (var p in result.Lista)
+            {
+                Console.WriteLine(p.Nombre + ":" + p.Count);
+            }
+
+        }
+
+        [Test]
         public void StartEnqueuingChristmasVotes()
         {
             var i = 1;
@@ -111,6 +127,22 @@ namespace ABServicios.Azure.Tests
                     Referal = "abhost" + i + ".cloudapp.net",
                     Referer = "http://pepe.clopudapp.net/Home/Index/",
                     UserId = "pepe.cloudapp.net"
+                });
+                AzureQueue.Enqueue(new AzureChristmasVoteLog
+                {
+                    Date = DateTime.UtcNow,
+                    Ip = "127.0.0." + i,
+                    Referal = string.Empty,
+                    Referer = "http://abhost" + i + ".cloudapp.net/Home/Index/",
+                    UserId = "abhost" + i + ".cloudapp.net"
+                });
+                AzureQueue.Enqueue(new AzureChristmasVoteLog
+                {
+                    Date = DateTime.UtcNow,
+                    Ip = "127.0.0." + i,
+                    Referal = string.Empty,
+                    Referer = "http://abhost" + i + ".cloudapp.net/Home/Index/",
+                    UserId = "abhost" + i + ".cloudapp.net"
                 });
                 i++;
             }
