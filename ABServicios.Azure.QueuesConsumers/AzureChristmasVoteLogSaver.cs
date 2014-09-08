@@ -82,7 +82,8 @@ namespace ABServicios.Azure.QueuesConsumers
                             Referal = group.Data.Referal,
                         });
 
-                        _tableImagePersister.Add(new AzureChristmasVoteUserData(group.Id, group.Data.Referal, group.Data.UserId));
+                        //TODO: para que sirve?
+                        //_tableImagePersister.Add(new AzureChristmasVoteUserData(group.Id, group.Data.Referal, group.Data.UserId));
 
                         if (!string.IsNullOrWhiteSpace(group.Data.Referal))
                         {
@@ -105,6 +106,7 @@ namespace ABServicios.Azure.QueuesConsumers
 
         public void ProcessMessages(QueueMessage<AzureChristmasVoteLog> message)
         {
+            //TODO: sacar comentario cuando funcione
             //if (message.DequeueCount > 100)
             //    return;
             
