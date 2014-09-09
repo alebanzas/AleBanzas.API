@@ -6,7 +6,7 @@ namespace AzureDashboard
     {
         public static void RegisterItems()
         {
-            (new HomeController()).Start();
+            (new HomeController()).FirstStart();
         }
     }
 }
