@@ -5,51 +5,73 @@
 }
 
 <div class="hero-unit" style="z-index: 999;">
-    <h1>Resultados</h1>
-    <p class="lead">Encuentra los resultados parciales de la votación.</p>
-    
-    <img src="/img/tc.png" style="position: fixed; top: 26%; height: 75%; left: -5%; display: none;" />
-    <img src="/img/tc.png" style="position: fixed; top: 26%; height: 75%; right: -5%; display: none;" />
-    
-    <table class="resultados" style="width: 100%; max-width: 600px;">
-        @{
-            float max = Model.Lista.FirstOrDefault() != null ? Model.Lista.FirstOrDefault().Visitas : 0;
-            for (int index = 1; index <= Model.Lista.Count; index++)
-            {
-                var item = Model.Lista[index-1];
-                <tr>
-                    <td>#@index</td>
-                    <td><a href="http://@item.Nombre" style="color: white;">@item.Nombre</a></td>
-                    <td>@(item.Visitas)</td>
-                    <td><progress style="margin-left: 30px; width: @(Math.Round(3*(item.Visitas/(max/100))))%; height: 60%;background-color: blue;" /></td>
-                </tr>
+    <div style="z-index: 3;">
+        <table class="resultados" style="width: 80%; max-width: 800px;">
+            <tr>
+                <td></td>
+                <td>visitas</td>
+                <td>amigos</td>
+                <td><b>total</b></td>
+                <td>puntos</td>
+            </tr>
+            @{
+                for (int index = 1; index <= Model.Lista.Count; index++)
+                {
+                    var item = Model.Lista[index-1];
+                    <tr>
+                        <td bgcolor="#CDC0B4">#@(index)&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://@item.Nombre" style="color: white;">@item.Nombre</a></td>
+                        <td bgcolor="#CDC0B4">@(item.Visitas)</td>
+                        <td>@(item.VisitasReferidas)</td>
+                        <td><b>@(item.Visitas + item.VisitasReferidas)</b></td>
+                        <td>@(item.Puntos)</td>
+                    </tr>
+                }
             }
-        }    
-    </table>
-    <p style="font-size:10px; display: none;">
-        <br />
-        Este resultado es parcial, el sistema cierra la votacion a las 0hs del 00/00/2014. Cuando el resultado sea final, publicaremos por este medio los ganadores finales.
-        <br />
-        El resultado esta auditado por accesos duplicados desde una misma IP el mismo dia.
-    </p>
+        </table>
+        <p style="font-size:10px; display: none;">
+            <br />
+            Este resultado es parcial, el sistema cierra la votacion a las 0hs del 00/00/2014. Cuando el resultado sea final, publicaremos por este medio los ganadores finales.
+            <br />
+            El resultado esta auditado por accesos duplicados desde una misma IP el mismo dia.
+        </p>
+    </div>
+    
+
+    <img src="/Content/lefttiles.png" style="position: fixed; height: 40%; bottom: 0; left: 0%; z-index: 1;" />
+    <img src="/Content/righttiles.png" style="position: fixed; height: 40%; bottom: 0; right: 0%; z-index: 1;" class="righttile" />
+
 </div>
 
 <style>
     body {
+        font-family: Segoe UI;
+        font-weight: lighter;
         background: url('/img/bg-h.jpg') no-repeat no-repeat;
-        background-color: rgb(92, 173, 203);
+        background-color: #FAF8EF;
     }
 
      .resultados tr:first-child {
          font-size: 30px;
      }
     .resultados {
-        margin-left: 100px;
+        background-color: #a28d7b;
+        background-color: rgba(162,141,123, 0.8);
     }
-    .resultados tr:nth-child(2) {
-        font-size: 25px;
+    
+    
+    .resultados tr {
+        font-size: 24px;
     }
+    .resultados tr:nth-child(1) {
+        font-size: 24px;
+    }
+    .resultados tr:nth-child(2),
+    .resultados tr:nth-child(3),
     .resultados tr:nth-child(4) {
-        font-size: 20px;
+        font-size: 30px;
     }
+    .resultados td:nth-child(1) {
+        
+    }
+
 </style>
