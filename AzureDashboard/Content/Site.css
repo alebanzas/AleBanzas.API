@@ -15,3 +15,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+@media (max-width: 600px) {
+  .righttile {
+    display: none;
+  }
+}
