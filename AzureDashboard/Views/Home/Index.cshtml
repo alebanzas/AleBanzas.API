@@ -13,15 +13,15 @@
     
     <table class="resultados" style="width: 100%; max-width: 600px;">
         @{
-            float max = Model.Lista.FirstOrDefault() != null ? Model.Lista.FirstOrDefault().Count : 0;
+            float max = Model.Lista.FirstOrDefault() != null ? Model.Lista.FirstOrDefault().Visitas : 0;
             for (int index = 1; index <= Model.Lista.Count; index++)
             {
                 var item = Model.Lista[index-1];
                 <tr>
                     <td>#@index</td>
                     <td><a href="http://@item.Nombre" style="color: white;">@item.Nombre</a></td>
-                    <td>@(item.Count)</td>
-                    <td><progress style="margin-left: 30px; width: @(Math.Round(3*(item.Count/(max/100))))%; height: 60%;background-color: blue;" /></td>
+                    <td>@(item.Visitas)</td>
+                    <td><progress style="margin-left: 30px; width: @(Math.Round(3*(item.Visitas/(max/100))))%; height: 60%;background-color: blue;" /></td>
                 </tr>
             }
         }    

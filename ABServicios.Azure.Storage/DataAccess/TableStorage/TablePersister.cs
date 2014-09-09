@@ -2,6 +2,7 @@ using System;
 using System.Data.Services.Client;
 using System.Linq;
 using System.Net;
+using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
@@ -22,23 +23,22 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 
 		public TDataRow Get(string partitionKey, string rowKey)
 		{
-			try
-			{
-				var query =
-					(from te in tableContext.CreateQuery<TDataRow>(entityTableName)
-					 where te.PartitionKey == partitionKey && te.RowKey == rowKey
-					 select te).AsTableServiceQuery(tableContext);
-				return query.Execute().SingleOrDefault();
-			}
-			catch (DataServiceQueryException e)
-			{
-				var inner = e.InnerException as DataServiceClientException;
-				if (inner != null && inner.StatusCode == (int)HttpStatusCode.NotFound)
-				{
-					return null;
-				}
-				throw;
-			}
+		    try
+		    {
+		        var query =
+		            (from te in tableContext.CreateQuery<TDataRow>(entityTableName)
+		                where te.PartitionKey == partitionKey && te.RowKey == rowKey
+		                select te).AsTableServiceQuery(tableContext);
+		        return query.Execute().SingleOrDefault();
+		    }
+		    catch (StorageException e)
+		    {
+                if (e.RequestInformation.HttpStatusCode == (int)HttpStatusCode.NotFound)
+		        {
+		            return null;
+		        }
+		        throw;
+		    }
 		}
 
 		public void Add(TDataRow dataRow)

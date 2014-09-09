@@ -80,7 +80,7 @@ namespace ABServicios.Azure.Tests
         [Test]
         public void StartConsumigAzureChristmasPuntosPorUsuario()
         {
-            QueueConsumerFor<PuntosProcesados>.WithStandaloneThread.Using(new AzureChristmasPuntosPorUsuario())
+            QueueConsumerFor<PuntosProcesados>.WithinCurrentThread.Using(new AzureChristmasPuntosPorUsuario())
                                                                                         .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
                                                                                         .StartConsimung();
 
@@ -101,9 +101,29 @@ namespace ABServicios.Azure.Tests
 
             foreach (var p in result.Lista)
             {
-                Console.WriteLine(p.Nombre + ":" + p.Count);
+                Console.WriteLine(p.Nombre + ":" + p.Visitas);
             }
 
+        }
+
+        [Test]
+        public void StartEnqueingChristmasPuntos()
+        {
+            var i = 1;
+            while (i <= 6)
+            {
+                AzureQueue.Enqueue(new PuntosProcesados
+                {
+                    Puntaje = DateTime.UtcNow.Second,
+                    UserID = "abhost" + i + ".cloudapp.net",
+                });
+                AzureQueue.Enqueue(new PuntosProcesados
+                {
+                    Puntaje = DateTime.UtcNow.Second + 3,
+                    UserID = "abhost" + i + ".cloudapp.net",
+                });
+                i++;
+            }
         }
 
         [Test]
@@ -115,7 +135,7 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.0." + i,
+                    Ip = "127.0.1." + i,
                     Referal = "abhost" + i + ".cloudapp.net",
                     Referer = "http://pepe.clopudapp.net/Home/Index/",
                     UserId = "pepe.cloudapp.net"
@@ -123,7 +143,7 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.0." + i,
+                    Ip = "127.0.1." + i,
                     Referal = "abhost" + i + ".cloudapp.net",
                     Referer = "http://pepe.clopudapp.net/Home/Index/",
                     UserId = "pepe.cloudapp.net"
@@ -131,7 +151,7 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.0." + i,
+                    Ip = "127.0.1." + i,
                     Referal = string.Empty,
                     Referer = "http://abhost" + i + ".cloudapp.net/Home/Index/",
                     UserId = "abhost" + i + ".cloudapp.net"
@@ -139,7 +159,7 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.0." + i,
+                    Ip = "127.0.1." + i,
                     Referal = string.Empty,
                     Referer = "http://abhost" + i + ".cloudapp.net/Home/Index/",
                     UserId = "abhost" + i + ".cloudapp.net"

@@ -81,7 +81,11 @@ namespace ABServicios.Azure.QueuesConsumers
 
                         if (!string.IsNullOrWhiteSpace(group.Data.Referal))
                         {
-                            AzureQueue.Enqueue(new AzureChristmasRefreshReferal{ Referal = group.Data.Referal });
+                            AzureQueue.Enqueue(new AzureChristmasRefreshReferal
+                            {
+                                UserId = group.Data.UserId, 
+                                Referal = group.Data.Referal,
+                            });
                         }
 
                         Console.WriteLine(group.Count);

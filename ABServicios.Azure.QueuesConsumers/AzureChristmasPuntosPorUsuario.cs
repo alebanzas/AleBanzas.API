@@ -9,7 +9,7 @@ using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.QueuesConsumers
 {
-    public class AzureChristmasPuntosPorUsuario : IQueueMessageBlocksConsumer<PuntosProcesados>
+    public class AzureChristmasPuntosPorUsuario : IQueueMessageConsumer<PuntosProcesados>
 	{
 		public static readonly TimeSpan EstimatedTime = TimeSpan.FromMinutes(1);
 
@@ -17,7 +17,7 @@ namespace ABServicios.Azure.QueuesConsumers
         {
             get { return EstimatedTime; }
         }
-        
+
         public int BlockSize
         {
             get { return 64; }
@@ -31,6 +31,13 @@ namespace ABServicios.Azure.QueuesConsumers
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tableContext = new TableServiceContext(tableClient);
             _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(_tableContext);
+        }
+
+        public void ProcessMessages(QueueMessage<PuntosProcesados> message)
+        {
+            var data = message.Data;
+            SaveOrUpdatePuntos(data.UserID, data.Puntaje);
+            _tableContext.SaveChangesWithRetries();
         }
 
         public void ProcessMessagesGroup(IQueueMessageRemover<PuntosProcesados> messagesRemover, IEnumerable<QueueMessage<PuntosProcesados>> messages)
@@ -52,13 +59,12 @@ namespace ABServicios.Azure.QueuesConsumers
             
             try
             {
-                foreach (var row in rows)
+                foreach (var votacionItem in rows)
                 {
-                    //TODO: update de los puntos, si no existe row, creo
-                    //_tablePersister.Add(row);
+                    SaveOrUpdatePuntos(votacionItem.UserId, votacionItem.Puntos);
                 }
 
-                //_tableContext.SaveChangesWithRetries();
+                _tableContext.SaveChangesWithRetries();
             }
             catch (Exception)
             {
@@ -68,6 +74,24 @@ namespace ABServicios.Azure.QueuesConsumers
             messagesRemover.RemoveProcessedMessages(queueMessages);
         }
 
+        private static void SaveOrUpdatePuntos(string userId, int puntos)
+        {
+            var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, userId);
+
+            if (i == null)
+            {
+                _tablePersister.Add(new AzureChristmasVoteUserResultData
+                {
+                    UserId = userId,
+                    Puntos = puntos,
+                });
+            }
+            else
+            {
+                i.Puntos += puntos;
+                _tablePersister.Update(i);
+            }
+        }
 	}
 
 }

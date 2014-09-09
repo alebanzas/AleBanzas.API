@@ -91,9 +91,9 @@ namespace ABServicios.Azure.Worker1
                                                                                         .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
                                                                                         .StartConsimung();
 
-            //QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
-            //                                                                            .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
-            //                                                                            .StartConsimung();
+            QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
+                                                                                        .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+                                                                                        .StartConsimung();
 
             QueueConsumerFor<TrenEnEstacion>.WithStandaloneThread.Using(new TrenEnEstacionReduceDuplicates())
                                                                                         .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
@@ -115,7 +115,26 @@ namespace ABServicios.Azure.Worker1
         {
             var results = query.GetResults();
 
-            //TODO: por cada resultado, armo o actualizo la tabla
+            foreach (var votacionItem in results.Lista)
+            {
+                var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
+
+                if (i == null)
+                {
+                    _tablePersister.Add(new AzureChristmasVoteUserResultData
+                    {
+                        UserId = votacionItem.Nombre,
+                        Visitas = votacionItem.Visitas,
+                    });
+                }
+                else
+                {
+                    i.Visitas = votacionItem.Visitas;
+                    _tablePersister.Update(i);
+                }
+            }
+
+            _tableContext.SaveChangesWithRetries();
             //TODO: tuneo la query para que traiga por fecha y hora
         }
     }
