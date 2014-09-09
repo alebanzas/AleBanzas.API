@@ -2,6 +2,9 @@
 {
 	public class AzureChristmasVoteUserResultData : TableDataRow
     {
+        //Aca podria escalar por pais
+	    public static string PKey = "PK";
+
         public string UserId { get; set; }
 
         public int Visitas { get; set; }
@@ -22,8 +25,7 @@
 
 		protected override string CreatePartitionKey()
 		{
-            //Aca podria escalar por pais
-            return "PK";
+            return PKey;
 		}
         
 		protected override string CreateRowKey()

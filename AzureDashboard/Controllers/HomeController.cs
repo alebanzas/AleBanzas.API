@@ -65,11 +65,7 @@ namespace AzureDashboard.Controllers
 
         private VotacionModel GetModel()
         {
-            var votacionModel = query.GetResults();
-            
-
-            
-            return votacionModel;
+            return query.GetResultsToView();
         }
     }
 }

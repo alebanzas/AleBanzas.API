@@ -13,6 +13,8 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
     public class VotacionItem
     {
         public string Nombre { get; set; }
-        public int Count { get; set; }
+        public int Visitas { get; set; }
+        public int VisitasReferidas { get; set; }
+        public int Puntos { get; set; }
     }
 }
