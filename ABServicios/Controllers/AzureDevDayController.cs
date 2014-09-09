@@ -10,7 +10,8 @@ namespace ABServicios.Controllers
         [HttpPost]
         public HttpStatusCodeResult Index(PuntosProcesados form)
         {
-            AzureQueue.Enqueue(form);
+            if(!string.IsNullOrWhiteSpace(form.UserID))
+                AzureQueue.Enqueue(form);
 
             return new HttpStatusCodeResult(200);
         }
