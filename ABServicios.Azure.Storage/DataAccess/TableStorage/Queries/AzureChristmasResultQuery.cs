@@ -79,7 +79,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
                             Puntos = x.Puntos,
                             Visitas = x.Visitas,
                             VisitasReferidas = x.VisitasReferidos,
-                        }))
+                        }).OrderByDescending(x => (x.Visitas + x.VisitasReferidas)))
             };
 	    }
 	}
