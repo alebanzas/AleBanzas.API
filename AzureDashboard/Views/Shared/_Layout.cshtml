@@ -24,12 +24,15 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;">
+        <div class="resultados" style="padding: 20px 0 10px 0;">
+            <img src="/Content/2048.png" class="img-title">
+            <img src="/Content/ranking.png" class="img-ranking">
+        </div>
         @RenderBody()
     </div>
-    <footer style="margin-top: -163px;display: none;">
-        <img src="/img/houses.png" style="width: 100%;" />
-    </footer>
+
+    <div class="background" style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 1;">&nbsp;</div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
