@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table.DataServices;
@@ -68,18 +69,32 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 	    public VotacionModel GetResultsToView()
 	    {
             var queryable = _tableContext.CreateQuery<AzureChristmasVoteUserResultData>(typeof(AzureChristmasVoteUserResultData).AsTableStorageName());
-            
-            return new VotacionModel
+
+	        var votacionItems = new List<VotacionItem>(
+	            queryable.AsTableServiceQuery(_tableContext).Execute().Select(x => new VotacionItem
+	            {
+	                Nombre = x.UserId,
+	                Puntos = x.Puntos,
+	                Visitas = x.Visitas,
+	                VisitasReferidas = x.VisitasReferidos,
+	            }).OrderByDescending(x => (x.Visitas + x.VisitasReferidas)));
+
+            var votacionItemsFiltrado = new List<VotacionItem>();
+
+	        foreach (var votacionItem in votacionItems)
+	        {
+                Uri referal;
+                if (votacionItem.Nombre == null || !votacionItem.Nombre.EndsWith(".cloudapp.net") || !Uri.TryCreate("http://" + votacionItem.Nombre, UriKind.Absolute, out referal))
+                {
+                    continue;
+                }
+	            votacionItemsFiltrado.Add(votacionItem);
+	        }
+
+	        return new VotacionModel
             {
                 Lista =
-                    new List<VotacionItem>(
-                        queryable.AsTableServiceQuery(_tableContext).Execute().Select(x => new VotacionItem
-                        {
-                            Nombre = x.UserId,
-                            Puntos = x.Puntos,
-                            Visitas = x.Visitas,
-                            VisitasReferidas = x.VisitasReferidos,
-                        }).OrderByDescending(x => (x.Visitas + x.VisitasReferidas)))
+                    votacionItemsFiltrado,
             };
 	    }
 	}
