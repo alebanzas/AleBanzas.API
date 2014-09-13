@@ -56,6 +56,12 @@ namespace ABServicios.Azure.QueuesConsumers
             {
                 try
                 {
+                    if ("aquienrefiero.cloudapp.net".Equals(filteredMessage.Data.Referal))
+                    {
+                        messagesToDequeue.Add(filteredMessage);
+                        continue;
+                    }
+
                     var referal = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey,
                         filteredMessage.Data.Referal);
                     var users = query.GetUsersFromReferal(filteredMessage.Data.Referal);
