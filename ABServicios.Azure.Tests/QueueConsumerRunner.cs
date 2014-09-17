@@ -99,7 +99,7 @@ namespace ABServicios.Azure.Tests
         {
             var result = new AzureChristmasResultQuery(AzureAccount.DefaultAccount()).GetResults();
 
-            foreach (var p in result.Lista)
+            foreach (var p in result.Lista.OrderByDescending(x => x.Nombre))
             {
                 Console.WriteLine(p.Nombre + ":" + p.Visitas);
             }

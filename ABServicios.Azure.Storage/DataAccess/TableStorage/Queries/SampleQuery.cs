@@ -12,8 +12,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 		public SampleQuery(CloudStorageAccount account)
 		{
 		    var client = account.CreateCloudTableClient();
-			_tableContext = client.GetTableServiceContext();
-            _tableSamplePersister = new TablePersister<TableSampleData>(_tableContext);
+            _tableSamplePersister = new TablePersister<TableSampleData>(client);
 		}
 
         public TableSampleData GetResultsFromPublicacion(string ex1, int ex2)

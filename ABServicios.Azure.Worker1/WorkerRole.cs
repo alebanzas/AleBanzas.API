@@ -28,8 +28,7 @@ namespace ABServicios.Azure.Worker1
             query = new AzureChristmasResultQuery(AzureAccount.DefaultAccount());
             
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
-            _tableContext = new TableServiceContext(tableClient);
-            _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(_tableContext);
+            _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
         }
 
 
