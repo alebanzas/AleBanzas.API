@@ -94,6 +94,13 @@ namespace ABServicios.Azure.QueuesConsumers
                     //_tableContext.SaveChangesWithRetries(SaveChangesOptions.Batch);
                     _tableContext.SaveChangesWithRetries();
                 }
+                catch (StorageException ex)
+                {
+                    if (ex.RequestInformation.HttpStatusCode != (int) HttpStatusCode.Conflict)
+                    {
+                        return;
+                    }
+                }
                 catch (Exception)
                 {
                     return;
