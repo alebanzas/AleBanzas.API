@@ -4,8 +4,6 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
 	public class AzureChristmasVoteLogData : TableDataRow
     {
-        public string Id { get; set; }
-
         public string UserId { get; set; }
         
         public DateTime Date { get; set; }
@@ -24,9 +22,8 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 	    {
 	    }
 
-        public AzureChristmasVoteLogData(string id, string referal, string userId)
+        public AzureChristmasVoteLogData(string referal, string userId)
 	    {
-            Id = id;
             Referal = referal;
             UserId = userId;
 	    }
@@ -38,7 +35,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
         
 		protected override string CreateRowKey()
 		{
-            return string.Format("{0}-{1}", Date.ToString("yyyyMMddHHmmssfffffff"), Id);
+            return string.Format("{0}-{1}", Date.ToString("yyyyMMddHHmmssfffffff"), Guid.NewGuid());
 		}
     }
 }

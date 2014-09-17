@@ -293,8 +293,6 @@
     <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Api\Extensions\SUBEExtensions.cs" />
     <Compile Include="Api\Models\VentaSUBEViewModel.cs" />
-    <Compile Include="Extensions\ExceptionExtensions.cs" />
-    <Compile Include="Extensions\RouteExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

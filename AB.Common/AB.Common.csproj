@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\RouteExtensions.cs" />
     <Compile Include="Helpers\DateTimeExtensions.cs" />
     <Compile Include="Helpers\EnumerableExtensions.cs" />
     <Compile Include="Helpers\EnumExtensions.cs" />
@@ -73,6 +75,12 @@
     <Compile Include="Helpers\StringsExtensions.cs" />
     <Compile Include="Wiring\ApplicationConfiguration.cs" />
     <Compile Include="Wiring\IGuyWire.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABServicios.Azure.Storage\ABServicios.Azure.Storage.csproj">
+      <Project>{3F2476BF-8BA8-4126-AFDF-0115587BABFC}</Project>
+      <Name>ABServicios.Azure.Storage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

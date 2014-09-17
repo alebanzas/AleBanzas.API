@@ -20,7 +20,7 @@ namespace ABServicios.Azure.QueuesConsumers
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tableContext = new TableServiceContext(tableClient);
-            _tablePersister = new TablePersister<DenunciaPreciosData>(_tableContext);
+            _tablePersister = new TablePersister<DenunciaPreciosData>(tableClient);
         }
 
         public void ProcessMessages(QueueMessage<DenunciaPrecios> message)

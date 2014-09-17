@@ -64,6 +64,7 @@
     <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +75,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AB.Common\AB.Common.csproj">
+      <Project>{E3E70B35-9ADF-40B2-A211-55859542854B}</Project>
+      <Name>AB.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ABServicios.Azure.QueuesConsumers\ABServicios.Azure.QueuesConsumers.csproj">
       <Project>{836a53b6-4e8a-4c1d-9c5a-4543e1d4071c}</Project>
       <Name>ABServicios.Azure.QueuesConsumers</Name>
