@@ -50,7 +50,7 @@ namespace ABServicios.Azure.QueuesConsumers
             }
 
             var filteredMessages = queueMessages.Distinct(new AzureChristmasReferalDataComparer()).ToList();
-            var messagesToDequeue = new List<QueueMessage<AzureChristmasRefreshReferal>>();
+            var messagesToDequeue = new List<QueueMessage<AzureChristmasRefreshReferal>>(queueMessages);
             
             foreach (var filteredMessage in filteredMessages)
             {
@@ -58,26 +58,27 @@ namespace ABServicios.Azure.QueuesConsumers
                 {
                     if ("aquienrefiero.cloudapp.net".Equals(filteredMessage.Data.Referal))
                     {
-                        messagesToDequeue.Add(filteredMessage);
                         continue;
                     }
 
                     var referal = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey,
                         filteredMessage.Data.Referal);
-                    var users = query.GetUsersFromReferal(filteredMessage.Data.Referal);
 
-                    var visitasReferidas =
-                        users.Sum(user => _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, user).Visitas);
+                    if (referal != null && filteredMessage.DequeueCount < 100)
+                    {
+                        var users = query.GetUsersFromReferal(filteredMessage.Data.Referal);
 
-                    //al referal le tengo que dar la mitad de los puntos del userid
-                    referal.VisitasReferidos = visitasReferidas/2;
+                        var visitasReferidas = users.Select(user => _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, user)).Where(u => u != null).Sum(u => u.Visitas);
 
-                    _tablePersister.Update(referal);
+                        //al referal le tengo que dar la mitad de los puntos del userid
+                        referal.VisitasReferidos = visitasReferidas / 2;
 
-                    messagesToDequeue.Add(filteredMessage);
+                        _tablePersister.Update(referal);
+                    }
                 }
                 catch (Exception)
                 {
+                    messagesToDequeue.Remove(filteredMessage);
                     Trace.TraceWarning("Error: user={0} referal={1}", filteredMessage.Data.UserId, filteredMessage.Data.Referal);
                 }
             }

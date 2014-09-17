@@ -1,7 +1,9 @@
+using System;
 using System.Diagnostics;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using AB.Common.Extensions;
 using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
@@ -103,11 +105,18 @@ namespace ABServicios.Azure.Worker1
             // TODO: logica de tareas como implementacion de consumers
             while (!cancellationToken.IsCancellationRequested)
             {
-                CalculateAzureChristmasResults();
-
+                try
+                {
+                    CalculateAzureChristmasResults();
+                }
+                catch (Exception ex)
+                {
+                    ex.Log(ExceptionAction.SendMailAndEnqueue);
+                    Trace.TraceError("Error calculando resultados.");
+                }
 
                 Trace.TraceInformation("Working");
-                await Task.Delay(1000 * 60 * 5);
+                await Task.Delay(1000 * 60 * 2);
             }
         }
 
