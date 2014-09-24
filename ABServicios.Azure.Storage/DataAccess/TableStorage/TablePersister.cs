@@ -1,14 +1,11 @@
 using System;
-using System.Data.Services.Client;
-using System.Linq;
 using System.Net;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
-using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
-	public class TablePersister<TDataRow> : IPersister<TDataRow> where TDataRow : TableDataRow
+	public class TablePersister<TDataRow> : IPersister<TDataRow> where TDataRow : TableEntity
 	{
 		private readonly CloudTable table;
 		private readonly string entityTableName = typeof(TDataRow).AsTableStorageName();
@@ -41,6 +38,11 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 		        throw;
 		    }
 		}
+
+        public void AddBatch(TableBatchOperation tableOperation)
+        {
+            table.ExecuteBatch(tableOperation);
+        }
 
 		public void Add(TDataRow dataRow)
 		{

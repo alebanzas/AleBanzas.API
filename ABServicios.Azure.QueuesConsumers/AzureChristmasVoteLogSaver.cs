@@ -7,7 +7,7 @@ using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using ABServicios.Azure.Storage.DataAccess.TableStorage;
 using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Table.DataServices;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace ABServicios.Azure.QueuesConsumers
 {
@@ -24,14 +24,12 @@ namespace ABServicios.Azure.QueuesConsumers
         {
             get { return 64; }
         }
-        
-        private static TableServiceContext _tableContext;
+
         private static TablePersister<AzureChristmasVoteLogData> _tablePersister;
        
         public AzureChristmasVoteLogSaver()
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
-            _tableContext = new TableServiceContext(tableClient);
             _tablePersister = new TablePersister<AzureChristmasVoteLogData>(tableClient);
         }
 
@@ -68,14 +66,15 @@ namespace ABServicios.Azure.QueuesConsumers
             
                 try
                 {
+                    TableBatchOperation batchOperation = new TableBatchOperation();
+
                     foreach (AzureChristmasVoteLogMessage @group in groups)
                     {
                         if (string.IsNullOrWhiteSpace(group.Data.UserId)) continue;
                         if (string.IsNullOrWhiteSpace(group.Data.Referer)) continue;
 
-                        _tablePersister.Add(new AzureChristmasVoteLogData(group.Data.Referal, group.Data.UserId)
+                        batchOperation.Insert(new AzureChristmasVoteLogData(group.Data.Referal, group.Data.UserId, group.Data.Date)
                         {
-                            Date = group.Data.Date,
                             Ip = group.Data.Ip,
                             Referer = group.Data.Referer,
                             Referal = group.Data.Referal,
@@ -92,9 +91,7 @@ namespace ABServicios.Azure.QueuesConsumers
 
                         Console.WriteLine(group.Count);
                     }
-
-                    //_tableContext.SaveChangesWithRetries(SaveChangesOptions.Batch);
-                    _tableContext.SaveChangesWithRetries();
+                    _tablePersister.AddBatch(batchOperation);
                 }
                 catch (StorageException ex)
                 {

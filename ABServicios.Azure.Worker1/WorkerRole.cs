@@ -129,9 +129,8 @@ namespace ABServicios.Azure.Worker1
 
                     if (i == null)
                     {
-                        _tablePersister.Add(new AzureChristmasVoteUserResultData
+                        _tablePersister.Add(new AzureChristmasVoteUserResultData(votacionItem.Nombre)
                         {
-                            UserId = votacionItem.Nombre,
                             Visitas = votacionItem.Visitas,
                         });
                     }

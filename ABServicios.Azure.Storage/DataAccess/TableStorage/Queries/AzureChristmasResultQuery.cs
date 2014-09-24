@@ -2,34 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table;
 using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 {
 	public class AzureChristmasResultQuery
-	{
-        private readonly TableServiceContext _tableContext;
-        public AzureChristmasResultQuery(CloudStorageAccount account)
+    {
+        private CloudTable _table;
+        private CloudTable _tableResults;
+
+	    public AzureChristmasResultQuery(CloudStorageAccount account)
 		{
-		    var client = account.CreateCloudTableClient();
-            _tableContext = client.GetTableServiceContext();
+            var client = account.CreateCloudTableClient();
+            _table = client.GetTableReference(typeof(AzureChristmasVoteLogData).AsTableStorageName());
+            _tableResults = client.GetTableReference(typeof(AzureChristmasVoteUserResultData).AsTableStorageName());
 		}
 
         public VotacionModel GetResults()
-		{
-            var queryable = _tableContext.CreateQuery<AzureChristmasVoteLogData>(typeof(AzureChristmasVoteLogData).AsTableStorageName());
+        {
+            IQueryable<AzureChristmasVoteLogData> apiAccessLogDatas = (from data in _table.CreateQuery<AzureChristmasVoteLogData>()
+                                                                       where
+                                                                           (!data.PartitionKey.Equals("127.0.0.1") && !data.PartitionKey.Equals("127.0.0.2") &&
+                                                                            !data.PartitionKey.Equals("localhost") && !data.PartitionKey.Equals("127.255.0.0") && !data.Ip.Equals("127.0.0.1"))
+                                                                       select data);
 
-            IQueryable<AzureChristmasVoteLogData> apiAccessLogDatas = (from data in queryable
-                where
-                    (!data.PartitionKey.Equals("127.0.0.1") && !data.PartitionKey.Equals("127.0.0.2") &&
-                     !data.PartitionKey.Equals("localhost") && !data.PartitionKey.Equals("127.255.0.0") && !data.Ip.Equals("127.0.0.1"))
-                select data);
-            var result = apiAccessLogDatas.AsTableServiceQuery(_tableContext).Execute();
-
-		    var list = result.ToList();
+            var list = apiAccessLogDatas.ToList();
 
 
-		    var group = list.GroupBy(x => x.UserId);
+            var group = list.GroupBy(x => x.UserId);
 
             var rr = new VotacionModel();
 
@@ -53,34 +54,29 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 
 	    public List<string> GetUsersFromReferal(string referal)
 	    {
-            var queryable = _tableContext.CreateQuery<AzureChristmasVoteLogData>(typeof(AzureChristmasVoteLogData).AsTableStorageName());
-
-            IQueryable<AzureChristmasVoteLogData> apiAccessLogDatas = (from data in queryable
-                                                                       where
-                                                                            data.Referal == referal &&
-                                                                           (!data.PartitionKey.Equals("127.0.0.1") && !data.PartitionKey.Equals("127.0.0.2") &&
-                                                                            !data.PartitionKey.Equals("localhost") && !data.PartitionKey.Equals("127.255.0.0") && !data.Ip.Equals("127.0.0.1"))
-                                                                       select data);
-            var result = apiAccessLogDatas.AsTableServiceQuery(_tableContext).Execute();
-
-            return result.GroupBy(x => x.UserId).Select(x => x.Key).ToList();
+            IQueryable<AzureChristmasVoteLogData> apiAccessLogDatas = (from data in _table.CreateQuery<AzureChristmasVoteLogData>()
+	                                                                   where
+	                                                                        data.Referal == referal &&
+	                                                                       (!data.PartitionKey.Equals("127.0.0.1") && !data.PartitionKey.Equals("127.0.0.2") &&
+	                                                                        !data.PartitionKey.Equals("localhost") && !data.PartitionKey.Equals("127.255.0.0") && !data.Ip.Equals("127.0.0.1"))
+	                                                                   select data);
+            
+            return apiAccessLogDatas.GroupBy(x => x.UserId).Select(x => x.Key).ToList();
 	    }
 
 	    public VotacionModel GetResultsToView()
 	    {
-            var queryable = _tableContext.CreateQuery<AzureChristmasVoteUserResultData>(typeof(AzureChristmasVoteUserResultData).AsTableStorageName());
-
 	        var votacionItems = new List<VotacionItem>(
-	            queryable.AsTableServiceQuery(_tableContext).Execute().Select(x => new VotacionItem
+                _tableResults.CreateQuery<AzureChristmasVoteUserResultData>().Select(x => new VotacionItem
 	            {
 	                Nombre = x.UserId,
 	                Puntos = x.Puntos,
 	                Visitas = x.Visitas,
 	                VisitasReferidas = x.VisitasReferidos,
 	            }).OrderByDescending(x => (x.Visitas + x.VisitasReferidas)));
-
+            
             var votacionItemsFiltrado = new List<VotacionItem>();
-
+            
 	        foreach (var votacionItem in votacionItems)
 	        {
                 Uri referal;
@@ -90,7 +86,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
                 }
 	            votacionItemsFiltrado.Add(votacionItem);
 	        }
-
+            
 	        return new VotacionModel
             {
                 Lista =

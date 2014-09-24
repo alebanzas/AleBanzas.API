@@ -1,9 +1,22 @@
 ﻿using System;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
-	public class AzureChristmasVoteLogData : TableDataRow
+    public class AzureChristmasVoteLogData : TableEntity
     {
+        public AzureChristmasVoteLogData(){}
+
+        public AzureChristmasVoteLogData(string referal, string userId, DateTime date)
+        {
+            Referal = referal;
+            UserId = userId;
+            PartitionKey = userId;
+            Date = date;
+            RowKey = date.ToString("yyyyMMddHHmmssfffffff") + Guid.NewGuid();
+        }
+        
+
         public string UserId { get; set; }
         
         public DateTime Date { get; set; }
@@ -16,26 +29,5 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
         /// quien refiere al usuario
         /// </summary>
 	    public string Referal { get; set; }
-
-
-	    public AzureChristmasVoteLogData()
-	    {
-	    }
-
-        public AzureChristmasVoteLogData(string referal, string userId)
-	    {
-            Referal = referal;
-            UserId = userId;
-	    }
-
-		protected override string CreatePartitionKey()
-		{
-            return UserId;
-		}
-        
-		protected override string CreateRowKey()
-		{
-            return string.Format("{0}-{1}", Date.ToString("yyyyMMddHHmmssfffffff"), Guid.NewGuid());
-		}
     }
 }

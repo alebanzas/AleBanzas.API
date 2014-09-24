@@ -80,9 +80,8 @@ namespace ABServicios.Azure.QueuesConsumers
 
             if (i == null)
             {
-                _tablePersister.Add(new AzureChristmasVoteUserResultData
+                _tablePersister.Add(new AzureChristmasVoteUserResultData(userId)
                 {
-                    UserId = userId,
                     Puntos = puntos,
                 });
             }

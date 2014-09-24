@@ -110,7 +110,6 @@
     <Compile Include="DataAccess\TableStorage\TableSampleData.cs" />
     <Compile Include="DataAccess\TableStorage\IPersister.cs" />
     <Compile Include="DataAccess\TableStorage\Queries\SampleQuery.cs" />
-    <Compile Include="DataAccess\TableStorage\TableDataRow.cs" />
     <Compile Include="DataAccess\TableStorage\TablePersister.cs" />
     <Compile Include="DataAccess\TableStorage\TableStorageExtensions.cs" />
     <Compile Include="DataAccess\TableStorage\TableStorageInitializer.cs" />
