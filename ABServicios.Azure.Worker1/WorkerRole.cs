@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
-using AB.Common.Extensions;
 using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
@@ -111,7 +110,6 @@ namespace ABServicios.Azure.Worker1
                 }
                 catch (Exception ex)
                 {
-                    ex.Log(ExceptionAction.SendMailAndEnqueue);
                     Trace.TraceError("Error calculando resultados.");
                 }
 
@@ -126,24 +124,35 @@ namespace ABServicios.Azure.Worker1
 
             foreach (var votacionItem in results.Lista)
             {
-                var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
+                try
+                {
+                    var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
 
-                if (i == null)
-                {
-                    _tablePersister.Add(new AzureChristmasVoteUserResultData
+                    if (i == null)
                     {
-                        UserId = votacionItem.Nombre,
-                        Visitas = votacionItem.Visitas,
-                    });
+                        _tablePersister.Add(new AzureChristmasVoteUserResultData
+                        {
+                            UserId = votacionItem.Nombre,
+                            Visitas = votacionItem.Visitas,
+                        });
+                    }
+                    else
+                    {
+                        if (i.Visitas != votacionItem.Visitas)
+                        {
+                            i.Visitas = votacionItem.Visitas;
+                            _tablePersister.Update(i);
+                        }
+                    }
+
+                    _tableContext.SaveChangesWithRetries();
                 }
-                else
+                catch (Exception)
                 {
-                    i.Visitas = votacionItem.Visitas;
-                    _tablePersister.Update(i);
+                    Trace.TraceError("Error al procesar " + votacionItem.Nombre);
+                    throw;
                 }
             }
-
-            _tableContext.SaveChangesWithRetries();
             //TODO: tuneo la query para que traiga por fecha y hora
         }
     }

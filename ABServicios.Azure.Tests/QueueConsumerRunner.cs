@@ -8,6 +8,7 @@ using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using ABServicios.Azure.Storage.DataAccess.TableStorage;
 using ABServicios.Azure.Storage.DataAccess.TableStorage.Queries;
+using Microsoft.WindowsAzure.Storage.Table.DataServices;
 using NUnit.Framework;
 
 namespace ABServicios.Azure.Tests
@@ -97,11 +98,42 @@ namespace ABServicios.Azure.Tests
         [Test]
         public void GetAzureChristmasResultsQuery()
         {
-            var result = new AzureChristmasResultQuery(AzureAccount.DefaultAccount()).GetResults();
+            var results = new AzureChristmasResultQuery(AzureAccount.DefaultAccount()).GetResults();
 
-            foreach (var p in result.Lista)
+            var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
+            var _tableContext = new TableServiceContext(tableClient);
+            var _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(_tableContext);
+
+            foreach (var votacionItem in results.Lista)
             {
-                Console.WriteLine(p.Nombre + ":" + p.Visitas);
+                Console.WriteLine(votacionItem.Nombre + ":" + votacionItem.Visitas);
+                try
+                {
+                    var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
+
+                    if (i == null)
+                    {
+                        _tablePersister.Add(new AzureChristmasVoteUserResultData
+                        {
+                            UserId = votacionItem.Nombre,
+                            Visitas = votacionItem.Visitas,
+                        });
+                    }
+                    else
+                    {
+                        if (i.Visitas != votacionItem.Visitas)
+                        {
+                            i.Visitas = votacionItem.Visitas;
+                            _tablePersister.Update(i);
+                        }
+                    }
+
+                    _tableContext.SaveChangesWithRetries();
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Error al procesar " + votacionItem.Nombre);
+                }
             }
 
         }
