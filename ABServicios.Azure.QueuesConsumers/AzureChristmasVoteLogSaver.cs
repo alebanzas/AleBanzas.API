@@ -32,7 +32,7 @@ namespace ABServicios.Azure.QueuesConsumers
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tableContext = new TableServiceContext(tableClient);
-            _tablePersister = new TablePersister<AzureChristmasVoteLogData>(_tableContext);
+            _tablePersister = new TablePersister<AzureChristmasVoteLogData>(tableClient);
         }
 
         public void ProcessMessagesGroup(IQueueMessageRemover<AzureChristmasVoteLog> messagesRemover, IEnumerable<QueueMessage<AzureChristmasVoteLog>> messages)
@@ -56,10 +56,10 @@ namespace ABServicios.Azure.QueuesConsumers
                         Data = new AzureChristmasVoteLog
                         {
                             Date = gcs.FirstOrDefault().Data.Date,
-                            Ip = gcs.Key.Ip,
                             UserId = gcs.Key.UserId,
                             Referer = gcs.FirstOrDefault().Data.Referer,
                             Referal = gcs.FirstOrDefault().Data.Referal,
+                            Ip = gcs.FirstOrDefault().Data.Ip,
                         },
                         Id = gcs.FirstOrDefault().Id,
                         Count = gcs.Count(),
@@ -73,7 +73,7 @@ namespace ABServicios.Azure.QueuesConsumers
                         if (string.IsNullOrWhiteSpace(group.Data.UserId)) continue;
                         if (string.IsNullOrWhiteSpace(group.Data.Referer)) continue;
 
-                        _tablePersister.Add(new AzureChristmasVoteLogData(group.Id, group.Data.Referal, group.Data.UserId)
+                        _tablePersister.Add(new AzureChristmasVoteLogData(group.Data.Referal, group.Data.UserId)
                         {
                             Date = group.Data.Date,
                             Ip = group.Data.Ip,

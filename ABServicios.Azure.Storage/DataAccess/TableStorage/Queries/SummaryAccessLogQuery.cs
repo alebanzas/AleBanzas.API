@@ -15,7 +15,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 		{
 		    var client = account.CreateCloudTableClient();
 			_tableContext = client.GetTableServiceContext();
-            _tablePersister = new TablePersister<ApiAccessLogData>(_tableContext);
+            _tablePersister = new TablePersister<ApiAccessLogData>(client);
 		}
         
 		public IEnumerable<IGrouping<string, ApiAccessLogData>> GetResultsFromDate(DateTime date)

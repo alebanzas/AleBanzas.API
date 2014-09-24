@@ -3,7 +3,7 @@ using System.Web;
 using AB.Common.Mail;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 
-namespace ABServicios.Extensions
+namespace AB.Common.Extensions
 {
     public enum ExceptionAction
     {

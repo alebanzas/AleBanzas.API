@@ -1,5 +1,6 @@
 using System;
 using System.Data.Services.Common;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {

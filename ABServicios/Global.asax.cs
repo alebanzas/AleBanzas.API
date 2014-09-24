@@ -1,4 +1,5 @@
-﻿using ABServicios.Services;
+﻿using AB.Common.Extensions;
+using ABServicios.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,6 @@ using AB.Common.Wiring;
 using AB.Data;
 using ABServicios.Azure.Storage;
 using ABServicios.Controllers;
-using ABServicios.Extensions;
 using ABServicios.Services;
 
 namespace ABServicios

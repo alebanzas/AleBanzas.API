@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Routing;
 
-namespace ABServicios.Extensions
+namespace AB.Common.Extensions
 {
     public static class RouteExtensions
     {

@@ -30,7 +30,7 @@ namespace ABServicios.Azure.QueuesConsumers
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tableContext = new TableServiceContext(tableClient);
-            _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(_tableContext);
+            _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
         }
 
         public void ProcessMessages(QueueMessage<PuntosProcesados> message)
