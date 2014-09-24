@@ -1,0 +1,88 @@
+﻿@model ABServicios.Azure.Storage.DataAccess.TableStorage.Queries.VotacionModel
+
+@functions {
+    private string NumberAsString(int numero)
+    {
+        if (numero >= 1000000)
+        {
+            return string.Format("{0}M", numero/1000000);
+        }
+        return numero >= 1000 ? string.Format("{0}K", numero/1000) : numero.ToString(CultureInfo.InvariantCulture);
+    }
+
+}
+@using System.Globalization
+@using Microsoft.Owin.Security
+@{
+    ViewBag.Title = "Resultados";  
+    var rnd = new Random();
+}
+
+
+<div class="resultados fondo">
+    <div class="row">
+        <div class="cell title"></div>
+        <div class="cell title"><p>visitas</p></div>
+        <div class="cell title"><p>amigos</p></div>
+        <div class="cell title"><p><b>total</b></p></div>
+        <div class="cell title"><p>puntos</p></div>
+    </div>
+    @{
+        for (int index = 1; index <= Model.Lista.Count; index++)
+        {
+            var item = Model.Lista[index - 1];
+            <div class="row">
+                <div class="cell"><p>#@(index)&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://@item.Nombre" style="color: white;">@item.Nombre</a></p></div>
+                <div class="cell">
+                    @if (item.Visitas != 0)
+                    {
+                        <p class="tile-@(rnd.Next(1, 5))" title="@item.Visitas">@(NumberAsString(item.Visitas))</p>
+                    }
+                    else
+                    {
+                        <p>&nbsp;</p>
+                    }
+                </div>
+                <div class="cell">
+                    @if (item.VisitasReferidas != 0)
+                    {
+                        <p class="tile-@(rnd.Next(1, 5))" title="@item.VisitasReferidas">@(NumberAsString(item.VisitasReferidas))</p>
+                    }
+                    else
+                    {
+                        <p>&nbsp;</p>
+                    }
+                </div>
+                <div class="cell">
+                    @if (item.Visitas + item.VisitasReferidas != 0)
+                    {
+                        <p class="tile-@(rnd.Next(1, 5))" title="@(item.Visitas + item.VisitasReferidas)"><b>@(NumberAsString(item.Visitas + item.VisitasReferidas))</b></p>
+                    }
+                    else
+                    {
+                        <p>&nbsp;</p>
+                    }
+                </div>
+                <div class="cell">
+                    @if (item.Puntos != 0)
+                    {
+                        <p class="tile-@(rnd.Next(1, 5))" title="@item.Puntos">@(NumberAsString(item.Puntos))</p>
+                    }
+                    else
+                    {
+                        <p>&nbsp;</p>
+                    }
+                </div>
+            </div>
+        }
+}
+
+    <p style="font-size:10px;">
+        <br />
+        Este resultado es parcial, el sistema cierra la votación a las 23:59:59hs del viernes 10/10/2014. Cuando el resultado sea final, publicaremos por este medio los ganadores finales.
+        <br />
+        Este resultado parcial está auditado por accesos duplicados desde una misma IP el mismo día. Se verificará la legitimidad de las visitas.
+        <br />
+        <a href="http://aka.ms/azuredevdayterms">Términos y condiciones</a>
+    </p>
+</div>

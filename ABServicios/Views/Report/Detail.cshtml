@@ -1,0 +1,25 @@
+﻿@using ABServicios.Azure.Storage.DataAccess.TableStorage;
+@model IEnumerable<ApiAccessLogData>
+
+<table>
+    @{
+    var i = 0;
+    foreach (var data in Model)
+    {
+        <tr>
+            <td>
+                <script type="text/javascript">
+                    direcciones[@(i)] = { lat: "@HttpUtility.ParseQueryString(data.PathAndQuery.Replace("?", "&")).Get("lat")", lon: "@HttpUtility.ParseQueryString(data.PathAndQuery).Get("lon")"};
+                </script>
+                @data.PartitionKey
+            </td>
+            <td>@data.RowKey</td>
+            <td>@data.Date</td>
+            <td>@data.PathAndQuery</td>
+            <td>@data.Timestamp</td>
+            <td>@data.Type</td>
+        </tr>
+        i++;
+    }
+}
+</table>

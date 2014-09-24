@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Azure</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="display: none;">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Azure", "Index", "Home", null, new { @class = "brand" })
+                <div class="nav-collapse collapse">
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;">
+        <div class="resultados" style="padding: 20px 0 10px 0;">
+            <img src="/Content/2048.png" class="img-title">
+            <img src="/Content/ranking.png" class="img-ranking">
+        </div>
+        @RenderBody()
+    </div>
+
+    <div class="background" style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 1;">&nbsp;</div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

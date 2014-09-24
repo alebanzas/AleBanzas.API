@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+           assembly="ABServicios.BLL"
+				   namespace="ABServicios.BLL.Entities">
+  <class name="InetForm" table="InetForm">
+    <id name="ID">
+      <generator class="guid"/>
+    </id>
+
+    <property name="Team" />
+    <property name="FileUrl" />
+    <property name="Institucion" />
+    <property name="Provincia" />
+    <property name="Date" />
+    
+    <property name="TutorNombre" />
+    <property name="TutorMail" />
+    <property name="TutorDireccion" />
+    <property name="TutorDocumento" />
+              
+    <bag name="Members" cascade="all-delete-orphan">
+      <key column="IDTeam"/>
+      <one-to-many class="TeamMember" />
+    </bag>
+    
+
+  </class>
+</hibernate-mapping>

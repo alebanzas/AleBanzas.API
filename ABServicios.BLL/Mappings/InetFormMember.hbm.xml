@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+           assembly="ABServicios.BLL"
+				   namespace="ABServicios.BLL.Entities">
+  <class name="TeamMember" table="InetFormMember">
+    <id name="ID">
+      <generator class="guid"/>
+    </id>
+
+    <property name="Nombre" />
+    <property name="Email" />
+    <property name="Domicilio" />
+    <property name="Documento" />
+    <property name="FechaNacimiento" />
+    
+  </class>
+</hibernate-mapping>

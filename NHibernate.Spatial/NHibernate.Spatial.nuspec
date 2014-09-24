@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Nhibernate Spatial built for NHibernate 3.X</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>NHibernate Spatial</tags>
+    <dependencies>
+      <dependency id="GeoAPI" version="1.6.0" />
+      <dependency id="Iesi.Collections" version="3.3.1.4000" />
+      <dependency id="NetTopologySuite" version="1.12.0" />
+      <dependency id="NHibernate" version="3.3.1.4000" />
+    </dependencies>
+  </metadata>
+</package>

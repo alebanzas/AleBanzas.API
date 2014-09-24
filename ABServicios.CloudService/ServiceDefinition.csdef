@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="ABServicios.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+  <WorkerRole name="ABServicios.Azure.Worker1" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+  </WorkerRole>
+</ServiceDefinition>

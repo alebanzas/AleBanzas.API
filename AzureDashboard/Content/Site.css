@@ -1,0 +1,252 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    min-height: 100%;
+}
+
+.background {
+    background: url('lefttiles.png'), url('righttiles.png');
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 400px auto, 400px auto;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+body {
+    font-family: Segoe UI;
+    font-weight: lighter;
+    background-color: #FAF8EF;
+}
+
+    .resultados tr:first-child {
+        font-size: 30px;
+    }
+
+    .resultados {
+        margin-left: auto;
+        margin-right: auto;
+        width: 850px;
+        padding: 0 20px 30px 20px;
+    }
+    .resultados.fondo {
+        background-color: #a28d7b;
+        background-color: rgba(162,141,123, 0.8);
+    }
+
+    .resultados .row {
+        display: table-row;
+    }
+    
+    .resultados .cell {
+        display: table-cell;
+    }
+    
+    .resultados .cell p {
+        background-color: #CDC0B4;
+        margin: 5px;
+        padding: 2px;
+        text-align: center;
+        width: 90px;
+    }
+
+    .resultados .cell.title p {
+        background-color: transparent;
+    }
+
+    .resultados .cell:nth-child(1) p {
+        text-align: left;
+        width: 400px;
+        padding-left: 10px;
+    }
+
+    .resultados .row {
+        font-size: 24px;
+    }
+
+    .resultados .row:nth-child(1) {
+        font-size: 24px;
+    }
+
+    .resultados .row:nth-child(2),
+    .resultados .row:nth-child(3),
+    .resultados .row:nth-child(4) {
+        font-size: 30px;
+    }
+
+    .resultados td:nth-child(1) {
+    }
+    
+    .resultados .cell p.tile-1 { 
+        background-color: #F5915D;
+        color: white;
+    }
+    .resultados .cell p.tile-2 {
+        background-color: #F67C5F;
+        color: white;
+    }
+    .resultados .cell p.tile-3 {
+        background-color: #EDCF72;
+        color: white;
+    }
+    .resultados .cell p.tile-4 {
+        background-color: #EDE0C8;
+        color: black;
+    }
+    .resultados .cell p.tile-5 {
+        background-color: #EEE4DA;
+        color: black;
+    }
+    
+    .img-title {
+        height: 50px;
+    }
+
+    .img-ranking {
+        float: right;
+        height: 30px;
+    }
+
+
+@media (max-width: 600px) {
+  .righttile {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1000px) {
+    .resultados {
+        width: 620px!important;
+        padding: 0 10px;
+    }
+
+    .resultados .cell p {
+        width: 60px!important;
+    }
+
+    .resultados .cell:nth-child(1) p {
+        width: 300px!important;
+    }
+
+    .resultados .row {
+        font-size: 16px;
+    }
+
+    .resultados .row:nth-child(1) {
+        font-size: 20px;
+    }
+
+    .resultados .row:nth-child(2),
+    .resultados .row:nth-child(3),
+    .resultados .row:nth-child(4) {
+        font-size: 22px;
+    }
+
+    .img-title {
+        height: 30px;
+    }
+
+    .img-ranking {
+        height: 25px;
+    }
+
+    .background {
+        background-size: 300px auto,  300px auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .resultados {
+        width: 420px!important;
+        padding: 0 5px;
+    }
+
+    .resultados .cell p {
+        width: 35px!important;
+    }
+
+    .resultados .cell:nth-child(1) p {
+        width: 210px!important;
+    }
+
+    .resultados .row {
+        font-size: 10px;
+    }
+
+    .resultados .row:nth-child(1) {
+        font-size: 12px;
+    }
+
+    .resultados .row:nth-child(2),
+    .resultados .row:nth-child(3),
+    .resultados .row:nth-child(4) {
+        font-size: 14px;
+    }
+
+    .img-title {
+        height: 25px;
+    }
+
+    .img-ranking {
+        height: 20px;
+    }
+
+    .background {
+        background-size: 180px auto,  180px auto;
+    }
+}
+
+@media (max-width: 440px) {
+    .resultados {
+        width: 300px!important;
+        padding: 0 5px;
+    }
+
+    .resultados .cell p {
+        width: 24px!important;
+    }
+
+    .resultados .cell:nth-child(1) p {
+        width: 145px!important;
+    }
+
+    .resultados .row {
+        font-size: 8px;
+    }
+
+    .resultados .row:nth-child(1) {
+        font-size: 8px;
+    }
+
+    .resultados .row:nth-child(2),
+    .resultados .row:nth-child(3),
+    .resultados .row:nth-child(4) {
+        font-size: 9px;
+    }
+
+    .img-title {
+        height: 25px;
+    }
+
+    .img-ranking {
+        height: 20px;
+    }
+
+    .background {
+        background-size: 180px auto,  0 0;
+    }
+}
