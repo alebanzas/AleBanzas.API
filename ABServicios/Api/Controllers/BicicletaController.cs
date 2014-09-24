@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Caching;
 using System.Web.Http;
-using ABServicios.Extensions;
+using AB.Common.Extensions;
 using ABServicios.Models;
 using ABServicios.Services;
 using HtmlAgilityPack;

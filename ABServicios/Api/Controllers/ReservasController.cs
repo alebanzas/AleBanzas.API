@@ -6,8 +6,8 @@ using System.Net.Http;
 using System.Text;
 using System.Web.Caching;
 using System.Web.Http;
+using AB.Common.Extensions;
 using ABServicios.Api.Models;
-using ABServicios.Extensions;
 using ABServicios.Services;
 using ScrapySharp.Extensions;
 

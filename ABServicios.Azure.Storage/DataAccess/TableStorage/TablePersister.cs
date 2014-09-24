@@ -3,33 +3,34 @@ using System.Data.Services.Client;
 using System.Linq;
 using System.Net;
 using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table;
 using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
 	public class TablePersister<TDataRow> : IPersister<TDataRow> where TDataRow : TableDataRow
 	{
-		private readonly TableServiceContext tableContext;
+		private readonly CloudTable table;
 		private readonly string entityTableName = typeof(TDataRow).AsTableStorageName();
 
-		public TablePersister(TableServiceContext tableContext)
+        public TablePersister(CloudTableClient tableClient)
 		{
-			if (tableContext == null)
+            if (tableClient == null)
 			{
-				throw new ArgumentNullException("tableContext");
+                throw new ArgumentNullException("cloudTableClient");
 			}
-			this.tableContext = tableContext;
+            table = tableClient.GetTableReference(entityTableName);
 		}
 
 		public TDataRow Get(string partitionKey, string rowKey)
 		{
 		    try
 		    {
-		        var query =
-		            (from te in tableContext.CreateQuery<TDataRow>(entityTableName)
-		                where te.PartitionKey == partitionKey && te.RowKey == rowKey
-		                select te).AsTableServiceQuery(tableContext);
-		        return query.Execute().SingleOrDefault();
+                var retrieveOperation = TableOperation.Retrieve<TDataRow>(partitionKey, rowKey);
+
+                var retrievedResult = table.Execute(retrieveOperation);
+
+                return (TDataRow)retrievedResult.Result;
 		    }
 		    catch (StorageException e)
 		    {
@@ -43,21 +44,23 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 
 		public void Add(TDataRow dataRow)
 		{
-			tableContext.AddObject(entityTableName, dataRow);
+		    var op = TableOperation.Insert(dataRow);
+            table.Execute(op);
 		}
 
 		public void Update(TDataRow dataRow)
-		{
-			tableContext.UpdateObject(dataRow);
+        {
+            var op = TableOperation.Replace(dataRow);
+            table.Execute(op);
 		}
 
 		public void Delete(string partitionKey, string rowKey)
 		{
 			var entity = Get(partitionKey, rowKey);
-			if (entity != null)
-			{
-				tableContext.DeleteObject(entity);
-			}
+		    if (entity == null) return;
+
+		    var op = TableOperation.Delete(entity);
+		    table.Execute(op);
 		}
 
 		public void Delete(TDataRow dataRow)
