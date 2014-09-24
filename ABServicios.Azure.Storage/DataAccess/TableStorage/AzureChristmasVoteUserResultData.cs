@@ -1,7 +1,21 @@
-﻿namespace ABServicios.Azure.Storage.DataAccess.TableStorage
+﻿using Microsoft.WindowsAzure.Storage.Table;
+
+namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 {
-	public class AzureChristmasVoteUserResultData : TableDataRow
+	public class AzureChristmasVoteUserResultData : TableEntity
     {
+        public AzureChristmasVoteUserResultData() { }
+
+        public AzureChristmasVoteUserResultData(string userId)
+        {
+            PartitionKey = PKey;
+            UserId = userId;
+            RowKey = userId;
+            Visitas = 0;
+            VisitasReferidos = 0;
+            Puntos = 0;
+        }
+
         //Aca podria escalar por pais
 	    public static string PKey = "PK";
 
@@ -10,27 +24,5 @@
         public int Visitas { get; set; }
         public int VisitasReferidos { get; set; }
         public int Puntos { get; set; }
-
-	    public AzureChristmasVoteUserResultData()
-	    {
-	    }
-
-        public AzureChristmasVoteUserResultData(string userId)
-	    {
-            UserId = userId;
-            Visitas = 0;
-            VisitasReferidos = 0;
-            Puntos = 0;
-	    }
-
-		protected override string CreatePartitionKey()
-		{
-            return PKey;
-		}
-        
-		protected override string CreateRowKey()
-		{
-            return UserId;
-		}
     }
 }

@@ -101,21 +101,19 @@ namespace ABServicios.Azure.Tests
             var results = new AzureChristmasResultQuery(AzureAccount.DefaultAccount()).GetResults();
 
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
-            var _tableContext = new TableServiceContext(tableClient);
-            var _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(_tableContext);
+            var tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
 
             foreach (var votacionItem in results.Lista)
             {
                 Console.WriteLine(votacionItem.Nombre + ":" + votacionItem.Visitas);
                 try
                 {
-                    var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
+                    var i = tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
 
                     if (i == null)
                     {
-                        _tablePersister.Add(new AzureChristmasVoteUserResultData
+                        tablePersister.Add(new AzureChristmasVoteUserResultData(votacionItem.Nombre)
                         {
-                            UserId = votacionItem.Nombre,
                             Visitas = votacionItem.Visitas,
                         });
                     }
@@ -124,11 +122,9 @@ namespace ABServicios.Azure.Tests
                         if (i.Visitas != votacionItem.Visitas)
                         {
                             i.Visitas = votacionItem.Visitas;
-                            _tablePersister.Update(i);
+                            tablePersister.Update(i);
                         }
                     }
-
-                    _tableContext.SaveChangesWithRetries();
                 }
                 catch (Exception)
                 {

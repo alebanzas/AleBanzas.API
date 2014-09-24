@@ -15,20 +15,18 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
             _tableSamplePersister = new TablePersister<TableSampleData>(client);
 		}
 
-        public TableSampleData GetResultsFromPublicacion(string ex1, int ex2)
+        public TableSampleData GetResultsFromPublicacion(string ex1, string ex2)
 		{
-            var row = _tableSamplePersister.Get(TableSampleData.GetPartionKeyFor(ex1, ex2), TableSampleData.GetRowKey(ex1, ex2));
+            var row = _tableSamplePersister.Get(ex1, ex2);
 
 			return row;
 		}
 
 		public void GetResultsFromPackage(string ex1, int ex2)
 		{
-            var pk = TableSampleData.GetPartionKeyFor(ex1, ex2);
-
             var queryable = _tableContext.CreateQuery<TableSampleData>(typeof(TableSampleData).AsTableStorageName());
 
-			var result = (from data in queryable where data.PartitionKey == pk select data).AsTableServiceQuery(_tableContext).Execute();
+			var result = (from data in queryable where data.PartitionKey == ex1 select data).AsTableServiceQuery(_tableContext).Execute();
 		}
 	}
 }

@@ -20,7 +20,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
         
 		public IEnumerable<IGrouping<string, ApiAccessLogData>> GetResultsFromDate(DateTime date)
 		{
-            var pk = ApiAccessLogData.GetPartionKeyFor(date);
+            var pk = date.ToString("yyyyMMdd");
 
             var queryable = _tableContext.CreateQuery<ApiAccessLogData>(typeof(ApiAccessLogData).AsTableStorageName());
 
