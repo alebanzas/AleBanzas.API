@@ -155,6 +155,38 @@ namespace ABServicios.Azure.Tests
         }
 
         [Test]
+        public void AzureResultsToViewModel()
+        {
+            var client = AzureAccount.DefaultAccount().CreateCloudTableClient();
+            var _tableResults = client.GetTableReference(typeof(AzureChristmasVoteUserResultData).AsTableStorageName());
+
+            var votacionItems = new List<VotacionItem>(
+                _tableResults.CreateQuery<AzureChristmasVoteUserResultData>().ToList().Select(x => new VotacionItem
+                {
+                    Nombre = x.UserId,
+                    Puntos = x.Puntos,
+                    Visitas = x.Visitas,
+                    VisitasReferidas = x.VisitasReferidos,
+                }).OrderByDescending(x => (x.Visitas + x.VisitasReferidas)));
+
+            var votacionItemsFiltrado = new List<VotacionItem>();
+
+            foreach (var votacionItem in votacionItems)
+            {
+                Uri referal;
+                if (votacionItem.Nombre == null || !votacionItem.Nombre.EndsWith(".cloudapp.net") ||
+                    !Uri.TryCreate("http://" + votacionItem.Nombre, UriKind.Absolute, out referal))
+                {
+                    continue;
+                }
+                votacionItemsFiltrado.Add(votacionItem);
+                Console.WriteLine(votacionItem.Nombre);
+            }
+
+        }
+
+
+        [Test]
         public void StartEnqueuingChristmasVotes()
         {
             var i = 1;

@@ -67,7 +67,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 	    public VotacionModel GetResultsToView()
 	    {
 	        var votacionItems = new List<VotacionItem>(
-                _tableResults.CreateQuery<AzureChristmasVoteUserResultData>().Select(x => new VotacionItem
+                _tableResults.CreateQuery<AzureChristmasVoteUserResultData>().ToList().Select(x => new VotacionItem
 	            {
 	                Nombre = x.UserId,
 	                Puntos = x.Puntos,

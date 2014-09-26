@@ -3,13 +3,13 @@
   <Role name="AzureDashboard">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=azureresults;AccountKey=RK3cbI0XlHk6si2bay3suHXk47KT/GkwtYW/XXlgmbYXi70aKe6RPqY+Ma/0P2IWrs8UzKbzPC5MS8C1016YLQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=azurechristmas;AccountKey=ifEsCU/YWUc53JKGIg0VuDTfeG0u+emnw5RSV9Uac7+vkEcsSS4kgoNBx5x7cLGQ6sUb2iwx+PB5p/ih3HYCKw==" />
     </ConfigurationSettings>
   </Role>
   <Role name="ABServicios.Azure.Worker1">
     <Instances count="2" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=azureresults;AccountKey=RK3cbI0XlHk6si2bay3suHXk47KT/GkwtYW/XXlgmbYXi70aKe6RPqY+Ma/0P2IWrs8UzKbzPC5MS8C1016YLQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=azurechristmas;AccountKey=ifEsCU/YWUc53JKGIg0VuDTfeG0u+emnw5RSV9Uac7+vkEcsSS4kgoNBx5x7cLGQ6sUb2iwx+PB5p/ih3HYCKw==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
