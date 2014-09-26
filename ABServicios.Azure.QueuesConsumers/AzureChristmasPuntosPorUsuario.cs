@@ -23,13 +23,11 @@ namespace ABServicios.Azure.QueuesConsumers
             get { return 64; }
         }
         
-        private static TableServiceContext _tableContext;
         private static TablePersister<AzureChristmasVoteUserResultData> _tablePersister;
 
         public AzureChristmasPuntosPorUsuario()
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
-            _tableContext = new TableServiceContext(tableClient);
             _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
         }
 
@@ -37,7 +35,6 @@ namespace ABServicios.Azure.QueuesConsumers
         {
             var data = message.Data;
             SaveOrUpdatePuntos(data.UserID, data.Puntaje);
-            _tableContext.SaveChangesWithRetries();
         }
 
         public void ProcessMessagesGroup(IQueueMessageRemover<PuntosProcesados> messagesRemover, IEnumerable<QueueMessage<PuntosProcesados>> messages)
@@ -63,8 +60,6 @@ namespace ABServicios.Azure.QueuesConsumers
                 {
                     SaveOrUpdatePuntos(votacionItem.UserId, votacionItem.Puntos);
                 }
-
-                _tableContext.SaveChangesWithRetries();
             }
             catch (Exception)
             {

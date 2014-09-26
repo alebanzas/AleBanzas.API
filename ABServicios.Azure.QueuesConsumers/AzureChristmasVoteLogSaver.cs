@@ -42,56 +42,39 @@ namespace ABServicios.Azure.QueuesConsumers
                 return;
             }
 
-            var groups =
-                    from c in queueMessages
-                    group c by new
-                    {
-                        c.Data.UserId,
-                        c.Data.Ip,
-                        c.Data.Date.Day,
-                    } into gcs
-                    select new AzureChristmasVoteLogMessage{
-                        Data = new AzureChristmasVoteLog
-                        {
-                            Date = gcs.FirstOrDefault().Data.Date,
-                            UserId = gcs.Key.UserId,
-                            Referer = gcs.FirstOrDefault().Data.Referer,
-                            Referal = gcs.FirstOrDefault().Data.Referal,
-                            Ip = gcs.FirstOrDefault().Data.Ip,
-                        },
-                        Id = gcs.FirstOrDefault().Id,
-                        Count = gcs.Count(),
-                    };
+            var filteredMessages = queueMessages.Distinct(new AzureChristmasVoteLogComparer()).ToList();
 
-            
+
+            var groups =
+                from c in filteredMessages
+                group c by c.Data.UserId;
+
                 try
                 {
-                    TableBatchOperation batchOperation = new TableBatchOperation();
-
-                    foreach (AzureChristmasVoteLogMessage @group in groups)
+                    foreach (IGrouping<string, QueueMessage<AzureChristmasVoteLog>> @group in groups)
                     {
-                        if (string.IsNullOrWhiteSpace(group.Data.UserId)) continue;
-                        if (string.IsNullOrWhiteSpace(group.Data.Referer)) continue;
-
-                        batchOperation.Insert(new AzureChristmasVoteLogData(group.Data.Referal, group.Data.UserId, group.Data.Date)
+                        TableBatchOperation batchOperation = new TableBatchOperation();
+                        foreach (QueueMessage<AzureChristmasVoteLog> queueMessage in group)
                         {
-                            Ip = group.Data.Ip,
-                            Referer = group.Data.Referer,
-                            Referal = group.Data.Referal,
-                        });
-
-                        if (!string.IsNullOrWhiteSpace(group.Data.Referal) && !"aquienrefiero.cloudapp.net".Equals(group.Data.Referal))
-                        {
-                            AzureQueue.Enqueue(new AzureChristmasRefreshReferal
+                            batchOperation.Insert(new AzureChristmasVoteLogData(queueMessage.Data.Referal, queueMessage.Data.UserId, queueMessage.Data.Date)
                             {
-                                UserId = group.Data.UserId, 
-                                Referal = group.Data.Referal,
+                                Ip = queueMessage.Data.Ip,
+                                Referer = queueMessage.Data.Referer,
+                                Referal = queueMessage.Data.Referal,
                             });
-                        }
 
-                        Console.WriteLine(group.Count);
+                            if (!string.IsNullOrWhiteSpace(queueMessage.Data.Referal) && !"aquienrefiero.cloudapp.net".Equals(queueMessage.Data.Referal))
+                            {
+                                AzureQueue.Enqueue(new AzureChristmasRefreshReferal
+                                {
+                                    UserId = queueMessage.Data.UserId,
+                                    Referal = queueMessage.Data.Referal,
+                                });
+                            }
+                        }
+                        _tablePersister.AddBatch(batchOperation);
+                        Console.WriteLine("Batch: " + batchOperation.Count);
                     }
-                    _tablePersister.AddBatch(batchOperation);
                 }
                 catch (StorageException ex)
                 {
@@ -105,6 +88,7 @@ namespace ABServicios.Azure.QueuesConsumers
                     return;
                 }
 
+                Console.WriteLine("Remove: " + queueMessages.Count);
             messagesRemover.RemoveProcessedMessages(queueMessages);
         }
 
