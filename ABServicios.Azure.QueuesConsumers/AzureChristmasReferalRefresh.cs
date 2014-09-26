@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Services.Client;
 using System.Diagnostics;
 using System.Linq;
 using ABServicios.Azure.Storage;
@@ -8,7 +7,6 @@ using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using ABServicios.Azure.Storage.DataAccess.TableStorage;
 using ABServicios.Azure.Storage.DataAccess.TableStorage.Queries;
-using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.QueuesConsumers
 {
@@ -26,7 +24,6 @@ namespace ABServicios.Azure.QueuesConsumers
             get { return 64; }
         }
         
-        private static TableServiceContext _tableContext;
         private static TablePersister<AzureChristmasVoteUserResultData> _tablePersister;
 
         public readonly AzureChristmasResultQuery query;
@@ -36,7 +33,6 @@ namespace ABServicios.Azure.QueuesConsumers
             query = new AzureChristmasResultQuery(AzureAccount.DefaultAccount());
 
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
-            _tableContext = new TableServiceContext(tableClient);
             _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
         }
 
@@ -51,7 +47,8 @@ namespace ABServicios.Azure.QueuesConsumers
 
             var filteredMessages = queueMessages.Distinct(new AzureChristmasReferalDataComparer()).ToList();
             var messagesToDequeue = new List<QueueMessage<AzureChristmasRefreshReferal>>(queueMessages);
-            
+
+            Console.WriteLine("Procesados: " + filteredMessages.Count);
             foreach (var filteredMessage in filteredMessages)
             {
                 try
@@ -83,8 +80,7 @@ namespace ABServicios.Azure.QueuesConsumers
                 }
             }
 
-            _tableContext.SaveChangesWithRetries();
-
+            Console.WriteLine("Remove: " + queueMessages.Count);
             messagesRemover.RemoveProcessedMessages(messagesToDequeue);
         }
 

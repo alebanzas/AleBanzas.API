@@ -54,14 +54,14 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 
 	    public List<string> GetUsersFromReferal(string referal)
 	    {
-            IQueryable<AzureChristmasVoteLogData> apiAccessLogDatas = (from data in _table.CreateQuery<AzureChristmasVoteLogData>()
+            IQueryable<string> apiAccessLogDatas = (from data in _table.CreateQuery<AzureChristmasVoteLogData>()
 	                                                                   where
 	                                                                        data.Referal == referal &&
 	                                                                       (!data.PartitionKey.Equals("127.0.0.1") && !data.PartitionKey.Equals("127.0.0.2") &&
 	                                                                        !data.PartitionKey.Equals("localhost") && !data.PartitionKey.Equals("127.255.0.0") && !data.Ip.Equals("127.0.0.1"))
-	                                                                   select data);
-            
-            return apiAccessLogDatas.GroupBy(x => x.UserId).Select(x => x.Key).ToList();
+	                                                                   select data.PartitionKey);
+
+            return apiAccessLogDatas.ToList().Distinct().ToList();
 	    }
 
 	    public VotacionModel GetResultsToView()
