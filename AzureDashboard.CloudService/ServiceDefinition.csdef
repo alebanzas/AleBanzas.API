@@ -12,12 +12,10 @@
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
     </Endpoints>
     <Imports>
-      <Import moduleName="Diagnostics" />
     </Imports>
   </WebRole>
   <WorkerRole name="ABServicios.Azure.Worker1" vmsize="ExtraSmall">
     <Imports>
-      <Import moduleName="Diagnostics" />
     </Imports>
   </WorkerRole>
 </ServiceDefinition>

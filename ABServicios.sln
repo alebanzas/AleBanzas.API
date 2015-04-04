@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22609.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{59F60900-3092-4209-9577-0A0BC7B799A5}"
 EndProject
@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C91768
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureContest", "AzureContest", "{694B4315-5488-4D4D-88E4-423ADBB7B8DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABServicios.BLL", "ABServicios.BLL\ABServicios.BLL.csproj", "{DE11105B-F395-4987-95AD-75255E2F539D}"
 EndProject
@@ -45,8 +47,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABServicios", "ABServicios\ABServicios.csproj", "{5520241D-D2DE-47AD-B972-9BDDB7BD3FB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABServicios.API.Tests", "ABServicios.API.Tests\ABServicios.API.Tests.csproj", "{B6397FD6-5D10-43AD-9B45-48D2FA8D91C9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureContest", "AzureContest", "{694B4315-5488-4D4D-88E4-423ADBB7B8DD}"
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureDashboard.CloudService", "AzureDashboard.CloudService\AzureDashboard.CloudService.ccproj", "{B726EA93-CE1F-44C7-B4A9-0C4F85CFE5DA}"
 EndProject
