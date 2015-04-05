@@ -1,16 +1,16 @@
-using System;
 using System.Diagnostics;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
-using ABServicios.Azure.QueuesConsumers;
-using ABServicios.Azure.Storage;
-using ABServicios.Azure.Storage.DataAccess.QueueStorage;
-using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
-using ABServicios.Azure.Storage.DataAccess.TableStorage;
-using ABServicios.Azure.Storage.DataAccess.TableStorage.Queries;
 using Microsoft.WindowsAzure.ServiceRuntime;
+using ABServicios.Azure.Storage.DataAccess.QueueStorage;
+using ABServicios.Azure.QueuesConsumers;
+using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
+using ABServicios.Azure.Storage.DataAccess.TableStorage.Queries;
+using ABServicios.Azure.Storage.DataAccess.TableStorage;
+using ABServicios.Azure.Storage;
 using Microsoft.WindowsAzure.Storage.Table.DataServices;
+using System;
 
 namespace ABServicios.Azure.Worker1
 {
@@ -20,7 +20,6 @@ namespace ABServicios.Azure.Worker1
         private readonly ManualResetEvent runCompleteEvent = new ManualResetEvent(false);
 
         public readonly AzureChristmasResultQuery query;
-        private static TableServiceContext _tableContext;
         private static TablePersister<AzureChristmasVoteUserResultData> _tablePersister;
         public WorkerRole()
         {
@@ -30,11 +29,10 @@ namespace ABServicios.Azure.Worker1
             _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
         }
 
-
         public override void Run()
         {
             Trace.TraceInformation("ABServicios.Azure.Worker1 is running");
-            
+
             try
             {
                 this.RunAsync(this.cancellationTokenSource.Token).Wait();
@@ -75,58 +73,47 @@ namespace ABServicios.Azure.Worker1
         private async Task RunAsync(CancellationToken cancellationToken)
         {
             QueueConsumerFor<ApiAccessLog>.WithStandaloneThread.Using(new ApiAccessLogSaver())
-                                                                                        .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
-                                                                                        .StartConsimung();
-
-            QueueConsumerFor<MailMessage>.WithStandaloneThread.Using(new MailsMessagesSender())
-                                                                                        .With(PollingFrequencer.For(MailsMessagesSender.EstimatedTime))
-                                                                                        .StartConsimung();
-
-
-            QueueConsumerFor<AzureChristmasVoteLog>.WithStandaloneThread.Using(new AzureChristmasVoteLogSaver())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
-                                                                                        .StartConsimung();
+                                        .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
+                                        .StartConsimung();
             
-            QueueConsumerFor<PuntosProcesados>.WithStandaloneThread.Using(new AzureChristmasPuntosPorUsuario())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
-                                                                                        .StartConsimung();
-
-            QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
-                                                                                        .StartConsimung();
-
+            QueueConsumerFor<MailMessage>.WithStandaloneThread.Using(new MailsMessagesSender())
+                                        .With(PollingFrequencer.For(MailsMessagesSender.EstimatedTime))
+                                        .StartConsimung();
+            
+            
+            //QueueConsumerFor<AzureChristmasVoteLog>.WithStandaloneThread.Using(new AzureChristmasVoteLogSaver())
+            //                            .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
+            //                            .StartConsimung();
+            
+            //QueueConsumerFor<PuntosProcesados>.WithStandaloneThread.Using(new AzureChristmasPuntosPorUsuario())
+            //                            .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
+            //                            .StartConsimung();
+            //
+            //QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
+            //                              .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+            //                              .StartConsimung();
+            //
             QueueConsumerFor<TrenEnEstacion>.WithStandaloneThread.Using(new TrenEnEstacionReduceDuplicates())
-                                                                                        .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
+                                            .StartConsimung();
 
-
-            // TODO: logica de tareas como implementacion de consumers
             while (!cancellationToken.IsCancellationRequested)
             {
-                try
-                {
-                    CalculateAzureChristmasResults();
-                }
-                catch (Exception ex)
-                {
-                    Trace.TraceError("Error calculando resultados.");
-                }
-
                 Trace.TraceInformation("Working");
-                await Task.Delay(1000 * 60 * 2);
+                await Task.Delay(1000);
             }
         }
 
         private void CalculateAzureChristmasResults()
         {
             var results = query.GetResults();
-
+        
             foreach (var votacionItem in results.Lista)
             {
                 try
                 {
                     var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
-
+        
                     if (i == null)
                     {
                         _tablePersister.Add(new AzureChristmasVoteUserResultData(votacionItem.Nombre)
@@ -142,8 +129,6 @@ namespace ABServicios.Azure.Worker1
                             _tablePersister.Update(i);
                         }
                     }
-
-                    _tableContext.SaveChangesWithRetries();
                 }
                 catch (Exception)
                 {

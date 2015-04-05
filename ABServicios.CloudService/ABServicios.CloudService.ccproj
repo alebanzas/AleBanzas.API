@@ -53,11 +53,15 @@
   <ItemGroup>
     <ProjectReference Include="..\ABServicios.Azure.Worker1\ABServicios.Azure.Worker1.csproj">
       <Name>ABServicios.Azure.Worker1</Name>
-      <Project>{2837b1cb-73fb-40f6-9d84-c603dccdf584}</Project>
+      <Project>{5485bc35-f77e-4032-9abb-ddcdadf04bc4}</Project>
       <Private>True</Private>
       <RoleType>Worker</RoleType>
       <RoleName>ABServicios.Azure.Worker1</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <DiagnosticsConfiguration Include="ABServicios.Azure.Worker1Content\diagnostics.wadcfgx" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
