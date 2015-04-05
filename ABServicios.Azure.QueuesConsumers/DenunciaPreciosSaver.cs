@@ -3,7 +3,6 @@ using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using ABServicios.Azure.Storage.DataAccess.TableStorage;
-using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace ABServicios.Azure.QueuesConsumers
 {
@@ -12,14 +11,12 @@ namespace ABServicios.Azure.QueuesConsumers
 		public static readonly TimeSpan EstimatedTime = TimeSpan.FromHours(1);
 
 	    public TimeSpan? EstimatedTimeToProcessMessageBlock { get; private set; }
-
-        private static TableServiceContext _tableContext;
+        
         private static TablePersister<DenunciaPreciosData> _tablePersister;
 
         public DenunciaPreciosSaver()
         {
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
-            _tableContext = new TableServiceContext(tableClient);
             _tablePersister = new TablePersister<DenunciaPreciosData>(tableClient);
         }
 
@@ -45,7 +42,6 @@ namespace ABServicios.Azure.QueuesConsumers
                     TrackingId = messageLog.TrackingId,
                     Type = messageLog.Type,
                 });
-            _tableContext.SaveChangesWithRetries();
         }
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using ABServicios.Azure.Storage.DataAccess.TableStorage;
 using ABServicios.Azure.Storage.DataAccess.TableStorage.Queries;
-using Microsoft.WindowsAzure.Storage.Table.DataServices;
 using NUnit.Framework;
 
 namespace ABServicios.Azure.Tests
@@ -42,48 +40,48 @@ namespace ABServicios.Azure.Tests
         public void StartConsumigMailsMessagesSender()
         {
             QueueConsumerFor<MailMessage>.WithinCurrentThread.Using(new MailsMessagesSender())
-                                                                                        .With(PollingFrequencer.For(MailsMessagesSender.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(MailsMessagesSender.EstimatedTime))
+                                            .StartConsimung();
         }
 
         [Test]
         public void StartConsumigApiAccessLogSaver()
         {
             QueueConsumerFor<ApiAccessLog>.WithinCurrentThread.Using(new ApiAccessLogSaver())
-                                                                                        .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(ApiAccessLogSaver.EstimatedTime))
+                                            .StartConsimung();
         }
 
         [Test]
         public void StartConsumigDenunciaPreciosSaver()
         {
             QueueConsumerFor<DenunciaPrecios>.WithinCurrentThread.Using(new DenunciaPreciosSaver())
-                                                                                        .With(PollingFrequencer.For(DenunciaPreciosSaver.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(DenunciaPreciosSaver.EstimatedTime))
+                                            .StartConsimung();
         }
 
         [Test]
         public void StartConsumigAzureChristmasVoteLogSaver()
         {
             QueueConsumerFor<AzureChristmasVoteLog>.WithinCurrentThread.Using(new AzureChristmasVoteLogSaver())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
+                                            .StartConsimung();
         }
 
         [Test]
         public void StartConsumigAzureChristmasReferalRefresh()
         {
             QueueConsumerFor<AzureChristmasRefreshReferal>.WithinCurrentThread.Using(new AzureChristmasReferalRefresh())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+                                            .StartConsimung();
         }
 
         [Test]
         public void StartConsumigAzureChristmasPuntosPorUsuario()
         {
             QueueConsumerFor<PuntosProcesados>.WithinCurrentThread.Using(new AzureChristmasPuntosPorUsuario())
-                                                                                        .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
+                                            .StartConsimung();
 
         }
 
@@ -91,8 +89,8 @@ namespace ABServicios.Azure.Tests
         public void StartConsumigTrenEnEstacionReduceDuplicates()
         {
             QueueConsumerFor<TrenEnEstacion>.WithinCurrentThread.Using(new TrenEnEstacionReduceDuplicates())
-                                                                                        .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
-                                                                                        .StartConsimung();
+                                            .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
+                                            .StartConsimung();
         }
 
         [Test]
