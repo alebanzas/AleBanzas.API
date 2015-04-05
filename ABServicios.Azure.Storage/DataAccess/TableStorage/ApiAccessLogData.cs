@@ -10,7 +10,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
         public ApiAccessLogData(string id, DateTime date)
         {
             PartitionKey = date.ToString("yyyyMMdd");
-            RowKey = string.Format("{0}-{1}", Date.ToString("HHmmssfffffff"), Id);
+            RowKey = $"{date.ToString("HHmmssfffffff")}-{id}";
             Id = id;
             Date = date.ToUniversalTime();
         }
