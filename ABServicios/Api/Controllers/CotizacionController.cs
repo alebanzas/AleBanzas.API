@@ -123,16 +123,40 @@ namespace ABServicios.Api.Controllers
 
         public void Start()
         {
+            int error = 0;
             try
             {
-                var result = GetModel();
-                _cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
-
-                var rresult = GetRofexModel();
-                _cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
-
-                var tresult = GetTasasModel();
-                _cache.Put(CacheKeyTasas, tresult, new TimeSpan(1, 0, 0, 0));
+                try
+                {
+                    var result = GetModel();
+                    _cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
+                }
+                catch (Exception)
+                {
+                    error++;
+                }
+                try
+                {
+                    var rresult = GetRofexModel();
+                    _cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
+                }
+                catch (Exception)
+                {
+                    error++;
+                }
+                try
+                {
+                    var tresult = GetTasasModel();
+                    _cache.Put(CacheKeyTasas, tresult, new TimeSpan(1, 0, 0, 0));
+                }
+                catch (Exception)
+                {
+                    error++;
+                }
+                if (error > 1)
+                {
+                    throw new Exception("CotizacionController");
+                }
             }
             catch (Exception ex)
             {
