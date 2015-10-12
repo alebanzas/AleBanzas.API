@@ -16,7 +16,7 @@ namespace ABServicios.Api.Controllers
             throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
-        // GET api/<controller>/ecuador 1419
+        // GET api/Geocoder/ecuador 1419
         [ApiAuthorize]
         public List<GeocoderResult> Get(string id)
         {
