@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition name="AzureDashboard.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+<ServiceDefinition name="AzureDashboard.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
   <WebRole name="AzureDashboard" vmsize="ExtraSmall">
     <Sites>
       <Site name="Web">
@@ -11,11 +11,9 @@
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
     </Endpoints>
-    <Imports>
-    </Imports>
+    <Imports></Imports>
   </WebRole>
   <WorkerRole name="ABServicios.Azure.Worker1" vmsize="ExtraSmall">
-    <Imports>
-    </Imports>
+    <Imports></Imports>
   </WorkerRole>
 </ServiceDefinition>
