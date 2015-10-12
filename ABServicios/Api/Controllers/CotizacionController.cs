@@ -258,7 +258,7 @@ namespace ABServicios.Api.Controllers
 
                 divisas.Add(new DivisaViewModel
                 {
-                    Nombre = "Mayorista Bancos",
+                    Nombre = "Mayorista",
                     Simbolo = "U$S",
                     ValorCompra = compra,
                     ValorVenta = venta,
@@ -347,8 +347,8 @@ namespace ABServicios.Api.Controllers
                 {
                     Nombre = nombre.InnerText,
                     Simbolo = "U$S",
-                    ValorCompra = compra.InnerText,
-                    ValorVenta = venta.InnerText,
+                    ValorCompra = compra.InnerText.Remove(compra.InnerText.Length - 1),
+                    ValorVenta = venta.InnerText.Remove(venta.InnerText.Length - 1),
                     Variacion = variacion.InnerText,
                 });
             }
