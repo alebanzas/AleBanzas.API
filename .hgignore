@@ -30,3 +30,5 @@ packages/
 [Bb]ld
 *.orig
 Thumbs.db
+ABServicios.CloudService/ecf/ABServicios.Azure.Worker1Content/diagnostics.wadcfgx
+.vs/config/applicationhost.config
