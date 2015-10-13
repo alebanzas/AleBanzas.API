@@ -81,18 +81,18 @@ namespace ABServicios.Azure.Worker1
                                         .StartConsimung();
             
             
-            //QueueConsumerFor<AzureChristmasVoteLog>.WithStandaloneThread.Using(new AzureChristmasVoteLogSaver())
-            //                            .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
-            //                            .StartConsimung();
+            QueueConsumerFor<AzureChristmasVoteLog>.WithStandaloneThread.Using(new AzureChristmasVoteLogSaver())
+                                        .With(PollingFrequencer.For(AzureChristmasVoteLogSaver.EstimatedTime))
+                                        .StartConsimung();
             
             //QueueConsumerFor<PuntosProcesados>.WithStandaloneThread.Using(new AzureChristmasPuntosPorUsuario())
             //                            .With(PollingFrequencer.For(AzureChristmasPuntosPorUsuario.EstimatedTime))
             //                            .StartConsimung();
-            //
-            //QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
-            //                              .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
-            //                              .StartConsimung();
-            //
+            
+            QueueConsumerFor<AzureChristmasRefreshReferal>.WithStandaloneThread.Using(new AzureChristmasReferalRefresh())
+                                          .With(PollingFrequencer.For(AzureChristmasReferalRefresh.EstimatedTime))
+                                          .StartConsimung();
+            
             QueueConsumerFor<TrenEnEstacion>.WithStandaloneThread.Using(new TrenEnEstacionReduceDuplicates())
                                             .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
                                             .StartConsimung();

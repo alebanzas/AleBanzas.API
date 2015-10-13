@@ -194,33 +194,33 @@ namespace ABServicios.Azure.Tests
                 {
                     Date = DateTime.UtcNow,
                     Ip = "127.0.1." + i,
-                    Referal = "abhost" + i + ".cloudapp.net",
-                    Referer = "http://pepe.clopudapp.net/Home/Index/",
-                    UserId = "pepe.cloudapp.net"
+                    Referal = "abhost" + i + ".azurewebsites.net",
+                    Referer = "http://pepe.azurewebsites.net/Home/Index/",
+                    UserId = "pepe.azurewebsites.net"
                 });
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
                     Ip = "127.0.1." + i,
-                    Referal = "abhost" + i + ".cloudapp.net",
-                    Referer = "http://pepe.clopudapp.net/Home/Index/",
-                    UserId = "pepe.cloudapp.net"
-                });
-                AzureQueue.Enqueue(new AzureChristmasVoteLog
-                {
-                    Date = DateTime.UtcNow,
-                    Ip = "127.0.1." + i,
-                    Referal = string.Empty,
-                    Referer = "http://abhost" + i + ".cloudapp.net/Home/Index/",
-                    UserId = "abhost" + i + ".cloudapp.net"
+                    Referal = "abhost" + i + ".azurewebsites.net",
+                    Referer = "http://pepe.azurewebsites.net/Home/Index/",
+                    UserId = "pepe.azurewebsites.net"
                 });
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
                     Ip = "127.0.1." + i,
                     Referal = string.Empty,
-                    Referer = "http://abhost" + i + ".cloudapp.net/Home/Index/",
-                    UserId = "abhost" + i + ".cloudapp.net"
+                    Referer = "http://abhost" + i + ".azurewebsites.net/Home/Index/",
+                    UserId = "abhost" + i + ".azurewebsites.net"
+                });
+                AzureQueue.Enqueue(new AzureChristmasVoteLog
+                {
+                    Date = DateTime.UtcNow,
+                    Ip = "127.0.1." + i,
+                    Referal = string.Empty,
+                    Referer = "http://abhost" + i + ".azurewebsites.net/Home/Index/",
+                    UserId = "abhost" + i + ".azurewebsites.net"
                 });
                 i++;
             }

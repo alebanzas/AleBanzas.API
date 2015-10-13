@@ -17,7 +17,7 @@ namespace ABServicios.Controllers
             {
                 var r = httpRequest.QueryString.Get("r");
                 Uri referal;
-                if (r == null || !r.EndsWith(".cloudapp.net") || !Uri.TryCreate("http://" + r, UriKind.Absolute, out referal))
+                if (r == null || !r.EndsWith(".azurewebsites.net") || !Uri.TryCreate("http://" + r, UriKind.Absolute, out referal))
                 {
                     r = string.Empty;
                 }
