@@ -384,6 +384,8 @@ namespace ABServicios.Api.Controllers
                     ValorCompra = ultimo,
                     ValorVenta = cierreAnterior,
                     Variacion = variacion,
+                    Actualizacion = DateTime.UtcNow.ToLongDateString(),
+                    Simbolo = "%",
                 });
             }
             catch
@@ -403,6 +405,8 @@ namespace ABServicios.Api.Controllers
                     ValorCompra = ultimo,
                     ValorVenta = cierreAnterior,
                     Variacion = variacion,
+                    Actualizacion = DateTime.UtcNow.ToLongDateString(),
+                    Simbolo = "%",
                 });
             }
             catch
@@ -423,6 +427,8 @@ namespace ABServicios.Api.Controllers
                     ValorCompra = ultimo,
                     ValorVenta = cierreAnterior,
                     Variacion = variacion,
+                    Actualizacion = DateTime.UtcNow.ToLongDateString(),
+                    Simbolo = "%",
                 });
             }
             catch
@@ -443,6 +449,8 @@ namespace ABServicios.Api.Controllers
                     ValorCompra = ultimo,
                     ValorVenta = cierreAnterior,
                     Variacion = variacion,
+                    Actualizacion = DateTime.UtcNow.ToLongDateString(),
+                    Simbolo = "%",
                 });
             }
             catch
@@ -462,6 +470,8 @@ namespace ABServicios.Api.Controllers
                     ValorCompra = ultimo,
                     ValorVenta = cierreAnterior,
                     Variacion = variacion,
+                    Actualizacion = DateTime.UtcNow.ToLongDateString(),
+                    Simbolo = "%",
                 });
             }
             catch
@@ -482,6 +492,8 @@ namespace ABServicios.Api.Controllers
                     ValorCompra = ultimo,
                     ValorVenta = cierreAnterior,
                     Variacion = variacion,
+                    Actualizacion = DateTime.UtcNow.ToLongDateString(),
+                    Simbolo = "%",
                 });
             }
             catch
