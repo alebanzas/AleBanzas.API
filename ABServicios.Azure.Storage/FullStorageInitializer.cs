@@ -19,9 +19,9 @@ namespace ABServicios.Azure.Storage
 
             new QueueStorageInitializer<TrenEnEstacion>(account).Initialize();
             new QueueStorageInitializer<TrenEnEstacionClean>(account).Initialize();
-
-            //new QueueStorageInitializer<AzureChristmasVoteLog>(account).Initialize();
-            //new QueueStorageInitializer<AzureChristmasRefreshReferal>(account).Initialize();
+            
+            new QueueStorageInitializer<AzureChristmasVoteLog>(account).Initialize();
+            new QueueStorageInitializer<AzureChristmasRefreshReferal>(account).Initialize();
             //new QueueStorageInitializer<PuntosProcesados>(account).Initialize();
 
             
@@ -29,8 +29,8 @@ namespace ABServicios.Azure.Storage
             new TableStorageInitializer<ApiAccessLogData>(account).Initialize();
             new TableStorageInitializer<DenunciaPreciosData>(account).Initialize();
 
-            //new TableStorageInitializer<AzureChristmasVoteLogData>(account).Initialize();
-            //new TableStorageInitializer<AzureChristmasVoteUserResultData>(account).Initialize();
+            new TableStorageInitializer<AzureChristmasVoteLogData>(account).Initialize();
+            new TableStorageInitializer<AzureChristmasVoteUserResultData>(account).Initialize();
 
 		}
 	}
