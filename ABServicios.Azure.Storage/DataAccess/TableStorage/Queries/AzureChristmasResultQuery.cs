@@ -18,17 +18,8 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
             _tableResults = client.GetTableReference(typeof(AzureChristmasVoteUserResultData).AsTableStorageName());
 		}
 
-        public VotacionModel GetResults()
+        public VotacionModel GetResults(List<AzureChristmasVoteLogData> list)
         {
-            IQueryable<AzureChristmasVoteLogData> apiAccessLogDatas = (from data in _table.CreateQuery<AzureChristmasVoteLogData>()
-                                                                       where
-                                                                           (!data.PartitionKey.Equals("127.0.0.1") && !data.PartitionKey.Equals("127.0.0.2") &&
-                                                                            !data.PartitionKey.Equals("localhost") && !data.PartitionKey.Equals("127.255.0.0") && !data.Ip.Equals("127.0.0.1"))
-                                                                       select data);
-
-            var list = apiAccessLogDatas.ToList();
-
-
             var group = list.GroupBy(x => x.UserId);
 
             var rr = new VotacionModel();
@@ -51,7 +42,21 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
             return rr;
 		}
 
-	    public List<string> GetUsersFromReferal(string referal)
+        public List<AzureChristmasVoteLogData> GetList()
+        {
+            IQueryable<AzureChristmasVoteLogData> apiAccessLogDatas =
+                (from data in _table.CreateQuery<AzureChristmasVoteLogData>()
+                    where
+                        (!data.PartitionKey.Equals("127.0.0.1") && !data.PartitionKey.Equals("127.0.0.2") &&
+                         !data.PartitionKey.Equals("localhost") && !data.PartitionKey.Equals("127.255.0.0") &&
+                         !data.Ip.Equals("127.0.0.1"))
+                    select data);
+
+            var list = apiAccessLogDatas.ToList();
+            return list;
+        }
+
+        public List<string> GetUsersFromReferal(string referal)
 	    {
             IQueryable<string> apiAccessLogDatas = (from data in _table.CreateQuery<AzureChristmasVoteLogData>()
 	                                                                   where
@@ -79,7 +84,7 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage.Queries
 	        foreach (var votacionItem in votacionItems)
 	        {
                 Uri referal;
-                if (votacionItem.Nombre == null || !votacionItem.Nombre.EndsWith(".cloudapp.net") || !Uri.TryCreate("http://" + votacionItem.Nombre, UriKind.Absolute, out referal))
+                if (votacionItem.Nombre == null || !votacionItem.Nombre.EndsWith(".azurewebsites.net") || !Uri.TryCreate("http://" + votacionItem.Nombre, UriKind.Absolute, out referal))
                 {
                     continue;
                 }

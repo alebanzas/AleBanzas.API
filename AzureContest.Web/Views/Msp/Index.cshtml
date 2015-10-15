@@ -15,7 +15,7 @@
 @using System.Globalization
 @using Microsoft.Owin.Security
 @{
-    ViewBag.Title = "Resultados";  
+    ViewBag.Title = "Resultados MSPs";  
     var rnd = new Random();
 }
 
@@ -23,18 +23,18 @@
 <div class="resultados fondo">
     <div class="row">
         <div class="cell title"></div>
-        <div class="cell title"><p>visitas</p></div>
+        <div class="cell title"><p><b>total</b></p></div>
     </div>
     @{
         for (int index = 1; index <= Model.Lista.Count; index++)
         {
             var item = Model.Lista[index - 1];
             <div class="row">
-                <div class="cell"><p>#@(index)&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://@item.Nombre" style="color: white;">@item.Nombre</a></p></div>
+                <div class="cell"><p>#@(index)&nbsp;&nbsp;&nbsp;&nbsp;@item.Nombre</p></div>
                 <div class="cell">
-                    @if (item.Visitas != 0)
+                    @if (item.Puntos != 0)
                     {
-                        <p class="tile-@(rnd.Next(1, 5))" title="@item.Visitas">@(NumberAsString(item.Visitas))</p>
+                        <p class="tile-@(rnd.Next(1, 5))" title="@item.Puntos">@(NumberAsString(item.Puntos))</p>
                     }
                     else
                     {

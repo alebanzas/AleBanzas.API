@@ -11,6 +11,7 @@ using ABServicios.Azure.Storage.DataAccess.TableStorage;
 using ABServicios.Azure.Storage;
 using Microsoft.WindowsAzure.Storage.Table.DataServices;
 using System;
+using System.Linq;
 
 namespace ABServicios.Azure.Worker1
 {
@@ -20,13 +21,18 @@ namespace ABServicios.Azure.Worker1
         private readonly ManualResetEvent runCompleteEvent = new ManualResetEvent(false);
 
         public readonly AzureChristmasResultQuery query;
+        public readonly AzureChristmasReferalResultQuery queryR;
         private static TablePersister<AzureChristmasVoteUserResultData> _tablePersister;
+        private static TablePersister<AzureChristmasVoteReferalResultData> _tableReferalPersister;
         public WorkerRole()
         {
             query = new AzureChristmasResultQuery(AzureAccount.DefaultAccount());
-            
+            queryR = new AzureChristmasReferalResultQuery(AzureAccount.DefaultAccount());
+
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
+            _tableReferalPersister = new TablePersister<AzureChristmasVoteReferalResultData>(tableClient);
+            
         }
 
         public override void Run()
@@ -97,46 +103,89 @@ namespace ABServicios.Azure.Worker1
                                             .With(PollingFrequencer.For(TrenEnEstacionReduceDuplicates.EstimatedTime))
                                             .StartConsimung();
 
+            await CalculateAzureChristmasResults();
+
             while (!cancellationToken.IsCancellationRequested)
             {
                 Trace.TraceInformation("Working");
-                await Task.Delay(1000);
+                await Task.Delay(1000, cancellationToken);
             }
         }
 
-        private void CalculateAzureChristmasResults()
+        public async Task CalculateAzureChristmasResults()
         {
-            var results = query.GetResults();
-        
-            foreach (var votacionItem in results.Lista)
+            while (true)
             {
-                try
+                Trace.TraceInformation("{0} CalculateAzureChristmasResults", DateTime.UtcNow.ToString("s"));
+                var list = query.GetList();
+                var results = query.GetResults(list);
+
+                foreach (var votacionItem in results.Lista)
                 {
-                    var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
-        
-                    if (i == null)
+                    try
                     {
-                        _tablePersister.Add(new AzureChristmasVoteUserResultData(votacionItem.Nombre)
+                        var i = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, votacionItem.Nombre);
+
+                        if (i == null)
                         {
-                            Visitas = votacionItem.Visitas,
-                        });
-                    }
-                    else
-                    {
-                        if (i.Visitas != votacionItem.Visitas)
+                            await _tablePersister.AddAsync(new AzureChristmasVoteUserResultData(votacionItem.Nombre)
+                            {
+                                Visitas = votacionItem.Visitas,
+                            });
+                        }
+                        else
                         {
+                            if (i.Visitas == votacionItem.Visitas) continue;
+
                             i.Visitas = votacionItem.Visitas;
-                            _tablePersister.Update(i);
+                            await _tablePersister.UpdateAsync(i);
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        Trace.TraceError("Error al procesar " + votacionItem.Nombre + " " + ex.Message);
+                        throw;
+                    }
                 }
-                catch (Exception)
+
+                //referal
+                var groups = queryR.GetToGenerateResults();
+
+                foreach (var @group in groups)
                 {
-                    Trace.TraceError("Error al procesar " + votacionItem.Nombre);
-                    throw;
+                    try
+                    {
+                        
+                        var i = _tableReferalPersister.Get(AzureChristmasVoteReferalResultData.PKey, group.Key);
+
+                        if (i == null)
+                        {
+                            await _tableReferalPersister.AddAsync(new AzureChristmasVoteReferalResultData(group.Key)
+                            {
+                                Puntos = 1,
+                            });
+                        }
+                        else
+                        {
+                            i.Puntos = group.Count();
+                            await _tableReferalPersister.UpdateAsync(i);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Trace.TraceError("Error al procesar referal " + group.Key + " " + ex.Message);
+                        throw;
+                    }
                 }
+
+                
+
+
+
+                //TODO: tuneo la query para que traiga por fecha y hora
+
+                Thread.Sleep(1000*60);
             }
-            //TODO: tuneo la query para que traiga por fecha y hora
         }
     }
 }

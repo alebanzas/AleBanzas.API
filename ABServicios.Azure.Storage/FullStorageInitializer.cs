@@ -31,7 +31,9 @@ namespace ABServicios.Azure.Storage
 
             new TableStorageInitializer<AzureChristmasVoteLogData>(account).Initialize();
             new TableStorageInitializer<AzureChristmasVoteUserResultData>(account).Initialize();
+            new TableStorageInitializer<AzureChristmasVoteReferalResultData>(account).Initialize();
+            new TableStorageInitializer<AzureChristmasVoteLogReferalData>(account).Initialize();
 
-		}
+        }
 	}
 }

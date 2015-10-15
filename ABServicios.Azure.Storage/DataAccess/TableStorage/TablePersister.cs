@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 
@@ -43,20 +44,36 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
         {
             table.ExecuteBatch(tableOperation);
         }
+        public async Task AddBatchAsync(TableBatchOperation tableOperation)
+        {
+            await table.ExecuteBatchAsync(tableOperation);
+        }
 
-		public void Add(TDataRow dataRow)
-		{
-		    var op = TableOperation.Insert(dataRow);
+        public void Add(TDataRow dataRow)
+        {
+            var op = TableOperation.Insert(dataRow);
             table.Execute(op);
-		}
+        }
 
-		public void Update(TDataRow dataRow)
+        public async Task AddAsync(TDataRow dataRow)
+        {
+            var op = TableOperation.Insert(dataRow);
+            await table.ExecuteAsync(op);
+        }
+
+        public void Update(TDataRow dataRow)
         {
             var op = TableOperation.Replace(dataRow);
             table.Execute(op);
-		}
+        }
 
-		public void Delete(string partitionKey, string rowKey)
+        public async Task UpdateAsync(TDataRow dataRow)
+        {
+            var op = TableOperation.Replace(dataRow);
+            await table.ExecuteAsync(op);
+        }
+
+        public void Delete(string partitionKey, string rowKey)
 		{
 			var entity = Get(partitionKey, rowKey);
 		    if (entity == null) return;

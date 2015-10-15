@@ -24,7 +24,7 @@ namespace ABServicios.Azure.QueuesConsumers
             get { return 64; }
         }
         
-        private static TablePersister<AzureChristmasVoteUserResultData> _tablePersister;
+        private static TablePersister<AzureChristmasVoteLogReferalData> _tablePersister;
 
         public readonly AzureChristmasResultQuery query;
 
@@ -33,7 +33,7 @@ namespace ABServicios.Azure.QueuesConsumers
             query = new AzureChristmasResultQuery(AzureAccount.DefaultAccount());
 
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
-            _tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
+            _tablePersister = new TablePersister<AzureChristmasVoteLogReferalData>(tableClient);
         }
 
         public void ProcessMessagesGroup(IQueueMessageRemover<AzureChristmasRefreshReferal> messagesRemover, IEnumerable<QueueMessage<AzureChristmasRefreshReferal>> messages)
@@ -44,34 +44,20 @@ namespace ABServicios.Azure.QueuesConsumers
             {
                 return;
             }
-
-            var filteredMessages = queueMessages.Distinct(new AzureChristmasReferalDataComparer()).ToList();
+            
             var messagesToDequeue = new List<QueueMessage<AzureChristmasRefreshReferal>>(queueMessages);
 
-            Console.WriteLine("Procesados: " + filteredMessages.Count);
-            foreach (var filteredMessage in filteredMessages)
+            Console.WriteLine("Procesados: " + messagesToDequeue.Count);
+            foreach (var filteredMessage in messagesToDequeue)
             {
                 try
                 {
-                    if ("aquienrefiero.cloudapp.net".Equals(filteredMessage.Data.Referal))
+                    if ("aquienrefiero".Equals(filteredMessage.Data.Referal))
                     {
                         continue;
                     }
 
-                    var referal = _tablePersister.Get(AzureChristmasVoteUserResultData.PKey,
-                        filteredMessage.Data.Referal);
-
-                    if (referal != null && filteredMessage.DequeueCount < 100)
-                    {
-                        var users = query.GetUsersFromReferal(filteredMessage.Data.Referal);
-
-                        var visitasReferidas = users.Select(user => _tablePersister.Get(AzureChristmasVoteUserResultData.PKey, user)).Where(u => u != null).Sum(u => u.Visitas);
-
-                        //al referal le tengo que dar la mitad de los puntos del userid
-                        referal.VisitasReferidos = visitasReferidas / 2;
-
-                        _tablePersister.Update(referal);
-                    }
+                    SaveOrUpdatePuntos(filteredMessage.Data.UserId, filteredMessage.Data.Referal);
                 }
                 catch (Exception)
                 {
@@ -84,6 +70,35 @@ namespace ABServicios.Azure.QueuesConsumers
             messagesRemover.RemoveProcessedMessages(messagesToDequeue);
         }
 
-	}
+        private static void SaveOrUpdatePuntos(string userId, string referalId)
+        {
+            var i = _tablePersister.Get(AzureChristmasVoteLogReferalData.PKey, userId + "|" + referalId);
+
+            if (i == null)
+            {
+                _tablePersister.Add(new AzureChristmasVoteLogReferalData(userId, referalId));
+            }
+        }
+
+
+        //private static void SaveOrUpdatePuntos(string userId)
+        //{
+        //    var i = _tablePersister.Get(AzureChristmasVoteReferalResultData.PKey, userId);
+        //
+        //    if (i == null)
+        //    {
+        //        _tablePersister.Add(new AzureChristmasVoteReferalResultData(userId)
+        //        {
+        //            Puntos = 1,
+        //        });
+        //    }
+        //    else
+        //    {
+        //        i.Puntos += 1;
+        //        _tablePersister.Update(i);
+        //    }
+        //}
+
+    }
 
 }
