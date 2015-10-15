@@ -59,30 +59,30 @@ namespace ABServicios.Azure.Storage.DataAccess.TableStorage
 
     }
 
-    public class AzureChristmasReferalDataComparer : IEqualityComparer<QueueMessage<AzureChristmasRefreshReferal>>
-    {
-        // Products are equal if their names and log numbers are equal. 
-        public bool Equals(QueueMessage<AzureChristmasRefreshReferal> x, QueueMessage<AzureChristmasRefreshReferal> y)
-        {
-
-            //Check whether the compared objects reference the same data. 
-            if (Object.ReferenceEquals(x, y)) return true;
-
-            //Check whether any of the compared objects is null. 
-            if (Object.ReferenceEquals(x, null) || Object.ReferenceEquals(y, null))
-                return false;
-
-            //Check whether the products' properties are equal. 
-            return x.Data.Referal == y.Data.Referal && x.Data.UserId == y.Data.UserId;
-        }
-
-        // If Equals() returns true for a pair of objects  
-        // then GetHashCode() must return the same value for these objects. 
-
-        public int GetHashCode(QueueMessage<AzureChristmasRefreshReferal> log)
-        {
-            return log.Data.Referal.GetHashCode() + log.Data.UserId.GetHashCode();
-        }
-
-    }
+    //public class AzureChristmasReferalDataComparer : IEqualityComparer<QueueMessage<AzureChristmasRefreshReferal>>
+    //{
+    //    // Products are equal if their names and log numbers are equal. 
+    //    public bool Equals(QueueMessage<AzureChristmasRefreshReferal> x, QueueMessage<AzureChristmasRefreshReferal> y)
+    //    {
+    //
+    //        //Check whether the compared objects reference the same data. 
+    //        if (Object.ReferenceEquals(x, y)) return true;
+    //
+    //        //Check whether any of the compared objects is null. 
+    //        if (Object.ReferenceEquals(x, null) || Object.ReferenceEquals(y, null))
+    //            return false;
+    //
+    //        //Check whether the products' properties are equal. 
+    //        return x.Data.Referal == y.Data.Referal && x.Data.UserId == y.Data.UserId;
+    //    }
+    //
+    //    // If Equals() returns true for a pair of objects  
+    //    // then GetHashCode() must return the same value for these objects. 
+    //
+    //    public int GetHashCode(QueueMessage<AzureChristmasRefreshReferal> log)
+    //    {
+    //        return log.Data.Referal.GetHashCode() + log.Data.UserId.GetHashCode();
+    //    }
+    //
+    //}
 }

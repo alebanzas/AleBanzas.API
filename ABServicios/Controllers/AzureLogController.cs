@@ -15,19 +15,12 @@ namespace ABServicios.Controllers
             var httpRequest = HttpContext.Request;
             if (httpRequest.UrlReferrer != null)
             {
-                var r = httpRequest.QueryString.Get("r");
-                Uri referal;
-                if (r == null || !r.EndsWith(".azurewebsites.net") || !Uri.TryCreate("http://" + r, UriKind.Absolute, out referal))
-                {
-                    r = string.Empty;
-                }
-
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Referer = httpRequest.UrlReferrer != null ? httpRequest.UrlReferrer.AbsoluteUri : string.Empty,
-                    UserId = httpRequest.UrlReferrer != null ? httpRequest.UrlReferrer.DnsSafeHost : string.Empty,
-                    Referal = r.ToLowerInvariant(),
+                    Referer = httpRequest.UrlReferrer?.AbsoluteUri,
+                    UserId = httpRequest.UrlReferrer?.DnsSafeHost,
+                    Referal = httpRequest.QueryString.Get("r").ToLowerInvariant() ?? string.Empty,
                     Ip = httpRequest.UserHostAddress,
                 });
             }

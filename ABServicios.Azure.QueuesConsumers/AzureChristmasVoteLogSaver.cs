@@ -63,7 +63,7 @@ namespace ABServicios.Azure.QueuesConsumers
                                 Referal = queueMessage.Data.Referal,
                             });
 
-                            if (!string.IsNullOrWhiteSpace(queueMessage.Data.Referal) && !"aquienrefiero.cloudapp.net".Equals(queueMessage.Data.Referal))
+                            if (!string.IsNullOrWhiteSpace(queueMessage.Data.Referal) && !"aquienrefiero".Equals(queueMessage.Data.Referal))
                             {
                                 AzureQueue.Enqueue(new AzureChristmasRefreshReferal
                                 {

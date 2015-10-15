@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using ABServicios.Azure.QueuesConsumers;
 using ABServicios.Azure.Storage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
@@ -96,7 +97,9 @@ namespace ABServicios.Azure.Tests
         [Test]
         public void GetAzureChristmasResultsQuery()
         {
-            var results = new AzureChristmasResultQuery(AzureAccount.DefaultAccount()).GetResults();
+            var azureChristmasResultQuery = new AzureChristmasResultQuery(AzureAccount.DefaultAccount());
+            var list = azureChristmasResultQuery.GetList();
+            var results = azureChristmasResultQuery.GetResults(list);
 
             var tableClient = AzureAccount.DefaultAccount().CreateCloudTableClient();
             var tablePersister = new TablePersister<AzureChristmasVoteUserResultData>(tableClient);
@@ -132,6 +135,7 @@ namespace ABServicios.Azure.Tests
 
         }
 
+
         [Test]
         public void StartEnqueingChristmasPuntos()
         {
@@ -141,12 +145,12 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new PuntosProcesados
                 {
                     Puntaje = DateTime.UtcNow.Second,
-                    UserID = "abhost" + i + ".cloudapp.net",
+                    UserID = "abhost" + i + ".azurewebsites.net",
                 });
                 AzureQueue.Enqueue(new PuntosProcesados
                 {
                     Puntaje = DateTime.UtcNow.Second + 3,
-                    UserID = "abhost" + i + ".cloudapp.net",
+                    UserID = "abhost" + i + ".azurewebsites.net",
                 });
                 i++;
             }
@@ -172,7 +176,7 @@ namespace ABServicios.Azure.Tests
             foreach (var votacionItem in votacionItems)
             {
                 Uri referal;
-                if (votacionItem.Nombre == null || !votacionItem.Nombre.EndsWith(".cloudapp.net") ||
+                if (votacionItem.Nombre == null || !votacionItem.Nombre.EndsWith(".azurewebsites.net") ||
                     !Uri.TryCreate("http://" + votacionItem.Nombre, UriKind.Absolute, out referal))
                 {
                     continue;
@@ -185,15 +189,26 @@ namespace ABServicios.Azure.Tests
 
 
         [Test]
+        public void StartEnqueuingChristmasVotesImagen()
+        {
+            var cc = new HttpClient();
+            cc.DefaultRequestHeaders.Referrer = new Uri("http://navidad2015.azurewebsites.net/");
+            cc.GetAsync("http://api.alebanzas.com.ar/azurelog?r=alebanzas");
+
+        }
+
+        [Test]
         public void StartEnqueuingChristmasVotes()
         {
             var i = 1;
             while (i <= 5)
             {
+                Random r = new Random();
+
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.1." + i,
+                    Ip = "127." + r.Next(0,255) + ".1." + i,
                     Referal = "abhost" + i + ".azurewebsites.net",
                     Referer = "http://pepe.azurewebsites.net/Home/Index/",
                     UserId = "pepe.azurewebsites.net"
@@ -201,7 +216,7 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.1." + i,
+                    Ip = "127." + r.Next(0, 255) + ".1." + i,
                     Referal = "abhost" + i + ".azurewebsites.net",
                     Referer = "http://pepe.azurewebsites.net/Home/Index/",
                     UserId = "pepe.azurewebsites.net"
@@ -209,7 +224,7 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.1." + i,
+                    Ip = "127." + r.Next(0, 255) + ".1." + i,
                     Referal = string.Empty,
                     Referer = "http://abhost" + i + ".azurewebsites.net/Home/Index/",
                     UserId = "abhost" + i + ".azurewebsites.net"
@@ -217,7 +232,7 @@ namespace ABServicios.Azure.Tests
                 AzureQueue.Enqueue(new AzureChristmasVoteLog
                 {
                     Date = DateTime.UtcNow,
-                    Ip = "127.0.1." + i,
+                    Ip = "127." + r.Next(0, 255) + ".1." + i,
                     Referal = string.Empty,
                     Referer = "http://abhost" + i + ".azurewebsites.net/Home/Index/",
                     UserId = "abhost" + i + ".azurewebsites.net"
