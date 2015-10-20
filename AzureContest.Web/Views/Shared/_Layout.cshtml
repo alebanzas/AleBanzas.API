@@ -26,10 +26,13 @@
     </div>
     <div style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;">
         <div class="resultados" style="padding: 20px 0 10px 0;">
-            <img src="http://api.alebanzas.com.ar/azurelog?r=alebanzas" class="img-title">
-            <img src="/Content/ranking.png" class="img-ranking">
+            <a href="/pasos"><img src="http://api.alebanzas.com.ar/azurelog?r=alebanzas" class="img-title"></a>
+            <a href="/"><img src="/Content/ranking.png" class="img-ranking"></a>
         </div>
-        @RenderBody()
+        
+        <div class="resultados fondo">
+            @RenderBody()
+        </div>
     </div>
     @*
     <div class="background" style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 1;">&nbsp;</div>
