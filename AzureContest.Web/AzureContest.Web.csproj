@@ -191,8 +191,14 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\BasesMspsController.cs" />
+    <Compile Include="Controllers\BasesController.cs" />
+    <Compile Include="Controllers\CodigoController.cs" />
+    <Compile Include="Controllers\ImagenController.cs" />
     <Compile Include="Controllers\MspController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PasosController.cs" />
+    <Compile Include="Controllers\SitioWebController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,8 +216,33 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\lefttiles.png" />
+    <Content Include="Content\Pasos\image001.png" />
+    <Content Include="Content\Pasos\image002.jpg" />
+    <Content Include="Content\Pasos\image003.jpg" />
+    <Content Include="Content\Pasos\image004.jpg" />
+    <Content Include="Content\Pasos\image005.jpg" />
+    <Content Include="Content\Pasos\image006.jpg" />
+    <Content Include="Content\Pasos\image007.jpg" />
+    <Content Include="Content\Pasos\image008.jpg" />
+    <Content Include="Content\Pasos\image009.jpg" />
+    <Content Include="Content\Pasos\image010.jpg" />
+    <Content Include="Content\Pasos\image011.jpg" />
+    <Content Include="Content\Pasos\image012.png" />
+    <Content Include="Content\Pasos\image013.png" />
+    <Content Include="Content\Pasos\image014.png" />
+    <Content Include="Content\Pasos\image015.jpg" />
+    <Content Include="Content\Pasos\image016.jpg" />
     <Content Include="Content\ranking.png" />
     <Content Include="Content\righttiles.png" />
+    <Content Include="Content\SitioWeb\image001.jpg" />
+    <Content Include="Content\SitioWeb\image002.jpg" />
+    <Content Include="Content\SitioWeb\image003.jpg" />
+    <Content Include="Content\SitioWeb\image004.jpg" />
+    <Content Include="Content\SitioWeb\image005.jpg" />
+    <Content Include="Content\SitioWeb\image006.jpg" />
+    <Content Include="Content\SitioWeb\image007.jpg" />
+    <Content Include="Content\SitioWeb\image008.jpg" />
+    <Content Include="Content\SitioWeb\image009.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -246,6 +277,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Msp\Index.cshtml" />
+    <Content Include="Views\BasesMsps\Index.cshtml" />
+    <Content Include="Views\Bases\Index.cshtml" />
+    <Content Include="Views\Codigo\Get.cshtml" />
+    <Content Include="Views\Codigo\Index.cshtml" />
+    <Content Include="Views\Pasos\Index.cshtml" />
+    <Content Include="Views\SitioWeb\Index.cshtml" />
+    <Content Include="Views\Imagen\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

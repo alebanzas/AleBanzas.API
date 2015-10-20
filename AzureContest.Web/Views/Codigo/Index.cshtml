@@ -1,0 +1,39 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Obtené tu código";
+}
+
+<h2 style="padding-top: 10px;">Obtené tu código</h2>
+
+<div id="form">
+    @using (Html.BeginForm("Get", "Codigo", FormMethod.Post, new Dictionary<string, object> { { "onsubmit", "GetResult(this);return false;" } }))
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="text" name="nombre" />
+        <input type="text" name="apellido" />
+        <input type="email" name="email" />
+
+        <input type="submit" value="Enviar" />
+
+    }
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        
+        function GetResult(e) {
+            var f = $(e);
+            $.post(f.attr("action"), f.serialize()).done(function (data) {
+                $("#form").replaceWith(data);
+            })
+            .fail(function () {
+                alert("error");
+            });
+        }
+
+    </script>
+
+}

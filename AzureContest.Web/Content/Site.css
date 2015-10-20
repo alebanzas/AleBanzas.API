@@ -67,6 +67,12 @@ body {
         background-color: transparent;
     }
 
+    .resultados.wide .cell:nth-child(1) p {
+        text-align: left;
+        width: 800px;
+        padding-left: 10px;
+    }
+    
     .resultados .cell:nth-child(1) p {
         text-align: left;
         width: 400px;
@@ -74,17 +80,11 @@ body {
     }
 
     .resultados .row {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .resultados .row:nth-child(1) {
         font-size: 24px;
-    }
-
-    .resultados .row:nth-child(2),
-    .resultados .row:nth-child(3),
-    .resultados .row:nth-child(4) {
-        font-size: 30px;
     }
 
     .resultados td:nth-child(1) {
@@ -149,13 +149,7 @@ body {
     .resultados .row:nth-child(1) {
         font-size: 20px;
     }
-
-    .resultados .row:nth-child(2),
-    .resultados .row:nth-child(3),
-    .resultados .row:nth-child(4) {
-        font-size: 22px;
-    }
-
+    
     .img-title {
         height: 30px;
     }
@@ -191,12 +185,6 @@ body {
         font-size: 12px;
     }
 
-    .resultados .row:nth-child(2),
-    .resultados .row:nth-child(3),
-    .resultados .row:nth-child(4) {
-        font-size: 14px;
-    }
-
     .img-title {
         height: 25px;
     }
@@ -225,19 +213,13 @@ body {
     }
 
     .resultados .row {
-        font-size: 8px;
+        font-size: 7px;
     }
 
     .resultados .row:nth-child(1) {
         font-size: 8px;
     }
-
-    .resultados .row:nth-child(2),
-    .resultados .row:nth-child(3),
-    .resultados .row:nth-child(4) {
-        font-size: 9px;
-    }
-
+    
     .img-title {
         height: 25px;
     }
