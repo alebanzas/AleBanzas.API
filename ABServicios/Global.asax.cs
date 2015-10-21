@@ -2,7 +2,6 @@
 using ABServicios.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -10,16 +9,16 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using AB.Common.Wiring;
 using AB.Data;
-using ABServicios.Azure.Storage;
-using ABServicios.Controllers;
-using ABServicios.Services;
+using Microsoft.ApplicationInsights;
 
 namespace ABServicios
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        private readonly TelemetryClient _telemetry = new TelemetryClient();
         private static IGuyWire guywire;
         private static ICacheProvider cacheProvider = new WebCache();
+        
 
         protected void Application_Start()
         {
@@ -43,6 +42,7 @@ namespace ABServicios
 
             ex.Log(context);
 
+            _telemetry.TrackException(ex);
             //no hago el clear, porque sino no entra en el customerrors
             //context.Server.ClearError();
         }
