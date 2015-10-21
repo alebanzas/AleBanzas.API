@@ -69,6 +69,10 @@
       <HintPath>..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="reCAPTCHA.MVC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\reCAPTCH.MVC.1.0.1\lib\net45\reCAPTCHA.MVC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -234,15 +238,20 @@
     <Content Include="Content\Pasos\image016.jpg" />
     <Content Include="Content\ranking.png" />
     <Content Include="Content\righttiles.png" />
-    <Content Include="Content\SitioWeb\image001.jpg" />
-    <Content Include="Content\SitioWeb\image002.jpg" />
-    <Content Include="Content\SitioWeb\image003.jpg" />
-    <Content Include="Content\SitioWeb\image004.jpg" />
-    <Content Include="Content\SitioWeb\image005.jpg" />
-    <Content Include="Content\SitioWeb\image006.jpg" />
-    <Content Include="Content\SitioWeb\image007.jpg" />
-    <Content Include="Content\SitioWeb\image008.jpg" />
-    <Content Include="Content\SitioWeb\image009.jpg" />
+    <Content Include="Content\SitioWeb\image001.png" />
+    <Content Include="Content\SitioWeb\image002.png" />
+    <Content Include="Content\SitioWeb\image003.png" />
+    <Content Include="Content\SitioWeb\image004.png" />
+    <Content Include="Content\SitioWeb\image005.png" />
+    <Content Include="Content\SitioWeb\image006.png" />
+    <Content Include="Content\SitioWeb\image007.png" />
+    <Content Include="Content\SitioWeb\image008.png" />
+    <Content Include="Content\SitioWeb\image009.png" />
+    <Content Include="Content\SitioWeb\image010.png" />
+    <Content Include="Content\SitioWeb\image011.png" />
+    <Content Include="Content\SitioWeb\image012.png" />
+    <Content Include="Content\SitioWeb\image013.png" />
+    <Content Include="Content\SitioWeb\image014.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -284,6 +293,7 @@
     <Content Include="Views\Pasos\Index.cshtml" />
     <Content Include="Views\SitioWeb\Index.cshtml" />
     <Content Include="Views\Imagen\Index.cshtml" />
+    <Content Include="Views\Codigo\Form.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

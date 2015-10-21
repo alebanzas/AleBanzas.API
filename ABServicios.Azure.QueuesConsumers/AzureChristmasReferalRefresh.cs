@@ -52,7 +52,7 @@ namespace ABServicios.Azure.QueuesConsumers
             {
                 try
                 {
-                    if ("aquienrefiero".Equals(filteredMessage.Data.Referal))
+                    if ("aquienrefiero".Equals(filteredMessage.Data.Referal) || !filteredMessage.Data.UserId.EndsWith("azurewebsites.net"))
                     {
                         continue;
                     }
