@@ -27,6 +27,8 @@ namespace ABServicios.Api
                 _telemetry.Context.Operation.Id = Guid.NewGuid().ToString();
                 _telemetry.Context.Operation.Name = requestName;
 
+                _telemetry.TrackEvent("Access.Api");
+
                 AzureQueue.Enqueue(new ApiAccessLog
                 {
                     DateTime = DateTime.UtcNow,
