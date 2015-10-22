@@ -33,6 +33,8 @@ namespace ABServicios.Controllers
             {
                 _telemetry.Context.Operation.Id = Guid.NewGuid().ToString();
                 _telemetry.Context.Operation.Name = _requestName;
+                
+                _telemetry.TrackEvent("Access");
 
                 AzureQueue.Enqueue(new ApiAccessLog
                 {

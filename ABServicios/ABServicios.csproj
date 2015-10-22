@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <ApplicationInsightsResourceId>/subscriptions/0be7d8e8-58ac-4d67-a936-acf42d8263e9/resourcegroups/ABHost/providers/microsoft.insights/components/Api.Alebanzas</ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>/subscriptions/0be7d8e8-58ac-4d67-a936-acf42d8263e9/resourcegroups/ABServicios/providers/microsoft.insights/components/ABServicios</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
