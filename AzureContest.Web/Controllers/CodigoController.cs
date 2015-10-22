@@ -1,6 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 using System.Web.Mvc;
+using Microsoft.ApplicationInsights;
 using reCAPTCHA.MVC;
 
 namespace AzureContest.Web.Controllers
@@ -33,6 +35,13 @@ namespace AzureContest.Web.Controllers
             var request = httpClient.GetAsync($"http://api.alebanzas.com.ar/api/dreamspark?nombre={nombre}&apellido={apellido}&email={email}");
 
             var codigo = request.Result.Content.ReadAsStringAsync().Result;
+            
+            var tm = new TelemetryClient();
+            tm.TrackEvent("CodigoEntregado", new Dictionary<string, string>
+            {
+                {"email", email},
+                {"codigo", codigo},
+            });
 
             return PartialView("Get", codigo);
         }
