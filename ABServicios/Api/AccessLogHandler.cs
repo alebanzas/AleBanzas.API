@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,10 +13,7 @@ namespace ABServicios.Api
 {
 	public class AccessLogHandler : DelegatingHandler
     {
-        private readonly TelemetryClient _telemetry = new TelemetryClient
-                                                    {
-                                                        InstrumentationKey = TelemetryConfiguration.Active.InstrumentationKey,
-                                                    };
+        private TelemetryClient _telemetry;
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 		{
@@ -24,6 +22,9 @@ namespace ABServicios.Api
 
             try
             {
+                _telemetry = new TelemetryClient();
+                _telemetry.Context.InstrumentationKey = ConfigurationManager.AppSettings["AppInsightsInstrumentationKey"];
+
                 _telemetry.Context.Operation.Id = Guid.NewGuid().ToString();
                 _telemetry.Context.Operation.Name = requestName;
 

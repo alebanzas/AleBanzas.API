@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Diagnostics;
 using System.Web.Mvc;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
@@ -17,10 +18,8 @@ namespace ABServicios.Controllers
         public BaseController()
         {
             _stopwatch = new Stopwatch();
-            _telemetry = new TelemetryClient
-            {
-                InstrumentationKey = TelemetryConfiguration.Active.InstrumentationKey,
-            };
+            _telemetry = new TelemetryClient();
+            _telemetry.Context.InstrumentationKey = ConfigurationManager.AppSettings["AppInsightsInstrumentationKey"];
         }
 
         protected override void OnActionExecuting(ActionExecutingContext ctx)
