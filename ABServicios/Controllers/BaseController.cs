@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using Microsoft.ApplicationInsights;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace ABServicios.Controllers
 {
@@ -16,7 +17,10 @@ namespace ABServicios.Controllers
         public BaseController()
         {
             _stopwatch = new Stopwatch();
-            _telemetry = new TelemetryClient();
+            _telemetry = new TelemetryClient
+            {
+                InstrumentationKey = TelemetryConfiguration.Active.InstrumentationKey,
+            };
         }
 
         protected override void OnActionExecuting(ActionExecutingContext ctx)
@@ -55,7 +59,7 @@ namespace ABServicios.Controllers
         {
             var r = filterContext.HttpContext.Response;
 
-            _stopwatch.Start();
+            _stopwatch.Stop();
             _telemetry.TrackRequest(_requestName, DateTime.Now, _stopwatch.Elapsed, r.StatusCode.ToString(), !(r.StatusCode >= 300));
         }
     }

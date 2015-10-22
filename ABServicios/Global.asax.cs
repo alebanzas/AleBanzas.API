@@ -24,12 +24,16 @@ namespace ABServicios
 
         protected void Application_Start()
         {
-            _telemetry = new TelemetryClient();
+            TelemetryConfiguration.Active.InstrumentationKey = ConfigurationManager.AppSettings["AppInsightsInstrumentationKey"];
+            _telemetry = new TelemetryClient
+                                            {
+                                                InstrumentationKey = TelemetryConfiguration.Active.InstrumentationKey,
+                                            };
             guywire = new MvcGuyWire();
             guywire.Wire();
 
             //TelemetryConfiguration.CreateDefault();
-            //TelemetryConfiguration.Active.InstrumentationKey = ConfigurationManager.AppSettings["AppInsightsInstrumentationKey"];
+            //;
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

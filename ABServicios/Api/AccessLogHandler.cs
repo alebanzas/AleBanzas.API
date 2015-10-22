@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using Microsoft.ApplicationInsights;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace ABServicios.Api
 {
 	public class AccessLogHandler : DelegatingHandler
     {
-        private readonly TelemetryClient _telemetry = new TelemetryClient();
+        private readonly TelemetryClient _telemetry = new TelemetryClient
+                                                    {
+                                                        InstrumentationKey = TelemetryConfiguration.Active.InstrumentationKey,
+                                                    };
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 		{
@@ -22,7 +26,7 @@ namespace ABServicios.Api
             {
                 _telemetry.Context.Operation.Id = Guid.NewGuid().ToString();
                 _telemetry.Context.Operation.Name = requestName;
-                
+
                 AzureQueue.Enqueue(new ApiAccessLog
                 {
                     DateTime = DateTime.UtcNow,
