@@ -2,6 +2,7 @@
 using ABServicios.Services;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -10,20 +11,25 @@ using System.Web.Routing;
 using AB.Common.Wiring;
 using AB.Data;
 using Microsoft.ApplicationInsights;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace ABServicios
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        private readonly TelemetryClient _telemetry = new TelemetryClient();
+        private TelemetryClient _telemetry;
         private static IGuyWire guywire;
         private static ICacheProvider cacheProvider = new WebCache();
         
 
         protected void Application_Start()
         {
+            _telemetry = new TelemetryClient();
             guywire = new MvcGuyWire();
             guywire.Wire();
+
+            //TelemetryConfiguration.CreateDefault();
+            //TelemetryConfiguration.Active.InstrumentationKey = ConfigurationManager.AppSettings["AppInsightsInstrumentationKey"];
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
