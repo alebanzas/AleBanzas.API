@@ -1,7 +1,6 @@
 ﻿using AB.Common.Extensions;
 using ABServicios.Services;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Web;
 using System.Web.Http;
@@ -11,7 +10,6 @@ using System.Web.Routing;
 using AB.Common.Wiring;
 using AB.Data;
 using Microsoft.ApplicationInsights;
-using Microsoft.ApplicationInsights.Extensibility;
 
 namespace ABServicios
 {
@@ -47,7 +45,7 @@ namespace ABServicios
 
             var ex = context.Server.GetLastError();
 
-            ex.Log(context);
+            ex.Log(context, ExceptionAction.SendMailAndEnqueue);
 
             _telemetry.TrackException(ex);
             //no hago el clear, porque sino no entra en el customerrors

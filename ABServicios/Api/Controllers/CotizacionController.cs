@@ -126,13 +126,15 @@ namespace ABServicios.Api.Controllers
             int error = 0;
             try
             {
+                Exception lastException = null;
                 try
                 {
                     var result = GetModel();
                     _cache.Put(CacheKey, result, new TimeSpan(1, 0, 0, 0));
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
+                    lastException = e;
                     error++;
                 }
                 try
@@ -140,8 +142,9 @@ namespace ABServicios.Api.Controllers
                     var rresult = GetRofexModel();
                     _cache.Put(CacheKeyRofex, rresult, new TimeSpan(1, 0, 0, 0));
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
+                    lastException = e;
                     error++;
                 }
                 try
@@ -149,13 +152,14 @@ namespace ABServicios.Api.Controllers
                     var tresult = GetTasasModel();
                     _cache.Put(CacheKeyTasas, tresult, new TimeSpan(1, 0, 0, 0));
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
+                    lastException = e;
                     error++;
                 }
                 if (error > 1)
                 {
-                    throw new Exception("CotizacionController");
+                    throw new Exception("CotizacionController", lastException);
                 }
             }
             catch (Exception ex)

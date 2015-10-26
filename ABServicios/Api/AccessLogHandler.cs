@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Net.Http;
 using System.Threading;
@@ -7,12 +6,13 @@ using System.Threading.Tasks;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage.Messages;
 using Microsoft.ApplicationInsights;
-using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.ApplicationInsights.Web;
 
 namespace ABServicios.Api
 {
 	public class AccessLogHandler : DelegatingHandler
     {
+
         private TelemetryClient _telemetry;
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
