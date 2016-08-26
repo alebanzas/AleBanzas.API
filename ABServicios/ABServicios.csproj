@@ -286,14 +286,11 @@
     <Compile Include="Api\Binders\HeadersParameterBinding.cs" />
     <Compile Include="Api\Binders\NeedDataBaseContextAttribute.cs" />
     <Compile Include="Api\Controllers\AvionController.cs" />
-    <Compile Include="Api\Controllers\CandyAppsController.cs" />
     <Compile Include="Api\Controllers\DenunciaPreciosController.cs" />
     <Compile Include="Api\Controllers\GeocoderController.cs" />
-    <Compile Include="Api\Controllers\MvaController.cs" />
     <Compile Include="Api\Controllers\RouteController.cs" />
     <Compile Include="Api\Controllers\ReservasController.cs" />
     <Compile Include="Api\Controllers\LiveTrenController.cs" />
-    <Compile Include="Api\Controllers\DreamSparkController.cs" />
     <Compile Include="Api\Extensions\AvionesStatusModelExtensions.cs" />
     <Compile Include="Api\Controllers\BaseController.cs" />
     <Compile Include="Api\Controllers\BicicletaController.cs" />
@@ -322,9 +319,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
-    <Compile Include="Controllers\AceptoElRetoController.cs" />
-    <Compile Include="Controllers\AzureDevDayController.cs" />
-    <Compile Include="Controllers\AzureLogController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
@@ -395,7 +389,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\License\Index.cshtml" />
     <Content Include="Views\Report\Detail.cshtml" />
     <Content Include="Views\Report\Location.cshtml" />
     <Content Include="Views\Report\Summary.cshtml" />
@@ -404,17 +397,11 @@
     <Content Include="Views\Status\Test.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Report\ByVersion.cshtml" />
-    <Content Include="Views\AceptoElReto\Index.cshtml" />
-    <Content Include="Views\AceptoElReto\Thanks.cshtml" />
-    <Content Include="Views\AceptoElReto\_TeamMemberItem.cshtml" />
-    <Content Include="Views\AceptoElReto\EditorTemplates\TeamMember.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api\ActionFilters\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AzureDevDay\" />
-    <Folder Include="Views\AzureLog\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

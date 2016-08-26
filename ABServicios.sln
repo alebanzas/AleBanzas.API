@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{6A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{9BB6D619-87F1-4D07-9AC1-D342F381C712}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureContest", "AzureContest", "{694B4315-5488-4D4D-88E4-423ADBB7B8DD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABServicios.BLL", "ABServicios.BLL\ABServicios.BLL.csproj", "{DE11105B-F395-4987-95AD-75255E2F539D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AB.Common", "AB.Common\AB.Common.csproj", "{E3E70B35-9ADF-40B2-A211-55859542854B}"
@@ -44,8 +42,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABServicios.Azure.QueuesConsumers", "ABServicios.Azure.QueuesConsumers\ABServicios.Azure.QueuesConsumers.csproj", "{7E6CCCB6-2ABB-4A17-9D29-9FAC0F3DA25F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABServicios.Azure.Tests", "ABServicios.Azure.Tests\ABServicios.Azure.Tests.csproj", "{C3702F05-2543-4BAA-97F6-D3C8AEE1A445}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureContest.Web", "AzureContest.Web\AzureContest.Web.csproj", "{9DDD23EA-DAFC-4790-9289-5AD726131CBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,18 +209,6 @@ Global
 		{C3702F05-2543-4BAA-97F6-D3C8AEE1A445}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C3702F05-2543-4BAA-97F6-D3C8AEE1A445}.Release|x86.ActiveCfg = Release|Any CPU
 		{C3702F05-2543-4BAA-97F6-D3C8AEE1A445}.Release|x86.Build.0 = Release|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Debug|x86.Build.0 = Debug|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Release|x86.ActiveCfg = Release|Any CPU
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -242,6 +226,5 @@ Global
 		{5485BC35-F77E-4032-9ABB-DDCDADF04BC4} = {9BB6D619-87F1-4D07-9AC1-D342F381C712}
 		{7E6CCCB6-2ABB-4A17-9D29-9FAC0F3DA25F} = {9BB6D619-87F1-4D07-9AC1-D342F381C712}
 		{C3702F05-2543-4BAA-97F6-D3C8AEE1A445} = {59F60900-3092-4209-9577-0A0BC7B799A5}
-		{9DDD23EA-DAFC-4790-9289-5AD726131CBC} = {694B4315-5488-4D4D-88E4-423ADBB7B8DD}
 	EndGlobalSection
 EndGlobal

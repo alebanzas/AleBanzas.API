@@ -20,10 +20,6 @@ namespace AB.Wiring.Repositories
             RegisterEntityDao<VentaSUBE, Guid>();
             RegisterEntityDao<DolarHistorico, Guid>();
             RegisterEntityDao<Transporte, Guid>();
-            RegisterEntityDao<DreamSparkItem, Guid>();
-            RegisterEntityDao<CandyApp, Guid>();
-            RegisterEntityDao<InetForm, Guid>();
-            RegisterEntityDao<TeamMember, Guid>();
 
             RegisterInMemoryRepositories();
 			RegisterQueries();
