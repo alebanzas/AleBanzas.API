@@ -4,6 +4,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=absrvctempstorage;AccountKey=9T6/Ngu46BeHj0FpuqJmpqXsQtz3RncSrR6l77BM3y5nvJzI9YfJTSMo3jbB8E6uzYEF6bEN/zpx5CRH/MrZCA==" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ac6d7929-717b-4f74-b94e-1512e98f443c" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
