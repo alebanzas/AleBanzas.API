@@ -67,9 +67,6 @@
   <ItemGroup>
     <Compile Include="ApiAccessLogSaver.cs" />
     <Compile Include="ApiCallExtensions.cs" />
-    <Compile Include="AzureChristmasPuntosPorUsuario.cs" />
-    <Compile Include="AzureChristmasReferalRefresh.cs" />
-    <Compile Include="AzureChristmasVoteLogSaver.cs" />
     <Compile Include="DenunciaPreciosSaver.cs" />
     <Compile Include="MailsMessagesSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
