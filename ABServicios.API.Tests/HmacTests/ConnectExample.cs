@@ -18,11 +18,11 @@ namespace ABServicios.API.Tests.HmacTests
 			{
 				InnerHandler = new HmacSigningHandler()
 			});
-			Task<HttpResponseMessage> x = client.GetAsync("http://servicio.abhosting.com.ar/api/tests");
+			Task<HttpResponseMessage> x = client.GetAsync("http://api.alebanzas.com.ar/api/tests");
 			x.Wait();
 			HttpResponseMessage resp = x.Result;
 			resp.IsSuccessStatusCode.Should().Be.True();
-            var r = client.GetStringAsync("http://servicio.abhosting.com.ar/api/tests/1");
+            var r = client.GetStringAsync("http://api.alebanzas.com.ar/api/tests/1");
 			r.Result.Should().Contain("1");
 		}
 
@@ -33,7 +33,7 @@ namespace ABServicios.API.Tests.HmacTests
 			{
 				InnerHandler = new HmacSigningHandler()
 			});
-			Task<HttpResponseMessage> x = client.PostAsJsonAsync("http://servicio.abhosting.com.ar/api/tests", new { valor = "cualquier cosa" });
+			Task<HttpResponseMessage> x = client.PostAsJsonAsync("http://api.alebanzas.com.ar/api/tests", new { valor = "cualquier cosa" });
 			x.Wait();
 			HttpResponseMessage resp = x.Result;
 			resp.IsSuccessStatusCode.Should().Be.True();
