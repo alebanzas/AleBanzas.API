@@ -352,6 +352,7 @@
     <Content Include="Content\MS-Azure_rgb_Blk_D.png" />
     <Content Include="Content\MS-Azure_rgb_Wht.png" />
     <Content Include="Content\MS-Azure_rgb_Wht_D.png" />
+    <Content Include="Content\map.pin.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
