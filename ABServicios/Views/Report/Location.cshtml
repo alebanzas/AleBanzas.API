@@ -1,7 +1,7 @@
 ﻿@using ABServicios.Azure.Storage.DataAccess.TableStorage;
 @model IEnumerable<ApiAccessLogData>
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCVjeDPxkn4EyncQSL5KZerwG7E4HkMxf4&sensor=true"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAwpnS0Tn8zfg-yc2SwB4N8c8iP3Lf5Znw"></script>
 
 <script type="text/javascript">
     var geocoder;
@@ -25,8 +25,8 @@
 
         marker = new google.maps.Marker({
             'position': pos,
-            'map': map,
-            'icon': icon
+            'map': map
+            //'icon': icon
         });
         
         var millisecondsToWait = 500;
