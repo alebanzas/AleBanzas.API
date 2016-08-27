@@ -16,16 +16,16 @@ namespace ABServicios.Api.Controllers
     {
         private readonly List<Tuple<string, Uri, Uri>> _ramales = new List<Tuple<string, Uri, Uri>>
         {
-            new Tuple<string, Uri, Uri>("sarmiento", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=1&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=1")),
-            new Tuple<string, Uri, Uri>("mitre-r-t", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=5&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=5")),
-            new Tuple<string, Uri, Uri>("mitre-r-m", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=7&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=7")),
-            new Tuple<string, Uri, Uri>("mitre-r-l", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=9&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=9")),
-            new Tuple<string, Uri, Uri>("roca-c-lp", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=11&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=11")),
-            //new Tuple<string, Uri, Uri>("roca-c-b", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=13&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=13")),
-            //new Tuple<string, Uri, Uri>("belgranosur-b-mdcgb", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=21&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=21")),
-            //new Tuple<string, Uri, Uri>("belgranosur-b-gc", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=25&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=25")),
-            new Tuple<string, Uri, Uri>("sanmartin-r-p", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=31&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=31")),
-            new Tuple<string, Uri, Uri>("delacosta", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=41&rnd=s3PNF522VOHdCxZi&key=v%23v%23QTUNWp%23MpWR0wkj%23RhHTqVUM"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=41")),
+            new Tuple<string, Uri, Uri>("sarmiento", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=1&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=1")),
+            new Tuple<string, Uri, Uri>("mitre-r-t", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=5&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=5")),
+            new Tuple<string, Uri, Uri>("mitre-r-m", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=7&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=7")),
+            new Tuple<string, Uri, Uri>("mitre-r-l", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=9&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=9")),
+            new Tuple<string, Uri, Uri>("roca-c-lp", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=11&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=11")),
+            //new Tuple<string, Uri, Uri>("roca-c-b", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=13&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=13")),
+            //new Tuple<string, Uri, Uri>("belgranosur-b-mdcgb", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=21&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=21")),
+            //new Tuple<string, Uri, Uri>("belgranosur-b-gc", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=25&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=25")),
+            new Tuple<string, Uri, Uri>("sanmartin-r-p", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=31&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=31")),
+            new Tuple<string, Uri, Uri>("delacosta", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=41&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=41")),
         };
 
         private readonly WebCache _cache = new WebCache();
@@ -100,7 +100,7 @@ namespace ABServicios.Api.Controllers
             }
             catch (Exception ex)
             {
-                ex.Log();
+                ex.Log(ExceptionAction.SendMail);
                 return _defaultModel;
             }
         }
