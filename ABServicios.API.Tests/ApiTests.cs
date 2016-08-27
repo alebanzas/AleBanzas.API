@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ABServicios.Api.Controllers;
 using ABServicios.Api.Models;
+using ABServicios.BLL.Entities;
+using ABServicios.Models;
 using Newtonsoft.Json;
 using NUnit.Framework;
 
@@ -14,6 +16,27 @@ namespace ABServicios.API.Tests
 {
     public class ApiTests
     {
+        [Test]
+        public void WhenGetAviones()
+        {
+            var r = AvionController.GetModel(TerminalesAereas.Aeroparque);
+            Assert.IsNotNull(r.Arribos.First());
+
+            r = AvionController.GetModel(TerminalesAereas.Ezeiza);
+            Assert.IsNotNull(r.Arribos.First());
+        }
+
+        [Test]
+        public void WhenGetAvionesThenHttp200()
+        {
+            var httpClient = Api.GetHttpClient();
+            var result = httpClient.GetAsync("/avion/arribos".ToAbsoluteUri(new { t = "EZE" })).Result;
+            var value = result.Content.ReadAsStringAsync().Result;
+            var r = JsonConvert.DeserializeObject<AvionesTerminalStatusModel>(value);
+
+            Assert.IsNotNull(r.Arribos.First());
+        }
+
         [Test]
         public void WhenGetTren()
         {

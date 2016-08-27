@@ -76,6 +76,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ABServicios.BLL\ABServicios.BLL.csproj">
+      <Project>{DE11105B-F395-4987-95AD-75255E2F539D}</Project>
+      <Name>ABServicios.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ABServicios\ABServicios.csproj">
       <Project>{5520241D-D2DE-47AD-B972-9BDDB7BD3FB2}</Project>
       <Name>ABServicios</Name>
