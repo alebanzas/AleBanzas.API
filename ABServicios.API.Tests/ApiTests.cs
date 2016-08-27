@@ -33,9 +33,15 @@ namespace ABServicios.API.Tests
         }
 
         [Test]
-        public void WhenGetCotizacion()
+        public void WhenGetCotizacionTasas()
         {
-            var r = CotizacionController.GetModel();
+            var r = CotizacionController.GetTasasModel();
+
+            foreach (var divisaViewModel in r.Divisas)
+            {
+                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" + divisaViewModel.ValorCompra);
+            }
+
             Assert.IsNotNull(r.Divisas.First());
         }
 
@@ -51,12 +57,38 @@ namespace ABServicios.API.Tests
         }
 
         [Test]
+        public void WhenGetCotizacionRofex()
+        {
+            var r = CotizacionController.GetRofexModel();
+
+            foreach (var divisaViewModel in r.Divisas)
+            {
+                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" + divisaViewModel.ValorCompra);
+            }
+
+            Assert.IsNotNull(r.Divisas.First());
+        }
+
+        [Test]
         public void WhenGetRofexThenHttp200()
         {
             var httpClient = Api.GetHttpClient();
             var result = httpClient.GetAsync("/cotizacion/rofex".ToAbsoluteUri()).Result;
             var value = result.Content.ReadAsStringAsync().Result;
             var r = JsonConvert.DeserializeObject<DivisaModel>(value);
+
+            Assert.IsNotNull(r.Divisas.First());
+        }
+
+        [Test]
+        public void WhenGetCotizacionDivisas()
+        {
+            var r = CotizacionController.GetModel();
+
+            foreach (var divisaViewModel in r.Divisas)
+            {
+                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" + divisaViewModel.ValorCompra);
+            }
 
             Assert.IsNotNull(r.Divisas.First());
         }

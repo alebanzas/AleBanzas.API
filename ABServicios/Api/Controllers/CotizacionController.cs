@@ -178,10 +178,10 @@ namespace ABServicios.Api.Controllers
 
             HtmlNode html = new Scraper(new Uri("http://www.ambito.com/economia/mercados/monedas/dolar/"), Encoding.UTF7).GetNodes();
 
-            var compra = html.CssSelect("div.columna1 div.ultimo big").FirstOrDefault().InnerText;
-            var venta = html.CssSelect("div.columna1 div.cierreAnterior big").FirstOrDefault().InnerText;
-            var variacion = html.CssSelect("div.columna1 div.variacion big").FirstOrDefault().InnerText;
-            var fecha = html.CssSelect("div.columna1 div.dolarFecha big").FirstOrDefault().InnerText;
+            var compra = html.CssSelect("div.bonosPrincipal div.ultimo big").FirstOrDefault().InnerText;
+            var venta = html.CssSelect("div.bonosPrincipal div.cierreAnterior big").FirstOrDefault().InnerText;
+            var variacion = html.CssSelect("div.bonosPrincipal div.variacion big").FirstOrDefault().InnerText;
+            var fecha = html.CssSelect("div.bonosPrincipal div.dolarFecha big").FirstOrDefault().InnerText;
 
             var variacionOficial = variacion;
             var fechaOficial = fecha;
@@ -198,10 +198,10 @@ namespace ABServicios.Api.Controllers
                 Actualizacion = fecha,
             });
 
-            compra = html.CssSelect("div.columna3 div.ultimo big").FirstOrDefault().InnerText;
-            venta = html.CssSelect("div.columna3 div.cierreAnterior big").FirstOrDefault().InnerText;
-            variacion = html.CssSelect("div.columna3 div.variacion big").FirstOrDefault().InnerText;
-            fecha = html.CssSelect("div.columna3 div.dolarFecha big").FirstOrDefault().InnerText;
+            compra = html.CssSelect("div.bonosPrincipal div.ultimo big").Skip(1).FirstOrDefault().InnerText;
+            venta = html.CssSelect("div.bonosPrincipal div.cierreAnterior big").Skip(1).FirstOrDefault().InnerText;
+            variacion = html.CssSelect("div.bonosPrincipal div.variacion big").Skip(1).FirstOrDefault().InnerText;
+            fecha = html.CssSelect("div.bonosPrincipal div.dolarFecha big").Skip(1).FirstOrDefault().InnerText;
 
             divisas.Add(new DivisaViewModel
             {
@@ -213,52 +213,13 @@ namespace ABServicios.Api.Controllers
                 Actualizacion = fecha,
             });
 
-            try
-            {
-                compra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.35).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
-                venta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.35).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
-
-                divisas.Add(new DivisaViewModel
-                {
-                    Nombre = "Dólar Tarjeta",
-                    Simbolo = "U$S",
-                    ValorCompra = compra,
-                    ValorVenta = venta,
-                    Variacion = variacionOficial,
-                    Actualizacion = fechaOficial,
-                });
-            }
-            catch
-            {
-
-            }
 
             try
             {
-                compra = (float.Parse(compraOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
-                venta = (float.Parse(ventaOficial.Replace(',', '.'), CultureInfo.InvariantCulture) * 1.2).ToString("##.###", CultureInfo.InvariantCulture).Replace('.', ',');
-
-                divisas.Add(new DivisaViewModel
-                {
-                    Nombre = "Dólar Ahorro",
-                    Simbolo = "U$S",
-                    ValorCompra = compra,
-                    ValorVenta = venta,
-                    Variacion = variacionOficial,
-                    Actualizacion = fechaOficial,
-                });
-            }
-            catch
-            {
-
-            }
-
-            try
-            {
-                compra = html.CssSelect("div.columna1 div.ultimo big").Skip(1).Take(1).FirstOrDefault().InnerText;
-                venta = html.CssSelect("div.columna1 div.cierreAnterior big").Skip(1).Take(1).FirstOrDefault().InnerText;
-                variacion = html.CssSelect("div.columna1 div.variacion big").Skip(1).Take(1).FirstOrDefault().InnerText;
-                fecha = html.CssSelect("div.columna1 div.dolarFecha big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                compra = html.CssSelect("div.bonosPrincipal div.ultimo big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.bonosPrincipal div.cierreAnterior big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.bonosPrincipal div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.bonosPrincipal div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
 
                 divisas.Add(new DivisaViewModel
                 {
@@ -277,10 +238,10 @@ namespace ABServicios.Api.Controllers
 
             try
             {
-                compra = html.CssSelect("div.columna1y2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                venta = html.CssSelect("div.columna1y2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                variacion = html.CssSelect("div.columna1y2 div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                fecha = html.CssSelect("div.columna1y2 div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                compra = html.CssSelect("div.bonosPrincipal div.cierreAnteriorUnico big").Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.bonosPrincipal div.cierreAnteriorUnico big").Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.bonosPrincipal div.variacion big").Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.bonosPrincipal div.dolarFecha big").Take(1).FirstOrDefault().InnerText;
 
                 divisas.Add(new DivisaViewModel
                 {
@@ -297,13 +258,35 @@ namespace ABServicios.Api.Controllers
 
             }
 
+            try
+            {
+                compra = html.CssSelect("div.bonosPrincipal div.cierreAnteriorUnico big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.bonosPrincipal div.cierreAnteriorUnico big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.bonosPrincipal div.variacion big").Skip(1).Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.bonosPrincipal div.dolarFecha big").Skip(1).Take(1).FirstOrDefault().InnerText;
+
+                divisas.Add(new DivisaViewModel
+                {
+                    Nombre = "Contado con liquidación",
+                    Simbolo = "U$S",
+                    ValorCompra = compra,
+                    ValorVenta = venta,
+                    Variacion = variacion,
+                    Actualizacion = fecha,
+                });
+            }
+            catch
+            {
+
+            }
+
 
             try
             {
-                compra = html.CssSelect("div.columna2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                venta = html.CssSelect("div.columna2 div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                variacion = html.CssSelect("div.columna2 div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
-                fecha = html.CssSelect("div.columna2 div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                compra = html.CssSelect("div.bonosPrincipal div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                venta = html.CssSelect("div.bonosPrincipal div.cierreAnteriorUnico big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                variacion = html.CssSelect("div.bonosPrincipal div.variacion big").Skip(2).Take(1).FirstOrDefault().InnerText;
+                fecha = html.CssSelect("div.bonosPrincipal div.dolarFecha big").Skip(2).Take(1).FirstOrDefault().InnerText;
 
                 divisas.Add(new DivisaViewModel
                 {
@@ -335,7 +318,7 @@ namespace ABServicios.Api.Controllers
 
             HtmlNode html = new Scraper(new Uri("http://www.rofex.com.ar/"), Encoding.UTF7).GetNodes();
 
-            var cierre = html.CssSelect("#cierre");
+            var cierre = html.CssSelect("#cierre_monedas");
             var tabla = cierre.CssSelect("table tr").Skip(1);
 
             foreach (var htmlNode in tabla)
