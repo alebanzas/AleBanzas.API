@@ -80,7 +80,7 @@ namespace ABServicios.Api.Controllers
 
         public static TrenesStatusModel GetModel()
         {
-            var scraper = new Scraper(new Uri("http://servicios.lanacion.com.ar/transito/?sitio=desktop"));
+            var scraper = new Scraper(new Uri("http://servicios.lanacion.com.ar/transito?sitio=desktop"));
             scraper.Request.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36";
             scraper.Request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
             
