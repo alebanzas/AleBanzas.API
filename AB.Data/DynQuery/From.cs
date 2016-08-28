@@ -1,6 +1,6 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
-using Iesi.Collections.Generic;
 
 namespace AB.Data.DynQuery
 {
@@ -14,7 +14,7 @@ namespace AB.Data.DynQuery
 	public class From : IDynClause
 	{
 		private readonly string partialClause;
-		private readonly HashedSet<string> joins = new HashedSet<string>();
+		private readonly HashSet<string> joins = new HashSet<string>();
 
 		/// <summary>
 		/// Create a new instance of <see cref="From"/>.
