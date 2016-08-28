@@ -20,12 +20,15 @@ namespace ABServicios
             routes.Redirect("sube/ventanear", "/api/ventasube/");
             routes.Redirect("aviones/arribos", "/api/avion/arribos");
             routes.Redirect("aviones/partidas", "/api/avion/partidas");
-            routes.Redirect("divisa/message", "/status/ok");
-            
+            routes.Redirect("azurelog", "/status/ok");
+            routes.Redirect("home/index", "/status/ok");
+            routes.Redirect("dreamspark", "/status/ok");
+            routes.Redirect("report/error", "/status/ok");
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Status", action = "Ok", id = UrlParameter.Optional }
             );
         }
     }

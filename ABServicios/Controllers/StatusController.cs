@@ -1,15 +1,32 @@
 ﻿using System;
 using System.Web.Mvc;
 using ABServicios.Api.Controllers;
+using ABServicios.Api.Models;
 using ABServicios.Attributes;
+using ABServicios.Models;
+using ABServicios.Services;
 
 namespace ABServicios.Controllers
 {
     public class StatusController : BaseController
     {
+        public ActionResult RemoveAll()
+        {
+            var cache = new WebCache();
+
+            cache.Evict<BicicletasStatusModel>(BicicletaController.CacheKey);
+            cache.Evict<TrenesStatusModel>(TrenController.CacheKey);
+            cache.Evict<SubteStatusModel>(SubteController.CacheKey);
+            cache.Evict<DivisaModel>(CotizacionController.CacheKey);
+            cache.Evict<DivisaModel>(CotizacionController.CacheKeyRofex);
+            cache.Evict<DivisaModel>(CotizacionController.CacheKeyTasas);
+
+
+            return new HttpStatusCodeResult(200);
+        }
+
         //
         // GET: /Status/Test
-
         public ActionResult Test()
         {
             return View();
@@ -41,6 +58,7 @@ namespace ABServicios.Controllers
         {
             try
             {
+                //TODO: implementar get por cada api call y verificar estado de resultado
                 (new SubteController()).Get();
                 (new TrenController()).Get();
                 (new CotizacionController()).Divisas();

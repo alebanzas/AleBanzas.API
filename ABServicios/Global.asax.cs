@@ -37,14 +37,22 @@ namespace ABServicios
 
         protected void Application_Error(Object sender, EventArgs e)
         {
-            var context = HttpContext.Current;
-            if (context == null) return;
+            try
+            {
+                var context = HttpContext.Current;
+                if (context == null) return;
 
-            var ex = context.Server.GetLastError();
+                var exception = context.Server.GetLastError();
 
-            ex.Log(context, ExceptionAction.SendMailAndEnqueue);
-            //no hago el clear, porque sino no entra en el customerrors
-            //context.Server.ClearError();
+                exception.Log(context, ExceptionAction.SendMailAndEnqueue);
+                //no hago el clear, porque sino no entra en el customerrors
+                //context.Server.ClearError();
+            }
+            catch (Exception ex)
+            {
+                (new SystemException("FATAL", ex)).Log(ExceptionAction.SendMail);
+                throw;
+            }
         }
 
         protected void Application_End()
