@@ -25,12 +25,7 @@ namespace AB.Data.Cache
 		{
 			get { return toleratedSpaces; }
 		}
-
-        protected override bool IsUpToDate(ISet<string> spaces, long timestamp)
-		{
-			return IsTolerated(spaces) || base.IsUpToDate(spaces, timestamp);
-		}
-
+        
 		public virtual bool IsTolerated(IEnumerable<string> spaces)
 		{
 			return isAlwaysTolerant || (toleratedSpaces.IsSupersetOf(spaces) && spaces.FirstOrDefault() != null);
