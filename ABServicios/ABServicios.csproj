@@ -298,7 +298,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\NeedRelationalPersistenceAttribute.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Api\Models\RecargaSUBEViewModel.cs" />
     <Compile Include="Controllers\ReportController.cs" />
