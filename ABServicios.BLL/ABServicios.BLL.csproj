@@ -125,18 +125,6 @@
       <Project>{E3E70B35-9ADF-40B2-A211-55859542854B}</Project>
       <Name>AB.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NHibernate.Spatial.MsSql2008\NHibernate.Spatial.MsSql2008.csproj">
-      <Project>{eac092d9-6d47-4a30-803c-7a8583f99dfe}</Project>
-      <Name>NHibernate.Spatial.MsSql2008</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NHibernate.Spatial.MsSqlSpatial\NHibernate.Spatial.MsSqlSpatial.csproj">
-      <Project>{3eda0009-eb8e-4024-8154-6de8707b7c05}</Project>
-      <Name>NHibernate.Spatial.MsSqlSpatial</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NHibernate.Spatial\NHibernate.Spatial.csproj">
-      <Project>{50868b60-ac38-47e1-bd09-b4a4aa06b6f2}</Project>
-      <Name>NHibernate.Spatial</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
