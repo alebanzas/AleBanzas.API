@@ -14,6 +14,13 @@ namespace ABServicios.API.Tests
     public class ApiTests
     {
         [Test]
+        public void WhenGetSUBE()
+        {
+            var r = (new RecargaSubeController()).Get(-58,-34);
+            Assert.IsNotNull(r.First());
+        }
+
+        [Test]
         public void WhenGetBicicletas()
         {
             var r = BicicletaController.GetModel();

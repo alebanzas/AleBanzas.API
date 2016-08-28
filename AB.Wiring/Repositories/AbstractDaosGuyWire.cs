@@ -30,7 +30,7 @@ namespace AB.Wiring.Repositories
 
 		protected void RegisterEntityDao<T, TEntityDao, TImplementation>()
 			where T : AbstractEntity<int>
-			where TEntityDao : IABDao<T>
+			where TEntityDao : class, IABDao<T>
 			where TImplementation : TEntityDao
 		{
 			container.Register(Component.For<TEntityDao, IABDao<T>, IEntityDao<T, int>, ICrudDao<T, int>, IDao<T, int>>().ImplementedBy<TImplementation>());
