@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Configuration;
 using System.Web;
 using AB.Common.Mail;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
+using Microsoft.ApplicationInsights;
 
 namespace AB.Common.Extensions
 {
@@ -26,6 +28,11 @@ namespace AB.Common.Extensions
 
     public static class ExceptionExtensions
     {
+        private static readonly TelemetryClient Telemetry = new TelemetryClient
+        {
+            Context = { InstrumentationKey = ConfigurationManager.AppSettings["AppInsightsInstrumentationKey"] }
+        };
+
         public static void Log(this Exception exception, ExceptionAction action = ExceptionAction.Enqueue)
         {
             Log(exception, null, string.Empty, action);
@@ -81,6 +88,15 @@ namespace AB.Common.Extensions
                     // si el mensaje es null significa que el maker controló algunas situaciones y no hay nada para enviar y el mensaje se puede remover de la queue
                     mailSender.Send(mailMessage);
                 }
+            }
+            catch (Exception ex)
+            {
+                //estamos en la B, error del error
+            }
+
+            try
+            {
+                Telemetry.TrackException(exception);
             }
             catch (Exception ex)
             {
