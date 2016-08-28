@@ -15,15 +15,12 @@ namespace ABServicios
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        private TelemetryClient _telemetry;
         private static IGuyWire guywire;
         private static ICacheProvider cacheProvider = new WebCache();
         
 
         protected void Application_Start()
         {
-            _telemetry = new TelemetryClient();
-            _telemetry.Context.InstrumentationKey = ConfigurationManager.AppSettings["AppInsightsInstrumentationKey"];
             guywire = new MvcGuyWire();
             guywire.Wire();
 
@@ -46,8 +43,6 @@ namespace ABServicios
             var ex = context.Server.GetLastError();
 
             ex.Log(context, ExceptionAction.SendMailAndEnqueue);
-
-            _telemetry.TrackException(ex);
             //no hago el clear, porque sino no entra en el customerrors
             //context.Server.ClearError();
         }
