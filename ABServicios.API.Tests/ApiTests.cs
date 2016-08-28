@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Runtime.Serialization.Json;
-using System.Text;
-using System.Threading.Tasks;
 using ABServicios.Api.Controllers;
 using ABServicios.Api.Models;
 using ABServicios.BLL.Entities;
@@ -16,6 +13,24 @@ namespace ABServicios.API.Tests
 {
     public class ApiTests
     {
+        [Test]
+        public void WhenGetBicicletas()
+        {
+            var r = BicicletaController.GetModel();
+            Assert.IsNotNull(r.Estaciones.First());
+        }
+
+        [Test]
+        public void WhenGetBicicletasThenHttp200()
+        {
+            var httpClient = Api.GetHttpClient();
+            var result = httpClient.GetAsync("/bicicleta".ToAbsoluteUri()).Result;
+            var value = result.Content.ReadAsStringAsync().Result;
+            var r = JsonConvert.DeserializeObject<AvionesTerminalStatusModel>(value);
+
+            Assert.IsNotNull(r.Arribos.First());
+        }
+
         [Test]
         public void WhenGetAviones()
         {
@@ -30,7 +45,7 @@ namespace ABServicios.API.Tests
         public void WhenGetAvionesThenHttp200()
         {
             var httpClient = Api.GetHttpClient();
-            var result = httpClient.GetAsync("/avion/arribos".ToAbsoluteUri(new { t = "EZE" })).Result;
+            var result = httpClient.GetAsync("/avion/arribos".ToAbsoluteUri(new {t = "EZE"})).Result;
             var value = result.Content.ReadAsStringAsync().Result;
             var r = JsonConvert.DeserializeObject<AvionesTerminalStatusModel>(value);
 
@@ -62,7 +77,8 @@ namespace ABServicios.API.Tests
 
             foreach (var divisaViewModel in r.Divisas)
             {
-                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" + divisaViewModel.ValorCompra);
+                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" +
+                                  divisaViewModel.ValorCompra);
             }
 
             Assert.IsNotNull(r.Divisas.First());
@@ -86,7 +102,8 @@ namespace ABServicios.API.Tests
 
             foreach (var divisaViewModel in r.Divisas)
             {
-                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" + divisaViewModel.ValorCompra);
+                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" +
+                                  divisaViewModel.ValorCompra);
             }
 
             Assert.IsNotNull(r.Divisas.First());
@@ -110,7 +127,8 @@ namespace ABServicios.API.Tests
 
             foreach (var divisaViewModel in r.Divisas)
             {
-                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" + divisaViewModel.ValorCompra);
+                Console.WriteLine(divisaViewModel.Nombre + "|" + divisaViewModel.ValorVenta + "|" +
+                                  divisaViewModel.ValorCompra);
             }
 
             Assert.IsNotNull(r.Divisas.First());
@@ -126,6 +144,5 @@ namespace ABServicios.API.Tests
 
             Assert.IsNotNull(r.Divisas.First());
         }
-
     }
 }
