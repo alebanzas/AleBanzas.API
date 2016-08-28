@@ -100,7 +100,7 @@ namespace ABServicios.Api.Controllers
             }
             catch (Exception ex)
             {
-                ex.Log(ExceptionAction.SendMail);
+                ex.Log();
                 return _defaultModel;
             }
         }
