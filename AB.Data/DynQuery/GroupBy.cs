@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Iesi.Collections.Generic;
 using NHibernate.Util;
 
 namespace AB.Data.DynQuery
@@ -20,7 +19,7 @@ namespace AB.Data.DynQuery
 			owner = fromClause;
 		}
 
-		private readonly HashedSet<string> groups = new HashedSet<string>();
+		private readonly HashSet<string> groups = new HashSet<string>();
 
 		public GroupBy Add(string propertyPath)
 		{
@@ -69,10 +68,6 @@ namespace AB.Data.DynQuery
 			return clause.ToString();
 		}
 
-		public bool HasMembers
-		{
-			get { return !groups.IsEmpty; }
-		}
-
+		public bool HasMembers => groups.Count != 0;
 	}
 }
