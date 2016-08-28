@@ -1,6 +1,8 @@
 using System;
 using Castle.Core;
 using Castle.MicroKernel;
+using Castle.MicroKernel.Context;
+using Castle.Windsor.Diagnostics;
 
 namespace AB.Wiring
 {
@@ -26,10 +28,11 @@ namespace AB.Wiring
 			return true;
 		}
 
-		public object Resolve(CreationContext context)
-		{
-			return activator.Create(context);
-		}
+	    public object Resolve(CreationContext context, IReleasePolicy releasePolicy)
+	    {
+            return activator.Create(context, null);
+        }
+        
 
 		#endregion
 	}
@@ -48,5 +51,13 @@ namespace AB.Wiring
 
 			base.Track(instance, burden);
 		}
+
+	    public LifecycledComponentsReleasePolicy(IKernel kernel) : base(kernel)
+	    {
+	    }
+
+	    public LifecycledComponentsReleasePolicy(ITrackedComponentsDiagnostic trackedComponentsDiagnostic, ITrackedComponentsPerformanceCounter trackedComponentsPerformanceCounter) : base(trackedComponentsDiagnostic, trackedComponentsPerformanceCounter)
+	    {
+	    }
 	}
 }
