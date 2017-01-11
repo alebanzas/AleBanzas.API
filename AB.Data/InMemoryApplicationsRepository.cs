@@ -39,10 +39,28 @@ namespace AB.Data
                 Mnemonico = "DolarBlueWP",
                 AppKey = new Guid("78f00a47-badb-4b8e-afad-f5e7114d917a"),
                 AppSecret = new Guid("7a691d5e-604f-4662-8601-eb6b8c4fca3a"),
-                Roles = new [] { ApplicationsRoles.DolarBlue },
+                Roles = new[] { ApplicationsRoles.DolarBlue },
             });
 
-		}
+            repo.Add(new Application
+            {
+                ID = 3,
+                Mnemonico = "ConsoleApp",
+                AppKey = new Guid("09b33d59-0a94-4742-be48-139735636329"),
+                AppSecret = new Guid("ae37c9c0-f0f4-41e0-ba2f-c11ac5171166"),
+                Roles = new[] { ApplicationsRoles.ConsoleApp },
+            });
+
+            repo.Add(new Application
+            {
+                ID = 3,
+                Mnemonico = "Limbs",
+                AppKey = new Guid("d973ae0f-cd1c-432c-81e5-b038bca46be9"),
+                AppSecret = new Guid("ec5066c7-e133-4b9b-92ac-f9abdc1b582f"),
+                Roles = new[] { ApplicationsRoles.Limbs },
+            });
+
+        }
 
 		public IEnumerator<Application> GetEnumerator()
 		{
