@@ -34,7 +34,7 @@ namespace ABServicios.API.Tests
 
 		public static Uri ToAbsoluteUri(this string path, object queryStringValues = null)
 		{
-			var ub = new UriBuilder("http", "localhost:51460");
+			var ub = new UriBuilder("http", "api.alebanzas.com.ar");
 			var pathAndQueryParts = path.Split('?');
 			ub.Path = string.Join("/", "api", pathAndQueryParts[0].TrimStart('/'));
 			if (queryStringValues != null)
