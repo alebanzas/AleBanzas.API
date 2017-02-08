@@ -151,5 +151,40 @@ namespace ABServicios.API.Tests
 
             Assert.IsNotNull(r.Divisas.First());
         }
+
+
+        [Test]
+        public void WhenGeocoderThenHttp200()
+        {
+            var httpClient = Api.GetHttpClient();
+            var result = httpClient.GetAsync("/geocoder".ToAbsoluteUri(new { address = "ecuador 1419" })).Result;
+            var value = result.Content.ReadAsStringAsync().Result;
+            var r = JsonConvert.DeserializeObject<List<GeocoderResult>>(value);
+
+            Assert.IsNotNull(r.First());
+        }
+
+
+        [Test]
+        public void WhenGeocoder2ThenHttp200()
+        {
+            var httpClient = Api.GetHttpClient();
+            var result = httpClient.GetAsync("/geocoder".ToAbsoluteUri(new { address = "801 spring st, seattle", zone = "us" })).Result;
+            var value = result.Content.ReadAsStringAsync().Result;
+            var r = JsonConvert.DeserializeObject<List<GeocoderResult>>(value);
+
+            Assert.IsNotNull(r.First());
+        }
+
+        [Test]
+        public void WhenGeocoder3ThenHttp200()
+        {
+            var httpClient = Api.GetHttpClient();
+            var result = httpClient.GetAsync("/geocoder".ToAbsoluteUri(new { id = "ecuador 1419"})).Result;
+            var value = result.Content.ReadAsStringAsync().Result;
+            var r = JsonConvert.DeserializeObject<List<GeocoderResult>>(value);
+
+            Assert.IsNotNull(r.First());
+        }
     }
 }
