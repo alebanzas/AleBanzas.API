@@ -16,23 +16,36 @@ namespace ABServicios.Api.Controllers
             throw Request.CreateExceptionResponse(HttpStatusCode.MethodNotAllowed, string.Empty);
         }
 
-        // GET api/Geocoder/ecuador 1419
+        // GET api/Geocoder/?id=ecuador 1419
         [ApiAuthorize]
         public List<GeocoderResult> Get(string id)
         {
+            Bounds boundsBias = new Bounds(new Location(-34.937171, -59.248109), new Location(-34.150454, -57.872254));
+
+            return GetAddress(id, boundsBias: boundsBias);
+        }
+
+        // GET api/Geocoder/?address=ecuador 1419
+        [ApiAuthorize]
+        public List<GeocoderResult> Get(string address, int count = 10,string zone = "ar")
+        {
+            return GetAddress(address, zone).Take(count).ToList();
+        }
+
+        private List<GeocoderResult> GetAddress(string address, string zone = "ar", Bounds boundsBias = null)
+        {
             try
             {
-                var boundsBias = new Bounds(new Location(-34.937171, -59.248109), new Location(-34.150454, -57.872254));
                 IGeocoder geocoder = new GoogleGeocoder
                 {
                     //ApiKey = "AIzaSyA4guD0ambG70ooNV5D_Cg8zR42GK1rP_I",
                     Language = "es",
-                    RegionBias = "ar",
+                    RegionBias = zone,
                     BoundsBias = boundsBias,
                 };
 
-                IEnumerable<Address> result = geocoder.Geocode(id).Where(x => IsInBound(boundsBias, new Location(x.Coordinates.Latitude, x.Coordinates.Longitude)));
-                
+                IEnumerable<Address> result = geocoder.Geocode(address).Where(x => IsInBound(boundsBias, new Location(x.Coordinates.Latitude, x.Coordinates.Longitude)));
+
                 return result.Select(x => new GeocoderResult
                 {
                     Nombre = x.FormattedAddress,
@@ -48,6 +61,8 @@ namespace ABServicios.Api.Controllers
 
         private bool IsInBound(Bounds boundsBias, Location location)
         {
+            if (boundsBias == null) return true;
+
             return (boundsBias.SouthWest.Latitude < location.Latitude) && (location.Latitude < boundsBias.NorthEast.Latitude) &&
                    (boundsBias.SouthWest.Longitude < location.Longitude) && (location.Longitude < boundsBias.NorthEast.Longitude);
 
