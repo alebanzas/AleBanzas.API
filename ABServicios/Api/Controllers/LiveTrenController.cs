@@ -9,6 +9,7 @@ using AB.Common.Extensions;
 using ABServicios.Api.Models;
 using ABServicios.Azure.Storage.DataAccess.QueueStorage;
 using ABServicios.Services;
+using Newtonsoft.Json;
 
 namespace ABServicios.Api.Controllers
 {
@@ -16,16 +17,16 @@ namespace ABServicios.Api.Controllers
     {
         private readonly List<Tuple<string, Uri, Uri>> _ramales = new List<Tuple<string, Uri, Uri>>
         {
-            new Tuple<string, Uri, Uri>("sarmiento", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=1&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=1")),
-            new Tuple<string, Uri, Uri>("mitre-r-t", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=5&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=5")),
-            new Tuple<string, Uri, Uri>("mitre-r-m", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=7&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=7")),
-            new Tuple<string, Uri, Uri>("mitre-r-l", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=9&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=9")),
-            new Tuple<string, Uri, Uri>("roca-c-lp", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=11&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=11")),
-            //new Tuple<string, Uri, Uri>("roca-c-b", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=13&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=13")),
-            //new Tuple<string, Uri, Uri>("belgranosur-b-mdcgb", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=21&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=21")),
-            //new Tuple<string, Uri, Uri>("belgranosur-b-gc", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=25&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=25")),
-            new Tuple<string, Uri, Uri>("sanmartin-r-p", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=31&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=31")),
-            new Tuple<string, Uri, Uri>("delacosta", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=41&rnd=s3PNF522VOHdCxZi&key=NRVQjcjTUF0I30EVFBDTqdWp%23"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=41")),
+            new Tuple<string, Uri, Uri>("sarmiento", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=1&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=1")),
+            new Tuple<string, Uri, Uri>("mitre-r-t", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=5&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=5")),
+            new Tuple<string, Uri, Uri>("mitre-r-m", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=7&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=7")),
+            new Tuple<string, Uri, Uri>("mitre-r-l", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=9&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=9")),
+            new Tuple<string, Uri, Uri>("roca-c-lp", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=11&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=11")),
+            //new Tuple<string, Uri, Uri>("roca-c-b", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=13&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=13")),
+            //new Tuple<string, Uri, Uri>("belgranosur-b-mdcgb", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=21&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=21")),
+            //new Tuple<string, Uri, Uri>("belgranosur-b-gc", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=25&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=25")),
+            new Tuple<string, Uri, Uri>("sanmartin-r-p", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=31&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=31")),
+            new Tuple<string, Uri, Uri>("delacosta", new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/ajax_arribos.php?ramal=41&rnd={0}&key={1}"), new Uri("http://trenes.mininterior.gov.ar/v2_pg/arribos/index.php?ramal=41")),
         };
 
         private readonly WebCache _cache = new WebCache();
@@ -33,7 +34,7 @@ namespace ABServicios.Api.Controllers
 
         private static string GetCacheKey(string nickName)
         {
-            return string.Format("LiveTrenControl-{0}", nickName.ToLowerInvariant());
+            return $"LiveTrenControl-{nickName.ToLowerInvariant()}";
         }
 
         private readonly LiveTrenModel _defaultModel = new LiveTrenModel
@@ -109,18 +110,19 @@ namespace ABServicios.Api.Controllers
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Referrer = referer;
-            var result = httpClient.GetStringAsync(url).Result;
+            var requestUri = string.Format(url.OriginalString, RandomString(), GetTrenApiKey(referer));
+            var result = httpClient.GetStringAsync(requestUri).Result;
 
             var minInteriorItemModels = System.Web.Helpers.Json.Decode<List<MinInteriorItemModel>>(result);
             
             var estaciones = minInteriorItemModels.Select(x => new LiveTrenModelItem
             {
-                Ida1 = x.minutos_1,
-                Ida2 = x.minutos_2,
-                Vuelta1 = x.minutos_3,
-                Vuelta2 = x.minutos_4,
-                Nombre = x.nombre,
-            });
+                Ida1 = x.MinutosI1,
+                Ida2 = x.MinutosI2,
+                Vuelta1 = x.MinutosV1,
+                Vuelta2 = x.MinutosV2,
+                Nombre = x.Nombre,
+            }).ToList();
 
             foreach (var liveTrenModelItem in estaciones.Where(x => x.Ida1.Equals(0) || x.Vuelta1.Equals(0)))
             {
@@ -155,27 +157,51 @@ namespace ABServicios.Api.Controllers
             };
         }
 
+        private static string GetTrenApiKey(Uri url)
+        {
+            var httpClient = new HttpClient();
+            var result = httpClient.GetStringAsync(url).Result;
+
+            var a1 = result.Split(new[] { "key=" }, StringSplitOptions.None)[1];
+            var key = a1.Split('"')[0];
+
+            return key;
+        }
+
+        private static string RandomString()
+        {
+            const string chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+            const int stringLength = 16;
+            var randomstring = "";
+            for (var i = 0; i < stringLength; i++)
+            {
+                var rnum = new Random().Next(0, chars.Length - 1);
+                randomstring += chars.Substring(rnum, 1);
+            }
+            return randomstring;
+        }
+
     }
 
-    class MinInteriorItemModel
+    internal class MinInteriorItemModel
     {
-        public int minutos_1 { get; set; }
-        public int minutos_2 { get; set; }
-        public int minutos_3 { get; set; }
-        public int minutos_4 { get; set; }
-        public string nombre { get; set; } 
+        [JsonProperty("minutos_1")]
+        public int MinutosI1 { get; set; }
+        [JsonProperty("minutos_2")]
+        public int MinutosI2 { get; set; }
+        [JsonProperty("minutos_3")]
+        public int MinutosV1 { get; set; }
+        [JsonProperty("minutos_4")]
+        public int MinutosV2 { get; set; }
+        [JsonProperty("nombre")]
+        public string Nombre { get; set; } 
     }
-
-    class TrenEnEstacion
+    internal class TrenEnEstacion
     {
         public string Key { get; set; }
-
         public string Estacion { get; set; }
-
         public DateTime Time { get; set; }
-
         public bool Vuelta { get; set; }
-
         public string SentidoDescription { get; set; }
     }
 }
