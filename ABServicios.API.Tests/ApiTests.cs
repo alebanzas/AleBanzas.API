@@ -27,6 +27,15 @@ namespace ABServicios.API.Tests
             Assert.IsNotNull(r.Estaciones.First());
         }
 
+
+        [Test]
+        public void WhenGetLiveTrain()
+        {
+            var ramal = LiveTrenController.Ramales[0];
+            var r = LiveTrenController.GetModelFromMinInterior(ramal.Item1, ramal.Item2, ramal.Item3);
+            Assert.IsNotNull(r.Estaciones.First());
+        }
+
         [Test]
         public void WhenGetBicicletasThenHttp200()
         {
